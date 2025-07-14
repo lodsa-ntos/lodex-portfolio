@@ -10,18 +10,25 @@ function HeroSection() {
     <SectionContainer>
       {/* SectionTitle */}
       <div className="relative mt-4 sm:mt-6 md:mt-8 lg:mt-12 z-50">
-        <SectionTitle title="Building the future of digital interfaces" />
+        <SectionTitle  />
       </div>
 
       {/* fundo quadrado no meio para colocar foto */}
       <div className="relative flex items-center justify-center py-36">
         <div className="absolute w-[850px] h-[300px] md:h-[400px] lg:h-[350px] bg-gray-200 rounded-sm shadow-lg flex items-center justify-center">
           {/* image */}
-          Imagem, mas qual?
+          <img
+            src="images/herosection/banners/lodex-banner-2.svg"
+            alt="Hero"
+            className="w-[450px] h-[450px] mt-16 z-50"
+          />
         </div>
 
         {/* Icones Redes Sociais a esquerda na vertical */}
-        <div className="absolute left-0 top-52 transform -translate-y-1/5 w-64 md:w-80 lg:w-32">
+        <div className="absolute left-0 -top-8 transform -translate-y-1/5 w-64 md:w-80 lg:w-32">
+        {/* Subheadline */}
+        <p>Desenvolvimento frontend com foco em performance, usabilidade e identidade de marca.
+Sites, apps e experiências digitais para empresas com visão.</p>
           <h3 className="text-sm text-terciario font-medium mb-4">Follow us</h3>
           <ul className="hidden lg:flex flex-row items-start justify-start gap-2">
             <li className="text-gray-700">
@@ -37,7 +44,7 @@ function HeroSection() {
 
             <li className="text-gray-700">
               <a
-                href="https://twitter.com/lodexstudio"
+                href="https://github.com/lodsa-ntos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center relative overflow-hidden rounded-full transition-all duration-500"

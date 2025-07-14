@@ -11,7 +11,7 @@ function Navbar() {
           {/* Left side - slogan */}
           <div className="hidden lg:flex items-center space-x-2 md:space-x-4 lg:space-x-6 xl:space-x-8">
             <p className="text-xs text-gray-700 font-semibold uppercase tracking-tight">
-              Websites, plataformas <br />e soluções digitais sob medida. <br /> Cada linha de código com propósito.
+              Transformo ideias <br /> em experiências digitais <br /> claras e intuitivas.
             </p>
           </div>
 
