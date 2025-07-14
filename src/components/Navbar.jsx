@@ -27,7 +27,12 @@ function Navbar() {
           </div>
 
           {/* Right side - Search & Hamburguer Menu */}
-          <div className="flex items-center ml-auto space-x-4">
+          <div className="flex items-center ml-auto space-x-8">
+            {/* Language PT-EN */}
+            <button className="text-gray-700 hover:text-gray-900 transition-colors duration-300">
+              <span className="text-xs font-black ">PT</span>
+              <span className="text-xs font-medium ml-1">EN</span>
+            </button>
             {/* Hamburger Menu Icon */}
             <button className="text-terciario hover:text-terciario transition-colors duration-300">
               <svg
