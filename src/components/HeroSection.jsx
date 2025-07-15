@@ -8,6 +8,7 @@ import { FaGithub } from "react-icons/fa";
 function HeroSection() {
   return (
     <SectionContainer>
+      
       {/* SectionTitle */}
       <div className="relative mt-4 sm:mt-6 md:mt-8 lg:mt-12 z-50">
         <SectionTitle />
