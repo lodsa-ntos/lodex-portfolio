@@ -3,7 +3,7 @@ import React from "react";
 function NotFound() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 text-center">
-      <h1 className="text-5xl font-bold bg-red-600 mb-4">404</h1>
+      <h1 className="text-5xl font-bold bg-secundario text-white mb-4">404</h1>
       <p className="text-lg">A página que procuras não existe.</p>
       <a
         href="/"

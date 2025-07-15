@@ -13,12 +13,11 @@ function HeroSection() {
         <SectionTitle />
       </div>
 
-      {/* fundo quadrado no meio para colocar foto */}
+      {/* Conteúdo */}
       <div className="relative flex items-center justify-center py-36">
-        
-        {/* Fundo do Hero */}
+       
+        {/* Imagem destaque centro */}
         <div className="absolute w-[850px] h-[300px] md:h-[400px] lg:h-[350px] bg-gray-200 rounded-sm shadow-lg flex items-center justify-center">
-          
           {/* card a esquerda */}
           <div className="absolute w-80 h-60 left-2/4 transform -translate-x-full -rotate-6 scale-90 z-0 opacity-30 blur-sm transition-all duration-500">
             <img
@@ -30,11 +29,13 @@ function HeroSection() {
 
           {/* card ao centro */}
           <div className="z-10 w-96 h-60 left-2/4 transform rotate-0 scale-100 hover:scale-[1.03] transition-all duration-500">
-            <img
-              src="images/herosection/cards/9.svg"
-              alt="Hero"
-              className="rounded-xl shadow-2xl"
-            />
+            <a href="https://www.gestosamaveis.pt/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="images/herosection/cards/9.svg"
+                alt="Hero"
+                className="rounded-xl shadow-2xl"
+              />
+            </a>
           </div>
 
           {/* card a direita */}
@@ -49,17 +50,19 @@ function HeroSection() {
 
         {/* Icones Redes Sociais a esquerda na vertical */}
         <div className="absolute left-0 top-16 transform -translate-y-1/5 w-64 md:w-80 lg:w-32">
-        
           {/* Subheadline */}
           <p className="text-sm text-gray-600 font-medium mb-2 whitespace-nowrap">
-           Criação de <strong>sites</strong> e <strong>apps</strong> <br />para empresas <br /> com <strong>presença digital</strong> <br /> a construir.
+            Criação de <strong className="text-secundario">sites</strong> e <strong className="text-secundario">apps</strong> <br />
+            para empresas <br /> com <strong className="text-secundario">
+              presença digital
+            </strong> <br /> a construir.
           </p>
 
           {/* CTA Button */}
           <div className="mb-4 mt-6">
             <a
               href="#projetos"
-              className="inline-block bg-primario text-white font-medium px-4 py-2 rounded-full shadow-lg hover:bg-secundario transition-all duration-500 hover:shadow-lg hover:scale-105 text-sm whitespace-nowrap"
+              className="inline-block bg-primario text-white font-medium px-3 py-2 rounded-full shadow-lg hover:bg-secundario transition-all duration-500 hover:shadow-lg hover:scale-105 text-sm whitespace-nowrap"
             >
               📂 Explorar projetos
             </a>
@@ -77,7 +80,7 @@ function HeroSection() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center relative overflow-hidden rounded-full transition-all duration-500"
               >
-                <FaInstagram className="size-6 relative z-10 fill-terciario transition-all duration-500" />
+                <FaInstagram className="size-6 relative z-10 fill-terciario hover:fill-[#e4405f] transition-all duration-500" />
               </a>
             </li>
 
@@ -88,18 +91,18 @@ function HeroSection() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center relative overflow-hidden rounded-full transition-all duration-500"
               >
-                <FaGithub className="size-6 relative z-10 fill-terciario transition-all duration-500" />
+                <FaGithub className="size-6 relative z-10 fill-terciario hover:fill-gray-950 transition-all duration-500" />
               </a>
             </li>
 
             <li className="text-gray-700">
               <a
-                href="https://twitter.com/lodexstudio"
+                href="https://api.whatsapp.com/send?phone=351935895551&text=Hello%20%F0%9F%91%8B%20I%27m%20interested%20in%20the%20services%20of%20Lodex Studio.%20%0A%0ACould%20you%20give%20me%20more%20details%3F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center relative overflow-hidden rounded-full transition-all duration-500"
               >
-                <FaWhatsapp className="size-6 relative z-10 fill-terciario transition-all duration-500" />
+                <FaWhatsapp className="size-6 relative z-10 fill-terciario hover:fill-[#25d366] transition-all duration-500" />
               </a>
             </li>
           </ul>
@@ -142,9 +145,8 @@ function HeroSection() {
             </small>
           </div>
 
-          {/* "scroll down" indicators */}
-          <div className="w-[2.1rem] h-16 border-solid border-2 border-secundario rounded-[30px] relative flex items-center justify-center mt-4 before:content-[''] before:w-[0.4em] before:h-[0.4em] before:rounded-[50%] before:bg-[#99AAB5] before:absolute before:left-2/2 before:top-2/2 before:animate-movingY">
-          </div>
+          {/* "scroll down" indicator */}
+          <div className="w-[2.1rem] h-16 border-solid border-2 border-secundario rounded-[30px] relative flex items-center justify-center mt-4 before:content-[''] before:w-[0.4em] before:h-[0.4em] before:rounded-[50%] before:bg-[#99AAB5] before:absolute before:left-2/2 before:top-2/2 before:animate-movingY"></div>
           <small className=" text-gray-500">scroll para ver mais</small>
         </div>
       </div>
