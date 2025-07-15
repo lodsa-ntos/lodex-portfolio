@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/FooterSection";
 import { ToastContainer } from "react-toastify";
-import Ribbons from '../utils/MouseRibbon';
 import "react-toastify/dist/ReactToastify.css";
 
 function LayoutGlobal() {

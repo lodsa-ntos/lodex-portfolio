@@ -10,7 +10,7 @@ function HeroSection() {
     <SectionContainer>
       
       {/* SectionTitle */}
-      <div className="relative mt-4 sm:mt-6 md:mt-8 lg:mt-12 z-50">
+      <div className="relative mt-4 sm:mt-6 md:mt-8 lg:mt-12 z-10">
         <SectionTitle />
       </div>
 
