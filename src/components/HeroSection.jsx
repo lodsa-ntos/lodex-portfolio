@@ -15,13 +15,13 @@ function HeroSection() {
 
       {/* Conteúdo */}
       <div className="relative flex items-center justify-center py-36">
-        {/* Imagem destaque centro */}
+        {/* Div zona cinzenta (bg-gray-200) */}
         <div
-          className="absolute w-[850px] h-[300px] md:h-[400px] lg:h-[350px] bg-gray-200 rounded-sm shadow-lg flex items-center justify-center"
+          className="absolute -bottom-40 w-full h-[465px] sm:-bottom-44 sm:w-[500px] sm:h-[480px] md:-bottom-72 md:w-[750px] md:h-[470px] lg:-bottom-16 lg:w-[850px] lg:h-[380px] xlplus:-bottom-64 xlplus:lg:w-[900px] xlplus:lg:h-[580px] lg:bg-gray-200 bg-gray-100 rounded-sm shadow-lg flex items-center justify-center"
           aria-hidden="true"
         >
-          {/* card a esquerda */}
-          <div className="absolute w-80 h-60 left-2/4 transform -translate-x-full -rotate-6 scale-90 z-0 opacity-30 blur-sm transition-all duration-500">
+          {/* card da empresa a esquerda */}
+          <div className="hidden lg:block absolute w-80 h-60 xlplus:h-[300px] xlplus:w-96 left-2/4 transform -translate-x-full -rotate-6 scale-90 z-0 opacity-30 blur-sm transition-all duration-500">
             <img
               src="images/herosection/cards/8.svg"
               alt=""
@@ -31,8 +31,8 @@ function HeroSection() {
             />
           </div>
 
-          {/* card ao centro */}
-          <div className="z-10 w-96 h-60 left-2/4 transform rotate-0 scale-100 hover:scale-[1.03] transition-all duration-500">
+          {/* card da empresa ao centro */}
+          <div className="hidden lg:block z-10 w-96 h-60 xlplus:h-[390px] left-2/4 transform rotate-0 scale-100 hover:scale-[1.03] transition-all duration-500">
             <a
               href="https://www.gestosamaveis.pt/"
               target="_blank"
@@ -49,8 +49,79 @@ function HeroSection() {
             </a>
           </div>
 
-          {/* card a direita */}
-          <div className="absolute w-80 h-60 right-2/4 transform translate-x-full rotate-6 scale-90 z-0 opacity-30 blur-sm transition-all duration-500">
+          {/* imagem mobile centralizado */}
+          <div className="lg:hidden flex flex-col items-center justify-center">
+            <img
+              src="images/herosection/banners/mockup-cliente-1.svg"
+              alt="Projeto Gestos Amáveis"
+              className="mb-4"
+            />
+
+            {/* CTA Buttons */}
+            <div className="grid grid-cols-2 items-center gap-4 mt-6 px-4">
+              <button className="bg-primario font-semibold text-white py-2 px-2 rounded-full shadow-sm text-sm w-full max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap">
+                📂 Explorar projetos
+              </button>
+
+              <button className="bg-white border border-secundario text-secundario py-2 px-2 rounded-full shadow-sm text-sm w-full max-w-xs whitespace-nowrap hover:bg-gray-100 transition-all duration-500">
+                💬 Conversar
+              </button>
+            </div>
+
+            {/* Social Media Icons */}
+            <div className="flex flex-col items-center justify-center">
+              <div className="flex justify-center gap-4 mt-10 mb-2">
+                <a
+                  href="https://www.instagram.com/lodex.studio/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center relative overflow-hidden rounded-full transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-secundario"
+                  aria-label="Instagram Lodex Studio (abre em nova aba)"
+                  tabIndex={0}
+                >
+                  <FaInstagram
+                    className="w-5 h-5 relative z-10 fill-terciario hover:fill-[#e4405f] transition-all duration-500"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
+                </a>
+                <a
+                  href="https://github.com/lodsa-ntos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center relative overflow-hidden rounded-full transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-secundario"
+                  aria-label="GitHub Lodex Studio (abre em nova aba)"
+                  tabIndex={0}
+                >
+                  <FaGithub
+                    className="w-5 h-5 relative z-10 fill-terciario hover:fill-gray-950 transition-all duration-500"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
+                </a>
+                <a
+                  href="https://api.whatsapp.com/send?phone=351935895551&text=Hello%20%F0%9F%91%8B%20I%27m%20interested%20in%20the%20services%20of%20Lodex Studio.%20%0A%0ACould%20you%20give%20me%20more%20details%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center relative overflow-hidden rounded-full transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-secundario"
+                  aria-label="WhatsApp Lodex Studio (abre em nova aba)"
+                  tabIndex={0}
+                >
+                  <FaWhatsapp
+                    className="w-5 h-5 relative z-10 fill-terciario hover:fill-[#25d366] transition-all duration-500"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
+                </a>
+              </div>
+              <small className="text-gray-500 text-sm tracking-wide">
+                📱 Redes sociais
+              </small>
+            </div>
+          </div>
+
+          {/* card da empresa a direita */}
+          <div className="hidden lg:block absolute w-80 h-60 xlplus:h-[300px] xlplus:w-96 right-2/4 transform translate-x-full rotate-6 scale-90 z-0 opacity-30 blur-sm transition-all duration-500">
             <img
               src="images/herosection/cards/7.svg"
               alt=""
@@ -61,10 +132,10 @@ function HeroSection() {
           </div>
         </div>
 
-        {/* Icones Redes Sociais a esquerda na vertical */}
-        <div className="absolute left-0 top-16 transform -translate-y-1/5 w-64 md:w-80 lg:w-32">
+        {/* Conteúdo Icones Redes Sociais a esquerda na vertical */}
+        <div className="absolute left-0 xlplus:top-[219px] xlplus:block top-16 transform -translate-y-1/5 w-64 md:w-80 lg:w-32">
           {/* Subheadline */}
-          <p className="text-sm text-gray-600 font-medium mb-2 whitespace-nowrap">
+          <p className="hidden lg:block text-sm xlplus:text-lg text-gray-600 font-medium mb-2 whitespace-nowrap">
             Criação de <strong className="text-secundario">sites</strong> e{" "}
             <strong className="text-secundario">apps</strong> <br />
             para empresas <br /> com{" "}
@@ -74,10 +145,10 @@ function HeroSection() {
           </p>
 
           {/* CTA Button */}
-          <div className="mb-4 mt-6">
+          <div className="hidden lg:block mb-4 mt-6">
             <a
               href="#projetos"
-              className="inline-block bg-primario text-white font-medium px-3 py-2 rounded-full shadow-lg hover:bg-secundario transition-all duration-500 hover:shadow-lg hover:scale-105 text-sm whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-secundario"
+              className="inline-block bg-primario text-white font-medium px-3 py-2 rounded-full shadow-lg hover:bg-secundario transition-all duration-500 hover:shadow-lg hover:scale-105 text-sm xlplus:text-lg whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-secundario"
               tabIndex={0}
               aria-label="Explorar projetos"
             >
@@ -86,11 +157,11 @@ function HeroSection() {
           </div>
 
           {/* Social Media Icons */}
-          <h3 className="text-[13px] leading-2 flex items-center justify-center text-terciario font-semibold mb-3">
+          <h3 className="hidden lg:flex text-[13px] xlplus:text-xl xlplus:translate-x-6 xlplus:whitespace-nowrap leading-2 items-center justify-center text-terciario font-semibold mb-3">
             Conecte-se comigo
           </h3>
           <ul
-            className="hidden lg:flex flex-row items-center justify-center gap-2"
+            className="hidden lg:flex flex-row items-center justify-center gap-2 xlplus:gap-4 xlplus:translate-x-5"
             aria-label="Redes sociais"
           >
             <li className="text-gray-700">
@@ -147,14 +218,14 @@ function HeroSection() {
         </div>
 
         {/* Tópicos a direita */}
-        <div className="hidden lg:absolute lg:right-0 lg:top-3/4 lg:transform lg:-translate-y-3/4 w-64 md:w-80 lg:w-32 lg:flex lg:flex-col lg:items-center lg:justify-end">
-          <h3 className="text-sm text-gray-600 text-end font-medium mb-4 z-[1000000]">
+        <div className="hidden lg:absolute lg:right-0 lg:top-3/4 xlplus:top-96 lg:transform lg:-translate-y-3/4 w-64 md:w-80 lg:w-32 lg:flex lg:flex-col lg:items-center lg:justify-end">
+          <h3 className="text-sm xlplus:text-2xl text-gray-600 text-end font-medium mb-4 z-[1000000]">
             Especialidades
           </h3>
           <div className="text-sm text-end font-semibold space-y-2 flex flex-col gap-1 items-center justify-end">
             {/* Badges */}
             <small
-              className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300 gap-1 inline-flex items-center justify-end"
+              className="bg-blue-100 text-blue-800 text-xs xlplus:text-base font-medium px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300 gap-1 inline-flex items-center justify-end"
               tabIndex={0}
             >
               <span
@@ -165,7 +236,7 @@ function HeroSection() {
             </small>
 
             <small
-              className="bg-cyan-100 text-cyan-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-cyan-900 dark:text-cyan-300 gap-1 inline-flex items-center justify-end"
+              className="bg-cyan-100 text-cyan-800 text-xs xlplus:text-base font-medium px-2.5 py-0.5 rounded-full dark:bg-cyan-900 dark:text-cyan-300 gap-1 inline-flex items-center justify-end"
               tabIndex={0}
             >
               <span
@@ -175,7 +246,7 @@ function HeroSection() {
               Tailwind CSS
             </small>
             <small
-              className="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-purple-900 dark:text-purple-300 gap-1 inline-flex items-center justify-end"
+              className="bg-purple-100 text-purple-800 text-xs xlplus:text-base font-medium px-2.5 py-0.5 rounded-full dark:bg-purple-900 dark:text-purple-300 gap-1 inline-flex items-center justify-end"
               tabIndex={0}
             >
               <span
@@ -186,7 +257,7 @@ function HeroSection() {
             </small>
 
             <small
-              className="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-indigo-900 dark:text-indigo-300 gap-1 inline-flex items-center justify-end"
+              className="bg-indigo-100 text-indigo-800 text-xs xlplus:text-[16px] xlplus:whitespace-nowrap font-medium px-2.5 py-0.5 xlplus:py-[5px] rounded-full dark:bg-indigo-900 dark:text-indigo-300 gap-1 inline-flex items-center justify-end"
               tabIndex={0}
             >
               <span
@@ -197,7 +268,7 @@ function HeroSection() {
             </small>
 
             <small
-              className="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-emepinkrald-900 dark:text-pink-300 gap-1 inline-flex items-center justify-end"
+              className="bg-pink-100 text-pink-800 text-xs xlplus:text-base font-medium px-2.5 py-0.5 rounded-full dark:bg-emepinkrald-900 dark:text-pink-300 gap-1 inline-flex items-center justify-end"
               tabIndex={0}
             >
               <span
@@ -208,7 +279,7 @@ function HeroSection() {
             </small>
 
             <small
-              className="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-amber-900 dark:text-amber-300 gap-1 inline-flex items-center justify-end"
+              className="bg-amber-100 text-amber-800 text-xs xlplus:text-base font-medium px-2.5 py-0.5 rounded-full dark:bg-amber-900 dark:text-amber-300 gap-1 inline-flex items-center justify-end"
               tabIndex={0}
             >
               <span
@@ -225,7 +296,9 @@ function HeroSection() {
             aria-hidden="true"
             tabIndex={-1}
           ></div>
-          <small className=" text-gray-500">scroll para ver mais</small>
+          <small className=" text-gray-500 xlplus:text-base xlplus:whitespace-nowrap">
+            scroll para ver mais
+          </small>
         </div>
       </div>
     </SectionContainer>

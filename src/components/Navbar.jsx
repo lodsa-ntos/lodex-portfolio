@@ -65,14 +65,14 @@ function Navbar() {
         <div className="relative flex items-center justify-between w-full h-full">
           {/* Left side - slogan */}
           <div className="hidden lg:flex items-center space-x-2 md:space-x-4 lg:space-x-6 xl:space-x-8">
-            <p className="text-xs text-gray-700 font-semibold uppercase tracking-tight">
+            <p className="text-xs xlplus:text-base xlplus:mt-6 text-gray-700 font-semibold uppercase tracking-tight transition-all duration-500">
               Transformo ideias <br /> em experiências digitais <br /> claras e
               intuitivas.
             </p>
           </div>
 
           {/* Logo center */}
-          <div className="flex items-center lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+          <div className="flex items-center lg:absolute lg:left-1/2 lg:-translate-x-1/2 transition-all duration-500">
             <a href="/" className="block" tabIndex={0} aria-label="Página inicial lodex.studio">
               <img
                 src={logo}
@@ -86,7 +86,7 @@ function Navbar() {
           <div className="flex items-center ml-auto space-x-8">
             {/* Language PT-EN */}
             <button
-              className="flex items-center text-sm transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
+              className="hidden lg:flex items-center text-sm xlplus:text-base transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
               onClick={() =>
                 setLanguage((prev) => (prev === "pt-pt" ? "en-gb" : "pt-pt"))
               }
@@ -116,13 +116,13 @@ function Navbar() {
               </span>
             </button>
 
-            <div className="relative inline-flex flex-wrap items-center">
+            <div className="relative inline-flex flex-wrap items-center transition-all duration-500">
               {/* Hamburger Menu Icon */}
               <button
                 id="dropdownDividerButton"
                 onClick={toggleDropdown}
                 onKeyDown={handleDropdownKeyDown}
-                className="text-terciario hover:text-terciario transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-terciario rounded"
+                className="text-terciario hover:text-terciario transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-terciario rounded"
                 aria-haspopup="true"
                 aria-expanded={dropdownOpen}
                 aria-controls="dropdownDivider"
@@ -130,7 +130,7 @@ function Navbar() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className="h-6 w-6 xlplus:h-8 xlplus:w-8"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

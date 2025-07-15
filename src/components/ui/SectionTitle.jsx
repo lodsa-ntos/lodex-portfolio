@@ -9,8 +9,8 @@ function SectionTitle({ subtitle, align = "center" }) {
 
   return (
     <div className={`space-y-2 ${alignment[align]}`}>
-      <h2 className="text-7xl w-5/5 mx-auto font-semibold uppercase text-terciario">
-        Design leve. <br /> Código limpo. <br /> Resultados visíveis
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl w-5/5 mx-auto font-semibold uppercase text-terciario transition-all duration-500">
+        Design leve<span className="text-secundario">.</span> <br /> Código limpo. <br /> Resultados visíveis
         <span className="text-secundario">.</span>
       </h2>
       {subtitle && <p className="text-gray-600 text-lg">{subtitle}</p>}

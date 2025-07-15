@@ -11,6 +11,7 @@ export default {
       md: "768px", // Tablets
       lg: "1024px", // Laptops
       xl: "1280px", // Desktops 
+      xlplus: '1440px', // Large desktops
       '2xl': "1536px", // Ultra-wide 4k
     },
     extend: {
