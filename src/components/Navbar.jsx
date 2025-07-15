@@ -1,10 +1,16 @@
 import React from "react";
 import GlobalContainer from "../utils/GlobalContainer";
 import logo from "../assets/logo/lodexstudio-logo.svg";
+import { LiaLanguageSolid } from "react-icons/lia";
+import { IoArrowForward } from "react-icons/io5";
+import { GrLanguage } from "react-icons/gr";
+import { PiRocketLaunchDuotone } from "react-icons/pi";
 
 function Navbar() {
   // Use React state to control dropdown visibility
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
+  // Add language state for PT/EN toggle
+  const [language, setLanguage] = React.useState("pt-pt");
 
   // Function to handle dropdown menu toggle
   const toggleDropdown = (e) => {
@@ -55,16 +61,38 @@ function Navbar() {
           {/* Right side - Search & Hamburguer Menu */}
           <div className="flex items-center ml-auto space-x-8">
             {/* Language PT-EN */}
-            <button className="text-sm transition-colors duration-300">
-              <span className="text-primario underline font-black ">PT</span>
-              <span> /</span>
-              <span className="text-gray-500 font-medium hover:text-primario ml-1">
-                EN
-              </span>
-            </button>
+           
+                  <button
+                    className="flex items-center text-sm transition-colors duration-300"
+                    onClick={() =>
+                    setLanguage((prev) => (prev === "pt-pt" ? "en-gb" : "pt-pt"))
+                    }
+                    aria-label="Trocar idioma"
+                  >
+                     <LiaLanguageSolid className="mr-2"/>
+                    <span
+                    className={
+                      language === "pt-pt"
+                      ? "text-primario underline font-black"
+                      : "text-gray-500 font-medium hover:text-primario"
+                    }
+                    >
+                    PT
+                    </span>
+                    <span className="ml-1"> /</span>
+                    <span
+                    className={
+                      language === "en-gb"
+                      ? "text-primario underline font-black ml-1"
+                      : "text-gray-500 font-medium hover:text-primario ml-1"
+                    }
+                    >
+                    EN
+                    </span>
+                  </button>
 
-            <div className="relative inline-flex flex-wrap items-center">
-              {/* Hamburger Menu Icon */}
+                  <div className="relative inline-flex flex-wrap items-center">
+                    {/* Hamburger Menu Icon */}
               <button
                 id="dropdownDividerButton"
                 onClick={toggleDropdown}
@@ -103,14 +131,6 @@ function Navbar() {
                       href="#"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      Sobre
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                    >
                       Projetos
                     </a>
                   </li>
@@ -122,13 +142,56 @@ function Navbar() {
                       Serviços
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Sobre mim
+                    </a>
+                  </li>
+
+                  <li className="block lg:hidden">
+                    <a
+                      href="#"
+                      className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      <GrLanguage /> Idioma: <button
+                    className="flex items-center text-sm transition-colors duration-500"
+                    onClick={() =>
+                    setLanguage((prev) => (prev === "pt-pt" ? "en-gb" : "pt-pt"))
+                    }
+                    aria-label="Trocar idioma"
+                  >
+                    <span
+                    className={
+                      language === "pt-pt"
+                      ? "text-primario underline font-black"
+                      : "text-gray-500 font-medium hover:text-primario hover:underline focus:outline-none focus:ring"
+                    }
+                    >
+                    PT
+                    </span>
+                    <span className="ml-1"> /</span>
+                    <span
+                    className={
+                      language === "en-gb"
+                      ? "text-primario underline font-black ml-1"
+                      : "text-gray-500 font-medium hover:text-primario hover:underline focus:outline-none focus:ring ml-1"
+                    }
+                    >
+                    EN
+                    </span>
+                  </button>
+                    </a>
+                  </li>
                 </ul>
                 <div className="py-2">
                   <a
                     href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white hover:scale-105 transition-all duration-500"
                   >
-                    Início
+                    <span className=" w-7 h-7 flex items-center justify-center rounded-full bg-blue-50 hover:bg-blue-100 py-2"><PiRocketLaunchDuotone className="fill-secundario size-4"/></span> Iniciar projeto <IoArrowForward />
                   </a>
                 </div>
               </div>
