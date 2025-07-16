@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../components/HeroSection";
 import SectionContainer from "../utils/SectionContainer";
 import ExpertiseSection from "../components/ExpertiseSection";
+import GlobalContainer from "../utils/GlobalContainer";
 
 function LandingPage() {
   return (
@@ -9,10 +10,10 @@ function LandingPage() {
       <SectionContainer>
         <Hero />
       </SectionContainer>
-      
-      <SectionContainer>
+
+      <GlobalContainer>
         <ExpertiseSection />
-      </SectionContainer>
+      </GlobalContainer>
     </>
   );
 }

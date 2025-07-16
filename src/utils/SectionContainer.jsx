@@ -3,7 +3,7 @@ import GlobalContainer from "./GlobalContainer";
 
 function SectionContainer({ children }) {
   return (
-    <div className="min-h-screen py-28">
+    <div className="min-h-screen pt-28">
       <GlobalContainer>{children}</GlobalContainer>
     </div>
   );
