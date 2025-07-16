@@ -83,7 +83,7 @@ function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 h-16 md:h-[80px] xl:h-[88px] flex items-center z-50 transition-all duration-500"
+      className="fixed top-0 left-0 right-0 h-16 md:h-[80px] xl:h-[88px] flex items-center z-[100] transition-all duration-500"
       aria-label="Main navigation"
     >
       <GlobalContainer>
