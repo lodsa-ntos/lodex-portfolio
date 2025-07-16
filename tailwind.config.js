@@ -18,9 +18,6 @@ export default {
       maxWidth: {
         'content': '1440px', // Custom max-width for content
       },
-      height: {
-        'screen-svh': '100svh',
-      },
       keyframes: {
         move: {
           "50%": { transform: "translateY(-1rem)" },
