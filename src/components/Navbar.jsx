@@ -90,14 +90,14 @@ function Navbar() {
         <div className="relative flex items-center justify-between w-full h-full">
           {/* Left side - slogan */}
           <div className="hidden lg:flex items-center space-x-2 md:space-x-4 lg:space-x-6 xl:space-x-8">
-            <p className="text-xs xlplus:text-base xlplus:mt-6 lg:mt-3 text-gray-700 font-semibold uppercase tracking-tight transition-all duration-500">
-              <strong>Frontend Developer</strong> <br /> transformando ideias em <br />interfaces elegantes, funcionais e responsivas.
+            <p className="text-xs xlplus:mt-6 lg:mt-3 text-gray-800 font-medium leading-4 uppercase tracking-wide transition-all duration-500">
+              <strong>Frontend Developer</strong> <br /> Interfaces pensadas para quem <br /> prefere usar, não ler sobre elas.
             </p>
           </div>
 
           {/* Logo center */}
           <div className="flex items-center lg:absolute lg:left-1/2 lg:-translate-x-1/2 transition-all duration-500">
-            <a href="/" className="block" tabIndex={0} aria-label="Página inicial lodex.studio">
+            <a href="/" className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded" tabIndex={0} aria-label="Página inicial lodex.studio">
               <img
                 src={logo}
                 alt="lodex.studio logo"
@@ -106,30 +106,28 @@ function Navbar() {
             </a>
           </div>
 
-          {/* Right side - Search & Hamburger Menu */}
+          {/* Right side - Social & Hamburger Menu */}
           <div className="flex items-center ml-auto space-x-8">
-            
-            {/* Social media*/}
-            <div className="flex justify-center gap-4">
-                {socialLinks.map(({ href, label, icon, hoverClass }) => (
-                  <a
-                    key={href}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center justify-center relative overflow-hidden rounded-full transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-secundario ${hoverClass}`}
-                    aria-label={label}
-                    tabIndex={0}
-                  >
-                    {React.createElement(icon, {
-                      className: `w-6 h-6 relative z-10 fill-terciario transition-all duration-500 ${hoverClass}`,
-                      'aria-hidden': "true",
-                      focusable: "false"
-                    })}
-                  </a>
-                ))}
-              </div>
-           
+            {/* Social media */}
+            <div className="hidden lg:flex gap-x-4 items-center pr-6">
+              {socialLinks.map(({ href, label, icon, hoverClass }) => (
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center justify-center relative overflow-hidden rounded-full transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario ${hoverClass}`}
+                  aria-label={label}
+                  tabIndex={0}
+                >
+                  {React.createElement(icon, {
+                    className: `w-6 h-6 relative z-10 fill-terciario transition-all duration-500 ${hoverClass}`,
+                    'aria-hidden': "true",
+                    focusable: "false"
+                  })}
+                </a>
+              ))}
+            </div>
 
             <div className="relative inline-flex flex-wrap items-center transition-all duration-500">
               {/* Hamburger Menu Icon */}
@@ -137,7 +135,7 @@ function Navbar() {
                 id="dropdownDividerButton"
                 onClick={toggleDropdown}
                 onKeyDown={handleDropdownKeyDown}
-                className="text-terciario hover:text-terciario transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-terciario rounded"
+                className={`text-terciario hover:text-terciario transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded ${dropdownOpen ? "ring-2 ring-primario" : ""}`}
                 aria-haspopup="true"
                 aria-expanded={dropdownOpen}
                 aria-controls="dropdownDivider"
@@ -179,7 +177,7 @@ function Navbar() {
                   <li>
                     <a
                       href="#"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                       role="menuitem"
                       tabIndex={dropdownOpen ? 0 : -1}
                     >
@@ -189,7 +187,7 @@ function Navbar() {
                   <li>
                     <a
                       href="#"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                       role="menuitem"
                       tabIndex={dropdownOpen ? 0 : -1}
                     >
@@ -199,7 +197,7 @@ function Navbar() {
                   <li>
                     <a
                       href="#"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                       role="menuitem"
                       tabIndex={dropdownOpen ? 0 : -1}
                     >
@@ -208,7 +206,7 @@ function Navbar() {
                   </li>
 
                   <li className="block lg:hidden">
-                    <div className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none">
+                    <div className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded">
                       <GrLanguage aria-hidden="true" /> Idioma:{" "}
                       <button
                         className="flex items-center text-sm transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
@@ -225,7 +223,7 @@ function Navbar() {
                           className={
                             language === "pt-pt"
                               ? "text-primario underline font-black"
-                              : "text-gray-500 font-medium hover:text-primario hover:underline focus:outline-none focus:ring"
+                              : "text-gray-500 font-medium hover:text-primario hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primario"
                           }
                         >
                           PT
@@ -235,7 +233,7 @@ function Navbar() {
                           className={
                             language === "en-gb"
                               ? "text-primario underline font-black ml-1"
-                              : "text-gray-500 font-medium hover:text-primario hover:underline focus:outline-none focus:ring ml-1"
+                              : "text-gray-500 font-medium hover:text-primario hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primario ml-1"
                           }
                         >
                           EN
@@ -247,7 +245,7 @@ function Navbar() {
                 <div className="py-2">
                   <a
                     href="#"
-                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white hover:scale-105 transition-all duration-500 focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none rounded"
+                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white hover:scale-105 transition-all duration-500 focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                     role="menuitem"
                     tabIndex={dropdownOpen ? 0 : -1}
                   >
