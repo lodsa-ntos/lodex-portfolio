@@ -5,8 +5,33 @@ import { LiaLanguageSolid } from "react-icons/lia";
 import { IoArrowForward } from "react-icons/io5";
 import { GrLanguage } from "react-icons/gr";
 import { PiRocketLaunchDuotone } from "react-icons/pi";
+import { FaInstagram } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 function Navbar() {
+  // Social links data for easier reuse and maintainability
+  const socialLinks = [
+    {
+      href: "https://www.instagram.com/lodex.studio/",
+      label: "Instagram Lodex Studio (abre em nova aba)",
+      icon: FaInstagram,
+      hoverClass: "hover:fill-[#e4405f]",
+    },
+    {
+      href: "https://github.com/lodsa-ntos",
+      label: "GitHub Lodex Studio (abre em nova aba)",
+      icon: FaGithub,
+      hoverClass: "hover:fill-gray-950",
+    },
+    {
+      href: "https://api.whatsapp.com/send?phone=351935895551&text=Hello%20%F0%9F%91%8B%20I%27m%20interested%20in%20the%20services%20of%20Lodex Studio.%20%0A%0ACould%20you%20give%20me%20more%20details%3F",
+      label: "WhatsApp Lodex Studio (abre em nova aba)",
+      icon: FaWhatsapp,
+      hoverClass: "hover:fill-[#25d366]",
+    },
+  ];
+
   // Use React state to control dropdown visibility
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
   // Add language state for PT/EN toggle
@@ -66,8 +91,7 @@ function Navbar() {
           {/* Left side - slogan */}
           <div className="hidden lg:flex items-center space-x-2 md:space-x-4 lg:space-x-6 xl:space-x-8">
             <p className="text-xs xlplus:text-base xlplus:mt-6 lg:mt-3 text-gray-700 font-semibold uppercase tracking-tight transition-all duration-500">
-              Transformo ideias <br /> em experiências digitais <br /> claras e
-              intuitivas.
+              <strong>Frontend Developer</strong> <br /> transformando ideias em <br />interfaces elegantes, funcionais e responsivas.
             </p>
           </div>
 
@@ -84,37 +108,28 @@ function Navbar() {
 
           {/* Right side - Search & Hamburger Menu */}
           <div className="flex items-center ml-auto space-x-8">
-            {/* Language PT-EN */}
-            <button
-              className="hidden lg:flex items-center text-sm xlplus:text-base transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
-              onClick={() =>
-                setLanguage((prev) => (prev === "pt-pt" ? "en-gb" : "pt-pt"))
-              }
-              aria-label="Trocar idioma"
-              aria-pressed={language === "en-gb"}
-              tabIndex={0}
-            >
-              <LiaLanguageSolid className="mr-2" aria-hidden="true" />
-              <span
-                className={
-                  language === "pt-pt"
-                    ? "text-primario underline font-black"
-                    : "text-gray-500 font-medium hover:text-primario"
-                }
-              >
-                PT
-              </span>
-              <span className="ml-1"> /</span>
-              <span
-                className={
-                  language === "en-gb"
-                    ? "text-primario underline font-black ml-1"
-                    : "text-gray-500 font-medium hover:text-primario ml-1"
-                }
-              >
-                EN
-              </span>
-            </button>
+            
+            {/* Social media*/}
+            <div className="flex justify-center gap-4">
+                {socialLinks.map(({ href, label, icon, hoverClass }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center justify-center relative overflow-hidden rounded-full transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-secundario ${hoverClass}`}
+                    aria-label={label}
+                    tabIndex={0}
+                  >
+                    {React.createElement(icon, {
+                      className: `w-6 h-6 relative z-10 fill-terciario transition-all duration-500 ${hoverClass}`,
+                      'aria-hidden': "true",
+                      focusable: "false"
+                    })}
+                  </a>
+                ))}
+              </div>
+           
 
             <div className="relative inline-flex flex-wrap items-center transition-all duration-500">
               {/* Hamburger Menu Icon */}
@@ -130,7 +145,7 @@ function Navbar() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 xlplus:h-8 xlplus:w-8"
+                  className="w-7 h-7"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
