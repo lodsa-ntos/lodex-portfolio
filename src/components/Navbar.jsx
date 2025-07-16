@@ -65,7 +65,7 @@ function Navbar() {
         <div className="relative flex items-center justify-between w-full h-full">
           {/* Left side - slogan */}
           <div className="hidden lg:flex items-center space-x-2 md:space-x-4 lg:space-x-6 xl:space-x-8">
-            <p className="text-xs xlplus:text-base xlplus:mt-6 text-gray-700 font-semibold uppercase tracking-tight transition-all duration-500">
+            <p className="text-xs xlplus:text-base xlplus:mt-6 lg:mt-3 text-gray-700 font-semibold uppercase tracking-tight transition-all duration-500">
               Transformo ideias <br /> em experiências digitais <br /> claras e
               intuitivas.
             </p>
