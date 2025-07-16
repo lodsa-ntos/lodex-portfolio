@@ -7,7 +7,11 @@ import { FaGithub } from "react-icons/fa";
 
 function HeroSection() {
   return (
-    <section className="overflow-hidden" aria-labelledby="hero-title">
+    <section
+      className="overflow-hidden"
+      aria-labelledby="hero-title"
+      tabIndex={-1}
+    >
       <div
         className="2xl:hidden absolute -top-28 -left-28 w-[500px] h-[500px] bg-gradient-to-tr from-[#3d55cc]/20 to-[#3d55cc]/20 rounded-full blur-[80px] -z-10"
         aria-hidden="true"
@@ -17,14 +21,14 @@ function HeroSection() {
 
       <div className="flex flex-row items-center justify-center w-full gap-4 mt-6 px-4 z-10">
         <button
-          className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-sm text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset focus:outline-none focus:ring-2 focus:ring-secundario"
+          className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-sm text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset"
           aria-label="Explorar projetos"
         >
           📂 Explorar projetos
         </button>
 
         <button
-          className="bg-white border border-secundario text-secundario py-3 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-secundario"
+          className="bg-white border border-secundario text-secundario py-3 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 transition-all duration-500"
           aria-label="Falar comigo"
         >
           💬 Falar comigo
@@ -60,7 +64,7 @@ function HeroSection() {
               rel="noopener noreferrer"
               tabIndex={0}
               aria-label="Visite o site Gestos Amáveis (abre em nova aba)"
-              className="focus:outline-none focus:ring-4 focus:ring-secundario rounded-xl"
+              className="rounded-xl shadow-2xl"
             >
               <img
                 src="images/herosection/cards/9.svg"
@@ -96,7 +100,7 @@ function HeroSection() {
         {/* "scroll down" indicator */}
         <div
           className="
-          hidden
+            hidden
             absolute
             w-[2.1rem] h-16 border-solid border-2 border-secundario rounded-[30px]
             lg:flex items-center justify-center
@@ -109,7 +113,10 @@ function HeroSection() {
           aria-hidden="true"
           tabIndex={-1}
         ></div>
-        <small className="hidden lg:block text-center absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 lg:left-4 lg:bottom-4 lg:-translate-x-3.5 lg:-translate-y-4 text-secundario text-xs font-semibold">
+        <small
+          className="hidden lg:block text-center absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 lg:left-4 lg:bottom-4 lg:-translate-x-3.5 lg:-translate-y-4 text-secundario text-xs font-semibold"
+          aria-live="polite"
+        >
           scroll para <br /> ver mais
         </small>
       </div>
