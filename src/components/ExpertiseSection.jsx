@@ -29,7 +29,7 @@ function ExpertiseSection() {
   ];
 
   return (
-    <section className="lg:py-20 bg-white">
+    <section className="lg:py-20">
       <div className="w-full max-w-[1400px] mx-auto px-4">
         <div className="flex items-center gap-4 mb-10">
           <h2 className="text-xl font-bold whitespace-nowrap text-terciario tracking-tight">

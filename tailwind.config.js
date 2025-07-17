@@ -51,6 +51,7 @@ export default {
       colors: {
         'primario': '#2D68C4 ', // Backgrounds suaves, caixas de texto
         'secundario': '#004AAD', // Acentos delicados
+        'primario-claro': '#EFF3FD', // Fundos suaves, caixas de texto
         'terciario': '#0a1f44', // Fundos suaves, caixas de texto
         'neutro-claro': '#f9fafa', // Background principal
         'neutro-escuro': '#1a1a1a', // Tipografia de contraste (headers)
