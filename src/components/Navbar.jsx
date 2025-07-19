@@ -91,7 +91,7 @@ function Navbar() {
           {/* Left side - slogan */}
           <div className="hidden lg:flex items-center space-x-2 md:space-x-4 lg:space-x-6 xl:space-x-8">
             <p className="text-xs xlplus:mt-6 lg:mt-3 text-gray-800 font-medium leading-4 uppercase tracking-wide transition-all duration-500">
-              <strong>Frontend Developer</strong> <br /> Interfaces pensadas para quem <br /> prefere usar, não ler sobre elas.
+              <strong>Frontend Developer</strong> <br />  focado em experiências <br /> simples, úteis e escaláveis.
             </p>
           </div>
 
@@ -176,7 +176,7 @@ function Navbar() {
                 >
                   <li>
                     <a
-                      href="#"
+                      href="#projetos"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                       role="menuitem"
                       tabIndex={dropdownOpen ? 0 : -1}
@@ -196,7 +196,7 @@ function Navbar() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#sobremim"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                       role="menuitem"
                       tabIndex={dropdownOpen ? 0 : -1}

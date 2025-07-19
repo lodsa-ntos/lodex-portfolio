@@ -13,7 +13,7 @@ function HeroSection() {
       tabIndex={-1}
     >
       <div
-        className="2xl:hidden absolute -top-28 -left-28 w-[500px] h-[500px] bg-gradient-to-tr from-[#3d55cc]/20 to-[#3d55cc]/20 rounded-full blur-[80px] -z-10"
+        className="2xl:hidden absolute -top-28 -left-28 w-[500px] h-[500px] bg-gradient-to-tr from-[#3d55cc]/20 to-[#3d55cc]/20 rounded-full blur-[80px] z-10"
         aria-hidden="true"
       ></div>
 
@@ -38,14 +38,14 @@ function HeroSection() {
       <div className="relative w-full flex justify-center items-center mt-10">
         {/* Caixa fundo central */}
         <div
-          className="bg-gradient-to-b from-gray-200 max-w-[950px] h-[320px] w-full flex rounded-sm z-0"
+          className="bg-gradient-to-b from-[#f4f8ff] via-white to-white max-w-[950px] h-[320px] border-none w-full flex rounded-sm z-0"
           aria-hidden="true"
         ></div>
 
         <div className="flex">
           {/* Left Card */}
           <div
-            className="hidden lg:block absolute w-80 mt-4 md:mt-6 xl:mt-8 h-60 left-2/4 transform -translate-x-full -translate-y-36 -rotate-6 scale-90 z-0 opacity-70 blur-sm transition-all duration-500"
+            className="hidden lg:block absolute w-80 mt-4 md:mt-6 xl:mt-8 h-60 left-2/4 transform -translate-x-full -translate-y-36 -rotate-6 scale-90 z-0 transition-all duration-500"
             aria-hidden="true"
           >
             <img
@@ -85,7 +85,7 @@ function HeroSection() {
 
           {/* Right Card */}
           <div
-            className="hidden lg:block absolute w-80 h-60 mt-4 md:mt-6 xl:mt-8 right-2/4 -translate-y-36 transform translate-x-[365px] rotate-6 scale-90 z-0 opacity-70 blur-sm transition-all duration-500"
+            className="hidden lg:block absolute w-80 h-60 mt-4 md:mt-6 xl:mt-8 right-2/4 -translate-y-36 transform translate-x-[365px] rotate-6 scale-90 z-0 transition-all duration-500"
             aria-hidden="true"
           >
             <img
@@ -96,29 +96,6 @@ function HeroSection() {
             />
           </div>
         </div>
-
-        {/* "scroll down" indicator */}
-        <div
-          className="
-            hidden
-            absolute
-            w-[2.1rem] h-16 border-solid border-2 border-secundario rounded-[30px]
-            lg:flex items-center justify-center
-            left-1/2 bottom-1/2
-            -translate-x-1/2 translate-y-1/2
-            lg:left-4 lg:bottom-7 lg:translate-x-0 lg:-translate-y-10
-            z-50
-            before:content-[''] before:w-[0.4em] before:h-[0.4em] before:rounded-[50%] before:bg-secundario before:absolute before:left-2/2 before:top-2/2 before:animate-movingY
-          "
-          aria-hidden="true"
-          tabIndex={-1}
-        ></div>
-        <small
-          className="hidden lg:block text-center absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 lg:left-4 lg:bottom-4 lg:-translate-x-3.5 lg:-translate-y-4 text-secundario text-xs font-semibold"
-          aria-live="polite"
-        >
-          scroll para <br /> ver mais
-        </small>
       </div>
     </section>
   );
