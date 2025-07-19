@@ -10,7 +10,7 @@ function FooterSection() {
           {/* Logo */}
           <div className="flex flex-col items-center sm:items-start cursor-pointer">
             <a
-              href="/"
+              href="#home"
               className="flex items-center space-x-2 hover:scale-105 hover:brightness-110 transition-all duration-500"
               aria-label="Ir para a página inicial"
             >

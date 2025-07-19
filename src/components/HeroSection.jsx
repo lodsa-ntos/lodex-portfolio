@@ -1,13 +1,13 @@
 import React from "react";
 import SectionContainer from "../utils/SectionContainer";
 import SectionTitle from "../components/ui/SectionTitle";
-import { FaInstagram } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { TbFileTypePdf } from "react-icons/tb";
+import { MdPlaylistAddCheckCircle } from "react-icons/md";
 
 function HeroSection() {
   return (
     <section
+      id="home"
       className="overflow-hidden"
       aria-labelledby="hero-title"
       tabIndex={-1}
@@ -21,31 +21,32 @@ function HeroSection() {
 
       <div className="flex flex-row items-center justify-center w-full gap-4 mt-6 px-4 z-10">
         <button
-          className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-sm text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset"
+          className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
           aria-label="Explorar projetos"
         >
-          📂 Explorar projetos
+          <MdPlaylistAddCheckCircle className="text-green-400" /> Aberto a
+          colaborações
         </button>
 
         <button
-          className="bg-white border border-secundario text-secundario py-3 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 transition-all duration-500"
+          className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center gap-1 transition-all duration-500"
           aria-label="Falar comigo"
         >
-          💬 Falar comigo
+          <TbFileTypePdf className="text-[#F40F02]" /> Currículo
         </button>
       </div>
 
       <div className="relative w-full flex justify-center items-center mt-10">
         {/* Caixa fundo central */}
         <div
-          className="bg-gradient-to-b from-[#f4f8ff] via-white to-white max-w-[950px] h-[320px] border-none w-full flex rounded-sm z-0"
+          className="bg-gradient-to-b from-terciario via-primario to-white max-w-[950px] h-[320px] border-none w-full flex rounded-t-2xl lg:rounded-t-3xl z-0"
           aria-hidden="true"
         ></div>
 
         <div className="flex">
           {/* Left Card */}
           <div
-            className="hidden lg:block absolute w-80 mt-4 md:mt-6 xl:mt-8 h-60 left-2/4 transform -translate-x-full -translate-y-36 -rotate-6 scale-90 z-0 transition-all duration-500"
+            className="hidden lg:block absolute w-80 mt-4 md:mt-6 xl:mt-8 h-60 left-2/4 transform -translate-x-full -translate-y-36 -rotate-6 scale-90 z-0 transition-all duration-500 hover:scale-[1.03]"
             aria-hidden="true"
           >
             <img
@@ -85,7 +86,7 @@ function HeroSection() {
 
           {/* Right Card */}
           <div
-            className="hidden lg:block absolute w-80 h-60 mt-4 md:mt-6 xl:mt-8 right-2/4 -translate-y-36 transform translate-x-[365px] rotate-6 scale-90 z-0 transition-all duration-500"
+            className="hidden lg:block absolute w-80 h-60 mt-4 md:mt-6 xl:mt-8 right-2/4 -translate-y-36 transform translate-x-[365px] rotate-6 scale-90 z-0 hover:scale-[1.03] transition-all duration-500"
             aria-hidden="true"
           >
             <img

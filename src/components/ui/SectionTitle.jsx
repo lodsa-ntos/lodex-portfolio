@@ -15,7 +15,7 @@ function SectionTitle({ align = "center" }) {
     >
       <h2
         id="section-title-heading"
-        className="text-2xl sm:text-4xl w-full mx-auto font-semibold uppercase leading-tight sm:text-terciario text-gray-900 transition-all duration-500  focus-visible:ring-secundario"
+        className="text-2xl sm:text-5xl w-full mx-auto font-[800] uppercase leading-tight sm:text-terciario text-[#111827] transition-all duration-500  focus-visible:ring-secundario"
         tabIndex={0}
       >
         Design leve
@@ -23,16 +23,9 @@ function SectionTitle({ align = "center" }) {
         <span className="relative">Resultados visíveis</span>
         <span className="text-secundario">.</span>
       </h2>
-      <p className="mt-6 sm:text-lg font-medium text-gray-700 lg:text-gray-500 text-base whitespace-nowrap">
-        Aqui, o design não se explica.{" "}
-        <strong className="text-secundario focus:outline-none focus-visible:ring-2 focus-visible:ring-secundario" tabIndex={0}>
-          Explora
-        </strong>{" "}
-        e{" "}
-        <strong className="text-secundario focus:outline-none focus-visible:ring-2 focus-visible:ring-secundario" tabIndex={0}>
-          vê por ti
-        </strong>
-        .
+      <p className="mt-6 md:text-lg font-medium text-[#4b5563] lg:text-gray-500 text-base whitespace-nowrap">
+        Não prometo tudo.{" "} Mas tudo o que prometo, 
+        <strong className="text-secundario"> entrego</strong>.
       </p>
     </section>
   );

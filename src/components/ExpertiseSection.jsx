@@ -29,11 +29,11 @@ function ExpertiseSection() {
   ];
 
   return (
-    <section className="lg:py-20">
+    <section className="lg:pb-20 pt-10">
       <div className="w-full max-w-[1400px] mx-auto px-4">
         <div className="flex items-center gap-4 mb-10">
           <h2 className="text-xl font-bold whitespace-nowrap text-terciario tracking-tight">
-            Stack principal
+            Tecnologias que uso para criar
           </h2>
           <div className="w-px h-8 bg-primario" />
           <div className="md:h-px md:flex-grow md:bg-gray-200" />
@@ -65,7 +65,7 @@ function ExpertiseSection() {
             </div>
           ))}
         </div>
-        <p className="text-center mt-8 text-sm text-gray-600">
+        <p className="text-center mt-8 pb-8 lg:pb-0 text-sm text-gray-600">
           Tecnologias que uso com frequência — sempre aberto a aprender novas
           ferramentas.
         </p>
