@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound";
 import ErrorBoundary from "./layout/ErrorBoundary";
 import "./index.css";
 import "react-toastify/dist/ReactToastify.css";
+import Academico from "./pages/Projects/Academico";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LayoutGlobal />}>
           <Route index element={<LandingPage />} />
+          <Route path="/academico" element={<Academico />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

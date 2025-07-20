@@ -29,7 +29,6 @@ function WorksSection() {
           {/** Card 1 */}
           <div class="cursor-pointer group relative flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500">
             <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-
               {/** Badge */}
               <div relative>
                 <div className="absolute top-3 right-4 rounded-full p-1.5 tracking-tight ring-1 ring-inset bg-gray-50 text-gray-600 ring-purple-700/10 z-50 flex items-center gap-2">
@@ -58,19 +57,20 @@ function WorksSection() {
               </p>
             </div>
             <div class="px-4 pb-4 pt-0 mt-2">
-              <button
-                class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                type="button"
-              >
-                Ver caso de estudo
-              </button>
+              <a href="/academico" className="transition-all duration-500">
+                <button
+                  class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none duration-500"
+                  type="button"
+                >
+                  Ver caso de estudo
+                </button>
+              </a>
             </div>
           </div>
 
           {/** Card 2 */}
           <div class="cursor-pointer group relative flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500">
             <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-
               {/** Badge */}
               <div relative>
                 <div className="absolute top-3 right-4 rounded-full p-1.5 tracking-tight ring-1 ring-inset bg-green-50 text-[#2F9B92] ring-purple-700/10 z-50 flex items-center gap-2">
@@ -111,7 +111,6 @@ function WorksSection() {
           {/** Card 3 */}
           <div class="md:hidden cursor-pointer group relative lg:flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500">
             <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-
               {/** Badge */}
               <div className="relative">
                 <div className="absolute top-3 right-4 rounded-full p-1.5 tracking-tight ring-1 ring-inset bg-blue-50 text-[#3b82f6] ring-blue-700/10 z-50 flex items-center gap-2">
@@ -119,7 +118,8 @@ function WorksSection() {
                     href="#preview"
                     className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-200 ease-in-out"
                   >
-                    <AiOutlineFileProtect className="text-blue-600"/> Conceito pessoal
+                    <AiOutlineFileProtect className="text-blue-600" /> Conceito
+                    pessoal
                   </a>
                 </div>
               </div>
