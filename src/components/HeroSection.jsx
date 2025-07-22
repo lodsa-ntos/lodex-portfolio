@@ -1,8 +1,8 @@
 import React from "react";
-import SectionContainer from "../utils/SectionContainer";
 import SectionTitle from "../components/ui/SectionTitle";
 import { TbFileTypePdf } from "react-icons/tb";
-import { MdPlaylistAddCheckCircle } from "react-icons/md";
+import { FaLaptopCode } from "react-icons/fa";
+import { VscSymbolInterface } from "react-icons/vsc";
 
 function HeroSection() {
   return (
@@ -21,11 +21,10 @@ function HeroSection() {
 
       <div className="flex flex-row items-center justify-center w-full gap-4 mt-6 px-4 z-10">
         <button
-          className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
+          className="bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
           aria-label="Explorar projetos"
         >
-          <MdPlaylistAddCheckCircle className="text-green-400" /> Aberto a
-          colaborações
+          <a href="#projetos" className="flex items-center justify-center gap-1"><FaLaptopCode className="text-green-400" /> Ver trabalhos</a>
         </button>
 
         <button

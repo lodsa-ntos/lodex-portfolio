@@ -8,6 +8,7 @@ import { PiRocketLaunchDuotone } from "react-icons/pi";
 import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { VscSymbolInterface } from "react-icons/vsc";
 
 function Navbar() {
   // Social links data for easier reuse and maintainability
@@ -89,10 +90,14 @@ function Navbar() {
       <GlobalContainer>
         <div className="relative flex items-center justify-between w-full h-full">
           {/* Left side - slogan */}
-          <div className="hidden lg:flex items-center space-x-2 md:space-x-4 lg:space-x-6 xl:space-x-8">
-            <p className="text-xs xlplus:mt-6 lg:mt-3 text-gray-800 font-medium leading-4 uppercase tracking-wide transition-all duration-500">
+          <div className="hidden lg:flex items-start lg:flex-col text-left">
+            <p className="text-xs xlplus:mt-6 lg:mt-3 text-gray-800 font-medium leading-4 mb-1 uppercase tracking-wide transition-all duration-500">
               <strong>Frontend Developer</strong> <br />  focado em experiências <br /> simples, úteis e escaláveis.
             </p>
+            <small className="flex justify-start contrast-100 text-green-500 gap-2 tracking-wide transition-all duration-500">
+              <VscSymbolInterface  className="size-5"/> 
+              Aberto a colaborações
+              </small>
           </div>
 
           {/* Logo center */}
@@ -176,6 +181,16 @@ function Navbar() {
                 >
                   <li>
                     <a
+                      href="/"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
+                      role="menuitem"
+                      tabIndex={dropdownOpen ? 0 : -1}
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
                       href="#projetos"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                       role="menuitem"
@@ -192,6 +207,16 @@ function Navbar() {
                       tabIndex={dropdownOpen ? 0 : -1}
                     >
                       Serviços
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
+                      role="menuitem"
+                      tabIndex={dropdownOpen ? 0 : -1}
+                    >
+                      Blog
                     </a>
                   </li>
                   <li>
