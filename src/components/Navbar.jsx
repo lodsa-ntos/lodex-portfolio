@@ -196,7 +196,7 @@ function Navbar() {
                   </li>
                   <li>
                     <a
-                      href="#sobremim"
+                      href="/sobremim"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                       role="menuitem"
                       tabIndex={dropdownOpen ? 0 : -1}

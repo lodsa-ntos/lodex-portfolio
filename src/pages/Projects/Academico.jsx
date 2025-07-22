@@ -1,7 +1,7 @@
 import React from "react";
+import GlobalContainer from "../../utils/GlobalContainer";
 import { LiaUniversitySolid } from "react-icons/lia";
 import { HiOutlineViewGrid } from "react-icons/hi";
-import GlobalContainer from "../../utils/GlobalContainer";
 import { AiOutlineFileProtect } from "react-icons/ai";
 import { TbContract } from "react-icons/tb";
 import flutter from "../../assets/tech/flutter.png";

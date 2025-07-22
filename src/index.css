@@ -31,6 +31,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.clip-path-slant {
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+  width: 50%;
+}
+
 .text-shadow-lg-super {
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.85);
 }
