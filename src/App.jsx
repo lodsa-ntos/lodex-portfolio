@@ -8,6 +8,7 @@ import "./index.css";
 import "react-toastify/dist/ReactToastify.css";
 import Academico from "./pages/projects/Academico";
 import SobreMim from "./pages/sobre/SobreMim";
+import Services from "./pages/services/Services";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route index element={<LandingPage />} />
           <Route path="/academico" element={<Academico />} />
           <Route path="/sobremim" element={<SobreMim />} />
+          <Route path="/servicos" element={<Services />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
