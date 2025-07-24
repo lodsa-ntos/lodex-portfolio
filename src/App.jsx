@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Academico from "./pages/projects/Academico";
 import SobreMim from "./pages/sobre/SobreMim";
 import Services from "./pages/services/Services";
+import GlobalProject from "./pages/projects/GlobalProject";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/academico" element={<Academico />} />
           <Route path="/sobremim" element={<SobreMim />} />
           <Route path="/servicos" element={<Services />} />
+          <Route path="/projetos" element={<GlobalProject />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
