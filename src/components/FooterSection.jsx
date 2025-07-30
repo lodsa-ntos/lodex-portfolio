@@ -27,17 +27,17 @@ function FooterSection() {
 
           {/* Links */}
           <div className="grid grid-cols-4 mt-6 md:mt-0  gap-x-4">
-            <a href="" className="text-[#4a5565] hover:text-gray-800 transition-colors">
+            <a href="/sobremim" className="text-[#4a5565] hover:text-gray-800 transition-colors">
               sobre
             </a>
-            <a href="" className="text-[#4a5565] hover:text-gray-800 transition-colors">
-              projeto
+            <a href="/projetos" className="text-[#4a5565] hover:text-gray-800 transition-colors">
+              portfólio
             </a>
-            <a href="" className="text-[#4a5565] hover:text-gray-800 transition-colors">
-              contato
+            <a href="/servicos" className="text-[#4a5565] hover:text-gray-800 transition-colors">
+              serviços
             </a>
-            <a href="" className="text-[#4a5565] hover:text-gray-800 transition-colors">
-              serviço
+            <a href="/blog" className="text-[#4a5565] hover:text-gray-800 transition-colors">
+              blog
             </a>
           </div>
         </div>

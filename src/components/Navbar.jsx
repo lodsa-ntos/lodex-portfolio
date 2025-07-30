@@ -10,6 +10,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { VscSymbolInterface } from "react-icons/vsc";
+import { FaLinkedinIn } from "react-icons/fa";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -19,19 +20,19 @@ function Navbar() {
       href: "https://www.instagram.com/lodex.studio/",
       label: "Instagram Lodex Studio (abre em nova aba)",
       icon: FaInstagram,
-      hoverClass: "hover:fill-[#e4405f]",
+      hoverClass: "hover:fill-[#e4405f] hover:scale-105",
     },
     {
       href: "https://github.com/lodsa-ntos",
       label: "GitHub Lodex Studio (abre em nova aba)",
       icon: FaGithub,
-      hoverClass: "hover:fill-gray-950",
+      hoverClass: `${scrolled ? "hover:fill-gray-950 hover:scale-105" : "fill-gray-600 hover:fill-gray-950 hover:scale-105"}`,
     },
     {
-      href: "https://api.whatsapp.com/send?phone=351935895551&text=Hello%20%F0%9F%91%8B%20I%27m%20interested%20in%20the%20services%20of%20Lodex Studio.%20%0A%0ACould%20you%20give%20me%20more%20details%3F",
-      label: "WhatsApp Lodex Studio (abre em nova aba)",
-      icon: FaWhatsapp,
-      hoverClass: "hover:fill-[#25d366]",
+      href: "https://www.linkedin.com/in/lodney-santos/",
+      label: "Linkedin (abre em nova aba)",
+      icon: FaLinkedinIn,
+      hoverClass: `${scrolled ? "hover:scale-105" : "hover:fill-primario hover:scale-105"}`,
     },
   ];
 
@@ -117,7 +118,11 @@ function Navbar() {
               <strong>Frontend Developer</strong> <br /> focado em experiências{" "}
               <br /> simples, úteis e escaláveis.
             </p>
-            <small className={`flex justify-start contrast-100 ${ scrolled ?'text-green-400' : 'text-green-500' } gap-2 tracking-wide transition-all duration-500`}>
+            <small
+              className={`flex justify-start contrast-100 ${
+                scrolled ? "text-green-400" : "text-green-500"
+              } gap-2 tracking-wide transition-all duration-500`}
+            >
               <VscSymbolInterface className="size-5" />
               Aberto a colaborações
             </small>
@@ -157,16 +162,13 @@ function Navbar() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center justify-center relative overflow-hidden rounded-full transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario ${hoverClass}`}
+                  className={`flex items-center justify-center relative overflow-hidden transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario ${hoverClass}`}
                   aria-label={label}
                   tabIndex={0}
                 >
                   {React.createElement(icon, {
                     className: `w-6 h-6 relative z-10 
-                    ${scrolled
-                      ? 'fill-white'
-                      : 'fill-terciario '
-                    }
+                    ${scrolled ? "fill-white" : "fill-terciario "}
                     transition-all duration-500 ${hoverClass}`,
                     "aria-hidden": "true",
                     focusable: "false",
@@ -174,14 +176,16 @@ function Navbar() {
                 </a>
               ))}
             </div>
-
+            
+            {/* Hamburger Menu Icon */}
             <div className="relative inline-flex flex-wrap items-center transition-all duration-500">
-              {/* Hamburger Menu Icon */}
               <button
                 id="dropdownDividerButton"
                 onClick={toggleDropdown}
                 onKeyDown={handleDropdownKeyDown}
-                className={`${ scrolled ? 'text-white hover:text-gray-300' : 'text-terciario'} transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-secundario rounded ${
+                className={`${
+                  scrolled ? "text-white hover:text-gray-300" : "text-terciario"
+                } transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-secundario rounded ${
                   dropdownOpen ? "ring-2 ring-secundario" : ""
                 }`}
                 aria-haspopup="true"
