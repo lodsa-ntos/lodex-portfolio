@@ -140,9 +140,8 @@ function GlobalProject() {
         setSelectedTags([]);
       } else {
         // Marca todas
-        setSelectedTags(allTags); 
+        setSelectedTags(allTags);
       }
-      
     } else {
       setSelectedTags((prevTags) =>
         prevTags.includes(tag)
@@ -178,7 +177,7 @@ function GlobalProject() {
           Projectos
         </span>
 
-        {/* Título and filter button*/}
+        {/* Título and filter button */}
         <div className="mb-10 sm:mb-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           {/* Título, subtítulo e Descrição */}
           <div className="flex flex-col items-start justify-center flex-1">
@@ -193,6 +192,7 @@ function GlobalProject() {
             </p>
           </div>
 
+          {/* Filter button */}
           <button
             id="dropdownToggleBtn"
             onClick={toggleDropdown}
