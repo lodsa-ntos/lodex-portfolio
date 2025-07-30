@@ -1,227 +1,243 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import GlobalContainer from "../../utils/GlobalContainer";
-import { PiRocketLaunchFill } from "react-icons/pi";
-import { GiVacuumCleaner } from "react-icons/gi";
 import { TbFileTypePdf } from "react-icons/tb";
-import { FaLaptopCode } from "react-icons/fa";
-import { MdCall } from "react-icons/md";
 import { RiPagesLine } from "react-icons/ri";
 import { CgWebsite } from "react-icons/cg";
 import { FaPortrait } from "react-icons/fa";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { FaRocketchat } from "react-icons/fa";
-import { FcIdea } from "react-icons/fc";
-import { FcSmartphoneTablet } from "react-icons/fc";
-import { FcMultipleInputs } from "react-icons/fc";
-import { FcEnteringHeavenAlive } from "react-icons/fc";
+import { GrValidate } from "react-icons/gr";
+import { MdOutlinePersonPin } from "react-icons/md";
+import { MdWeb } from "react-icons/md";
+import { PiTreeStructureDuotone } from "react-icons/pi";
 
 function Services() {
   const cardsTop = [
     {
-      icon: <RiPagesLine className="size-10 text-secundario" />,
+      icon: <RiPagesLine className="size-10 text-white" />,
       title: "Landing pages sob medida",
+      titleForm: "O que preciso para estruturar a tua landing…",
       desc: "Para quem precisa comunicar uma ideia com impacto e clareza. Direto ao ponto.",
       descModal:
         "Uma página única e direta para apresentar tua ideia com impacto e ação.",
       linkText: "Ver detalhes",
       tag: {
+        minicon: <GrValidate />,
         label: "Para validar ideias",
         cor: "text-yellow-800 px-4 rounded-full border border-yellow-200 mx-auto bg-yellow-50",
       },
-      details: (
+      details: [
+        {
+          iconDetails: "💡",
+          text: "Criado com base na tua ideia ou conteúdo. Simples, direto e com identidade.",
+          title: "Visual",
+        },
+        {
+          iconDetails: "📱",
+          text: "Estrutura única, responsiva e funcional, pensada para impactar.",
+          title: "Página",
+        },
+        {
+          iconDetails: "🔗",
+          text: "Link, botão ou formulário para captar o interesse sem distrações.",
+          title: "Botão",
+        },
+        {
+          iconDetails: "⚙️",
+          text: "Código leve com React + Tailwind, pronto para publicar ou integrar.",
+          title: "Código",
+        },
+      ],
+
+      prerequisites: (
         <>
-          <ul className="mb-4 text-sm text-gray-700">
-            <li className="flex items-center justify-start gap-1">
-              <FcIdea /> Visual feito com base no teu conteúdo
-            </li>
-            <li>📱 Página única, responsiva e funcional</li>
-            <li>🔗 Botão, link ou formulário de contato</li>
-            <li>⚙️ Código final com React + Tailwind</li>
-          </ul>
+          Basta uma ideia inicial, referência ou esboço.
+          <br /> O resto trato eu.
         </>
       ),
-
-      prerequisites:
-        "Uma ideia mínima, referência ou esboço. Se não tiveres, posso sugerir caminhos visuais. Depois disso, a execução é comigo.",
       audience: "👥 freelancers, criadores e ideias em fase inicial",
       price: "💶 a partir de 300€",
       time: "📅 3 a 5 dias úteis",
-      cta: (
-        <>
-          <a
-            href={`https://wa.me/351937287597?text=${encodeURIComponent(
-              `Olá! Gostaria de saber mais sobre o serviço avulso de ${`Assistência Sênior Diária`} oferecido pela Gestos Amáveis.`
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-verde-petroleo text-secundario px-4 py-2 rounded-full font-semibold text-sm hover:brightness-105 transition"
-            role="button"
-            tabIndex={0}
-            aria-label="Quero este apoio"
-            onKeyPress={(e) => {
-              if (e.key === "Enter" || e.key === " ") e.target.click();
-            }}
-          >
-            👉 Quero conversar sobre este serviço
-          </a>
-        </>
-      ),
+      placeholder:
+        "Descreve a tua ideia, desafio ou o que tens em mente. Vale tudo, mesmo que ainda não esteja claro.",
     },
     {
-      icon: <CgWebsite className="size-10 text-secundario" />,
+      icon: <CgWebsite className="size-10 text-white" />,
       title: "Website completo",
+      titleForm: "Vamos estruturar o teu site…",
       desc: "Do zero, com identidade — sem templates, site institucional ou pessoal com estrutura sólida",
       descModal:
         "Um site institucional ou pessoal com estrutura sólida, visual limpo e navegação fluida.",
       linkText: "Ver detalhes",
       tag: {
+        minicon: <MdWeb />,
         label: "Para presença profissional",
         cor: "text-primario px-4 rounded-full border border-blue-200 mx-auto bg-blue-50",
       },
-      details: (
+      details: [
+        {
+          iconDetails: "🧩",
+          text: "Design modular adaptado ao teu projeto e identidade. Sem templates.",
+          title: "Visual",
+        },
+        {
+          iconDetails: "🗂️",
+          text: "De 3 a 5 páginas como Home, Sobre, Serviços, Contato... com navegação clara.",
+          title: "Estrutura",
+        },
+        {
+          iconDetails: "🌐",
+          text: "Responsivo, acessível e com animações suaves que orientam o olhar.",
+          title: "Acessibilidade",
+        },
+        {
+          iconDetails: "⚙️",
+          text: "Frontend limpo com React + Tailwind, preparado para crescer contigo.",
+          title: "Código",
+        },
+        {
+          iconDetails: "🔧",
+          text: "Acompanhamento pós-entrega por 30 dias para pequenos ajustes.",
+          title: "Suporte",
+        },
+      ],
+
+      prerequisites: (
         <>
-          <ul className="mb-4 text-sm text-gray-700">
-            <li>🧩 Design modular adaptado ao teu projeto</li>
-            <li>🗂️ De 3 a 5 páginas: Home, Sobre, Serviços, Contato...</li>
-            <li>🌐 Responsivo, acessível e com microanimações</li>
-            <li>⚙️ Código limpo com React + Tailwind</li>
-            <li>🔧 Suporte pós-entrega por 30 dias</li>
-          </ul>
+          Precisas ter ideia do conteúdo das páginas. <br />
+          Se ainda estiveres a definir,
+          <br /> posso ajudar com estrutura base e referências.
         </>
       ),
-      prerequisites:
-        "Precisas ter ideia do conteúdo das páginas. Se ainda estiveres a definir, posso ajudar com estrutura base e referências.",
-      audience: "🏢 Profissionais, negócios locais, freelancers, marcas pessoais",
+
+      audience:
+        "🏢 Profissionais, negócios locais, freelancers, marcas pessoais",
       price: "💶 a partir de 600€",
       time: "📅 10 a 15 dias úteis",
-      cta: (
-        <>
-          <a
-            href={`https://wa.me/351937287597?text=${encodeURIComponent(
-              `Olá! Gostaria de saber mais sobre o serviço avulso de ${`Assistência Sênior Diária`} oferecido pela Gestos Amáveis.`
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-verde-petroleo text-secundario px-4 py-2 rounded-full font-semibold text-sm hover:brightness-105 transition"
-            role="button"
-            tabIndex={0}
-            aria-label="Quero este apoio"
-            onKeyPress={(e) => {
-              if (e.key === "Enter" || e.key === " ") e.target.click();
-            }}
-          >
-            👉 Quero estruturar minha presença digital
-          </a>
-        </>
-      ),
+      placeholder:
+        "Tens alguma ideia das páginas necessárias? Já tens identidade visual? (ex: Home, Sobre, Contato...)",
     },
     {
-      icon: <FaPortrait className="size-10 text-secundario" />,
+      icon: <FaPortrait className="size-10 text-white" />,
       title: "Portfólio com presença",
+      titleForm: "O que preciso de ti para começar:",
       desc: "Mostra o teu trabalho com estrutura, ritmo e identidade. Destaque para o trabalho e trajetória",
       descModal:
         "Um portfólio profissional que destaca tua trajetória, projetos e visão com impacto e clareza.",
       linkText: "Ver detalhes",
       tag: {
+        minicon: <MdOutlinePersonPin />,
         label: "Para mostrar teu trabalho",
         cor: "text-purple-800 px-4 rounded-full border border-purple-200 mx-auto bg-purple-50",
       },
-      details: (
+      details: [
+        {
+          iconDetails: "🎯",
+          text: "Criado com base no teu estilo, ritmo e trajetória. Identidade em foco.",
+          title: "Visual",
+        },
+        {
+          iconDetails: "🗂️",
+          text: "Sobre, Projetos, Contato, Manifesto... tudo alinhado com tua narrativa.",
+          title: "Seções",
+        },
+        {
+          iconDetails: "🎈",
+          text: "Transições suaves, foco no percurso do visitante.",
+          title: "Navegação",
+        },
+        {
+          iconDetails: "🔗",
+          text: "Integrações com GitHub, LinkedIn, Behance ou o que fizer sentido para ti.",
+          title: "Links",
+        },
+        {
+          iconDetails: "⚙️",
+          text: "Desenvolvido com React + Tailwind, responsivo e pronto para mostrar teu trabalho.",
+          title: "Código",
+        },
+      ],
+
+      prerequisites: (
         <>
-          <ul className="mb-4 text-sm text-gray-700">
-            <li>🎯 Design centrado na tua identidade e conteúdo</li>
-            <li>📁 Seções como: Sobre, Projetos, Contato, Manifesto...</li>
-            <li>🎈 Navegação fluida e animações suaves</li>
-            <li>🔗 Links para GitHub, Behance, LinkedIn, etc.</li>
-            <li>⚙️ Código com React + Tailwind, pronto para publicar</li>
-          </ul>
+          Precisas enviar teus projetos, bio e referências visuais.
+          <br /> Se precisares, posso orientar com base em exemplos.
         </>
       ),
 
-      prerequisites:
-        "Precisas enviar teus projetos, bio e referências visuais. Se precisares, posso orientar com base em exemplos.",
       audience: "🧑‍🎨 Designers, devs, freelancers, criadores independentes",
       price: "💶 a partir de 500€",
       time: "📅 8 a 12 dias úteis",
-      cta: (
-        <>
-          <a
-            href={`https://wa.me/351937287597?text=${encodeURIComponent(
-              `Olá! Gostaria de saber mais sobre o serviço avulso de ${`Assistência Sênior Diária`} oferecido pela Gestos Amáveis.`
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-verde-petroleo text-secundario px-4 py-2 rounded-full font-semibold text-sm hover:brightness-105 transition"
-            role="button"
-            tabIndex={0}
-            aria-label="Quero este apoio"
-            onKeyPress={(e) => {
-              if (e.key === "Enter" || e.key === " ") e.target.click();
-            }}
-          >
-            👉 Quero construir meu portfólio com presença
-          </a>
-        </>
-      ),
+      placeholder:
+        "Fala um pouco sobre os teus projetos, referências ou onde já expuseste o teu trabalho. Links úteis como GitHub, Behance ou Instagram também ajudam.",
     },
     {
-      icon: <MdOutlineDesignServices className="size-10 text-secundario" />,
+      icon: <MdOutlineDesignServices className="size-10 text-white" />,
       title: "Redesign funcional",
+      titleForm: "Para começamos o redesign…",
       desc: "Para quem já tem algo online, mas quer mais clareza, performance ou presença sem perder tua essência.",
       descModal:
         "Melhoria visual e funcional de um site já existente. Mais clareza, estrutura e performance.",
       linkText: "Ver detalhes",
       tag: {
+        minicon: <PiTreeStructureDuotone />,
         label: "Melhora o teu site atual",
         cor: "text-gray-800 px-4 rounded-full border border-gray-300 mx-auto bg-gray-50",
       },
-      details: (
-        <>
-          <ul className="mb-4 text-sm text-gray-700">
-            <li>🔍 Análise de usabilidade, hierarquia e visual</li>
-            <li>🎨 Redesenho parcial ou completo da interface</li>
-            <li>⚡ Código otimizado e responsivo (se necessário)</li>
-            <li>📐 Ajustes de contraste, legibilidade e espaçamento</li>
-            <li>🖼️ Alinhamento com tua identidade atual</li>
-          </ul>
-        </>
-      ),
-      prerequisites:
-        "Precisas ter um site online ou em desenvolvimento. A partir disso, analiso os pontos de melhoria.",
+      details: [
+        {
+          iconDetails: "🔍",
+          text: "Análise de usabilidade, contraste e hierarquia visual do site atual.",
+          title: "Diagnóstico",
+        },
+        {
+          iconDetails: "🎨",
+          text: "Redesenho parcial ou total da interface sem perder tua essência.",
+          title: "Interface",
+        },
+        {
+          iconDetails: "⚡",
+          text: "Código ajustado ou refeito com foco em performance e responsividade.",
+          title: "Código",
+        },
+        {
+          iconDetails: "📐",
+          text: "Espaçamento, tipografia, leitura... todos os detalhes que fazem diferença.",
+          title: "Ajustes",
+        },
+        {
+          iconDetails: "🖼️",
+          text: "Garantia de alinhamento visual com a tua marca ou projeto atual.",
+          title: "Identidade",
+        },
+      ],
+
+      prerequisites: <>Se já tens um site, analiso o que pode ser melhorado.</>,
+
       audience: "🔁 Projetos que precisam evoluir visual ou funcionalmente",
       price: "💶 a partir de 400€",
       time: "📅 5 a 9 dias úteis",
-      cta: (
-        <>
-          <a
-            href={`https://wa.me/351937287597?text=${encodeURIComponent(
-              `Olá! Gostaria de saber mais sobre o serviço avulso de ${`Assistência Sênior Diária`} oferecido pela Gestos Amáveis.`
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-verde-petroleo text-secundario px-4 py-2 rounded-full font-semibold text-sm hover:brightness-105 transition"
-            role="button"
-            tabIndex={0}
-            aria-label="Quero este apoio"
-            onKeyPress={(e) => {
-              if (e.key === "Enter" || e.key === " ") e.target.click();
-            }}
-          >
-            👉 Quero melhorar meu site sem começar do zero
-          </a>
-        </>
-      ),
+      placeholder:
+        "Descreve brevemente o que gostavas de melhorar (design, performance, clareza...)",
     },
   ];
 
   // Open modal and scroll to details
-  const [modalOpen, setModalOpen] = React.useState(false);
-  const [selectedCard, setSelectedCard] = React.useState(null);
+  const [selectedService, setselectedService] = useState(false);
+  const formRef = useRef(null);
 
+  // Função para scrollar para o formulário quando um serviço for selecionado
+  const handleScrollToForm = (card) => {
+    setselectedService(card);
+    setTimeout(() => {
+      if (formRef.current) {
+        formRef.current?.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Atraso para garantir que o estado foi atualizado
+  };
   // (Removed unused handleFindOutMore function)
   const handleCardClick = (card) => {
-    setSelectedCard(card);
-    setModalOpen(true);
+    setselectedService(card);
     // Scroll to the modal details section
     setTimeout(() => {
       const detailsSection = document.getElementById("modal-details-section");
@@ -231,64 +247,14 @@ function Services() {
     }, 100);
   };
 
-  // Modal component
-  const Modal = ({ open, onClose, card }) => {
-    if (!open || !card) return null;
-    return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative bg-white rounded-2xl shadow-lg max-w-md w-full p-6 animate-fadeIn">
-          <button
-            className="absolute top-3 right-4 text-2xl text-verde-petroleo hover:text-secundario"
-            onClick={onClose}
-            aria-label="Fechar modal"
-            type="button"
-          >
-            ×
-          </button>
-          <div className="flex flex-col">
-            <div className="mb-4 flex items-center justify-center text-center">
-              {card.icon}
-            </div>
-            <h3 className="text-lg font-semibold mb-2 items-start justify-center text-start">
-              {card.title}
-            </h3>
-            <p className="text-gray-600 mb-4 items-start justify-center text-start">
-              {card.descModal}
-            </p>
-            <div
-              id="modal-details-section"
-              className="items-start justify-center text-start"
-            >
-              {card.details}
-            </div>
-            <h3 className="text-lg font-semibold mb-2 items-start justify-center text-start">
-              O que preciso de ti para começar:
-            </h3>
-            <p className="text-gray-600 mb-4 items-start justify-center text-start">
-              {card.prerequisites}
-            </p>
-            <small className="mb-4 text-sm text-gray-700text-start">
-              <>
-                {card.time} <br />
-                {card.price} <br />
-                {card.audience} <br />
-              </>
-            </small>
-            {card.cta}
-          </div>
-        </div>
-      </div>
-    );
-  };
-
   const Card = ({ icon, title, desc, linkText, tag }) => (
-    <div className="relative max-w-xs h-full border border-solid border-gray-400 rounded-2xl p-4 flex flex-col justify-between transition-all duration-500 col-span-12 xl:p-7 lg:col-span-3 md:col-span-6 border-l-4 border-l-primario">
+    <div className="relative max-w-xs h-full border border-solid border-gray-400 bg-white rounded-2xl p-4 flex flex-col justify-between transition-all duration-500 col-span-12 xl:p-7 lg:col-span-3 md:col-span-6 border-l-4 border-l-primario">
       <span
-        className={`absolute top-2 right-2 ${tag.cor} text-xs font-semibold pr-4 py-1 rounded flex items-end justify-end text-end `}
+        className={`absolute top-2 right-2 ${tag.cor} text-xs font-semibold pl-2 pr-2 py-1 rounded flex items-center justify-end text-end gap-1 `}
       >
-        {`${tag.label}`}
+        {tag.minicon} {`${tag.label}`}
       </span>
-      <div className="mb-6 w-16 h-16 rounded-full bg-white flex items-center justify-center">
+      <div className="mb-6 w-16 h-16 rounded-full bg-secundario flex items-center justify-center">
         {icon}
       </div>
       <h4 className="text-base font-semibold text-gray-900 mb-2 transition-all duration-500">
@@ -341,7 +307,7 @@ function Services() {
             <div className="flex flex-col items-center justify-center text-center">
               <div className="flex flex-col items-center justify-center p-2 text-terciario">
                 <h1 className="text-5xl mb-4 mt-2 tracking-wide leading-10 font-medium text-black/90">
-                  Serviços
+                  Como posso ajudar a tua marca?
                 </h1>
                 <p className="text-2xl font-light text-[#0e101199]">
                   <strong>
@@ -380,7 +346,7 @@ function Services() {
             {cardsTop.map((card, idx) => (
               <div
                 key={idx}
-                onClick={() => handleCardClick(card)}
+                onClick={() => handleScrollToForm(card)}
                 className="cursor-pointer"
                 tabIndex={0}
                 role="button"
@@ -393,13 +359,172 @@ function Services() {
               </div>
             ))}
           </div>
+        </div>
 
-          {/* Modal for card details */}
-          <Modal
-            open={modalOpen}
-            onClose={() => setModalOpen(false)}
-            card={selectedCard}
-          />
+        {/* Formulário */}
+        <div>
+          {selectedService && (
+            <>
+              <div ref={formRef} className="text-left container mx-auto py-2">
+                <span className="text-xs sm:text-sm text-secundario  font-semibold text-start block mb-2 uppercase tracking-wide">
+                  Detalhes do serviço
+                </span>
+
+                {/* Título, subtítulo e Descrição */}
+                <div className="mb-10 sm:mb-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                  <div className="flex flex-col items-start justify-center flex-1">
+                    <h2 className="text-xl sm:text-3xl md:text-4xl text-left font-medium text-gray-900 leading-tight">
+                      {selectedService?.title}
+                    </h2>
+                    <p className="mt-6 mb-2 text-base max-w-xl lg:text-lg text-left text-slate-500 font-Satoshi leading-relaxed text-balance">
+                      {selectedService?.desc}
+                    </p>
+                    {selectedService?.time} <br />
+                    {selectedService?.price}
+                    <br />
+                    {selectedService?.audience}
+                  </div>
+
+                  <a
+                    href="https://wa.link/7e3xwn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-secundario mb-6 w-16 h-16 rounded-full shadow-sm font-semibold hover:brightness-105 flex items-center justify-center gap-1 transition-all duration-500 ring-white ring-inset ring-2 ring-transparent"
+                    role="button"
+                    aria-label="Explorar mais no WhatsApp"
+                  >
+                    {selectedService?.icon}
+                  </a>
+                </div>
+              </div>
+              <div class="py-8 bg-white">
+                <div
+                  class={`mx-auto grid  ${
+                    selectedService?.details.length === 4
+                      ? "md:grid-cols-4"
+                      : "md:grid-cols-5"
+                  } gap-7 text-center`}
+                >
+                  {selectedService?.details.map((item, idx) => (
+                    <>
+                      <div className="flex flex-col text-center items-center gap-1">
+                        <div
+                          className="w-20 h-20 rounded-full mb-3 flex items-center justify-center"
+                          style={{
+                            backgroundColor:
+                              idx === 0
+                                ? "#F1EFFD"
+                                : idx === 1
+                                ? "#FEE7E7"
+                                : idx === 2
+                                ? "#FFF3E4"
+                                : idx === 3
+                                ? "#E6F4FF"
+                                : idx === 4
+                                ? "#E6FFFA"
+                                : "#F0F9FF",
+                          }}
+                        >
+                          <div className="text-3xl">{item.iconDetails}</div>
+                        </div>
+                        <ul className="text-lg font-semibold mb-2 text-gray-700">
+                          <li
+                            key={idx}
+                            className="flex gap-1 items-center justify-center"
+                          >
+                            <span>{item.title}</span>
+                          </li>
+                        </ul>
+                        <p>{item.text}</p>
+                      </div>
+                    </>
+                  ))}
+                </div>
+              </div>
+
+              {/* Título + descrição */}
+              <div className="container mx-auto mt-6 py-10 flex flex-col items-center justify-center text-center">
+                <h2 className="text-base sm:text-2xl md:text-3xl font-bold text-gray-900">
+                  {selectedService?.titleForm}
+                </h2>
+                <p className="mt-3 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-slate-600">
+                  {selectedService?.prerequisites}
+                </p>
+              </div>
+
+              <div className="text-left container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                <div>
+                  <form
+                    method="POST"
+                    encType="multipart/form-data"
+                    className="space-y-6 sm:space-y-10 px-4 sm:px-16 lg:px-20 "
+                  >
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {/* Primeiro Nome e Último Nome */}
+                      <div className="flex flex-col gap-1">
+                        <label className="text-sm font-medium text-gray-700">
+                          Nome Completo <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          name="primeiroNome"
+                          placeholder="Nome Completo"
+                          required
+                          className="w-full border outline-none focus:border-secundario hover:border-secundario rounded-md px-4 py-2 transition duration-500"
+                        />
+                      </div>
+
+                      {/* E-mail */}
+                      <div className="flex flex-col gap-1">
+                        <label className="text-sm font-medium text-gray-700">
+                          E-mail <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="E-mail"
+                          required
+                          pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com)$"
+                          className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500"
+                          title="O e-mail deve terminar com @gmail.com, @hotmail.com ou @outlook.com"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Mensagem */}
+                    <div className="flex flex-col gap-1">
+                      <label className="text-sm font-medium text-gray-700">
+                        Mensagem <span className="text-red-500">*</span>
+                      </label>
+                      <textarea
+                        placeholder={selectedService?.placeholder}
+                        name="message"
+                        rows="4"
+                        required
+                        className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500 resize-none"
+                        aria-label="Mensagem"
+                      ></textarea>
+                    </div>
+
+                    {/* Botão de Envio */}
+                    <div className="flex flex-col items-center justify-center mt-6">
+                      <button
+                        type="submit"
+                        className="w-fit bg-secundario text-white py-4 px-10 rounded-md transition-colors duration-500  hover:bg-secundario/90 focus:outline-none focus:ring-2 focus:ring-secundario focus:ring-opacity-50 shadow-md "
+                        aria-label="Enviar Candidatura"
+                      >
+                        Enviar mensagem
+                      </button>
+                      <small className="py-10 text-sm">
+                        🕓 Responderei em até 24h úteis. Preferes falar direto?
+                        Usa o botão de WhatsApp.
+                      </small>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </GlobalContainer>
     </section>

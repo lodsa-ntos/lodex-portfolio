@@ -9,7 +9,9 @@ import "react-toastify/dist/ReactToastify.css";
 import Academico from "./pages/projects/Academico";
 import SobreMim from "./pages/sobre/SobreMim";
 import Services from "./pages/services/Services";
+import Blog from "./pages/blog/Blog";
 import GlobalProject from "./pages/projects/GlobalProject";
+import Whatsapp from "./utils/Whatsapp";
 
 function App() {
   return (
@@ -20,10 +22,12 @@ function App() {
           <Route path="/academico" element={<Academico />} />
           <Route path="/sobremim" element={<SobreMim />} />
           <Route path="/servicos" element={<Services />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/projetos" element={<GlobalProject />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+      <Whatsapp />
     </ErrorBoundary>
   );
 }

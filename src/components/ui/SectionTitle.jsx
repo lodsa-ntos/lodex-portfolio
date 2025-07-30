@@ -24,8 +24,8 @@ function SectionTitle({ align = "center" }) {
         <span className="text-secundario">.</span>
       </h2>
       <p className="mt-6 md:text-lg font-medium text-[#4b5563] lg:text-gray-500 text-base whitespace-nowrap">
-        Não prometo tudo.{" "} Mas tudo o que prometo, 
-        <strong className="text-secundario"> entrego</strong>.
+        Não prometo tudo. {" "}Mas o que prometo{" "}, 
+        <strong className="text-secundario"> eu entrego</strong>.
       </p>
     </section>
   );

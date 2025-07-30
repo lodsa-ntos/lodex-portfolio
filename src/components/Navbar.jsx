@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import GlobalContainer from "../utils/GlobalContainer";
 import logo from "../assets/logo/lodexstudio-logo.svg";
+import logo2 from "../assets/logo/lodexstudio-logo-white.svg";
 import { LiaLanguageSolid } from "react-icons/lia";
 import { IoArrowForward } from "react-icons/io5";
 import { GrLanguage } from "react-icons/gr";
@@ -11,6 +12,7 @@ import { FaGithub } from "react-icons/fa";
 import { VscSymbolInterface } from "react-icons/vsc";
 
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
   // Social links data for easier reuse and maintainability
   const socialLinks = [
     {
@@ -34,9 +36,9 @@ function Navbar() {
   ];
 
   // Use React state to control dropdown visibility
-  const [dropdownOpen, setDropdownOpen] = React.useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   // Add language state for PT/EN toggle
-  const [language, setLanguage] = React.useState("pt-pt");
+  const [language, setLanguage] = useState("pt-pt");
 
   // Function to handle dropdown menu toggle
   const toggleDropdown = (e) => {
@@ -45,7 +47,7 @@ function Navbar() {
   };
 
   // Function to close dropdown menu when clicking outside
-  React.useEffect(() => {
+  useEffect(() => {
     const handleClickOutside = (event) => {
       if (
         !event.target.closest("#dropdownDivider") &&
@@ -73,7 +75,7 @@ function Navbar() {
 
   // Focus trap for dropdown menu
   const dropdownRef = React.useRef(null);
-  React.useEffect(() => {
+  useEffect(() => {
     if (dropdownOpen && dropdownRef.current) {
       const firstFocusable = dropdownRef.current.querySelector(
         'a, button, [tabindex]:not([tabindex="-1"])'
@@ -82,32 +84,66 @@ function Navbar() {
     }
   }, [dropdownOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav
-      className="fixed top-0 left-0 right-0 h-16 md:h-[80px] xl:h-[88px] flex items-center z-[100] transition-all duration-500"
       aria-label="Main navigation"
+      className={`fixed top-0 left-0 right-0 h-16 md:h-[80px] xl:h-[88px] flex items-center z-[100] transition-all duration-500
+        ${
+          scrolled
+            ? "bg-secundario shadow-md text-terciario"
+            : "bg-transparent text-white"
+        }`}
     >
       <GlobalContainer>
         <div className="relative flex items-center justify-between w-full h-full">
           {/* Left side - slogan */}
           <div className="hidden lg:flex items-start lg:flex-col text-left">
-            <p className="text-xs xlplus:mt-6 lg:mt-3 text-gray-800 font-medium leading-4 mb-1 uppercase tracking-wide transition-all duration-500">
-              <strong>Frontend Developer</strong> <br />  focado em experiências <br /> simples, úteis e escaláveis.
+            <p
+              className={`text-xs xlplus:mt-6 lg:mt-3 font-medium leading-4 mb-1 uppercase tracking-wide transition-all duration-500
+                ${scrolled ? "text-white" : "text-gray-800"}
+              `}
+            >
+              <strong>Frontend Developer</strong> <br /> focado em experiências{" "}
+              <br /> simples, úteis e escaláveis.
             </p>
-            <small className="flex justify-start contrast-100 text-green-500 gap-2 tracking-wide transition-all duration-500">
-              <VscSymbolInterface  className="size-5"/> 
+            <small className={`flex justify-start contrast-100 ${ scrolled ?'text-green-400' : 'text-green-500' } gap-2 tracking-wide transition-all duration-500`}>
+              <VscSymbolInterface className="size-5" />
               Aberto a colaborações
-              </small>
+            </small>
           </div>
 
           {/* Logo center */}
           <div className="flex items-center lg:absolute lg:left-1/2 lg:-translate-x-1/2 transition-all duration-500">
-            <a href="/" className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded" tabIndex={0} aria-label="Página inicial lodex.studio">
-              <img
-                src={logo}
-                alt="lodex.studio logo"
-                className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto max-w-[180px] object-contain flex items-center justify-center"
-              />
+            <a
+              href="/"
+              className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
+              tabIndex={0}
+              aria-label="Página inicial lodex.studio"
+            >
+              {scrolled ? (
+                <img
+                  src={logo2}
+                  alt="lodex.studio logo"
+                  className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto max-w-[180px] object-contain flex items-center justify-center"
+                />
+              ) : (
+                <img
+                  src={logo}
+                  alt="lodex.studio logo"
+                  className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto max-w-[180px] object-contain flex items-center justify-center"
+                />
+              )}
             </a>
           </div>
 
@@ -126,9 +162,14 @@ function Navbar() {
                   tabIndex={0}
                 >
                   {React.createElement(icon, {
-                    className: `w-6 h-6 relative z-10 fill-terciario transition-all duration-500 ${hoverClass}`,
-                    'aria-hidden': "true",
-                    focusable: "false"
+                    className: `w-6 h-6 relative z-10 
+                    ${scrolled
+                      ? 'fill-white'
+                      : 'fill-terciario '
+                    }
+                    transition-all duration-500 ${hoverClass}`,
+                    "aria-hidden": "true",
+                    focusable: "false",
                   })}
                 </a>
               ))}
@@ -140,7 +181,9 @@ function Navbar() {
                 id="dropdownDividerButton"
                 onClick={toggleDropdown}
                 onKeyDown={handleDropdownKeyDown}
-                className={`text-terciario hover:text-terciario transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded ${dropdownOpen ? "ring-2 ring-primario" : ""}`}
+                className={`${ scrolled ? 'text-white hover:text-gray-300' : 'text-terciario'} transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-secundario rounded ${
+                  dropdownOpen ? "ring-2 ring-secundario" : ""
+                }`}
                 aria-haspopup="true"
                 aria-expanded={dropdownOpen}
                 aria-controls="dropdownDivider"
@@ -211,7 +254,7 @@ function Navbar() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/blog"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                       role="menuitem"
                       tabIndex={dropdownOpen ? 0 : -1}
@@ -275,7 +318,10 @@ function Navbar() {
                     tabIndex={dropdownOpen ? 0 : -1}
                   >
                     <span className="w-7 h-7 flex items-center justify-center rounded-full bg-blue-50 hover:bg-blue-100 py-2">
-                      <PiRocketLaunchDuotone className="fill-secundario size-4" aria-hidden="true" />
+                      <PiRocketLaunchDuotone
+                        className="fill-secundario size-4"
+                        aria-hidden="true"
+                      />
                     </span>{" "}
                     Iniciar projeto <IoArrowForward aria-hidden="true" />
                   </a>

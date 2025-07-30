@@ -24,7 +24,7 @@ function HeroSection() {
           className="bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
           aria-label="Explorar projetos"
         >
-          <a href="#projetos" className="flex items-center justify-center gap-1"><FaLaptopCode className="text-green-400" /> Ver trabalhos</a>
+          <a href="#projetos" className="flex items-center justify-center gap-1"><FaLaptopCode className="text-green-400" /> Ver projetos</a>
         </button>
 
         <button
