@@ -10,13 +10,24 @@ import { GrValidate } from "react-icons/gr";
 import { MdOutlinePersonPin } from "react-icons/md";
 import { MdWeb } from "react-icons/md";
 import { PiTreeStructureDuotone } from "react-icons/pi";
+import { GiTakeMyMoney } from "react-icons/gi";
+import { SiLibreofficewriter } from "react-icons/si";
+import { BubblyLink } from "../../library/BubblyLink";
 import { toast } from "react-toastify";
 
 function Services() {
   const cardsTop = [
     {
       icon: <RiPagesLine className="size-10 text-white" />,
-      title: "Landing pages sob medida",
+      title: (
+        <>
+          Landing pages sob medida <br />{" "}
+          <small className="text-sm flex items-center justify-start mt-1 gap-1">
+            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 300€
+          </small>
+        </>
+      ),
+      titleFunction: "Landing pages sob medida → a partir de 300€",
       titleForm: "O que preciso para estruturar a tua landing…",
       desc: "Para quem precisa comunicar uma ideia com impacto e clareza. Direto ao ponto.",
       descModal:
@@ -57,16 +68,33 @@ function Services() {
         </>
       ),
       audience: "👥 freelancers, criadores e ideias em fase inicial",
-      price: "💶 a partir de 300€",
-      time: "📅 3 a 5 dias úteis",
+      price: (
+        <p className="flex-row items-center justify-center text-start">
+          📄 O valor "<strong>a partir de 300€</strong>" refere-se à estrutura
+          base do serviço.
+          <br />
+          💡 O preço final depende do número de seções, funcionalidades extra e
+          do nível de preparação do conteúdo. <br />
+          Vamos alinhar juntos de forma transparente. <br />
+        </p>
+      ),
+      time: "📅 5 a 7 dias úteis",
       placeholder:
         "Descreve a tua ideia, desafio ou o que tens em mente. Vale tudo, mesmo que ainda não esteja claro.",
     },
     {
       icon: <CgWebsite className="size-10 text-white" />,
-      title: "Website completo",
+      title: (
+        <>
+          Website completo <br />{" "}
+          <small className="text-sm flex items-center justify-start mt-1 gap-1">
+            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 600€
+          </small>
+        </>
+      ),
+      titleFunction: "Website completo → a partir de 600€",
       titleForm: "Vamos estruturar o teu site…",
-      desc: "Do zero, com identidade — sem templates, site institucional ou pessoal com estrutura sólida",
+      desc: "Do zero, com identidade — sem templates, site institucional ou pessoal com estrutura sólida.",
       descModal:
         "Um site institucional ou pessoal com estrutura sólida, visual limpo e navegação fluida.",
       linkText: "Ver detalhes",
@@ -113,16 +141,34 @@ function Services() {
 
       audience:
         "🏢 Profissionais, negócios locais, freelancers, marcas pessoais",
-      price: "💶 a partir de 600€",
-      time: "📅 10 a 15 dias úteis",
+      price: (
+        <p className="flex-row items-center justify-center text-start">
+          📄 O valor "<strong>a partir de 600€</strong>" refere-se à estrutura
+          base do serviço.
+          <br />
+          💡 O preço final varia conforme o número de páginas, integração de
+          funcionalidades (ex: blog, CMS) e se já tiveres conteúdo definido.{" "}
+          <br />
+          Tudo é alinhado com clareza desde o início.
+        </p>
+      ),
+      time: "📅 3 a 4 semanas úteis",
       placeholder:
         "Tens alguma ideia das páginas necessárias? Já tens identidade visual? (ex: Home, Sobre, Contato...)",
     },
     {
       icon: <FaPortrait className="size-10 text-white" />,
-      title: "Portfólio com presença",
+      title: (
+        <>
+          Portfólio com presença <br />{" "}
+          <small className="text-sm flex items-center justify-start mt-1 gap-1">
+            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 450€
+          </small>
+        </>
+      ),
+      titleFunction: "Portfólio com presença → a partir de 450€",
       titleForm: "O que preciso de ti para começar:",
-      desc: "Mostra o teu trabalho com estrutura, ritmo e identidade. Destaque para o trabalho e trajetória",
+      desc: "Mostra o teu trabalho com estrutura, ritmo e identidade. Destaque para o trabalho e trajetória.",
       descModal:
         "Um portfólio profissional que destaca tua trajetória, projetos e visão com impacto e clareza.",
       linkText: "Ver detalhes",
@@ -167,14 +213,31 @@ function Services() {
       ),
 
       audience: "🧑‍🎨 Designers, devs, freelancers, criadores independentes",
-      price: "💶 a partir de 500€",
-      time: "📅 8 a 12 dias úteis",
+      price: (
+        <p className="flex-row items-center justify-center text-start">
+          📄 O valor "<strong>a partir de 450€</strong>" refere-se à estrutura
+          base do serviço.
+          <br />
+          💡 O preço pode variar conforme a quantidade de projetos, nível de
+          orientação necessária para bio, e ajustes visuais específicos. <br />
+          Vamos montar com ritmo, clareza e identidade.
+        </p>
+      ),
+      time: "📅 2 a 3 semanas úteis",
       placeholder:
         "Fala um pouco sobre os teus projetos, referências ou onde já expuseste o teu trabalho. Links úteis como GitHub, Behance ou Instagram também ajudam.",
     },
     {
       icon: <MdOutlineDesignServices className="size-10 text-white" />,
-      title: "Redesign funcional",
+      title: (
+        <>
+          Redesign funcional <br />{" "}
+          <small className="text-sm flex items-center justify-start gap-1 mt-1">
+            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 300€
+          </small>
+        </>
+      ),
+      titleFunction: "Redesign funcional → a partir de 300€",
       titleForm: "Para começamos o redesign…",
       desc: "Para quem já tem algo online, mas quer mais clareza, performance ou presença sem perder tua essência.",
       descModal:
@@ -216,8 +279,17 @@ function Services() {
       prerequisites: <>Se já tens um site, analiso o que pode ser melhorado.</>,
 
       audience: "🔁 Projetos que precisam evoluir visual ou funcionalmente",
-      price: "💶 a partir de 400€",
-      time: "📅 5 a 9 dias úteis",
+      price: (
+        <p className="flex-row items-center justify-center text-start">
+          📄 O valor "<strong>a partir de 300€</strong>" refere-se ao redesenho
+          visual e melhorias básicas.
+          <br />
+          💡 Pode variar caso precise de novo código, reformulação completa ou
+          identidade visual. <br />A análise é feita com base no que já tens
+          online.
+        </p>
+      ),
+      time: "📅 2 a 3 semanas úteis",
       placeholder:
         "Descreve brevemente o que gostavas de melhorar (design, performance, clareza...)",
     },
@@ -369,16 +441,20 @@ function Services() {
                     href="#projetos"
                     className="flex items-center justify-center gap-1"
                   >
-                    <FaRocketchat className="text-green-400" /> Quero conversar
+                    <SiLibreofficewriter className="text-green-400" /> Preencher
+                    formulário
                   </a>
                 </button>
 
-                <button
+                <BubblyLink
+                  to="/projetos"
+                  colorStart="#004AAD"
+                  colorEnd="#FFFFFF"
                   className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-md shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center gap-1 transition-all duration-500"
                   aria-label="Falar comigo"
                 >
                   <TbFileTypePdf className="text-[#F40F02]" /> Ver portfólio
-                </button>
+                </BubblyLink>
               </div>
             </div>
           </div>
@@ -418,14 +494,13 @@ function Services() {
                 <div className="mb-10 sm:mb-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                   <div className="flex flex-col items-start justify-center flex-1">
                     <h2 className="text-xl sm:text-3xl md:text-4xl text-left font-medium text-gray-900 leading-tight">
-                      {selectedService?.title}
+                      {selectedService?.titleFunction}
                     </h2>
                     <p className="mt-6 mb-2 text-base max-w-xl lg:text-lg text-left text-slate-500 font-Satoshi leading-relaxed text-balance">
                       {selectedService?.desc}
                     </p>
                     {selectedService?.time} <br />
                     {selectedService?.price}
-                    <br />
                     {selectedService?.audience}
                   </div>
 
@@ -450,36 +525,39 @@ function Services() {
                   } gap-7 text-center`}
                 >
                   {selectedService?.details.map((item, idx) => (
-                    <div key={idx} className="flex flex-col text-center items-center gap-1">
-                        <div
-                          className="w-20 h-20 rounded-full mb-3 flex items-center justify-center"
-                          style={{
-                            backgroundColor:
-                              idx === 0
-                                ? "#F1EFFD"
-                                : idx === 1
-                                ? "#FEE7E7"
-                                : idx === 2
-                                ? "#FFF3E4"
-                                : idx === 3
-                                ? "#E6F4FF"
-                                : idx === 4
-                                ? "#E6FFFA"
-                                : "#F0F9FF",
-                          }}
-                        >
-                          <div className="text-3xl">{item.iconDetails}</div>
-                        </div>
-                        <ul className="text-lg font-semibold mb-2 text-gray-700">
-                          <li
-                            key={idx}
-                            className="flex gap-1 items-center justify-center"
-                          >
-                            <span>{item.title}</span>
-                          </li>
-                        </ul>
-                        <p>{item.text}</p>
+                    <div
+                      key={idx}
+                      className="flex flex-col text-center items-center gap-1"
+                    >
+                      <div
+                        className="w-20 h-20 rounded-full mb-3 flex items-center justify-center"
+                        style={{
+                          backgroundColor:
+                            idx === 0
+                              ? "#F1EFFD"
+                              : idx === 1
+                              ? "#FEE7E7"
+                              : idx === 2
+                              ? "#FFF3E4"
+                              : idx === 3
+                              ? "#E6F4FF"
+                              : idx === 4
+                              ? "#E6FFFA"
+                              : "#F0F9FF",
+                        }}
+                      >
+                        <div className="text-3xl">{item.iconDetails}</div>
                       </div>
+                      <ul className="text-lg font-semibold mb-2 text-gray-700">
+                        <li
+                          key={idx}
+                          className="flex gap-1 items-center justify-center"
+                        >
+                          <span>{item.title}</span>
+                        </li>
+                      </ul>
+                      <p>{item.text}</p>
+                    </div>
                   ))}
                 </div>
               </div>
