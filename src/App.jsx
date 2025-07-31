@@ -11,6 +11,7 @@ import SobreMim from "./pages/sobre/SobreMim";
 import Services from "./pages/services/Services";
 import Blog from "./pages/blog/Blog";
 import GlobalProject from "./pages/projects/GlobalProject";
+ import Conversar from "./pages/chat/conversar";
 import Whatsapp from "./utils/Whatsapp";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/servicos" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/projetos" element={<GlobalProject />} />
+          <Route path="/conversar" element={<Conversar />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
