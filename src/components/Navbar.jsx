@@ -9,6 +9,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { VscSymbolInterface } from "react-icons/vsc";
 import { FaLinkedinIn } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 import { BubblyLink } from "../library/BubblyLink";
 import { useLocation } from "react-router-dom";
 
@@ -50,9 +51,7 @@ function Navbar() {
     { label: "Sobre mim", to: "/sobremim" },
   ];
 
-  // Use React state to control dropdown visibility
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  // Add language state for PT/EN toggle
   const [language, setLanguage] = useState("pt-pt");
 
   // Function to handle dropdown menu toggle
@@ -233,21 +232,25 @@ function Navbar() {
                 aria-controls="dropdownDivider"
                 tabIndex={0}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-7 h-7"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
+                {dropdownOpen ? (
+                  <IoClose className="w-7 h-7"/>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-7 h-7"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16m-7 6h7"
+                    />
+                  </svg>
+                )}
                 <span className="sr-only">Abrir menu</span>
               </button>
 

@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "formidable": "^3.5.4",
+    "fs": "^0.0.1-security",
     "i18next": "^25.3.2",
+    "nodemailer": "^7.0.5",
+    "process": "^0.11.10",
     "react": "^19.1.0",
     "react-bubbly-transitions": "^1.0.1",
     "react-dom": "^19.1.0",
