@@ -437,13 +437,15 @@ function Services() {
                   className="bg-primario font-semibold text-white py-3 px-4 rounded-md shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
                   aria-label="Explorar projetos"
                 >
-                  <a
-                    href="#projetos"
+                  <BubblyLink
+                  to="/conversar"
+                  colorStart="#004AAD"
+                  colorEnd="#FFFFFF"
                     className="flex items-center justify-center gap-1"
                   >
                     <SiLibreofficewriter className="text-green-400" /> Preencher
                     formulário
-                  </a>
+                  </BubblyLink>
                 </button>
 
                 <BubblyLink
