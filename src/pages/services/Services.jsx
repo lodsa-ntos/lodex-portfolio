@@ -10,6 +10,7 @@ import { GrValidate } from "react-icons/gr";
 import { MdOutlinePersonPin } from "react-icons/md";
 import { MdWeb } from "react-icons/md";
 import { PiTreeStructureDuotone } from "react-icons/pi";
+import { toast } from "react-toastify";
 
 function Services() {
   const cardsTop = [
@@ -225,6 +226,11 @@ function Services() {
   // Open modal and scroll to details
   const [selectedService, setselectedService] = useState(false);
   const formRef = useRef(null);
+  // Estado para controlar e mostrar o formulário para preenchimento - Candidaturas
+  const [sending, setSending] = useState(false);
+  const [nomeCompleto, setnomeCompleto] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   // Função para scrollar para o formulário quando um serviço for selecionado
   const handleScrollToForm = (card) => {
@@ -295,6 +301,50 @@ function Services() {
       </a>
     </div>
   );
+
+  // Função para enviar o formulário
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+
+    const formData = new FormData(e.target);
+    formData.append("funcao", selectedService);
+
+    // Certifica que o campo de ficheiro é anexado corretamente
+    const fileInput = e.target.elements.cvFile;
+    if (fileInput && fileInput.files && fileInput.files[0]) {
+      formData.set("cvFile", fileInput.files[0]);
+    }
+
+    try {
+      const response = await fetch("/api/send-cv", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        toast.success(
+          "Candidatura enviada com sucesso! Obrigado, entraremos em contacto em breve."
+        );
+        setselectedService(false);
+
+        // Limpa os campos do formulário
+        setnomeCompleto("");
+        setEmail("");
+        setMessage("");
+      } else {
+        toast.error("Erro ao enviar candidatura. Por favor, tente novamente.");
+        setselectedService(false);
+      }
+    } catch (error) {
+      console.error("Erro ao enviar a candidatura:", error);
+      toast.error(
+        "Erro inesperado. Tente mais tarde. Se o problema persistir, contacte-nos."
+      );
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <section
@@ -457,6 +507,7 @@ function Services() {
                   <form
                     method="POST"
                     encType="multipart/form-data"
+                    onSubmit={handleSubmit}
                     className="space-y-6 sm:space-y-10 px-4 sm:px-16 lg:px-20 "
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -468,7 +519,9 @@ function Services() {
                         <input
                           type="text"
                           name="primeiroNome"
+                          value={nomeCompleto}
                           placeholder="Nome Completo"
+                          onChange={(e) => setnomeCompleto(e.target.value)}
                           required
                           className="w-full border outline-none focus:border-secundario hover:border-secundario rounded-md px-4 py-2 transition duration-500"
                         />
@@ -482,6 +535,8 @@ function Services() {
                         <input
                           type="email"
                           name="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                           placeholder="E-mail"
                           required
                           pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com)$"
@@ -498,6 +553,8 @@ function Services() {
                       </label>
                       <textarea
                         placeholder={selectedService?.placeholder}
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                         name="message"
                         rows="4"
                         required
@@ -506,12 +563,24 @@ function Services() {
                       ></textarea>
                     </div>
 
+                    {/* Mensagem de Espera */}
+                    {sending && (
+                      <p
+                        className="text-center text-gray-500"
+                        role="status"
+                        aria-live="polite"
+                      >
+                        A enviar mensagem, por favor aguarde...
+                      </p>
+                    )}
+
                     {/* Botão de Envio */}
                     <div className="flex flex-col items-center justify-center mt-6">
                       <button
                         type="submit"
                         className="w-fit bg-secundario text-white py-4 px-10 rounded-md transition-colors duration-500  hover:bg-secundario/90 focus:outline-none focus:ring-2 focus:ring-secundario focus:ring-opacity-50 shadow-md "
                         aria-label="Enviar Candidatura"
+                        disabled={sending}
                       >
                         Enviar mensagem
                       </button>
