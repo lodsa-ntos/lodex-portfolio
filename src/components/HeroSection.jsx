@@ -24,7 +24,12 @@ function HeroSection() {
           className="bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
           aria-label="Explorar projetos"
         >
-          <a href="#projetos" className="flex items-center justify-center gap-1"><FaLaptopCode className="text-green-400" /> Ver projetos</a>
+          <a
+            href="#projetos"
+            className="flex items-center justify-center gap-1"
+          >
+            <FaLaptopCode className="text-green-400" /> Ver projetos
+          </a>
         </button>
 
         <button
@@ -48,12 +53,20 @@ function HeroSection() {
             className="hidden lg:block absolute w-80 mt-4 md:mt-6 xl:mt-8 h-60 left-2/4 transform -translate-x-full -translate-y-36 -rotate-6 scale-90 z-0 transition-all duration-500 hover:scale-[1.03]"
             aria-hidden="true"
           >
-            <img
-              src="images/herosection/cards/8.svg"
-              alt=""
-              className="rounded-xl shadow-lg"
-              tabIndex={-1}
-            />
+            <a
+              href="https://www.gestosamaveis.pt/sobre-nos"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={0}
+              aria-label="Visite o site Gestos Amáveis (abre em nova aba)"
+            >
+              <img
+                src="images/herosection/cards/8.svg"
+                alt=""
+                className="rounded-xl shadow-lg"
+                tabIndex={-1}
+              />
+            </a>
           </div>
 
           {/* Center Card */}
@@ -88,12 +101,20 @@ function HeroSection() {
             className="hidden lg:block absolute w-80 h-60 mt-4 md:mt-6 xl:mt-8 right-2/4 -translate-y-36 transform translate-x-[365px] rotate-6 scale-90 z-0 hover:scale-[1.03] transition-all duration-500"
             aria-hidden="true"
           >
-            <img
-              src="images/herosection/cards/7.svg"
-              alt=""
-              className="rounded-xl shadow-lg"
-              tabIndex={-1}
-            />
+            <a
+              href="https://www.gestosamaveis.pt/servicos-avulso"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={0}
+              aria-label="Visite o site Gestos Amáveis (abre em nova aba)"
+            >
+              <img
+                src="images/herosection/cards/7.svg"
+                alt=""
+                className="rounded-xl shadow-lg"
+                tabIndex={-1}
+              />
+            </a>
           </div>
         </div>
       </div>

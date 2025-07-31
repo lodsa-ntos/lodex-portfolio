@@ -10,8 +10,8 @@ function FooterSection() {
         <div className="sm:flex text-center items-center justify-between">
           {/* Logo */}
           <div className="flex flex-col items-center sm:items-start cursor-pointer">
-            <a
-              href="#home"
+            <BubblyLink
+              to="/"
               className="flex items-center space-x-2 hover:scale-105 hover:brightness-110 transition-all duration-500"
               aria-label="Ir para a página inicial"
             >
@@ -23,7 +23,7 @@ function FooterSection() {
               <span className="text-lg tracking-wide font-Satoshi font-bold transition-opacity text-secundario">
                 LodeX Studio
               </span>
-            </a>
+            </BubblyLink>
           </div>
 
           {/* Links */}

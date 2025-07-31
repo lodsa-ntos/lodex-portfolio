@@ -170,8 +170,8 @@ function Navbar() {
 
           {/* Logo center */}
           <div className="flex items-center lg:absolute lg:left-1/2 lg:-translate-x-1/2 transition-all duration-500">
-            <a
-              href="/"
+            <BubblyLink
+              to="/"
               className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
               tabIndex={0}
               aria-label="Página inicial lodex.studio"
@@ -189,7 +189,7 @@ function Navbar() {
                   className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto max-w-[180px] object-contain flex items-center justify-center"
                 />
               )}
-            </a>
+            </BubblyLink>
           </div>
 
           {/* Right side - Social & Hamburger Menu */}
