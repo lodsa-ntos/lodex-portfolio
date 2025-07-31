@@ -8,6 +8,7 @@ export type BubblyLinkProps = {
   children: ReactNode;
   colorStart?: string;
   colorEnd?: string;
+  className?: string;
   duration?: number;
 };
 
@@ -16,19 +17,18 @@ export const BubblyLink: FC<BubblyLinkProps> = ({
   children,
   colorStart = "#004AAD",
   colorEnd = "#ffffff",
+  className = "",
   duration = 1250,
 }) => {
   const navigate = useNavigate();
 
-  const handleClick = (e: MouseEvent<HTMLButtonElement> | undefined) => {
+  const handleClick = (e: MouseEvent<HTMLAnchorElement> | undefined) => {
     e?.preventDefault();
 
     if (
       !document.getElementById("react-bubbly-transitions__bubbles") &&
       window.location.pathname !== to
     ) {
-      // change the url in address bar
-      window.history.pushState("", "", to);
 
       // get access to wave container
       const container = createRoot(
@@ -45,7 +45,10 @@ export const BubblyLink: FC<BubblyLinkProps> = ({
       );
 
       // do the route change
-      setTimeout(() => navigate(to), duration / 2); // half total animation
+      setTimeout(() => {
+        navigate(to);
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }, duration / 2); // half total animation
 
       // hide the waves
       setTimeout(() => container.unmount(), duration); // total animation
@@ -53,14 +56,16 @@ export const BubblyLink: FC<BubblyLinkProps> = ({
   };
 
   return (
-    <button
-      type="button"
+    <a
+      href={to}
+      onClick={handleClick}
       className={`react-bubbly-transitions__bubbly-link ${
         window.location.pathname === to ? "active" : ""
-      }`}
-      onClick={handleClick}
+      } ${ className ?? ""}`}
+      role="menuitem"
+      tabIndex={0}
     >
       {children}
-    </button>
+    </a>
   );
 };

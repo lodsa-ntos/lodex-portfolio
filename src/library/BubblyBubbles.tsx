@@ -1,5 +1,4 @@
 import { FC } from "react";
-import "./styles.css";
 
 type Props = {
   colorStart: string;

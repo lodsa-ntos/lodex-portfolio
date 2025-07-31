@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import GlobalContainer from "../utils/GlobalContainer";
 import logo from "../assets/logo/lodexstudio-logo.svg";
 import logo2 from "../assets/logo/lodexstudio-logo-white.svg";
-import { LiaLanguageSolid } from "react-icons/lia";
 import { IoArrowForward } from "react-icons/io5";
 import { GrLanguage } from "react-icons/gr";
 import { PiRocketLaunchDuotone } from "react-icons/pi";
 import { FaInstagram } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { VscSymbolInterface } from "react-icons/vsc";
 import { FaLinkedinIn } from "react-icons/fa";
+import { BubblyLink } from "../library/BubblyLink";
+import { useLocation } from "react-router-dom";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,13 +26,19 @@ function Navbar() {
       href: "https://github.com/lodsa-ntos",
       label: "GitHub Lodex Studio (abre em nova aba)",
       icon: FaGithub,
-      hoverClass: `${scrolled ? "hover:fill-gray-950 hover:scale-105" : "fill-gray-600 hover:fill-gray-950 hover:scale-105"}`,
+      hoverClass: `${
+        scrolled
+          ? "hover:fill-gray-950 hover:scale-105"
+          : "fill-gray-600 hover:fill-gray-950 hover:scale-105"
+      }`,
     },
     {
       href: "https://www.linkedin.com/in/lodney-santos/",
       label: "Linkedin (abre em nova aba)",
       icon: FaLinkedinIn,
-      hoverClass: `${scrolled ? "hover:scale-105" : "hover:fill-primario hover:scale-105"}`,
+      hoverClass: `${
+        scrolled ? "hover:scale-105" : "hover:fill-primario hover:scale-105"
+      }`,
     },
   ];
 
@@ -75,15 +81,31 @@ function Navbar() {
   };
 
   // Focus trap for dropdown menu
+  {/**
+    I adjusted the focus behaviour in the dropdown menu so that it respects the current page. Previously, the focus always went to the first item (“Home”), which confused users and disrupted the expected flow of keyboard navigation. Now, the focus goes directly to the item corresponding to the active route, using useLocation() to keep the visual and logical context synchronised.
+    */}
   const dropdownRef = React.useRef(null);
+  const location = useLocation();
   useEffect(() => {
     if (dropdownOpen && dropdownRef.current) {
-      const firstFocusable = dropdownRef.current.querySelector(
-        'a, button, [tabindex]:not([tabindex="-1"])'
+      const currentPath = location.pathname;
+
+      const activeItem = dropdownRef.current.querySelector(
+        `[href="${currentPath}]`
       );
-      firstFocusable?.focus();
+
+      if (activeItem && activeItem instanceof HTMLElement) {
+        activeItem.focus();
+      } else {
+        const fallback = dropdownRef.current.querySelector(
+          'a, button, [tabindex]:not([tabindex="-1"])'
+        );
+        if (fallback instanceof HTMLElement) {
+          fallback?.focus();
+        }
+      }
     }
-  }, [dropdownOpen]);
+  }, [dropdownOpen, location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -176,7 +198,7 @@ function Navbar() {
                 </a>
               ))}
             </div>
-            
+
             {/* Hamburger Menu Icon */}
             <div className="relative inline-flex flex-wrap items-center transition-all duration-500">
               <button
@@ -227,54 +249,59 @@ function Navbar() {
                   aria-labelledby="dropdownDividerButton"
                 >
                   <li>
-                    <a
-                      href="/"
+                    <BubblyLink
+                      to="/"
+                       colorStart="#004AAD" colorEnd="#FFFFFF"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                       role="menuitem"
                       tabIndex={dropdownOpen ? 0 : -1}
                     >
                       Home
-                    </a>
+                    </BubblyLink>
                   </li>
                   <li>
-                    <a
-                      href="/projetos"
+                    <BubblyLink
+                    colorStart="#004AAD" colorEnd="#FFFFFF"
+                      to="/projetos"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                       role="menuitem"
                       tabIndex={dropdownOpen ? 0 : -1}
                     >
                       Projetos
-                    </a>
+                    </BubblyLink>
                   </li>
                   <li>
-                    <a
-                      href="/servicos"
+                    <BubblyLink
+                    colorStart="#004AAD" colorEnd="#FFFFFF"
+                      to="/servicos"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                       role="menuitem"
                       tabIndex={dropdownOpen ? 0 : -1}
                     >
                       Serviços
-                    </a>
+                    </BubblyLink>
                   </li>
                   <li>
-                    <a
-                      href="/blog"
+                    <BubblyLink
+                    colorStart="#004AAD" colorEnd="#FFFFFF"
+                      to="/blog"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                       role="menuitem"
                       tabIndex={dropdownOpen ? 0 : -1}
                     >
                       Blog
-                    </a>
+                    </BubblyLink>
                   </li>
                   <li>
-                    <a
-                      href="/sobremim"
+                    <BubblyLink
+                    colorStart="#004AAD" colorEnd="#FFFFFF"
+                      to="/sobremim"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                       role="menuitem"
                       tabIndex={dropdownOpen ? 0 : -1}
                     >
                       Sobre mim
-                    </a>
+                    </BubblyLink>
                   </li>
 
                   <li className="block lg:hidden">

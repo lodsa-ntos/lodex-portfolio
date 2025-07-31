@@ -11,7 +11,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   min-height: 100%;
   height: auto;
   overflow-x: hidden;
@@ -41,7 +42,7 @@ html {
 }
 
 .text-shadow-lg-title {
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 992px) {
@@ -74,7 +75,7 @@ html {
 }
 
 .swiper-pagination-bullet-active {
-  background: #2D68C4 !important;
+  background: #004aad !important;
 }
 
 .swiper-slide.swiper-slide-active > .slide_active\:border-indigo-600 {
@@ -89,24 +90,24 @@ html {
 
 /* Scrollbar Customization */
 ::-webkit-scrollbar {
-    width: 7px;
+  width: 7px;
 }
 
 /* Fundo da barra */
 ::-webkit-scrollbar-track {
-    background: #f6f6f6;
-    border-radius: 5px;
+  background: #f6f6f6;
+  border-radius: 5px;
 }
 
 /* Cor da barra do scroll */
 ::-webkit-scrollbar-thumb {
-    background: #2D68C4;
-    border-radius: 5px;
+  background: #004aad;
+  border-radius: 5px;
 }
 
 /* Quando o rato passa por cima */
 ::-webkit-scrollbar-thumb:hover {
-    background: #2D68C4;
+  background: #004aad;
 }
 
 @media (max-width: 575.98px) {
@@ -119,3 +120,99 @@ html {
     -ms-overflow-style: none;
   }
 }
+
+@keyframes in-keyframes {
+  0% {
+    opacity: 0;
+    translate: 0 100%;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.animate-in {
+  animation-name: in-keyframes;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+/* wave link styles */
+body .react-bubbly-transitions__bubbly-link {
+  outline: none;
+}
+
+body .react-bubbly-transitions__bubbly-link.active {
+  position: relative;
+  color: #004aad;
+}
+
+body .react-bubbly-transitions__bubbly-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 3px;
+  background: #004aad;
+}
+
+#react-bubbly-transitions__bubbles {
+  --size: 200vw;
+}
+
+@media only screen and (min-width: 768px) {
+  #react-bubbly-transitions__bubbles {
+    --size: 125vw;
+  }
+}
+
+.react-bubbly-transitions__first,
+.react-bubbly-transitions__second {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 50%;
+  translate: -50% 100%;
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  animation-timing-function: ease-in-out;
+}
+
+.react-bubbly-transitions__first {
+  animation-name: bubble-move;
+}
+
+.react-bubbly-transitions__second {
+  animation-name: bubble-second-move;
+}
+
+@keyframes bubble-move {
+  20% {
+    border-radius: var(--size);
+  }
+  50%,
+  100% {
+    translate: -50% 0;
+    border-radius: 0;
+  }
+}
+
+@keyframes bubble-second-move {
+  30% {
+    translate: -50% 100%;
+  }
+  50% {
+    border-radius: var(--size);
+  }
+  100% {
+    translate: -50% 0;
+    border-radius: 0;
+  }
+}
+
+/* bubbly Link */
+
