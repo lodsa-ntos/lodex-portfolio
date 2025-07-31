@@ -138,17 +138,12 @@ html {
   animation-fill-mode: both;
 }
 
-/* wave link styles */
-body .react-bubbly-transitions__bubbly-link {
-  outline: none;
-}
-
-body .react-bubbly-transitions__bubbly-link.active {
+.navbar-links .react-bubbly-transitions__bubbly-link.active {
   position: relative;
   color: #004aad;
 }
 
-body .react-bubbly-transitions__bubbly-link.active::after {
+.navbar-links .react-bubbly-transitions__bubbly-link.active::after {
   content: "";
   position: absolute;
   left: 0;

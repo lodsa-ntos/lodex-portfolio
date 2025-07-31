@@ -1,5 +1,6 @@
 import React from "react";
 import GlobalContainer from "../utils/GlobalContainer";
+import { BubblyLink } from "../library/BubblyLink";
 import logo from "../assets/logo/lodexstudio-logo.svg";
 
 function FooterSection() {
@@ -27,18 +28,18 @@ function FooterSection() {
 
           {/* Links */}
           <div className="grid grid-cols-4 mt-6 md:mt-0  gap-x-4">
-            <a href="/sobremim" className="text-[#4a5565] hover:text-gray-800 transition-colors">
+            <BubblyLink to="/sobremim" className="text-[#4a5565] hover:text-gray-800 transition-colors no-underline">
               sobre
-            </a>
-            <a href="/projetos" className="text-[#4a5565] hover:text-gray-800 transition-colors">
+            </BubblyLink>
+            <BubblyLink to="/projetos" className="text-[#4a5565] hover:text-gray-800 transition-colors">
               portfólio
-            </a>
-            <a href="/servicos" className="text-[#4a5565] hover:text-gray-800 transition-colors">
+            </BubblyLink>
+            <BubblyLink to="/servicos" className="text-[#4a5565] hover:text-gray-800 transition-colors">
               serviços
-            </a>
-            <a href="/blog" className="text-[#4a5565] hover:text-gray-800 transition-colors">
+            </BubblyLink>
+            <BubblyLink to="/blog" className="text-[#4a5565] hover:text-gray-800 transition-colors">
               blog
-            </a>
+            </BubblyLink>
           </div>
         </div>
 

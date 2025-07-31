@@ -42,6 +42,14 @@ function Navbar() {
     },
   ];
 
+  const links = [
+    { label: "Home", to: "/" },
+    { label: "Projetos", to: "/projetos" },
+    { label: "Serviços", to: "/servicos" },
+    { label: "Blog", to: "/blog" },
+    { label: "Sobre mim", to: "/sobremim" },
+  ];
+
   // Use React state to control dropdown visibility
   const [dropdownOpen, setDropdownOpen] = useState(false);
   // Add language state for PT/EN toggle
@@ -55,17 +63,24 @@ function Navbar() {
 
   // Function to close dropdown menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClick = (event) => {
       if (
         !event.target.closest("#dropdownDivider") &&
         !event.target.closest("#dropdownDividerButton")
       ) {
         setDropdownOpen(false);
       }
+
+      if (
+        event.target.closest("#dropdownDivider") &&
+        event.target.closest("[role='menuitem']")
+      ) {
+        setDropdownOpen(false);
+      }
     };
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("click", handleClick);
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("click", handleClick);
     };
   }, []);
 
@@ -81,17 +96,20 @@ function Navbar() {
   };
 
   // Focus trap for dropdown menu
-  {/**
+  {
+    /**
     I adjusted the focus behaviour in the dropdown menu so that it respects the current page. Previously, the focus always went to the first item (“Home”), which confused users and disrupted the expected flow of keyboard navigation. Now, the focus goes directly to the item corresponding to the active route, using useLocation() to keep the visual and logical context synchronised.
-    */}
+    */
+  }
   const dropdownRef = React.useRef(null);
   const location = useLocation();
+  const currentPath = location.pathname;
   useEffect(() => {
     if (dropdownOpen && dropdownRef.current) {
-      const currentPath = location.pathname;
+      currentPath;
 
       const activeItem = dropdownRef.current.querySelector(
-        `[href="${currentPath}]`
+        `[href="${currentPath}"]`
       );
 
       if (activeItem && activeItem instanceof HTMLElement) {
@@ -105,7 +123,7 @@ function Navbar() {
         }
       }
     }
-  }, [dropdownOpen, location.pathname]);
+  }, [dropdownOpen, currentPath]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -248,60 +266,26 @@ function Navbar() {
                   className="py-2 text-sm text-gray-700 dark:text-gray-200"
                   aria-labelledby="dropdownDividerButton"
                 >
-                  <li>
-                    <BubblyLink
-                      to="/"
-                       colorStart="#004AAD" colorEnd="#FFFFFF"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
-                      role="menuitem"
-                      tabIndex={dropdownOpen ? 0 : -1}
-                    >
-                      Home
-                    </BubblyLink>
-                  </li>
-                  <li>
-                    <BubblyLink
-                    colorStart="#004AAD" colorEnd="#FFFFFF"
-                      to="/projetos"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
-                      role="menuitem"
-                      tabIndex={dropdownOpen ? 0 : -1}
-                    >
-                      Projetos
-                    </BubblyLink>
-                  </li>
-                  <li>
-                    <BubblyLink
-                    colorStart="#004AAD" colorEnd="#FFFFFF"
-                      to="/servicos"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
-                      role="menuitem"
-                      tabIndex={dropdownOpen ? 0 : -1}
-                    >
-                      Serviços
-                    </BubblyLink>
-                  </li>
-                  <li>
-                    <BubblyLink
-                    colorStart="#004AAD" colorEnd="#FFFFFF"
-                      to="/blog"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
-                      role="menuitem"
-                      tabIndex={dropdownOpen ? 0 : -1}
-                    >
-                      Blog
-                    </BubblyLink>
-                  </li>
-                  <li>
-                    <BubblyLink
-                    colorStart="#004AAD" colorEnd="#FFFFFF"
-                      to="/sobremim"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
-                      role="menuitem"
-                      tabIndex={dropdownOpen ? 0 : -1}
-                    >
-                      Sobre mim
-                    </BubblyLink>
+                  <li className="navbar-links">
+                    {links.map(({ label, to }) => (
+                      <BubblyLink
+                        key={to}
+                        to={to}
+                        colorStart="#004AAD"
+                        colorEnd="#FFFFFF"
+                        className={`
+                        block px-4 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded
+                        ${
+                          currentPath === to
+                            ? "hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600"
+                            : "hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        }`}
+                        role="menuitem"
+                        tabIndex={dropdownOpen ? 0 : -1}
+                      >
+                        {label}
+                      </BubblyLink>
+                    ))}
                   </li>
 
                   <li className="block lg:hidden">
