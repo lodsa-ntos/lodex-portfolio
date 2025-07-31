@@ -310,12 +310,6 @@ function Services() {
     const formData = new FormData(e.target);
     formData.append("funcao", selectedService);
 
-    // Certifica que o campo de ficheiro é anexado corretamente
-    const fileInput = e.target.elements.cvFile;
-    if (fileInput && fileInput.files && fileInput.files[0]) {
-      formData.set("cvFile", fileInput.files[0]);
-    }
-
     try {
       const response = await fetch("/api/send-cv", {
         method: "POST",
@@ -324,7 +318,7 @@ function Services() {
 
       if (response.ok) {
         toast.success(
-          "Candidatura enviada com sucesso! Obrigado, entraremos em contacto em breve."
+          "Mensagem enviada com sucesso! Obrigado, entrarei em contacto em breve."
         );
         setselectedService(false);
 
@@ -333,11 +327,11 @@ function Services() {
         setEmail("");
         setMessage("");
       } else {
-        toast.error("Erro ao enviar candidatura. Por favor, tente novamente.");
+        toast.error("Erro ao enviar mensagem. Por favor, tente novamente.");
         setselectedService(false);
       }
     } catch (error) {
-      console.error("Erro ao enviar a candidatura:", error);
+      console.error("Erro ao enviar a mensagem:", error);
       toast.error(
         "Erro inesperado. Tente mais tarde. Se o problema persistir, contacte-nos."
       );
@@ -447,17 +441,16 @@ function Services() {
                   </a>
                 </div>
               </div>
-              <div class="py-8 bg-white">
+              <div className="py-8 bg-white">
                 <div
-                  class={`mx-auto grid  ${
+                  className={`mx-auto grid  ${
                     selectedService?.details.length === 4
                       ? "md:grid-cols-4"
                       : "md:grid-cols-5"
                   } gap-7 text-center`}
                 >
                   {selectedService?.details.map((item, idx) => (
-                    <>
-                      <div className="flex flex-col text-center items-center gap-1">
+                    <div key={idx} className="flex flex-col text-center items-center gap-1">
                         <div
                           className="w-20 h-20 rounded-full mb-3 flex items-center justify-center"
                           style={{
@@ -487,7 +480,6 @@ function Services() {
                         </ul>
                         <p>{item.text}</p>
                       </div>
-                    </>
                   ))}
                 </div>
               </div>
