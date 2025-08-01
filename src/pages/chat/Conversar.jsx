@@ -117,14 +117,14 @@ function Conversar() {
                           <legend className="flex items-center justify-between py-2 gap-1">
                             Prazo ideal{" "}
                             <span
-                              class="bg-gray-100 text-gray-500 ring-1 ring-gray-500/10 ring-inset text-xs font-medium me-2 px-1.5 py-0.5 
+                              className="bg-gray-100 text-gray-500 ring-1 ring-gray-500/10 ring-inset text-xs font-medium me-2 px-1.5 py-0.5 
                              rounded-full"
                             >
                               opcional
                             </span>
                           </legend>
                           <select
-                            class="select select-bordered ring-1 ring-gray-200 focus:outline-none active:border-secundario active:ring-secundario 
+                            className="select select-bordered ring-1 ring-gray-200 focus:outline-none active:border-secundario active:ring-secundario 
                           focus:ring-secundario hover:ring-secundario transition-all duration-500 rounded-md py-2 w-full"
                           >
                             <option value="" disabled selected>
@@ -147,14 +147,14 @@ function Conversar() {
                           <legend className="flex items-center justify-between py-2 gap-1">
                             Orçamento estimado
                             <span
-                              class="bg-gray-100 text-gray-500 ring-1 ring-gray-500/10 ring-inset text-xs font-medium me-2 px-1.5 py-0.5 
+                              className="bg-gray-100 text-gray-500 ring-1 ring-gray-500/10 ring-inset text-xs font-medium me-2 px-1.5 py-0.5 
                              rounded-full"
                             >
                               opcional
                             </span>
                           </legend>
                           <select
-                            class="select select-bordered ring-1 ring-gray-200 focus:outline-none active:border-secundario active:ring-secundario 
+                            className="select select-bordered ring-1 ring-gray-200 focus:outline-none active:border-secundario active:ring-secundario 
                           focus:ring-secundario hover:ring-secundario transition-all duration-500 rounded-md py-2 w-full"
                           >
                             <option value="" disabled selected>

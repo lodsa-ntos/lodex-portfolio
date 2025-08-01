@@ -313,6 +313,7 @@ function Services() {
       }
     }, 100); // Atraso para garantir que o estado foi atualizado
   };
+
   // (Removed unused handleFindOutMore function)
   const handleCardClick = (card) => {
     setselectedService(card);
@@ -383,7 +384,7 @@ function Services() {
     formData.append("funcao", selectedService);
 
     try {
-      const response = await fetch("/api/send-cv", {
+      const response = await fetch("/api/send-service", {
         method: "POST",
         body: formData,
       });
