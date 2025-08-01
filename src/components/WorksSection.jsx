@@ -70,7 +70,7 @@ function WorksSection() {
           </a>
 
           {/** Card 2 */}
-          <div class="cursor-pointer group relative flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500">
+          <a class="cursor-pointer group relative flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500">
             <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
               {/** Badge */}
               <div relative>
@@ -107,10 +107,10 @@ function WorksSection() {
                 Ver caso de estudo
               </button>
             </div>
-          </div>
+          </a>
 
           {/** Card 3 */}
-          <div class="md:hidden cursor-pointer group relative lg:flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500">
+          <a class="md:hidden cursor-pointer group relative lg:flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500">
             <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
               {/** Badge */}
               <div className="relative">
@@ -148,7 +148,7 @@ function WorksSection() {
                 Ver caso de estudo
               </button>
             </div>
-          </div>
+          </a>
         </div>
       </GlobalContainer>
     </section>

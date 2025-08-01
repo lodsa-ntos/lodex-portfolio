@@ -435,7 +435,7 @@ function Services() {
               </div>
               <div className="flex gap-3 mt-2 transition-all duration-500">
                 <button
-                  className="bg-primario font-semibold text-white py-3 px-4 rounded-md shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
+                  className="bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
                   aria-label="Explorar projetos"
                 >
                   <BubblyLink
@@ -453,7 +453,7 @@ function Services() {
                   to="/projetos"
                   colorStart="#004AAD"
                   colorEnd="#FFFFFF"
-                  className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-md shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center gap-1 transition-all duration-500"
+                  className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center gap-1 transition-all duration-500"
                   aria-label="Falar comigo"
                 >
                   <TbFileTypePdf className="text-[#F40F02]" /> Ver portfólio
