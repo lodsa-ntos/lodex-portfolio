@@ -43,9 +43,9 @@ function Conversar() {
                         </label>
                         <input
                           type="text"
-                          name="primeiroNome"
-                          placeholder="Como te posso chamar?"
+                          name="nomeCompleto"
                           required
+                          placeholder="Como te posso chamar?"
                           className="w-full border outline-none focus:border-secundario hover:border-secundario rounded-md px-4 py-2 transition duration-500"
                         />
                       </div>
@@ -58,8 +58,8 @@ function Conversar() {
                         <input
                           type="email"
                           name="email"
-                          placeholder="teuemail@email.com"
                           required
+                          placeholder="teuemail@email.com"
                           pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com)$"
                           className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500"
                           title="O e-mail deve terminar com @gmail.com, @hotmail.com ou @outlook.com"
@@ -67,7 +67,7 @@ function Conversar() {
                       </div>
                     </div>
 
-                    {/* E-mail */}
+                    {/*  Link de referência ou site atual */}
                     <div className="flex flex-col gap-1">
                       <label className="text-sm font-medium text-gray-700">
                         Link de referência ou site atual{" "}
@@ -79,13 +79,11 @@ function Conversar() {
                         </span>
                       </label>
                       <input
-                        type="email"
-                        name="email"
+                        type="link"
+                        name="link"
                         placeholder="Se já tiveres um site, portfólio ou referência visual, partilha aqui."
-                        required
                         pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com)$"
                         className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500"
-                        title="O e-mail deve terminar com @gmail.com, @hotmail.com ou @outlook.com"
                       />
                     </div>
 
@@ -97,17 +95,19 @@ function Conversar() {
                             <span className="text-red-500">*</span>
                           </legend>
                           <select
-                            class="select select-bordered ring-1 ring-gray-200 focus:outline-none active:border-secundario active:ring-secundario 
+                            name="tipoProjeto"
+                            required
+                            className="select select-bordered ring-1 ring-gray-200 focus:outline-none active:border-secundario active:ring-secundario 
                           focus:ring-secundario hover:ring-secundario transition-all duration-500 rounded-md py-2 w-full"
                           >
-                            <option disabled selected>
+                            <option value="" disabled selected>
                               Seleciona um tipo de projeto
                             </option>
-                            <option>Landing Page</option>
-                            <option>Website Completo</option>
-                            <option>Portfólio</option>
-                            <option>Redesign</option>
-                            <option>Outro / Ainda não sei</option>
+                            <option value="landing">Landing Page</option>
+                            <option value="website">Website Completo</option>
+                            <option value="portfolio">Portfólio</option>
+                            <option value="redesign">Redesign</option>
+                            <option value="outro">Outro / Ainda não sei</option>
                           </select>
                         </fieldset>
                       </div>
@@ -127,13 +127,17 @@ function Conversar() {
                             class="select select-bordered ring-1 ring-gray-200 focus:outline-none active:border-secundario active:ring-secundario 
                           focus:ring-secundario hover:ring-secundario transition-all duration-500 rounded-md py-2 w-full"
                           >
-                            <option disabled selected>
+                            <option value="" disabled selected>
                               Seleciona prazo ideal
                             </option>
-                            <option>Não tenho pressa</option>
-                            <option>Dentro de 2 semanas</option>
-                            <option>Dentro de 1 mês</option>
-                            <option>Tenho urgência</option>
+                            <option value="naoTenhoPressa">
+                              Não tenho pressa
+                            </option>
+                            <option value="2semanas">
+                              Dentro de 2 semanas
+                            </option>
+                            <option value="1mes">Dentro de 1 mês</option>
+                            <option value="urgencia">Tenho urgência</option>
                           </select>
                         </fieldset>
                       </div>
@@ -153,14 +157,14 @@ function Conversar() {
                             class="select select-bordered ring-1 ring-gray-200 focus:outline-none active:border-secundario active:ring-secundario 
                           focus:ring-secundario hover:ring-secundario transition-all duration-500 rounded-md py-2 w-full"
                           >
-                            <option disabled selected>
+                            <option value="" disabled selected>
                               Seleciona orçamento estimado
                             </option>
-                            <option>Ainda não sei</option>
-                            <option>Até 300€</option>
-                            <option>300€ – 500€</option>
-                            <option>500€ – 800€</option>
-                            <option>800€ ou mais</option>
+                            <option value="aindaNaoSei">Ainda não sei</option>
+                            <option value="valor1">Até 300€</option>
+                            <option value="valor1">300€ – 500€</option>
+                            <option value="valor1">500€ – 800€</option>
+                            <option value="valor1">800€ ou mais</option>
                           </select>
                         </fieldset>
                       </div>
