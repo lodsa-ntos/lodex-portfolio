@@ -1,15 +1,18 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import GlobalContainer from "../../utils/GlobalContainer";
 import { PiCodeBlockBold } from "react-icons/pi";
 import { toast } from "react-toastify";
 
 function Conversar() {
-  const formRef = useRef(null);
   // Estado para controlar e mostrar o formulário para preenchimento - Candidaturas
   const [sending, setSending] = useState(false);
   const [nomeCompleto, setnomeCompleto] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [referencia, setReferencia] = useState("");
+  const [tipoProjeto, setTipoProjeto] = useState("");
+  const [prazoIdeal, setPrazoIdeal] = useState("");
+  const [orcamentoEstimado, setOrcamentoEstimado] = useState("");
+  const [messagem, setMessagem] = useState("");
 
   // Função para enviar o formulário
   const handleStartProject = async (e) => {
@@ -19,12 +22,12 @@ function Conversar() {
     const formData = new FormData(e.target);
 
     // Valida os campos obrigatórios
-    const nome = formData.get("nome")?.trim();
+    const nome = formData.get("nomeCompleto")?.trim();
     const email = formData.get("email")?.trim();
-    const message = formData.get("message")?.trim();
+    const messagem = formData.get("messagem")?.trim();
     const tipoProjeto = formData.get("tipoProjeto");
 
-    if (!nome || !email || !message || !tipoProjeto) {
+    if (!nome || !email || !messagem || !tipoProjeto) {
       toast.error("Por favor, preenche todos os campos obrigatórios.");
       setSending(false);
       return;
@@ -44,12 +47,17 @@ function Conversar() {
         // Limpa os campos do formulário
         setnomeCompleto("");
         setEmail("");
-        setMessage("");
+        setReferencia("");
+        setTipoProjeto("");
+        setPrazoIdeal("");
+        setOrcamentoEstimado("");
+        setMessagem("");
 
         // Limpa os campos não-controlados
         e.target.reset();
       } else {
-        toast.error("Erro ao enviar mensagem. Por favor, tente novamente.");
+        const data = await response.json();
+        toast.error(data.error || "Erro ao enviar mensagem.");
       }
     } catch (error) {
       console.error("Erro ao enviar a mensagem:", error);
@@ -90,6 +98,7 @@ function Conversar() {
                   <form
                     method="POST"
                     encType="multipart/form-data"
+                    onSubmit={handleStartProject}
                     className="space-y-6 sm:space-y-10  container mx-auto px-4 sm:px-6 lg:px-32"
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -102,6 +111,9 @@ function Conversar() {
                         <input
                           type="text"
                           name="nomeCompleto"
+                          value={nomeCompleto}
+                          id="nomeCompleto"
+                          onChange={(e) => setnomeCompleto(e.target.value)}
                           required
                           placeholder="Como te posso chamar?"
                           className="w-full border outline-none focus:border-secundario hover:border-secundario rounded-md px-4 py-2 transition duration-500"
@@ -116,6 +128,9 @@ function Conversar() {
                         <input
                           type="email"
                           name="email"
+                          value={email}
+                          id="email"
+                          onChange={(e) => setEmail(e.target.value)}
                           required
                           placeholder="teuemail@email.com"
                           pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com)$"
@@ -137,8 +152,11 @@ function Conversar() {
                         </span>
                       </label>
                       <input
-                        type="link"
-                        name="link"
+                        type="referencia"
+                        name="referencia"
+                        value={referencia}
+                        id="referencia"
+                        onChange={(e) => setReferencia(e.target.value)}
                         placeholder="Se já tiveres um site, portfólio ou referência visual, partilha aqui."
                         pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com)$"
                         className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500"
@@ -155,6 +173,9 @@ function Conversar() {
                           <select
                             name="tipoProjeto"
                             required
+                            id="tipoProjeto"
+                            value={tipoProjeto}
+                            onChange={(e) => setTipoProjeto(e.target.value)}
                             className="select select-bordered ring-1 ring-gray-200 focus:outline-none active:border-secundario active:ring-secundario 
                           focus:ring-secundario hover:ring-secundario transition-all duration-500 rounded-md py-2 w-full"
                           >
@@ -182,6 +203,10 @@ function Conversar() {
                             </span>
                           </legend>
                           <select
+                            id="prazoIdeal"
+                            name="prazoIdeal"
+                            value={prazoIdeal}
+                            onChange={(e) => setPrazoIdeal(e.target.value)}
                             className="select select-bordered ring-1 ring-gray-200 focus:outline-none active:border-secundario active:ring-secundario 
                           focus:ring-secundario hover:ring-secundario transition-all duration-500 rounded-md py-2 w-full"
                           >
@@ -212,6 +237,12 @@ function Conversar() {
                             </span>
                           </legend>
                           <select
+                            id="orcamento"
+                            name="orcamentoEstimado"
+                            value={orcamentoEstimado}
+                            onChange={(e) =>
+                              setOrcamentoEstimado(e.target.value)
+                            }
                             className="select select-bordered ring-1 ring-gray-200 focus:outline-none active:border-secundario active:ring-secundario 
                           focus:ring-secundario hover:ring-secundario transition-all duration-500 rounded-md py-2 w-full"
                           >
@@ -235,20 +266,34 @@ function Conversar() {
                       </label>
                       <textarea
                         placeholder="Conta-me onde estás agora. Pode ser só uma ideia vaga, uma necessidade específica ou até uma dúvida. Tudo bem por aqui."
-                        name="message"
+                        name="messagem"
                         rows="4"
-                        required
+                        id="messagem"
+                        value={messagem}
+                        onChange={(e) => setMessagem(e.target.value)}
                         className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500 resize-none"
                         aria-label="Mensagem"
                       ></textarea>
                     </div>
+
+                    {/* Mensagem de Espera */}
+                    {sending && (
+                      <p
+                        className="text-center text-gray-500"
+                        role="status"
+                        aria-live="polite"
+                      >
+                        A enviar mensagem, por favor aguarde...
+                      </p>
+                    )}
 
                     {/* Botão de Envio */}
                     <div className="flex flex-col items-center justify-center mt-6">
                       <button
                         type="submit"
                         className="w-fit bg-secundario text-white py-4 px-10 rounded-md transition-colors duration-500  hover:bg-secundario/90 focus:outline-none focus:ring-2 focus:ring-secundario focus:ring-opacity-50 shadow-md "
-                        aria-label="Enviar Candidatura"
+                        aria-label="Enviar mensagem"
+                        disabled={sending}
                       >
                         Enviar e começar conversa
                       </button>

@@ -652,7 +652,7 @@ function Services() {
                       <button
                         type="submit"
                         className="w-fit bg-secundario text-white py-4 px-10 rounded-md transition-colors duration-500  hover:bg-secundario/90 focus:outline-none focus:ring-2 focus:ring-secundario focus:ring-opacity-50 shadow-md "
-                        aria-label="Enviar Candidatura"
+                        aria-label="Enviar mensagem"
                         disabled={sending}
                       >
                         Enviar mensagem

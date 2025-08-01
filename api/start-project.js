@@ -41,7 +41,7 @@ export default async function handlerProject(req, res) {
         };
 
         // Obtém os valores dos campos, garantindo que são strings
-        const nome = getFieldValue(fields.nome).trim(); 
+        const nomeCompleto = getFieldValue(fields.nomeCompleto).trim(); 
         const email = getFieldValue(fields.email).trim();
         const mensagem = getFieldValue(fields.message).trim();
         const tipoProjeto = getFieldValue(fields.tipoProjeto).trim();
@@ -51,8 +51,7 @@ export default async function handlerProject(req, res) {
         const orcamentoEstimado = orcamentoMap[orcamentoEstimadoRaw] || "-";
 
         // Validação dos campos obrigatórios
-        const name = `${nome}`;
-        if (!name || !email  || !mensagem || !tipoProjeto ) {
+        if (!nomeCompleto || !email  || !mensagem || !tipoProjeto ) {
             return res.status(400).json({ error: "Nome, email, tipo projeto e mensagem são obrigatórios." });
         }
 
@@ -73,20 +72,20 @@ export default async function handlerProject(req, res) {
 
         // Construção do e-mail
         const mailOptions = {
-            from: `"${name} via LodeX Studio" <${process.env.EMAIL_USER}>`,
+            from: `"${nomeCompleto} via LodeX Studio" <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_TO,
             replyTo: email,
             subject: `Estruturação de projeto – ${tipoProjeto || "sem tipo definido" }`,
             html: `
             <div style="font-family: Arial, sans-serif; line-height: 1.6;">
                 <h2>Pedido de Estruturação de Projeto</h2>
-                <p><strong>Nome:</strong> ${nome}</p>
+                <p><strong>Nome:</strong> ${nomeCompleto}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Mensagem:</strong><br>${mensagem}</p>
                 <hr />
                 <p><strong>Tipo de projeto:</strong> ${tipoProjeto || "-"}</p>
                 <p><strong>Prazo ideal:</strong> ${prazoIdeal || "-"}</p>
-                <p><strong>Orçamento estimado:</strong> ${orcamentoEstimado || "-"}</p>
+                <p><strong>Orçamento estimado:</strong> ${orcamentoEstimado}</p>
                 <p><strong>Link de referência:</strong> ${referencia || "-"}</p>
                 <p style="font-size: 12px; color: #999;">Recebido via formulário de estruturação em lodexstudio.com/conversar</p>
             </div>
