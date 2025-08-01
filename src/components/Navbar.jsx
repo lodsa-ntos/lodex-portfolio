@@ -233,7 +233,7 @@ function Navbar() {
                 tabIndex={0}
               >
                 {dropdownOpen ? (
-                  <IoClose className="w-7 h-7"/>
+                  <IoClose className="w-7 h-7" />
                 ) : (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -329,8 +329,10 @@ function Navbar() {
                   </li>
                 </ul>
                 <div className="py-2">
-                  <a
-                    href="#"
+                  <BubblyLink
+                    to="/conversar"
+                    colorStart="#004AAD"
+                    colorEnd="#FFFFFF"
                     className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white hover:scale-105 transition-all duration-500 focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
                     role="menuitem"
                     tabIndex={dropdownOpen ? 0 : -1}
@@ -342,7 +344,7 @@ function Navbar() {
                       />
                     </span>{" "}
                     Iniciar projeto <IoArrowForward aria-hidden="true" />
-                  </a>
+                  </BubblyLink>
                 </div>
               </div>
             </div>

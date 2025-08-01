@@ -70,12 +70,13 @@ function Conversar() {
                     {/* E-mail */}
                     <div className="flex flex-col gap-1">
                       <label className="text-sm font-medium text-gray-700">
-                        Link de referência ou site atual{" "} <span
-                              class="bg-gray-100 text-gray-500 ring-1 ring-gray-500/10 ring-inset text-xs font-medium me-2 px-1.5 py-0.5 
+                        Link de referência ou site atual{" "}
+                        <span
+                          class="bg-gray-100 text-gray-500 ring-1 ring-gray-500/10 ring-inset text-xs font-medium me-2 px-1.5 py-0.5 
                              rounded-full"
-                            >
-                              opcional
-                            </span>
+                        >
+                          opcional
+                        </span>
                       </label>
                       <input
                         type="email"
