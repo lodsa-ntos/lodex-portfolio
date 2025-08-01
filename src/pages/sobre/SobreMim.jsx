@@ -5,8 +5,8 @@ import { MdOutlineDesignServices } from "react-icons/md";
 import { MdImportantDevices } from "react-icons/md";
 import { PiRocketLaunchDuotone } from "react-icons/pi";
 import { VscCompassDot } from "react-icons/vsc";
-import { GiWaxSeal } from "react-icons/gi";
-import { MdCall } from "react-icons/md";
+import { SiLibreofficewriter } from "react-icons/si";
+import { BubblyLink } from "../../library/BubblyLink";
 import me from "../../assets/me/about-photo.svg";
 
 function SobreMim() {
@@ -223,29 +223,41 @@ function SobreMim() {
       {/** Para quem é */}
       <section id="paraqueme" className="py-24 border-b shadow-md bg-gray-50">
         <GlobalContainer>
-          <div className="flex flex-col items-center justify-center mx-auto w-[800px] h-72 bg-primario border rounded-xl">
-            <GiWaxSeal className="size-6 text-green-400" />
-            <p className="text-gray-300 text-sm mb-2 font-medium">
-              Quando a ideia é boa, a execução precisa acompanhar.
-            </p>
-            <h1 className="text-5xl font-medium text-white mb-4">
+          <div className="flex flex-col items-center justify-center mx-auto w-[800px] h-72 rounded-xl">
+            <h1 className="text-3xl font-bold uppercase text-terciario mb-2">
               Bora construir?
             </h1>
+            <p className="text-terciario text-base mb-6 font-regular">
+              Quando a ideia é boa, a execução precisa acompanhar.
+            </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <button
-                className="bg-blue-400 font-semibold text-white border-white py-3 px-3 ring-1 ring-white rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-blue-300 hover:text-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-white hover:scale-105 hover:ring-inset flex items-center justify-center gap-1"
-                aria-label="Explorar projetos"
+              <BubblyLink
+                to="/conversar"
+                colorStart="#004AAD"
+                colorEnd="#FFFFFF"
               >
-                Fazer chamada <MdCall />
-              </button>
+                <button
+                  className="bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-white hover:scale-105 hover:ring-inset flex items-center gap-1"
+                  aria-label="Explorar projetos"
+                >
+                  <SiLibreofficewriter className="text-green-400" />
+                  Preencher formulário
+                </button>
+              </BubblyLink>
 
-              <button
-                className="bg-white font-semibold text-secundario py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-blue-300 hover:text-white transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-white ring-secundario ring-2 hover:scale-105 hover:ring-inset flex items-center gap-1"
-                aria-label="Explorar projetos"
+              <BubblyLink
+                to="/projetos"
+                colorStart="#004AAD"
+                colorEnd="#FFFFFF"
               >
-                👉 Veja os meus projetos
-              </button>
+                <button
+                  className="bg-white font-semibold text-secundario py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-blue-300 hover:text-white transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-white ring-secundario ring-2 hover:scale-105 hover:ring-inset flex items-center gap-1"
+                  aria-label="Explorar projetos"
+                >
+                  👉 Veja os meus projetos
+                </button>
+              </BubblyLink>
             </div>
           </div>
         </GlobalContainer>
