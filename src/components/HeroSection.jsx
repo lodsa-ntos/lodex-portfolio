@@ -3,6 +3,7 @@ import SectionTitle from "../components/ui/SectionTitle";
 import { TbFileTypePdf } from "react-icons/tb";
 import { FaLaptopCode } from "react-icons/fa";
 import { VscSymbolInterface } from "react-icons/vsc";
+import { BubblyLink } from "../library/BubblyLink";
 
 function HeroSection() {
   return (
