@@ -15,6 +15,9 @@ export default async function handler(req, res) {
         return res.status(405).json({ error: "Método não permitido" });
     }
 
+    // Função auxiliar para obter o valor de um campo (não depende dados assincronos)
+    const getFieldValue = (f) => Array.isArray(f) ? f[0] : f;
+
     const form = formidable({ multiples: false, keepExtensions: true });
 
     try {
@@ -26,11 +29,7 @@ export default async function handler(req, res) {
             });
         });
 
-        const [fields, files] = await formParse();
-
-        // Função auxiliar para obter o valor do campo, considerando que pode ser um array
-        // ou um único valor
-        const getFieldValue = (f) => Array.isArray(f) ? f[0] : f;
+        const [fields] = await formParse();
 
         // Obtém os valores dos campos, garantindo que são strings
         const nomeCompleto = getFieldValue(fields.nomeCompleto);
@@ -39,13 +38,11 @@ export default async function handler(req, res) {
         const funcao = getFieldValue(fields.funcao);
 
         // Verifica se o todo os campos obrigatórios foram preenchidos
-        const name = `${nomeCompleto}`;
-        if (!name || !email  || !message ) {
+        if (!nomeCompleto || !email  || !message ) {
             return res.status(400).json({ error: "Todos os campos são obrigatórios" });
         }
 
         console.log("Fields recebidos:", fields);
-        console.log("Files recebidos:", files);
 
         // Configuração do transporte de e-mail
         const transporter = nodemailer.createTransport({
@@ -64,14 +61,13 @@ export default async function handler(req, res) {
             subject: `Nova mensagem de: ${name || " " }`,
             html: `
             <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-              <h2>Está a candidatar-se para: ${funcao}</h2
-                <p><strong>Nome:</strong> ${name}</p>
+                <h2>Está a pedir informações de serviço para: ${funcao || "-"}</h2>
+                <p><strong>Nome:</strong> ${nomeCompleto}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Mensagem:</strong><br>${message}</p>
                 <hr/>
-                
                 <p style="font-size: 12px; color: #888;">
-                    Recebido via <a href="https://www.lodexstudio.com/servicos"> LodeX Studio - ${funcao}</a>
+                    Recebido via <a href="https://www.lodexstudio.com/servicos">Lodex Studio – ${funcao || "-"}</a>
                 </p>
             </div>`,
         };
