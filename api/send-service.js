@@ -81,11 +81,11 @@ export default async function handler(req, res) {
             await transporter.sendMail(mailOptions);
             return res.status(200).json({ 
                 success: true, 
-                message: "Candidatura enviada com sucesso!" 
+                message: "Mensagem enviada com sucesso!" 
             });
         } catch (error) {
             console.error("Erro ao enviar o e-mail:", error);
-            return res.status(500).json({ error: "Erro ao enviar a candidatura" });
+            return res.status(500).json({ error: "Erro ao enviar a mensagem" });
         }
     } catch (err) {
         console.log("Erro ao processar o formulário:", err);
