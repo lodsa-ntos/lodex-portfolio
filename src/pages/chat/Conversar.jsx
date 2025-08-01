@@ -1,8 +1,66 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import GlobalContainer from "../../utils/GlobalContainer";
 import { PiCodeBlockBold } from "react-icons/pi";
+import { toast } from "react-toastify";
 
 function Conversar() {
+  const formRef = useRef(null);
+  // Estado para controlar e mostrar o formulário para preenchimento - Candidaturas
+  const [sending, setSending] = useState(false);
+  const [nomeCompleto, setnomeCompleto] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  // Função para enviar o formulário
+  const handleStartProject = async (e) => {
+    e.preventDefault();
+    setSending(true);
+
+    const formData = new FormData(e.target);
+
+    // Valida os campos obrigatórios
+    const nome = formData.get("nome")?.trim();
+    const email = formData.get("email")?.trim();
+    const message = formData.get("message")?.trim();
+    const tipoProjeto = formData.get("tipoProjeto");
+
+    if (!nome || !email || !message || !tipoProjeto) {
+      toast.error("Por favor, preenche todos os campos obrigatórios.");
+      setSending(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/start-project", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        toast.success(
+          "Mensagem enviada com sucesso! Obrigado, entrarei em contacto em breve."
+        );
+
+        // Limpa os campos do formulário
+        setnomeCompleto("");
+        setEmail("");
+        setMessage("");
+
+        // Limpa os campos não-controlados
+        e.target.reset();
+      } else {
+        toast.error("Erro ao enviar mensagem. Por favor, tente novamente.");
+      }
+    } catch (error) {
+      console.error("Erro ao enviar a mensagem:", error);
+      toast.error(
+        "Erro inesperado. Tente mais tarde. Se o problema persistir, contacte-nos."
+      );
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <>
       <section id="conversar" className="relative min-h-screen">
@@ -161,10 +219,10 @@ function Conversar() {
                               Seleciona orçamento estimado
                             </option>
                             <option value="aindaNaoSei">Ainda não sei</option>
-                            <option value="valor1">Até 300€</option>
-                            <option value="valor1">300€ – 500€</option>
-                            <option value="valor1">500€ – 800€</option>
-                            <option value="valor1">800€ ou mais</option>
+                            <option value="ate300">Até 300€</option>
+                            <option value="entre300e500">300€ – 500€</option>
+                            <option value="entre500e800">500€ – 800€</option>
+                            <option value="mais800">800€ ou mais</option>
                           </select>
                         </fieldset>
                       </div>

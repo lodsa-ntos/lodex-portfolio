@@ -32,14 +32,23 @@ export default async function handlerProject(req, res) {
 
         const [fields] = await formParse();
 
+        const orcamentoMap = {
+            ate300: "Até 300€",
+            entre300e500: "300€ – 500€",
+            entre500e800: "500€ – 800€",
+            mais800: "800€ ou mais",
+            aindaNaoSei: "Ainda não sei"
+        };
+
         // Obtém os valores dos campos, garantindo que são strings
         const nome = getFieldValue(fields.nome).trim(); 
         const email = getFieldValue(fields.email).trim();
         const mensagem = getFieldValue(fields.message).trim();
         const tipoProjeto = getFieldValue(fields.tipoProjeto).trim();
         const prazoIdeal = getFieldValue(fields.prazoIdeal).trim();
-        const orcamentoEstimado = getFieldValue(fields.orcamentoEstimado).trim();
         const referencia = getFieldValue(fields.referencia).trim();
+        const orcamentoEstimadoRaw = getFieldValue(fields.orcamentoEstimado).trim();
+        const orcamentoEstimado = orcamentoMap[orcamentoEstimadoRaw] || "-";
 
         // Validação dos campos obrigatórios
         const name = `${nome}`;
