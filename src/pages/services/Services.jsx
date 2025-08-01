@@ -439,9 +439,9 @@ function Services() {
                   aria-label="Explorar projetos"
                 >
                   <BubblyLink
-                  to="/conversar"
-                  colorStart="#004AAD"
-                  colorEnd="#FFFFFF"
+                    to="/conversar"
+                    colorStart="#004AAD"
+                    colorEnd="#FFFFFF"
                     className="flex items-center justify-center gap-1"
                   >
                     <SiLibreofficewriter className="text-green-400" /> Preencher
@@ -507,16 +507,13 @@ function Services() {
                     {selectedService?.audience}
                   </div>
 
-                  <a
-                    href="https://wa.link/7e3xwn"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <div
                     className="bg-secundario mb-6 w-16 h-16 rounded-full shadow-sm font-semibold hover:brightness-105 flex items-center justify-center gap-1 transition-all duration-500 ring-white ring-inset ring-2 ring-transparent"
                     role="button"
                     aria-label="Explorar mais no WhatsApp"
                   >
                     {selectedService?.icon}
-                  </a>
+                  </div>
                 </div>
               </div>
               <div className="py-8 bg-white">
