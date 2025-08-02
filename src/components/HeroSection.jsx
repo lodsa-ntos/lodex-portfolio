@@ -92,11 +92,10 @@ function HeroSection() {
           </div>
 
           {/* Mobile Image & CTA */}
-          <div className="lg:hidden absolute z-50 w-80 h-60 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform rotate-0 scale-100 hover:scale-[1.03] transition-all duration-500 flex items-center justify-center">
+          <div className="lg:hidden absolute z-50 w-96 md:w-[500px] h-60 left-1/2 top-1/2 -translate-x-[199px] -translate-y-20 sm:-translate-x-1/2 sm:-translate-y-28 transform rotate-0 scale-100 hover:scale-[1.03] transition-all duration-500 flex items-center justify-center">
             <img
               src="images/herosection/banners/mockup-cliente-1.svg"
               alt="Projeto Gestos Amáveis"
-              className="mb-4"
             />
           </div>
 

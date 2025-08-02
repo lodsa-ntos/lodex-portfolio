@@ -9,7 +9,7 @@ function Whatsapp() {
   if (!allowedPaths.includes(location.pathname)) return null;
 
   return (
-    <div>
+    <div className='hidden md:flex 2xl:flex'>
         <FloatingWhatsApp 
         phoneNumber='+351935895551'
         accountName='LodeX Studio'

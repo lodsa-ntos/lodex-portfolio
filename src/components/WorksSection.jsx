@@ -11,12 +11,12 @@ function WorksSection() {
       <GlobalContainer>
         <div className="flex flex-row items-center justify-center mb-6 gap-x-1">
           {/* Top Line */}
-          <div className="w-full h-[2px] rounded-full bg-lines-color"></div>
+          <div className="w-full mx-auto h-[2px] rounded-full bg-lines-color"></div>
 
           {/* Main title */}
           <h1
             id="projetos"
-            className="text-sm w-full mx-auto uppercase font-bold text-[#777] tracking-wider text-center"
+            className="text-sm whitespace-nowrap px-2 uppercase font-bold text-[#777] tracking-wider text-center"
           >
             O que tenho criado ultimamente
           </h1>
