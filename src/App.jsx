@@ -11,7 +11,7 @@ import SobreMim from "./pages/sobre/SobreMim";
 import Services from "./pages/services/Services";
 import Blog from "./pages/blog/Blog";
 import GlobalProject from "./pages/projects/GlobalProject";
-import Conversar from "./pages/chat/Conversar";
+import Conversar from "./pages/chat/Conversar-TEMP";
 import Whatsapp from "./utils/Whatsapp";
 
 function App() {
