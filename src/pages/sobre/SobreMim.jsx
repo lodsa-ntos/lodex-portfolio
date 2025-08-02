@@ -251,7 +251,7 @@ function SobreMim() {
               </BubblyLink>
 
               <BubblyLink
-                to="/projetos"
+                to="/portfolio"
                 colorStart="#004AAD"
                 colorEnd="#FFFFFF"
               >

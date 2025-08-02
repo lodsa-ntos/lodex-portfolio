@@ -60,7 +60,7 @@ function FooterSection() {
               sobre
             </BubblyLink>
             <BubblyLink
-              to="/projetos"
+              to="/portfolio"
               className="text-[#4a5565] hover:text-gray-800 transition-colors"
             >
               portfólio

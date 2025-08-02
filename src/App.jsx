@@ -24,7 +24,7 @@ function App() {
           <Route path="/sobremim" element={<SobreMim />} />
           <Route path="/servicos" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/projetos" element={<GlobalProject />} />
+          <Route path="/portfolio" element={<GlobalProject />} />
           <Route path="/conversar" element={<Conversar />} />
           <Route path="*" element={<NotFound />} />
         </Route>

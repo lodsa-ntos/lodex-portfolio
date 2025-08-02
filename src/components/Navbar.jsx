@@ -52,7 +52,7 @@ function Navbar() {
 
   const links = [
     { label: "Home", to: "/" },
-    { label: "Projetos", to: "/projetos" },
+    { label: "Portfólio", to: "/portfolio" },
     { label: "Serviços", to: "/servicos" },
     { label: "Blog", to: "/blog" },
     { label: "Sobre mim", to: "/sobremim" },
