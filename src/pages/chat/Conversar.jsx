@@ -71,26 +71,35 @@ function Conversar() {
 
   return (
     <>
-      <section id="conversar" className="relative min-h-screen">
+      <section
+        id="conversar"
+        className="relative min-h-screen transition-all duration-500"
+      > 
         {/* Fundo dividido */}
         <div className="absolute inset-0 ">
-          <div className="h-1/2 bg-[#f2f8fb]">
+          <div className="relative h-1/2 2xl:h-96 bg-[#f2f8fb] flex flex-col items-center justify-center text-center px-4 transition-all duration-500">
             {/* Título e subtítulo */}
-            <div className="mb-10 pt-36">
-              <span className=" text-xl sm:text-3xl md:text-4xl text-gray-900 font-semibold text-center flex mb-2 uppercase tracking-wide items-center justify-center gap-1">
+            <div className="mb-10 pt-24 md:pt-36">
+              <span className=" text-[17px] md:text-3xl xl:text-4xl text-gray-900 font-semibold text-center flex mb-2 uppercase tracking-wide items-center justify-center gap-1">
                 <PiCodeBlockBold className="text-gray-600" /> Vamos estruturar o
                 teu projeto?
               </span>
 
-              <h2 className="text-xs sm:text-lg text-center font-medium text-gray-500 leading-tight">
-                Mesmo que estejas no início ou sem tudo definido, podes começar
-                por aqui. <br />É só preencher o que souberes, o resto alinhamos
-                juntos.
+              <h2 className="text-sm md:text-lg xl:text-xl text-center font-medium text-gray-500 leading-tight">
+                Mesmo que estejas no início ou sem tudo definido,{" "}
+                <br className=" md:hidden" />
+                podes começar por aqui. <br />É só preencher o que souberes,{" "}
+                <br className=" md:hidden" />o resto alinhamos juntos.
               </h2>
+
+              {/* Mensagem Bem-vindo */}
+              <div className="absolute bottom-[-1.25rem] left-1/2 -translate-x-1/2 bg-gray-300 rounded-full px-6 py-2 shadow-lg z-10 text-gray-600 text-sm ring-1 ring-gray-500/10 ring-inset transition-all duration-500">
+                Tu guias, eu estruturo.
+              </div>
             </div>
           </div>
 
-          <div className="h-1/2 py-16 pb-36 bg-white">
+          <div className="h-1/2 py-16 pb-36 bg-white transition-all duration-500">
             <GlobalContainer>
               {/* Formulário */}
               <div>
@@ -99,7 +108,7 @@ function Conversar() {
                     method="POST"
                     encType="multipart/form-data"
                     onSubmit={handleStartProject}
-                    className="space-y-6 sm:space-y-10  container mx-auto px-4 sm:px-6 lg:px-32"
+                    className="space-y-6 sm:space-y-10  container mx-auto px-4 sm:px-6 lg:px-32 transition-all duration-500"
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {/* Primeiro Nome e Último Nome */}
@@ -163,10 +172,10 @@ function Conversar() {
                       />
                     </div>
 
-                    <div className="flex items-start gap-20 justify-start text-sm font-medium text-gray-700 ">
+                    <div className="grid gap-8 md:flex md:items-start xl:gap-20 justify-start text-sm font-medium text-gray-700">
                       <div className="justify-self-center relative w-72 ">
                         <fieldset className="max-w-content gap-2 flex flex-col py-1">
-                          <legend className="flex items-center justify-between py-2 gap-1">
+                          <legend className="flex items-center justify-between py-2 whitespace-nowrap gap-1">
                             Tipo de projeto que procuras
                             <span className="text-red-500">*</span>
                           </legend>
@@ -193,7 +202,7 @@ function Conversar() {
 
                       <div className="justify-self-center relative w-72">
                         <fieldset className="max-w-content gap-2 flex flex-col py-1">
-                          <legend className="flex items-center justify-between py-2 gap-1">
+                          <legend className="flex items-center justify-between py-2 whitespace-nowrap gap-1">
                             Prazo ideal{" "}
                             <span
                               className="bg-gray-100 text-gray-500 ring-1 ring-gray-500/10 ring-inset text-xs font-medium me-2 px-1.5 py-0.5 
@@ -227,7 +236,7 @@ function Conversar() {
 
                       <div className="justify-self-center relative w-72">
                         <fieldset className="max-w-content gap-2 flex flex-col py-1">
-                          <legend className="flex items-center justify-between py-2 gap-1">
+                          <legend className="flex items-center justify-between py-2 whitespace-nowrap gap-1">
                             Orçamento estimado
                             <span
                               className="bg-gray-100 text-gray-500 ring-1 ring-gray-500/10 ring-inset text-xs font-medium me-2 px-1.5 py-0.5 
@@ -265,7 +274,7 @@ function Conversar() {
                         Mensagem <span className="text-red-500">*</span>
                       </label>
                       <textarea
-                        placeholder="Conta-me onde estás agora. Pode ser só uma ideia vaga, uma necessidade específica ou até uma dúvida. Tudo bem por aqui."
+                        placeholder="Conta-me onde estás agora. Pode ser só uma ideia vaga, uma necessidade específica ou até uma dúvida."
                         name="messagem"
                         rows="4"
                         id="messagem"
@@ -300,11 +309,12 @@ function Conversar() {
                     </div>
                   </form>
 
-                  <div className="flex items-center justify-center py-10">
+                  <div className="flex items-center justify-center text-center py-10">
                     <small>
-                      🔒 As tuas informações são usadas apenas para entender e
-                      alinhar o projeto contigo. Sem spam, sem compromisso
-                      automático.
+                      🔒 As tuas informações são usadas apenas para entender{" "}
+                      <br className=" md:hidden" />e alinhar o projeto contigo.{" "}
+                      <br className=" xl:hidden" />
+                      Sem spam, sem compromisso automático.
                     </small>
                   </div>
                 </div>
@@ -312,13 +322,8 @@ function Conversar() {
             </GlobalContainer>
           </div>
         </div>
-
-        {/* Mensagem Bem-vindo */}
-        <div className=" hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-300 rounded-[4rem] p-3 shadow-lg z-10 text-gray-600 ring-1 ring-gray-500/10 ring-inset">
-          Tu guias, eu estruturo.
-        </div>
       </section>
-      <section className="py-52"></section>
+      <section className="py-80 sm:py-36 md:py-36 xl:py-52 2xl:py-0 transition-all duration-500 "></section>
     </>
   );
 }
