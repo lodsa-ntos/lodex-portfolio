@@ -2,8 +2,9 @@ import React from "react";
 import SectionTitle from "../components/ui/SectionTitle";
 import { TbFileTypePdf } from "react-icons/tb";
 import { FaLaptopCode } from "react-icons/fa";
-import { VscSymbolInterface } from "react-icons/vsc";
-import { BubblyLink } from "../library/BubblyLink";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
 
 function HeroSection() {
   return (
@@ -21,8 +22,11 @@ function HeroSection() {
       <SectionTitle id="hero-title" />
 
       <div className="flex flex-row items-center justify-center w-full gap-4 mt-6 px-4 z-10">
-        <button
-          className="bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center justify-center gap-1"
+        <motion.button
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView="show"
+          className="bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center justify-center gap-1"
           aria-label="Explorar projetos"
         >
           <a
@@ -31,17 +35,20 @@ function HeroSection() {
           >
             <FaLaptopCode className="text-green-400" /> Ver projetos
           </a>
-        </button>
+        </motion.button>
 
-        <a
+        <motion.a
+          variants={fadeIn("left", 0.2)}
+          initial="hidden"
+          whileInView="show"
           href="/Lodney Santos_CV_(pt-pt).pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center justify-center gap-1 transition-all duration-500"
+          className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center justify-center gap-1"
           aria-label="Falar comigo"
         >
           <TbFileTypePdf className="text-[#F40F02]" /> Currículo
-        </a>
+        </motion.a>
       </div>
 
       <div className="relative w-full flex justify-center items-center mt-10">
@@ -64,7 +71,10 @@ function HeroSection() {
               tabIndex={0}
               aria-label="Visite o site Gestos Amáveis (abre em nova aba)"
             >
-              <img
+              <motion.img
+                variants={fadeIn("down", 0.2)}
+                initial="hidden"
+                whileInView="show"
                 src="images/herosection/cards/8.svg"
                 alt=""
                 className="rounded-xl shadow-lg"
@@ -83,7 +93,10 @@ function HeroSection() {
               aria-label="Visite o site Gestos Amáveis (abre em nova aba)"
               className="rounded-xl shadow-2xl"
             >
-              <img
+              <motion.img
+                variants={fadeIn("up", 0.2)}
+                initial="hidden"
+                whileInView="show"
                 src="images/herosection/cards/9.svg"
                 alt="Projeto Gestos Amáveis"
                 className="rounded-xl shadow-2xl"
@@ -111,7 +124,10 @@ function HeroSection() {
               tabIndex={0}
               aria-label="Visite o site Gestos Amáveis (abre em nova aba)"
             >
-              <img
+              <motion.img
+                variants={fadeIn("down", 0.2)}
+                initial="hidden"
+                whileInView="show"
                 src="images/herosection/cards/7.svg"
                 alt=""
                 className="rounded-xl shadow-lg"

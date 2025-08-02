@@ -17,7 +17,10 @@ import { fadeIn } from "../utils/motion";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
+
 function Navbar() {
+  const location = useLocation();
+  const [shouldAnimate, setShouldAnimate] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   // Social links data for easier reuse and maintainability
   const socialLinks = [
@@ -105,7 +108,7 @@ function Navbar() {
     */
   }
   const dropdownRef = React.useRef(null);
-  const location = useLocation();
+ 
   const currentPath = location.pathname;
   useEffect(() => {
     if (dropdownOpen && dropdownRef.current) {
@@ -139,7 +142,14 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
+  useEffect(() => {
+    // toda vez que a rota muda, reinicia a animação
+    setShouldAnimate(false);
+    const timeout = setTimeout(() => setShouldAnimate(true), 50);
+    return () => clearTimeout(timeout);
+  }, [location.pathname]);
+
+  return shouldAnimate ? (
     <motion.nav
       variants={fadeIn("down", 0.2)}
       initial="hidden"
@@ -360,7 +370,7 @@ function Navbar() {
         </div>
       </GlobalContainer>
     </motion.nav>
-  );
+  ) : null;;
 }
 
 export default Navbar;

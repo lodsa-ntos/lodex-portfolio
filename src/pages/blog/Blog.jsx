@@ -9,8 +9,10 @@ function Blog() {
     >
       <GlobalContainer>
         <div className="flex flex-col items-center justify-center text-center">
-          <p>Blog</p>
-          <h1 className="text-5xl font-bold -tracking-wide">EM BREVE</h1>
+          <h2 className="text-center text-4xl font-semibold">Conteúdo com propósito. <br className="lg:hidden" />Em construção.</h2>
+          <p className="text-sm text-gray-500 -tracking-wide mt-2">
+            Aqui vou partilhar ideias, reflexões e soluções práticas sobre frontend, design e criação digital.
+          </p>
         </div>
       </GlobalContainer>
     </section>
