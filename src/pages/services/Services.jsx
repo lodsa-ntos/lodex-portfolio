@@ -13,6 +13,7 @@ import { PiTreeStructureDuotone } from "react-icons/pi";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { SiLibreofficewriter } from "react-icons/si";
 import { BubblyLink } from "../../library/BubblyLink";
+import { BsPersonWorkspace } from "react-icons/bs";
 import { toast } from "react-toastify";
 
 function Services() {
@@ -456,7 +457,7 @@ function Services() {
                   className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center gap-1 transition-all duration-500"
                   aria-label="Falar comigo"
                 >
-                  <TbFileTypePdf className="text-[#F40F02]" /> Ver portfólio
+                  <BsPersonWorkspace className="text-indigo-600" /> Ver portfólio
                 </BubblyLink>
               </div>
             </div>

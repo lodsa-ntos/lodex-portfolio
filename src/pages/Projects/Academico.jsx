@@ -13,20 +13,20 @@ import ulht from "../../assets/tech/ulht.svg";
 
 function Academico() {
   const companies = [
-    { Icon: flutter, href: "https://reactjs.org/", title: "Flutter" },
+    { Icon: flutter, href: "https://flutter.dev/", title: "Flutter" },
     {
       Icon: dart,
-      href: "https://tailwindcss.com/",
+      href: "https://dart.dev/",
       title: "Dart",
     },
     {
       Icon: firebase,
-      href: "https://www.uxuidesigner.com/",
+      href: "https://firebase.google.com/?authuser=5&hl=pt-br",
       title: "Firebase",
     },
     {
       Icon: axure,
-      href: "https://www.framer.com/motion/",
+      href: "https://www.axure.com/release-history/rp9",
       title: "Axure RP 9",
     },
   ];

@@ -33,12 +33,15 @@ function HeroSection() {
           </a>
         </button>
 
-        <button
+        <a
+          href="/Lodney Santos_CV_(pt-pt).pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center gap-1 transition-all duration-500"
           aria-label="Falar comigo"
         >
           <TbFileTypePdf className="text-[#F40F02]" /> Currículo
-        </button>
+        </a>
       </div>
 
       <div className="relative w-full flex justify-center items-center mt-10">
