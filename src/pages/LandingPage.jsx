@@ -5,10 +5,14 @@ import ExpertiseSection from "../components/ExpertiseSection";
 import GlobalContainer from "../utils/GlobalContainer";
 import AboutSection from "../components/AboutSection";
 import WorksSection from "../components/WorksSection";
+import { Helmet } from "react-helmet";
 
 function LandingPage() {
   return (
     <>
+    <Helmet>
+            <title>Lodex Studio — Portfólio</title>
+          </Helmet>
       <div className="shadow bg-gradient-to-b from-[#f4f8ff] via-white to-white">
         <SectionContainer>
           <Hero />
