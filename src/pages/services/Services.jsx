@@ -418,7 +418,11 @@ function Services() {
   return (
     <>
       <Helmet>
-        <title>LodeX Studio — Serviços</title>
+        <title>Lodex Studio — Serviços</title>
+        <meta
+          name="description"
+          content="Landing pages, websites completos, portfólios e redesigns. Soluções digitais para marcas pequenas com identidade forte."
+        />
       </Helmet>
       <section
         id="sobremim"

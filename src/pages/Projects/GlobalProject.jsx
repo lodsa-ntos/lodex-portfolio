@@ -174,7 +174,11 @@ function GlobalProject() {
   return (
     <>
       <Helmet>
-        <title>LodeX Studio — Portfólio</title>
+        <title>Lodex Studio — Portfólio</title>
+        <meta
+          name="description"
+          content="Projetos reais e conceitos autorais com foco em clareza, ritmo e estrutura sólida. Veja o que foi criado recentemente."
+        />
       </Helmet>
       <section id="sobremim" className="min-h-[95vh] pt-36 border-b shadow-md">
         <GlobalContainer>

@@ -11,11 +11,11 @@ function LandingPage() {
   return (
     <>
       <Helmet>
-        <title>LodeX Studio | Desenvolvimento Web e UI/UX</title>
+        <title>Lodex Studio | Desenvolvimento web e UI/UX</title>
         <meta
           name="description"
-          content="Portfólio da Lodex Studio. Projetos e serviços de frontend com foco em clareza, estrutura e experiências digitais escaláveis."
-        ></meta>
+          content="Criação de websites modernos, leves e escaláveis. Interfaces funcionais com identidade clara e foco no detalhe."
+        />
       </Helmet>
       <div className="shadow bg-gradient-to-b from-[#f4f8ff] via-white to-white">
         <SectionContainer>
