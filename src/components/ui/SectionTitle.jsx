@@ -35,7 +35,7 @@ function SectionTitle({ align = "center" }) {
             initial="hidden"
             whileInView="show" className="mt-6 md:text-lg font-medium text-[#4b5563] lg:text-gray-500 text-base whitespace-nowrap">
         Não prometo tudo. {" "}Mas o que prometo, 
-        <strong className="text-secundario"> eu entrego</strong>.
+        <strong className="text-secundario"> <br className="md:hidden"/>eu entrego</strong>.
       </motion.p>
     </section>
   );
