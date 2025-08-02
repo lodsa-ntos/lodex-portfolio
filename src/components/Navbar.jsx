@@ -13,6 +13,10 @@ import { IoClose } from "react-icons/io5";
 import { BubblyLink } from "../library/BubblyLink";
 import { useLocation } from "react-router-dom";
 
+import { fadeIn } from "../utils/motion";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   // Social links data for easier reuse and maintainability
@@ -136,9 +140,13 @@ function Navbar() {
   }, []);
 
   return (
-    <nav
+    <motion.nav
+      variants={fadeIn("down", 0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
       aria-label="Main navigation"
-      className={`fixed top-0 left-0 right-0 h-16 md:h-[80px] xl:h-[88px] flex items-center z-[100] transition-all duration-500
+      className={`fixed top-0 left-0 right-0 h-16 md:h-[80px] xl:h-[88px] flex items-center z-[100] leading-relaxed
         ${
           scrolled
             ? "bg-secundario shadow-md text-terciario"
@@ -351,7 +359,7 @@ function Navbar() {
           </div>
         </div>
       </GlobalContainer>
-    </nav>
+    </motion.nav>
   );
 }
 
