@@ -14,6 +14,7 @@ import { BiFilter, BiLinkExternal } from "react-icons/bi";
 import { GrStatusGoodSmall } from "react-icons/gr";
 import ProjectCard from "../../components/ProjectCard";
 import esc from "../../assets/tech/esc.png";
+import { Helmet } from "react-helmet";
 
 function GlobalProject() {
   // eferência ao dropdown
@@ -171,170 +172,176 @@ function GlobalProject() {
   }, [dropdownOpen]);
 
   return (
-    <section id="sobremim" className="min-h-[95vh] pt-36 border-b shadow-md">
-      <GlobalContainer>
-        <span className="text-xs sm:text-sm text-gray-600  font-semibold text-start block mb-2 uppercase tracking-wide">
-          Projectos
-        </span>
+    <>
+      <Helmet>
+        <title>Lodex Studio — Portfólio</title>
+      </Helmet>
+      <section id="sobremim" className="min-h-[95vh] pt-36 border-b shadow-md">
+        <GlobalContainer>
+          <span className="text-xs sm:text-sm text-gray-600  font-semibold text-start block mb-2 uppercase tracking-wide">
+            Projectos
+          </span>
 
-        {/* Título and filter button */}
-        <div className="mb-10 sm:mb-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          {/* Título, subtítulo e Descrição */}
-          <div className="flex flex-col items-start justify-center flex-1">
-            <h2 className="text-xl sm:text-3xl md:text-4xl text-left font-medium text-gray-900 leading-tight">
-              Cada projeto tem
-              <br />
-              <strong>lógica</strong> e <strong>função</strong>.
-            </h2>
-            <p className="mt-6 mb-2 text-base max-w-xl lg:text-lg text-left text-slate-500 font-Satoshi leading-relaxed text-balance">
-              Para comunicar com clareza. Para guiar decisões. <br />
-              Para transformar ideias em experiência digital.
-            </p>
+          {/* Título and filter button */}
+          <div className="mb-10 sm:mb-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            {/* Título, subtítulo e Descrição */}
+            <div className="flex flex-col items-start justify-center flex-1">
+              <h2 className="text-xl sm:text-3xl md:text-4xl text-left font-medium text-gray-900 leading-tight">
+                Cada projeto tem
+                <br />
+                <strong>lógica</strong> e <strong>função</strong>.
+              </h2>
+              <p className="mt-6 mb-2 text-base max-w-xl lg:text-lg text-left text-slate-500 font-Satoshi leading-relaxed text-balance">
+                Para comunicar com clareza. Para guiar decisões. <br />
+                Para transformar ideias em experiência digital.
+              </p>
+            </div>
+
+            {/* Filter button */}
+            <button
+              id="dropdownToggleBtn"
+              onClick={toggleDropdown}
+              rel="noopener noreferrer"
+              className="bg-secundario px-4 py-2 rounded-full shadow-sm font-semibold w-fit text-white hover:brightness-105 flex items-center justify-center gap-1 transition-all duration-500 hover:ring-secundario hover:text-secundario hover:bg-white ring-inset ring-2 ring-transparent"
+              role="button"
+              aria-label="Explorar mais no WhatsApp"
+              aria-haspopup="true"
+              aria-expanded={dropdownOpen}
+              aria-controls="dropdownMenu"
+              tabIndex={0}
+            >
+              Filtrar <BiFilter />
+            </button>
+
+            {/* Dropdown menu */}
+            {dropdownOpen && (
+              <div
+                id="dropdownMenu"
+                ref={dropdownRef}
+                className="z-[80] w-56 p-3 bg-white border -translate-y-3 -translate-x-5 rounded-lg shadow dark:bg-gray-700 absolute top-72 mt-2 right-0"
+              >
+                <ul
+                  className="space-y-2 text-sm"
+                  aria-labelledby="dropdownDefault"
+                >
+                  <li className="flex items-center">
+                    <input
+                      id="todos"
+                      type="checkbox"
+                      checked={selectedTags.includes("todos")}
+                      onChange={() => toggleTag("todos")}
+                      className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                    />
+
+                    <label
+                      htmlFor="Todos"
+                      className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center justify-center gap-1"
+                    >
+                      <GrStatusGoodSmall className="text-white border-2 rounded-full" />{" "}
+                      Todos
+                    </label>
+                  </li>
+
+                  <li className="flex items-center">
+                    <input
+                      id="website"
+                      type="checkbox"
+                      checked={selectedTags.includes("website")}
+                      onChange={() => toggleTag("website")}
+                      className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                    />
+
+                    <label
+                      htmlFor="Website"
+                      className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center justify-center gap-1"
+                    >
+                      <GrStatusGoodSmall className="text-secundario" /> Website
+                    </label>
+                  </li>
+
+                  <li className="flex items-center">
+                    <input
+                      id="landing"
+                      type="checkbox"
+                      checked={selectedTags.includes("landing")}
+                      onChange={() => toggleTag("landing")}
+                      className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                    />
+
+                    <label
+                      htmlFor="Landing"
+                      className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center justify-center gap-1"
+                    >
+                      <GrStatusGoodSmall className="text-green-500" /> Landing
+                      Pages
+                    </label>
+                  </li>
+
+                  <li className="flex items-center">
+                    <input
+                      id="app"
+                      type="checkbox"
+                      checked={selectedTags.includes("app")}
+                      onChange={() => toggleTag("app")}
+                      className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                    />
+
+                    <label
+                      htmlFor="App"
+                      className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center justify-center gap-1"
+                    >
+                      <GrStatusGoodSmall className="text-gray-300" /> Apps
+                    </label>
+                  </li>
+
+                  <li className="flex items-center">
+                    <input
+                      id="portfolio"
+                      type="checkbox"
+                      checked={selectedTags.includes("portfolio")}
+                      onChange={() => toggleTag("portfolio")}
+                      className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                    />
+
+                    <label
+                      htmlFor="Portfólio"
+                      className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center justify-center gap-1"
+                    >
+                      <GrStatusGoodSmall className="text-purple-500" />{" "}
+                      Portfólio
+                    </label>
+                  </li>
+
+                  <li className="flex items-center">
+                    <input
+                      id="redesign"
+                      type="checkbox"
+                      checked={selectedTags.includes("redesign")}
+                      onChange={() => toggleTag("redesign")}
+                      className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                    />
+
+                    <label
+                      htmlFor="Redesign"
+                      className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center justify-center gap-1"
+                    >
+                      <GrStatusGoodSmall className="text-orange-500" /> Redesign
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
 
-          {/* Filter button */}
-          <button
-            id="dropdownToggleBtn"
-            onClick={toggleDropdown}
-            rel="noopener noreferrer"
-            className="bg-secundario px-4 py-2 rounded-full shadow-sm font-semibold w-fit text-white hover:brightness-105 flex items-center justify-center gap-1 transition-all duration-500 hover:ring-secundario hover:text-secundario hover:bg-white ring-inset ring-2 ring-transparent"
-            role="button"
-            aria-label="Explorar mais no WhatsApp"
-            aria-haspopup="true"
-            aria-expanded={dropdownOpen}
-            aria-controls="dropdownMenu"
-            tabIndex={0}
-          >
-            Filtrar <BiFilter />
-          </button>
-
-          {/* Dropdown menu */}
-          {dropdownOpen && (
-            <div
-              id="dropdownMenu"
-              ref={dropdownRef}
-              className="z-[80] w-56 p-3 bg-white border -translate-y-3 -translate-x-5 rounded-lg shadow dark:bg-gray-700 absolute top-72 mt-2 right-0"
-            >
-              <ul
-                className="space-y-2 text-sm"
-                aria-labelledby="dropdownDefault"
-              >
-                <li className="flex items-center">
-                  <input
-                    id="todos"
-                    type="checkbox"
-                    checked={selectedTags.includes("todos")}
-                    onChange={() => toggleTag("todos")}
-                    className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                  />
-
-                  <label
-                    htmlFor="Todos"
-                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center justify-center gap-1"
-                  >
-                    <GrStatusGoodSmall className="text-white border-2 rounded-full" />{" "}
-                    Todos
-                  </label>
-                </li>
-
-                <li className="flex items-center">
-                  <input
-                    id="website"
-                    type="checkbox"
-                    checked={selectedTags.includes("website")}
-                    onChange={() => toggleTag("website")}
-                    className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                  />
-
-                  <label
-                    htmlFor="Website"
-                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center justify-center gap-1"
-                  >
-                    <GrStatusGoodSmall className="text-secundario" /> Website
-                  </label>
-                </li>
-
-                <li className="flex items-center">
-                  <input
-                    id="landing"
-                    type="checkbox"
-                    checked={selectedTags.includes("landing")}
-                    onChange={() => toggleTag("landing")}
-                    className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                  />
-
-                  <label
-                    htmlFor="Landing"
-                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center justify-center gap-1"
-                  >
-                    <GrStatusGoodSmall className="text-green-500" /> Landing
-                    Pages
-                  </label>
-                </li>
-
-                <li className="flex items-center">
-                  <input
-                    id="app"
-                    type="checkbox"
-                    checked={selectedTags.includes("app")}
-                    onChange={() => toggleTag("app")}
-                    className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                  />
-
-                  <label
-                    htmlFor="App"
-                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center justify-center gap-1"
-                  >
-                    <GrStatusGoodSmall className="text-gray-300" /> Apps
-                  </label>
-                </li>
-
-                <li className="flex items-center">
-                  <input
-                    id="portfolio"
-                    type="checkbox"
-                    checked={selectedTags.includes("portfolio")}
-                    onChange={() => toggleTag("portfolio")}
-                    className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                  />
-
-                  <label
-                    htmlFor="Portfólio"
-                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center justify-center gap-1"
-                  >
-                    <GrStatusGoodSmall className="text-purple-500" /> Portfólio
-                  </label>
-                </li>
-
-                <li className="flex items-center">
-                  <input
-                    id="redesign"
-                    type="checkbox"
-                    checked={selectedTags.includes("redesign")}
-                    onChange={() => toggleTag("redesign")}
-                    className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                  />
-
-                  <label
-                    htmlFor="Redesign"
-                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center justify-center gap-1"
-                  >
-                    <GrStatusGoodSmall className="text-orange-500" /> Redesign
-                  </label>
-                </li>
-              </ul>
-            </div>
-          )}
-        </div>
-
-        {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 mb-36">
-          {filteredProjects.map((projet, idx) => (
-            <ProjectCard key={idx} {...projet} />
-          ))}
-        </div>
-      </GlobalContainer>
-    </section>
+          {/* Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 mb-36">
+            {filteredProjects.map((projet, idx) => (
+              <ProjectCard key={idx} {...projet} />
+            ))}
+          </div>
+        </GlobalContainer>
+      </section>
+    </>
   );
 }
 

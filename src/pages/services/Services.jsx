@@ -15,6 +15,7 @@ import { SiLibreofficewriter } from "react-icons/si";
 import { BubblyLink } from "../../library/BubblyLink";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 function Services() {
   const cardsTop = [
@@ -415,259 +416,270 @@ function Services() {
   };
 
   return (
-    <section
-      id="sobremim"
-      className="min-h-[95vh] pt-36 border-b shadow-md bg-[#f6f6f6] transition-all duration-500"
-    >
-      <GlobalContainer>
-        <div className="flex flex-col items-start justify-start mb-2 transition-all duration-500">
-          <div className="w-full py-10 mx-auto bg-white border rounded-3xl">
-            <div className="flex flex-col items-center justify-center text-center">
-              <div className="flex flex-col items-center justify-center p-2 text-terciario">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl mb-4 mt-2 tracking-wide leading-10 font-medium text-black/90">
-                  Como posso ajudar a tua marca?
-                </h1>
-                <p className="text-2xl font-light text-[#0e101199]">
-                  <strong>
-                    Acredito que cada projeto é uma oportunidade para praticar o
-                    cuidado nos detalhes.
-                  </strong>
-                </p>
-              </div>
-              <div className="flex gap-3 mt-2 transition-all duration-500">
-                <button
-                  className="bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
-                  aria-label="Explorar projetos"
-                >
+    <>
+      <Helmet>
+        <title>Lodex Studio — Serviços</title>
+      </Helmet>
+      <section
+        id="sobremim"
+        className="min-h-[95vh] pt-36 border-b shadow-md bg-[#f6f6f6] transition-all duration-500"
+      >
+        <GlobalContainer>
+          <div className="flex flex-col items-start justify-start mb-2 transition-all duration-500">
+            <div className="w-full py-10 mx-auto bg-white border rounded-3xl">
+              <div className="flex flex-col items-center justify-center text-center">
+                <div className="flex flex-col items-center justify-center p-2 text-terciario">
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl mb-4 mt-2 tracking-wide leading-10 font-medium text-black/90">
+                    Como posso ajudar a tua marca?
+                  </h1>
+                  <p className="text-2xl font-light text-[#0e101199]">
+                    <strong>
+                      Acredito que cada projeto é uma oportunidade para praticar
+                      o cuidado nos detalhes.
+                    </strong>
+                  </p>
+                </div>
+                <div className="flex gap-3 mt-2 transition-all duration-500">
+                  <button
+                    className="bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
+                    aria-label="Explorar projetos"
+                  >
+                    <BubblyLink
+                      to="/conversar"
+                      colorStart="#004AAD"
+                      colorEnd="#FFFFFF"
+                      className="flex items-center justify-center gap-1"
+                    >
+                      <SiLibreofficewriter className="text-green-400" />{" "}
+                      Preencher formulário
+                    </BubblyLink>
+                  </button>
+
                   <BubblyLink
-                    to="/conversar"
+                    to="/projetos"
                     colorStart="#004AAD"
                     colorEnd="#FFFFFF"
-                    className="flex items-center justify-center gap-1"
+                    className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center gap-1 transition-all duration-500"
+                    aria-label="Falar comigo"
                   >
-                    <SiLibreofficewriter className="text-green-400" /> Preencher
-                    formulário
+                    <BsPersonWorkspace className="text-indigo-600" /> Ver
+                    portfólio
                   </BubblyLink>
-                </button>
-
-                <BubblyLink
-                  to="/projetos"
-                  colorStart="#004AAD"
-                  colorEnd="#FFFFFF"
-                  className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center gap-1 transition-all duration-500"
-                  aria-label="Falar comigo"
-                >
-                  <BsPersonWorkspace className="text-indigo-600" /> Ver portfólio
-                </BubblyLink>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="py-16 flex items-center justify-center transition-all duration-500">
-          {/* Cards em cima */}
-          <div className="mb-10 gap-4 sm:mb-16 flex-wrap justify-center transition-all duration-500 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
-            {cardsTop.map((card, idx) => (
-              <div
-                key={idx}
-                onClick={() => handleScrollToForm(card)}
-                className="cursor-pointer"
-                tabIndex={0}
-                role="button"
-                aria-label={`Abrir detalhes de ${card.title}`}
-                onKeyPress={(e) => {
-                  if (e.key === "Enter" || e.key === " ") handleCardClick(card);
-                }}
-              >
-                <Card {...card} />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Formulário */}
-        <div>
-          {selectedService && (
-            <>
-              <div ref={formRef} className="text-left container mx-auto py-2 transition-all duration-500">
-                <span className="text-xs sm:text-sm text-secundario  font-semibold text-start block mb-2 uppercase tracking-wide ">
-                  Detalhes do serviço
-                </span>
-
-                {/* Título, subtítulo e Descrição */}
-                <div className="mb-10 sm:mb-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-                  <div className="flex flex-col items-start justify-center flex-1">
-                    <h2 className="text-xl sm:text-3xl md:text-4xl text-left font-medium text-gray-900 leading-tight">
-                      {selectedService?.titleFunction}
-                    </h2>
-                    <p className="mt-6 mb-2 text-base max-w-xl lg:text-lg text-left text-slate-500 font-Satoshi leading-relaxed text-balance">
-                      {selectedService?.desc}
-                    </p>
-                    {selectedService?.time} <br />
-                    {selectedService?.price}
-                    {selectedService?.audience}
-                  </div>
-
-                  <div
-                    className="bg-secundario mb-6 w-16 h-16 rounded-full shadow-sm font-semibold hover:brightness-105 flex items-center justify-center gap-1 ring-white ring-inset ring-2 ring-transparent transition-all duration-500"
-                    role="button"
-                    aria-label="Explorar mais no WhatsApp"
-                  >
-                    {selectedService?.icon}
-                  </div>
-                </div>
-              </div>
-              <div className="py-8 bg-white transition-all duration-500">
+          <div className="py-16 flex items-center justify-center transition-all duration-500">
+            {/* Cards em cima */}
+            <div className="mb-10 gap-4 sm:mb-16 flex-wrap justify-center transition-all duration-500 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+              {cardsTop.map((card, idx) => (
                 <div
-                  className={`mx-auto grid  ${
-                    selectedService?.details.length === 4
-                      ? "md:grid-cols-4"
-                      : "md:grid-cols-5"
-                  } gap-7 text-center`}
+                  key={idx}
+                  onClick={() => handleScrollToForm(card)}
+                  className="cursor-pointer"
+                  tabIndex={0}
+                  role="button"
+                  aria-label={`Abrir detalhes de ${card.title}`}
+                  onKeyPress={(e) => {
+                    if (e.key === "Enter" || e.key === " ")
+                      handleCardClick(card);
+                  }}
                 >
-                  {selectedService?.details.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="flex flex-col text-center items-center gap-1 transition-all duration-500"
-                    >
-                      <div
-                        className="w-20 h-20 rounded-full mb-3 flex items-center justify-center transition-all duration-500"
-                        style={{
-                          backgroundColor:
-                            idx === 0
-                              ? "#F1EFFD"
-                              : idx === 1
-                              ? "#FEE7E7"
-                              : idx === 2
-                              ? "#FFF3E4"
-                              : idx === 3
-                              ? "#E6F4FF"
-                              : idx === 4
-                              ? "#E6FFFA"
-                              : "#F0F9FF",
-                        }}
-                      >
-                        <div className="text-3xl">{item.iconDetails}</div>
-                      </div>
-                      <ul className="text-lg font-semibold mb-2 text-gray-700">
-                        <li
-                          key={idx}
-                          className="flex gap-1 items-center justify-center"
-                        >
-                          <span>{item.title}</span>
-                        </li>
-                      </ul>
-                      <p>{item.text}</p>
-                    </div>
-                  ))}
+                  <Card {...card} />
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
 
-              {/* Título + descrição */}
-              <div className="container mx-auto mt-6 py-10 flex flex-col items-center justify-center text-center">
-                <h2 className="text-base sm:text-2xl md:text-3xl font-bold text-gray-900">
-                  {selectedService?.titleForm}
-                </h2>
-                <p className="mt-3 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-slate-600">
-                  {selectedService?.prerequisites}
-                </p>
-              </div>
+          {/* Formulário */}
+          <div>
+            {selectedService && (
+              <>
+                <div
+                  ref={formRef}
+                  className="text-left container mx-auto py-2 transition-all duration-500"
+                >
+                  <span className="text-xs sm:text-sm text-secundario  font-semibold text-start block mb-2 uppercase tracking-wide ">
+                    Detalhes do serviço
+                  </span>
 
-              <div className="text-left container mx-auto px-4 sm:px-6 lg:px-8 py-10">
-                <div>
-                  <form
-                    method="POST"
-                    encType="multipart/form-data"
-                    onSubmit={handleSubmit}
-                    className="space-y-6 sm:space-y-10 px-4 sm:px-16 lg:px-20 transition-all duration-500"
-                  >
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {/* Primeiro Nome e Último Nome */}
-                      <div className="flex flex-col gap-1">
-                        <label className="text-sm font-medium text-gray-700">
-                          Nome Completo <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          name="primeiroNome"
-                          value={nomeCompleto}
-                          placeholder="Nome Completo"
-                          onChange={(e) => setnomeCompleto(e.target.value)}
-                          required
-                          className="w-full border outline-none focus:border-secundario hover:border-secundario rounded-md px-4 py-2 transition duration-500"
-                        />
-                      </div>
-
-                      {/* E-mail */}
-                      <div className="flex flex-col gap-1">
-                        <label className="text-sm font-medium text-gray-700">
-                          E-mail <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="email"
-                          name="email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          placeholder="E-mail"
-                          required
-                          pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com)$"
-                          className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500"
-                          title="O e-mail deve terminar com @gmail.com, @hotmail.com ou @outlook.com"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Mensagem */}
-                    <div className="flex flex-col gap-1">
-                      <label className="text-sm font-medium text-gray-700">
-                        Mensagem <span className="text-red-500">*</span>
-                      </label>
-                      <textarea
-                        placeholder={selectedService?.placeholder}
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        name="message"
-                        rows="4"
-                        required
-                        className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500 resize-none"
-                        aria-label="Mensagem"
-                      ></textarea>
-                    </div>
-
-                    {/* Mensagem de Espera */}
-                    {sending && (
-                      <p
-                        className="text-center text-gray-500"
-                        role="status"
-                        aria-live="polite"
-                      >
-                        A enviar mensagem, por favor aguarde...
+                  {/* Título, subtítulo e Descrição */}
+                  <div className="mb-10 sm:mb-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                    <div className="flex flex-col items-start justify-center flex-1">
+                      <h2 className="text-xl sm:text-3xl md:text-4xl text-left font-medium text-gray-900 leading-tight">
+                        {selectedService?.titleFunction}
+                      </h2>
+                      <p className="mt-6 mb-2 text-base max-w-xl lg:text-lg text-left text-slate-500 font-Satoshi leading-relaxed text-balance">
+                        {selectedService?.desc}
                       </p>
-                    )}
-
-                    {/* Botão de Envio */}
-                    <div className="flex flex-col items-center justify-center mt-6">
-                      <button
-                        type="submit"
-                        className="w-fit bg-secundario text-white py-4 px-10 rounded-md transition-colors duration-500  hover:bg-secundario/90 focus:outline-none focus:ring-2 focus:ring-secundario focus:ring-opacity-50 shadow-md "
-                        aria-label="Enviar mensagem"
-                        disabled={sending}
-                      >
-                        Enviar mensagem
-                      </button>
-                      <small className="py-10 text-sm text-center">
-                        🕓 Responderei em até 24h úteis. Preferes falar direto?
-                        Usa o botão de WhatsApp.
-                      </small>
+                      {selectedService?.time} <br />
+                      {selectedService?.price}
+                      {selectedService?.audience}
                     </div>
-                  </form>
+
+                    <div
+                      className="bg-secundario mb-6 w-16 h-16 rounded-full shadow-sm font-semibold hover:brightness-105 flex items-center justify-center gap-1 ring-white ring-inset ring-2 ring-transparent transition-all duration-500"
+                      role="button"
+                      aria-label="Explorar mais no WhatsApp"
+                    >
+                      {selectedService?.icon}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </>
-          )}
-        </div>
-      </GlobalContainer>
-    </section>
+                <div className="py-8 bg-white transition-all duration-500">
+                  <div
+                    className={`mx-auto grid  ${
+                      selectedService?.details.length === 4
+                        ? "md:grid-cols-4"
+                        : "md:grid-cols-5"
+                    } gap-7 text-center`}
+                  >
+                    {selectedService?.details.map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="flex flex-col text-center items-center gap-1 transition-all duration-500"
+                      >
+                        <div
+                          className="w-20 h-20 rounded-full mb-3 flex items-center justify-center transition-all duration-500"
+                          style={{
+                            backgroundColor:
+                              idx === 0
+                                ? "#F1EFFD"
+                                : idx === 1
+                                ? "#FEE7E7"
+                                : idx === 2
+                                ? "#FFF3E4"
+                                : idx === 3
+                                ? "#E6F4FF"
+                                : idx === 4
+                                ? "#E6FFFA"
+                                : "#F0F9FF",
+                          }}
+                        >
+                          <div className="text-3xl">{item.iconDetails}</div>
+                        </div>
+                        <ul className="text-lg font-semibold mb-2 text-gray-700">
+                          <li
+                            key={idx}
+                            className="flex gap-1 items-center justify-center"
+                          >
+                            <span>{item.title}</span>
+                          </li>
+                        </ul>
+                        <p>{item.text}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Título + descrição */}
+                <div className="container mx-auto mt-6 py-10 flex flex-col items-center justify-center text-center">
+                  <h2 className="text-base sm:text-2xl md:text-3xl font-bold text-gray-900">
+                    {selectedService?.titleForm}
+                  </h2>
+                  <p className="mt-3 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-slate-600">
+                    {selectedService?.prerequisites}
+                  </p>
+                </div>
+
+                <div className="text-left container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                  <div>
+                    <form
+                      method="POST"
+                      encType="multipart/form-data"
+                      onSubmit={handleSubmit}
+                      className="space-y-6 sm:space-y-10 px-4 sm:px-16 lg:px-20 transition-all duration-500"
+                    >
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {/* Primeiro Nome e Último Nome */}
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm font-medium text-gray-700">
+                            Nome Completo{" "}
+                            <span className="text-red-500">*</span>
+                          </label>
+                          <input
+                            type="text"
+                            name="primeiroNome"
+                            value={nomeCompleto}
+                            placeholder="Nome Completo"
+                            onChange={(e) => setnomeCompleto(e.target.value)}
+                            required
+                            className="w-full border outline-none focus:border-secundario hover:border-secundario rounded-md px-4 py-2 transition duration-500"
+                          />
+                        </div>
+
+                        {/* E-mail */}
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm font-medium text-gray-700">
+                            E-mail <span className="text-red-500">*</span>
+                          </label>
+                          <input
+                            type="email"
+                            name="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="E-mail"
+                            required
+                            pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com)$"
+                            className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500"
+                            title="O e-mail deve terminar com @gmail.com, @hotmail.com ou @outlook.com"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Mensagem */}
+                      <div className="flex flex-col gap-1">
+                        <label className="text-sm font-medium text-gray-700">
+                          Mensagem <span className="text-red-500">*</span>
+                        </label>
+                        <textarea
+                          placeholder={selectedService?.placeholder}
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                          name="message"
+                          rows="4"
+                          required
+                          className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500 resize-none"
+                          aria-label="Mensagem"
+                        ></textarea>
+                      </div>
+
+                      {/* Mensagem de Espera */}
+                      {sending && (
+                        <p
+                          className="text-center text-gray-500"
+                          role="status"
+                          aria-live="polite"
+                        >
+                          A enviar mensagem, por favor aguarde...
+                        </p>
+                      )}
+
+                      {/* Botão de Envio */}
+                      <div className="flex flex-col items-center justify-center mt-6">
+                        <button
+                          type="submit"
+                          className="w-fit bg-secundario text-white py-4 px-10 rounded-md transition-colors duration-500  hover:bg-secundario/90 focus:outline-none focus:ring-2 focus:ring-secundario focus:ring-opacity-50 shadow-md "
+                          aria-label="Enviar mensagem"
+                          disabled={sending}
+                        >
+                          Enviar mensagem
+                        </button>
+                        <small className="py-10 text-sm text-center">
+                          🕓 Responderei em até 24h úteis. Preferes falar
+                          direto? Usa o botão de WhatsApp.
+                        </small>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        </GlobalContainer>
+      </section>
+    </>
   );
 }
 

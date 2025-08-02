@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import GlobalContainer from "../../utils/GlobalContainer";
 import { PiCodeBlockBold } from "react-icons/pi";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 function Conversar() {
   // Estado para controlar e mostrar o formulário para preenchimento - Candidaturas
@@ -71,10 +72,13 @@ function Conversar() {
 
   return (
     <>
+      <Helmet>
+        <title>Lodex Studio — Estruturar projeto</title>
+      </Helmet>
       <section
         id="conversar"
         className="relative min-h-screen transition-all duration-500"
-      > 
+      >
         {/* Fundo dividido */}
         <div className="absolute inset-0 ">
           <div className="relative h-1/2 2xl:h-96 bg-[#f2f8fb] flex flex-col items-center justify-center text-center px-4 transition-all duration-500">
