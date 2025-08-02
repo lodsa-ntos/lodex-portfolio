@@ -234,11 +234,11 @@ function Services() {
         <>
           Redesign funcional <br />{" "}
           <small className="text-sm flex items-center justify-start gap-1 mt-1">
-            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 300€
+            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 150€
           </small>
         </>
       ),
-      titleFunction: "Redesign funcional → a partir de 300€",
+      titleFunction: "Redesign funcional → a partir de 150€",
       titleForm: "Para começamos o redesign…",
       desc: "Para quem já tem algo online, mas quer mais clareza, performance ou presença sem perder tua essência.",
       descModal:
@@ -282,7 +282,7 @@ function Services() {
       audience: "🔁 Projetos que precisam evoluir visual ou funcionalmente",
       price: (
         <p className="flex-row items-center justify-center text-start">
-          📄 O valor "<strong>a partir de 300€</strong>" refere-se ao redesenho
+          📄 O valor "<strong>a partir de 150€</strong>" refere-se ao redesenho
           visual e melhorias básicas.
           <br />
           💡 Pode variar caso precise de novo código, reformulação completa ou
@@ -417,14 +417,14 @@ function Services() {
   return (
     <section
       id="sobremim"
-      className="min-h-[95vh] pt-36 border-b shadow-md bg-[#f6f6f6]"
+      className="min-h-[95vh] pt-36 border-b shadow-md bg-[#f6f6f6] transition-all duration-500"
     >
       <GlobalContainer>
-        <div className="flex flex-col items-start justify-start mb-2">
+        <div className="flex flex-col items-start justify-start mb-2 transition-all duration-500">
           <div className="w-full py-10 mx-auto bg-white border rounded-3xl">
             <div className="flex flex-col items-center justify-center text-center">
               <div className="flex flex-col items-center justify-center p-2 text-terciario">
-                <h1 className="text-5xl mb-4 mt-2 tracking-wide leading-10 font-medium text-black/90">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl mb-4 mt-2 tracking-wide leading-10 font-medium text-black/90">
                   Como posso ajudar a tua marca?
                 </h1>
                 <p className="text-2xl font-light text-[#0e101199]">
@@ -464,9 +464,9 @@ function Services() {
           </div>
         </div>
 
-        <div className="py-16 transition-all duration-500">
+        <div className="py-16 flex items-center justify-center transition-all duration-500">
           {/* Cards em cima */}
-          <div className="mb-10 gap-4 sm:mb-16 flex-wrap justify-center transition-all duration-500 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="mb-10 gap-4 sm:mb-16 flex-wrap justify-center transition-all duration-500 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
             {cardsTop.map((card, idx) => (
               <div
                 key={idx}
@@ -489,8 +489,8 @@ function Services() {
         <div>
           {selectedService && (
             <>
-              <div ref={formRef} className="text-left container mx-auto py-2">
-                <span className="text-xs sm:text-sm text-secundario  font-semibold text-start block mb-2 uppercase tracking-wide">
+              <div ref={formRef} className="text-left container mx-auto py-2 transition-all duration-500">
+                <span className="text-xs sm:text-sm text-secundario  font-semibold text-start block mb-2 uppercase tracking-wide ">
                   Detalhes do serviço
                 </span>
 
@@ -509,7 +509,7 @@ function Services() {
                   </div>
 
                   <div
-                    className="bg-secundario mb-6 w-16 h-16 rounded-full shadow-sm font-semibold hover:brightness-105 flex items-center justify-center gap-1 transition-all duration-500 ring-white ring-inset ring-2 ring-transparent"
+                    className="bg-secundario mb-6 w-16 h-16 rounded-full shadow-sm font-semibold hover:brightness-105 flex items-center justify-center gap-1 ring-white ring-inset ring-2 ring-transparent transition-all duration-500"
                     role="button"
                     aria-label="Explorar mais no WhatsApp"
                   >
@@ -517,7 +517,7 @@ function Services() {
                   </div>
                 </div>
               </div>
-              <div className="py-8 bg-white">
+              <div className="py-8 bg-white transition-all duration-500">
                 <div
                   className={`mx-auto grid  ${
                     selectedService?.details.length === 4
@@ -528,10 +528,10 @@ function Services() {
                   {selectedService?.details.map((item, idx) => (
                     <div
                       key={idx}
-                      className="flex flex-col text-center items-center gap-1"
+                      className="flex flex-col text-center items-center gap-1 transition-all duration-500"
                     >
                       <div
-                        className="w-20 h-20 rounded-full mb-3 flex items-center justify-center"
+                        className="w-20 h-20 rounded-full mb-3 flex items-center justify-center transition-all duration-500"
                         style={{
                           backgroundColor:
                             idx === 0
@@ -579,7 +579,7 @@ function Services() {
                     method="POST"
                     encType="multipart/form-data"
                     onSubmit={handleSubmit}
-                    className="space-y-6 sm:space-y-10 px-4 sm:px-16 lg:px-20 "
+                    className="space-y-6 sm:space-y-10 px-4 sm:px-16 lg:px-20 transition-all duration-500"
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {/* Primeiro Nome e Último Nome */}
@@ -655,7 +655,7 @@ function Services() {
                       >
                         Enviar mensagem
                       </button>
-                      <small className="py-10 text-sm">
+                      <small className="py-10 text-sm text-center">
                         🕓 Responderei em até 24h úteis. Preferes falar direto?
                         Usa o botão de WhatsApp.
                       </small>

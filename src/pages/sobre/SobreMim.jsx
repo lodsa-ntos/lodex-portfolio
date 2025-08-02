@@ -14,7 +14,7 @@ function SobreMim() {
     <>
       <section
         id="sobremim"
-        className="min-h-[95vh] pt-36 border-b shadow-md bg-gray-50"
+        className="min-h-[95vh] lg:min-h-[70vh] 2xl:min-h-[35vh] pt-36 border-b shadow-md bg-gray-50"
       >
         <GlobalContainer>
           <div className="flex flex-col items-start justify-start mb-2">
@@ -37,7 +37,7 @@ function SobreMim() {
                 Olá, sou Lodney Santos
               </h1>
 
-              <p className="max-w-xl mb-6 font-light text-xl leading-relaxed subpixel-antialiased">
+              <p className="max-w-xl mb-20 lg:mb-6 font-light text-xl leading-relaxed subpixel-antialiased">
                 Sempre fui curioso com o que há por trás das coisas — desmontar
                 computadores, observar interfaces, tentar entender lógica onde a
                 maioria só vê pixels. Foi no design digital que encontrei um
@@ -55,7 +55,7 @@ function SobreMim() {
             <img
               src={me}
               alt="Retrato de Lodney Santos"
-              className="w-52 sm:w-80 aspect-square rounded-2xl object-cover mx-auto bg-gradient-to-b from-primario-claro shadow-lg hover:scale-105 hover:brightness-105 hover:contrast-100 hover:shadow-xl -translate-y-16 transform transition-all duration-500"
+              className="w-64 mt-28 sm:w-80 aspect-square rounded-2xl object-cover mx-auto bg-gradient-to-b from-primario-claro shadow-lg hover:scale-105 hover:brightness-105 hover:contrast-100 hover:shadow-xl -translate-y-16 transform transition-all duration-500"
             />
           </div>
         </GlobalContainer>
@@ -78,10 +78,10 @@ function SobreMim() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-4">
             {/** Card 1 */}
-            <div className="flex items-start justify-start text-start">
-              <div className="flex flex-col items-start justify-start space-y-1">
+            <div className="flex items-center justify-center text-center">
+              <div className="flex flex-col items-center justify-center space-y-1">
                 <PiWallDuotone className="size-10 text-gray-500" />
                 <h1 className="font-bold ">Construo</h1>
                 <p className="font-light text-lg leading-relaxed subpixel-antialiased">
@@ -92,8 +92,8 @@ function SobreMim() {
             </div>
 
             {/** Card 2 */}
-            <div className="flex items-start justify-start text-start">
-              <div className="flex flex-col items-start justify-start space-y-1">
+            <div className="flex items-center justify-center text-center">
+              <div className="flex flex-col items-center justify-center space-y-1">
                 <MdOutlineDesignServices className="size-10 text-gray-500" />
                 <h1 className="font-bold ">Desenho</h1>
                 <p className="font-light text-lg leading-relaxed subpixel-antialiased">
@@ -104,9 +104,9 @@ function SobreMim() {
             </div>
 
             {/** Card 3 */}
-            <div className="flex items-start justify-start text-start">
+            <div className="flex items-center justify-center text-center">
               {/** Card 1 */}
-              <div className="flex flex-col items-start justify-start space-y-1">
+              <div className="flex flex-col items-center justify-center space-y-1">
                 <MdImportantDevices className="size-10 text-gray-500" />
                 <h1 className="font-bold ">Desenvolvo</h1>
                 <p className="font-light text-lg leading-relaxed subpixel-antialiased">
@@ -117,8 +117,8 @@ function SobreMim() {
             </div>
 
             {/** Card 4 */}
-            <div className="flex items-start justify-start text-start">
-              <div className="flex flex-col items-start justify-start space-y-1">
+            <div className="flex items-center justify-center text-center">
+              <div className="flex flex-col items-center justify-center space-y-1">
                 <PiRocketLaunchDuotone className="size-10 text-gray-500" />
                 <h1 className="font-bold ">Lanço</h1>
                 <p className="font-light text-lg leading-relaxed subpixel-antialiased">
@@ -129,8 +129,8 @@ function SobreMim() {
             </div>
 
             {/** Card 5 */}
-            <div className="flex items-start justify-start text-start">
-              <div className="flex flex-col items-start justify-start space-y-1">
+            <div className="flex items-center justify-center text-center">
+              <div className="flex flex-col items-center justify-center space-y-1">
                 <VscCompassDot className="size-10 text-gray-500" />
                 <h1 className="font-bold ">Guio</h1>
                 <p className="font-light text-lg leading-relaxed subpixel-antialiased">
@@ -146,7 +146,7 @@ function SobreMim() {
       {/** Para quem é */}
       <section
         id="paraqueme"
-        className="min-h-[95vh] pt-24 border-b shadow-md bg-gray-50"
+        className="min-h-[95vh] lg:min-h-[95vh] 2xl:min-h-[35vh] pb-20 lg:pb-0 pt-24 border-b shadow-md bg-gray-50"
       >
         <GlobalContainer>
           <div className="grid grid-cols-1 md:grid-cols-2">
@@ -161,7 +161,7 @@ function SobreMim() {
 
             {/* Right Side - Texto */}
             <div className="text-gray-800">
-              <h1 className="mb-6 text-4xl font-light text-[##333333] subpixel-antialiased">
+              <h1 className="mb-6 mt-6 lg:mt-0 text-4xl font-light text-[##333333] subpixel-antialiased">
                 Para quem é
               </h1>
 
@@ -197,7 +197,7 @@ function SobreMim() {
                 Por que faço isso?
               </h1>
               <p className="max-w-lg font-light text-xl leading-relaxed subpixel-antialiased">
-                Levei anos para entender meu lugar. Comecei desmontando
+                Levei anos para entender o meu lugar. Comecei desmontando
                 computadores, lutei com a programação, formei-me com atraso. Mas
                 descobri que meu foco não era velocidade, era transformar
                 confusão em clareza.
@@ -213,7 +213,7 @@ function SobreMim() {
               <img
                 src="images/aboutme/place.svg"
                 alt="Retrato pratical"
-                className="w-52 sm:w-96 object-cover mx-auto hover:brightness-105 hover:contrast-100  transform transition-all duration-500 inset-[166px] left-0 absolute"
+                className="hidden md:block w-72 inset-[326px] xl:translate-x-0 translate-x-16 lg:w-96 object-cover mx-auto hover:brightness-105 hover:contrast-100  transform transition-all duration-500 lg:inset-[166px] left-0 absolute"
               />
             </div>
           </div>
@@ -223,7 +223,7 @@ function SobreMim() {
       {/** Para quem é */}
       <section id="paraqueme" className="py-24 border-b shadow-md bg-gray-50">
         <GlobalContainer>
-          <div className="flex flex-col items-center justify-center mx-auto w-[800px] h-72 rounded-xl">
+          <div className="flex flex-col items-center justify-center text-center">
             <h1 className="text-3xl font-bold uppercase text-terciario mb-2">
               Bora construir?
             </h1>
