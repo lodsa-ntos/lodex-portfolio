@@ -174,7 +174,7 @@ function GlobalProject() {
   return (
     <>
       <Helmet>
-        <title>Lodex Studio — Portfólio</title>
+        <title>LodeX Studio — Portfólio</title>
       </Helmet>
       <section id="sobremim" className="min-h-[95vh] pt-36 border-b shadow-md">
         <GlobalContainer>

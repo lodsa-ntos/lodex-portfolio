@@ -418,7 +418,7 @@ function Services() {
   return (
     <>
       <Helmet>
-        <title>Lodex Studio — Serviços</title>
+        <title>LodeX Studio — Serviços</title>
       </Helmet>
       <section
         id="sobremim"

@@ -6,7 +6,7 @@ function Blog() {
   return (
     <>
       <Helmet>
-        <title>Lodex Studio — Blog</title>
+        <title>LodeX Studio — Blog</title>
       </Helmet>
       <section
         id="sobremim"
