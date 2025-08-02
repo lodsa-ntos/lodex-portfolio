@@ -8,10 +8,14 @@ import { VscCompassDot } from "react-icons/vsc";
 import { SiLibreofficewriter } from "react-icons/si";
 import { BubblyLink } from "../../library/BubblyLink";
 import me from "../../assets/me/about-photo.svg";
+import { Helmet } from "react-helmet";
 
 function SobreMim() {
   return (
     <>
+      <Helmet>
+        <title>LodeX Studio — Sobre mim</title>
+      </Helmet>
       <section
         id="sobremim"
         className="min-h-[95vh] lg:min-h-[70vh] 2xl:min-h-[35vh] pt-36 border-b shadow-md bg-gray-50"
