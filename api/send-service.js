@@ -62,14 +62,34 @@ export default async function handler(req, res) {
             replyTo: `${nomeCompleto} <${email}>`,
             subject: `Nova mensagem de: ${nomeCompleto || " " }`,
             html: `
-            <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-                <h2>Está a pedir informações de serviço para: ${funcao || "-"}</h2>
+            <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #222;">
+                <h2 style="margin-bottom: 0.5rem;">Pedido de informação para: ${funcao || "-"}</h2>
+
                 <p><strong>Nome:</strong> ${nomeCompleto}</p>
                 <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Mensagem:</strong><br>${message}</p>
-                <hr/>
+                <p><strong>Mensagem:</strong></p>
+                <p style="background: #f9f9f9; padding: 10px; border-left: 3px solid #ccc;">${message}</p>
+
+                <hr style="margin: 2rem 0;" />
+
+                <div style="font-size: 14px; color: #555;">
+                <p style="margin: 0;">Com os melhores cumprimentos,</p>
+                <p style="margin: 0.2rem 0;"><strong>Lodney Santos</strong></p>
+                <p style="margin: 0.2rem 0;">Frontend Developer & UI Designer</p>
+                <p style="margin: 0.2rem 0;">
+                    <a href="https://www.lodexstudio.com" target="_blank" style="color: #1a73e8; text-decoration: none;">www.lodexstudio.com</a>
+                </p>
+                <p style="margin: 0.2rem 0;">
+                    <a href="mailto:noreply@lodexstudio.com" style="color: #1a73e8; text-decoration: none;">noreply@lodexstudio.com</a>
+                </p>
+                <img src="https://lodexstudio.com/lodexstudio-logo.svg" alt="Lodex Studio Logo" width="120" style="margin-top: 12px;" />
+                </div>
+
+                <hr style="margin: 2rem 0;" />
+
                 <p style="font-size: 12px; color: #888;">
-                    Recebido via <a href="https://www.lodexstudio.com/servicos">Lodex Studio – ${funcao || "-"}</a>
+                Este e-mail foi enviado automaticamente através do formulário da página de serviços da 
+                <a href="https://www.lodexstudio.com/servicos" target="_blank" style="color: #888;">Lodex Studio</a>.
                 </p>
             </div>`,
         };
