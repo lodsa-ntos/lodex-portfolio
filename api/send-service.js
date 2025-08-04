@@ -62,36 +62,61 @@ export default async function handler(req, res) {
             replyTo: `${nomeCompleto} <${email}>`,
             subject: `Novo pedido de informação – ${funcao || "Serviço"}`,
             html: `
-            <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #222;">
-                <h2 style="margin-bottom: 0.5rem;">Pedido de informação para: ${funcao || "-"}</h2>
-
+            <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+                <h2>Está a pedir informações de serviço para: ${funcao || "-"}</h2>
                 <p><strong>Nome:</strong> ${nomeCompleto}</p>
                 <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Mensagem:</strong></p>
-                <p style="background: #f9f9f9; padding: 10px; border-left: 3px solid #ccc;">${message}</p>
-
-                <hr style="margin: 2rem 0;" />
-
-                <div style="font-size: 14px; color: #555;">
-                <p style="margin: 0;">Com os melhores cumprimentos,</p>
-                <p style="margin: 0.2rem 0;"><strong>Lodney Santos</strong></p>
-                <p style="margin: 0.2rem 0;">Frontend Developer & UI Designer</p>
-                <p style="margin: 0.2rem 0;">
-                    <a href="https://www.lodexstudio.com" target="_blank" style="color: #1a73e8; text-decoration: none;">www.lodexstudio.com</a>
-                </p>
-                <p style="margin: 0.2rem 0;">
-                    <a href="mailto:noreply@lodexstudio.com" style="color: #1a73e8; text-decoration: none;">noreply@lodexstudio.com</a>
-                </p>
-                <img src="https://lodexstudio.com/lodexstudio-logo.svg" alt="Lodex Studio Logo" width="120" style="margin-top: 12px;" />
-                </div>
-
-                <hr style="margin: 2rem 0;" />
-
+                <p><strong>Mensagem:</strong><br>${message}</p>
+                <hr />
                 <p style="font-size: 12px; color: #888;">
-                Este e-mail foi enviado automaticamente através do formulário da página de serviços da 
-                <a href="https://www.lodexstudio.com/servicos" target="_blank" style="color: #888;">Lodex Studio</a>.
+                Recebido via <a href="https://www.lodexstudio.com/servicos">Lodex Studio – ${funcao || "-"}</a>
                 </p>
-            </div>`,
+                <br />
+                <table cellpadding="0" cellspacing="0" style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+                <tr>
+                    <td style="padding-bottom: 8px;">
+                    <strong style="font-size: 16px; color: #000;">Lodney Santos</strong><br />
+                    Frontend Developer & UI Designer<br />
+                    <span style="color: #666;">LodeX Studio — Websites, Landings, Portfólios e Redesign</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-bottom: 10px;">
+                    <img src="https://www.lodexstudio.com/lodexstudio-logo.svg" alt="Lodex Studio Logo" width="120" style="border: none;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    📩 <a href="mailto:noreply@lodexstudio.com" style="color: #1a73e8;">noreply@lodexstudio.com</a><br />
+                    🌐 <a href="https://www.lodexstudio.com" style="color: #1a73e8;">www.lodexstudio.com</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top: 10px;">
+                    <span style="color: #666; font-size: 12px;">
+                        Feedbacks espontâneos são sempre bem-vindos. Obrigado por confiar.
+                    </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top: 12px;">
+                    <a href="https://wa.me/351912345678" style="margin-right: 8px;">
+                        <img src="https://cdn-icons-png.flaticon.com/24/733/733585.png" alt="WhatsApp" width="24" />
+                    </a>
+                    <a href="https://instagram.com/lodex.studio" style="margin-right: 8px;">
+                        <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" width="24" />
+                    </a>
+                    <a href="https://github.com/lodexstudio" style="margin-right: 8px;">
+                        <img src="https://cdn-icons-png.flaticon.com/24/733/733553.png" alt="GitHub" width="24" />
+                    </a>
+                    <a href="https://linkedin.com/in/lodneysantos">
+                        <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn" width="24" />
+                    </a>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            `,
         };
 
         // Envia o e-mail
