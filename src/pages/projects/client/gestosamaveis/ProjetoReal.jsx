@@ -17,7 +17,7 @@ function ProjetoReal() {
 
       <section id="gestosamaveis"  className="min-h-[95vh] pt-36 border-b shadow-md bg-[#f6f6f6] transition-all duration-500">
         <GlobalContainer>
-            <div className="grid grid-cols-[1fr_480px] gap-[4rem] px-4 py-20">
+            <div className="grid grid-cols-[1fr_480px] gap-[4rem] py-20">
                 
 
                 {/** Imagens mockup */}
