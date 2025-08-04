@@ -60,7 +60,7 @@ export default async function handler(req, res) {
             from: '"Lodex Studio" <noreply@lodexstudio.com>',
             to: process.env.EMAIL_TO,
             replyTo: `${nomeCompleto} <${email}>`,
-            subject: `Nova mensagem de: ${nomeCompleto || " " }`,
+            subject: `Novo pedido de informação – ${funcao || "Serviço"}`,
             html: `
             <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #222;">
                 <h2 style="margin-bottom: 0.5rem;">Pedido de informação para: ${funcao || "-"}</h2>
