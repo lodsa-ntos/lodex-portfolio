@@ -1,5 +1,6 @@
 import React from "react";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
+import { BubblyLink } from "../library/BubblyLink";
 
 function ProjectCard({
   title,
@@ -11,10 +12,16 @@ function ProjectCard({
   bagdeStyle,
   link,
   techIcons,
-  linkExternal
+  linkExternal,
 }) {
   return (
-    <a href={link} target={linkExternal} rel="noopener noreferrer">
+    <BubblyLink
+      to={link}
+      colorStart="#004AAD"
+      colorEnd="#FFFFFF"
+      target={linkExternal}
+      rel="noopener noreferrer"
+    >
       <div className="w-full h-full rounded-md overflow-hidden shadow-sm bg-[#f6f6f6] transition-all group">
         {/* Imagens com proporção fixa */}
         <div className="aspect-[16/10] w-full relative">
@@ -49,7 +56,7 @@ function ProjectCard({
           <p className="text-[#888888] leading-normal text-xs">{description}</p>
         </div>
       </div>
-    </a>
+    </BubblyLink>
   );
 }
 

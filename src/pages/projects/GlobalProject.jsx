@@ -86,7 +86,6 @@ function GlobalProject() {
       id: 3,
       title: "LaunchPeack",
       link: "https://launchpeak-starter.vercel.app/",
-      linkExternal: "_blank",
       primaryImg: "images/projetos/ficticio/launchpeak-home.png",
       hoverImg: "images/projetos/ficticio/launchpeak-home-hover.png",
       techIcons: [
