@@ -15,7 +15,7 @@ function ProjetoReal() {
         />
       </Helmet>
 
-      <section id="academico" className="pt-[192px] pb-20 border-b shadow-md">
+      <section id="gestosamaveis"  className="min-h-[95vh] pt-36 border-b shadow-md bg-[#f6f6f6] transition-all duration-500">
         <GlobalContainer>
 
         </GlobalContainer>
