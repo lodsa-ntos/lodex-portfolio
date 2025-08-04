@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import GlobalContainer from "../../utils/GlobalContainer";
+import GlobalContainer from "../../../../utils/GlobalContainer";
 
 function ProjetoReal() {
   return (
@@ -17,7 +17,7 @@ function ProjetoReal() {
 
       <section id="academico" className="pt-[192px] pb-20 border-b shadow-md">
         <GlobalContainer>
-            
+
         </GlobalContainer>
       </section>
     </>
