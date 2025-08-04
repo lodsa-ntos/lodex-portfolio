@@ -55,9 +55,7 @@ export default async function handlerProject(req, res) {
             return res.status(400).json({ error: "Nome, email, tipo projeto e mensagem são obrigatórios." });
         }
 
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            return res.status(400).json({ error: "Email inválido." });
-        }
+        
 
         console.log("Fields recebidos:", fields);
 
