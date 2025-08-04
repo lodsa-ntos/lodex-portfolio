@@ -46,10 +46,12 @@ export default async function handler(req, res) {
 
         // Configuração do transporte de e-mail
         const transporter = nodemailer.createTransport({
-            service: "gmail",
+            host: "smtp.zoho.eu",
+            port: 465, // SSL
+            secure: true,
             auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS,
+                user: "noreply@lodexstudio.com",
+                pass: process.env.ZOHO_PASS,
             },
         });
 
