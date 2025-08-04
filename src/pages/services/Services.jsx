@@ -387,7 +387,7 @@ function Services() {
     setSending(true);
 
     const formData = new FormData(e.target);
-    formData.append("funcao", selectedService);
+    formData.append("funcao", selectedService?.titleFunction1);
 
     try {
       const response = await fetch("/api/send-service", {
@@ -488,7 +488,7 @@ function Services() {
               {cardsTop.map((card, idx) => (
                 <div
                   key={idx}
-                  onClick={() => handleScrollToForm(card.titleFunction1)}
+                  onClick={() => handleScrollToForm(card)}
                   className="cursor-pointer"
                   tabIndex={0}
                   role="button"
