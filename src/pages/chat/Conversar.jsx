@@ -178,7 +178,6 @@ function Conversar() {
                         id="referencia"
                         onChange={(e) => setReferencia(e.target.value)}
                         placeholder="Se já tiveres um site, portfólio ou referência visual, partilha aqui."
-                        pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com)$"
                         className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500"
                       />
                     </div>
