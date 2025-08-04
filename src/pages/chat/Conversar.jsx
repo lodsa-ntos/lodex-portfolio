@@ -201,8 +201,8 @@ function Conversar() {
                             <option value="" disabled selected>
                               Seleciona um tipo de projeto
                             </option>
-                            <option value="landing">Landing Page</option>
-                            <option value="website">Website Completo</option>
+                            <option value="landing">Landing pages sob medida</option>
+                            <option value="website">Website completo</option>
                             <option value="portfolio">Portfólio</option>
                             <option value="redesign">Redesign</option>
                             <option value="outro">Outro / Ainda não sei</option>
@@ -235,10 +235,10 @@ function Conversar() {
                             <option value="naoTenhoPressa">
                               Não tenho pressa
                             </option>
-                            <option value="2semanas">
+                            <option value="duasSemanas">
                               Dentro de 2 semanas
                             </option>
-                            <option value="1mes">Dentro de 1 mês</option>
+                            <option value="umMes">Dentro de 1 mês</option>
                             <option value="urgencia">Tenho urgência</option>
                           </select>
                         </fieldset>

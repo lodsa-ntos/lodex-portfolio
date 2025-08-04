@@ -32,6 +32,14 @@ export default async function handlerProject(req, res) {
 
         const [fields] = await formParse();
 
+        const tipoProjetoMap = {
+            landing: "Landing pages sob medida",
+            website: "Website completo",
+            portfolio: "Portfólio",
+            redesign: "Redesign",
+            outro: "Outro / Ainda não sei"
+        };
+
         const orcamentoMap = {
             ate300: "Até 300€",
             entre300e500: "300€ – 500€",
@@ -40,15 +48,24 @@ export default async function handlerProject(req, res) {
             aindaNaoSei: "Ainda não sei"
         };
 
+        const prazoIdealMap = {
+            naoTenhoPressa: "Não tenho pressa.",
+            duasSemanas: "Dentro de 2 semanas.",
+            umMes: "Dentro de 1 mês.",
+            urgencia: "Tenho urgência."
+        }
+
         // Obtém os valores dos campos, garantindo que são strings
         const nomeCompleto = getFieldValue(fields.nomeCompleto).trim(); 
         const email = getFieldValue(fields.email).trim();
         const mensagem = getFieldValue(fields.messagem).trim();
-        const tipoProjeto = getFieldValue(fields.tipoProjeto).trim();
-        const prazoIdeal = getFieldValue(fields.prazoIdeal).trim();
         const referencia = getFieldValue(fields.referencia).trim();
+        const tipoProjetoRaw = getFieldValue(fields.tipoProjeto).trim();
+        const prazoIdealRaw = getFieldValue(fields.prazoIdeal).trim();
         const orcamentoEstimadoRaw = getFieldValue(fields.orcamentoEstimado).trim();
+        const tipoProjeto = tipoProjetoMap[tipoProjetoRaw] || "-";
         const orcamentoEstimado = orcamentoMap[orcamentoEstimadoRaw] || "-";
+        const prazoIdeal = prazoIdealMap[prazoIdealRaw] || "-";
 
         // Validação dos campos obrigatórios
         if (!nomeCompleto || !email  || !mensagem || !tipoProjeto ) {
@@ -77,18 +94,18 @@ export default async function handlerProject(req, res) {
             from: '"Lodex Studio" <noreply@lodexstudio.com>',
             to: process.env.EMAIL_TO,
             replyTo: email,
-            subject: `Estruturação de projeto – ${tipoProjeto || "sem tipo definido" }`,
+            subject: `Estruturação para um novo projeto – ${tipoProjeto || "sem tipo definido" }`,
             html: `
             <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-                <h2>Pedido de Estruturação de Projeto</h2>
+                <h2>Pedido de Estruturação para Projeto</h2>
                 <p><strong>Nome:</strong> ${nomeCompleto}</p>
                 <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Mensagem:</strong><br>${mensagem}</p>
-                <hr />
                 <p><strong>Tipo de projeto:</strong> ${tipoProjeto || "-"}</p>
                 <p><strong>Prazo ideal:</strong> ${prazoIdeal || "-"}</p>
                 <p><strong>Orçamento estimado:</strong> ${orcamentoEstimado}</p>
                 <p><strong>Link de referência:</strong> ${referencia || "-"}</p>
+                <hr />
+                 <p><strong>Mensagem:</strong><br>${mensagem}</p>
                 <p style="font-size: 12px; color: #999;">Recebido via formulário de estruturação em lodexstudio.com/conversar</p>
             </div>
             `,
