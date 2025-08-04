@@ -36,7 +36,8 @@ function Academico() {
     <>
       <Helmet>
         <title>
-          Gestos Amáveis — Website Profissional para Cuidadores | LodeX Studio
+          Biblioteca Escolar Camarate — Experiência mobile em Flutter, simples e
+          funcional | LodeX Studio
         </title>
         <meta
           name="description"
