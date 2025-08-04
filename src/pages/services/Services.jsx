@@ -604,7 +604,7 @@ function Services() {
                           </label>
                           <input
                             type="text"
-                            name="primeiroNome"
+                            name="nomeCompleto"
                             value={nomeCompleto}
                             placeholder="Nome Completo"
                             onChange={(e) => setnomeCompleto(e.target.value)}
