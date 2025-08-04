@@ -21,6 +21,7 @@ function Services() {
   const cardsTop = [
     {
       icon: <RiPagesLine className="size-10 text-white" />,
+      titleFunction1: "Landing pages sob medida",
       title: (
         <>
           Landing pages sob medida <br />{" "}
@@ -86,6 +87,7 @@ function Services() {
     },
     {
       icon: <CgWebsite className="size-10 text-white" />,
+      titleFunction1: "Website completo",
       title: (
         <>
           Website completo <br />{" "}
@@ -160,6 +162,7 @@ function Services() {
     },
     {
       icon: <FaPortrait className="size-10 text-white" />,
+      titleFunction1: "Portfólio com presença",
       title: (
         <>
           Portfólio com presença <br />{" "}
@@ -231,6 +234,7 @@ function Services() {
     },
     {
       icon: <MdOutlineDesignServices className="size-10 text-white" />,
+      titleFunction1: "Redesign funcional",
       title: (
         <>
           Redesign funcional <br />{" "}
@@ -484,7 +488,7 @@ function Services() {
               {cardsTop.map((card, idx) => (
                 <div
                   key={idx}
-                  onClick={() => handleScrollToForm(card)}
+                  onClick={() => handleScrollToForm(card.titleFunction1)}
                   className="cursor-pointer"
                   tabIndex={0}
                   role="button"
