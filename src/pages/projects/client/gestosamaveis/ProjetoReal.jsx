@@ -36,7 +36,7 @@ function ProjetoReal() {
 
                 {/** Explicação */}
                 <div className="sticky top-24 self-start">
-                    gfdfgdfgdf
+                    Gestos Amáveis 💚
                 </div>
             </div>
         </GlobalContainer>
