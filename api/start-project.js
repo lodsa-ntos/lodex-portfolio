@@ -74,10 +74,10 @@ export default async function handlerProject(req, res) {
         };
 
         const prazoIdealMap = {
-            naoTenhoPressa: "Não tenho pressa.",
-            duasSemanas: "Dentro de 2 semanas.",
-            umMes: "Dentro de 1 mês.",
-            urgencia: "Tenho urgência."
+            naoTenhoPressa: "Não tenho pressa",
+            duasSemanas: "Dentro de 2 semanas",
+            umMes: "Dentro de 1 mês",
+            urgencia: "Tenho urgência"
         }
 
         // Obtém os valores dos campos, garantindo que são strings
