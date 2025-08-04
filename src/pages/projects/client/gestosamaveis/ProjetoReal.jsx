@@ -17,7 +17,28 @@ function ProjetoReal() {
 
       <section id="gestosamaveis"  className="min-h-[95vh] pt-36 border-b shadow-md bg-[#f6f6f6] transition-all duration-500">
         <GlobalContainer>
+            <div className="grid grid-cols-[1fr_480px] gap-[4rem] px-4 py-20">
+                
 
+                {/** Imagens mockup */}
+                <div className="flex flex-col gap-12">
+                    
+                    <img src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-herosection.jpg" alt="Gestos Amaveis Homepage" className="rounded-lg"/>
+
+                    <img src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-home-scroll.jpg" alt="Gestos Amaveis Homepage" className="rounded-lg"/>
+
+                    <img src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-sobre.jpg" alt="Gestos Amaveis Homepage" className="rounded-lg"/>
+
+                    <img src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-servicos.jpg" alt="Gestos Amaveis Homepage" className="rounded-lg"/>
+
+                    <img src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-como-funciona.jpg" alt="Gestos Amaveis Homepage" className="rounded-lg"/>
+                </div>
+
+                {/** Explicação */}
+                <div className="sticky top-24 self-start">
+                    gfdfgdfgdf
+                </div>
+            </div>
         </GlobalContainer>
       </section>
     </>
