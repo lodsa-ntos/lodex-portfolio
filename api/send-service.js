@@ -55,10 +55,10 @@ export default async function handler(req, res) {
 
         // Configuração do e-mail
         const mailOptions = {
-            from: `"${name} via Lodex Studio" <${process.env.EMAIL_USER}>`,
+            from: `"${nomeCompleto} via Lodex Studio" <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_TO,
             replyTo: email,
-            subject: `Nova mensagem de: ${name || " " }`,
+            subject: `Nova mensagem de: ${nomeCompleto || " " }`,
             html: `
             <div style="font-family: Arial, sans-serif; line-height: 1.6;">
                 <h2>Está a pedir informações de serviço para: ${funcao || "-"}</h2>
