@@ -11,7 +11,7 @@ function LandingPage() {
   return (
     <>
       <Helmet>
-        <title>Lodex Studio | Desenvolvimento Web</title>
+        <title>LodeX Studio | Desenvolvimento Web</title>
         <meta
           name="description"
           content="Criação de websites modernos, leves e escaláveis. Interfaces funcionais com identidade clara e foco no detalhe."
