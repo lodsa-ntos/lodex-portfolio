@@ -40,6 +40,10 @@ function Conversar() {
         body: formData,
       });
 
+      for (let [key, value] of formData.entries()) {
+        console.log(`${key}:${value}`);
+      }
+
       if (response.ok) {
         toast.success(
           "Mensagem enviada com sucesso! Obrigado, entrarei em contacto em breve."

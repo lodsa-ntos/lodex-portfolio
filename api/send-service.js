@@ -55,7 +55,7 @@ export default async function handler(req, res) {
 
         // Configuração do e-mail
         const mailOptions = {
-            from: `"${nomeCompleto} via Lodex Studio" <${process.env.EMAIL_USER}>`,
+            from: "Lodex Studio <noreply@lodexstudio.com>",
             to: process.env.EMAIL_TO,
             replyTo: email,
             subject: `Nova mensagem de: ${nomeCompleto || " " }`,
