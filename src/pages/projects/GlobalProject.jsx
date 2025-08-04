@@ -59,7 +59,7 @@ function GlobalProject() {
     {
       id: 2,
       title: "Gestos Amáveis",
-      link: "https://www.gestosamaveis.pt/",
+      link: "/gestosamaveis",
       linkExternal: "_blank",
       primaryImg:
         "images/projetos/cliente/gestosamaveis/gestos-home-global.png",

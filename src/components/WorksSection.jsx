@@ -73,7 +73,7 @@ function WorksSection() {
           </BubblyLink>
 
           {/** Card 2 */}
-          <a className="cursor-pointer group relative flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500">
+          <a href="/gestosamaveis" className="cursor-pointer group relative flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500">
             <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
               {/** Badge */}
               <div relative>
