@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import GlobalContainer from "../../../../utils/GlobalContainer";
+import { SiQuicklook } from "react-icons/si";
 
 function ProjetoReal() {
   return (
@@ -15,29 +16,82 @@ function ProjetoReal() {
         />
       </Helmet>
 
-      <section id="gestosamaveis"  className="min-h-screen pt-36 border-b shadow-md transition-all duration-500">
+      <section
+        id="gestosamaveis"
+        className="min-h-screen pt-36 border-b shadow-md transition-all duration-500"
+      >
         <GlobalContainer>
-            <div className="grid grid-cols-[1fr_480px] gap-[4rem] py-16">
-                
-                {/** Imagens mockup */}
-                <div className="flex flex-col gap-4">
-                    
-                    <img src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-herosection.jpg" alt="Gestos Amáveis - Hero Section" className="rounded-lg"/>
+          <div className="grid grid-cols-[1fr_480px] gap-[4rem] py-16">
+            {/** Imagens mockup */}
+            <div className="flex flex-col gap-4">
+              <img
+                src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-herosection.jpg"
+                alt="Gestos Amáveis - Hero Section"
+                className="rounded-lg"
+              />
 
-                    <img src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-home-scroll.jpg" alt="Gestos Amáveis - Página inicial com scroll" className="rounded-lg"/>
+              <img
+                src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-home-scroll.jpg"
+                alt="Gestos Amáveis - Página inicial com scroll"
+                className="rounded-lg"
+              />
 
-                    <img src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-sobre.jpg" alt="Gestos Amáveis - Seção sobre" className="rounded-lg"/>
+              <img
+                src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-sobre.jpg"
+                alt="Gestos Amáveis - Seção sobre"
+                className="rounded-lg"
+              />
 
-                    <img src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-servicos.jpg" alt="Gestos Amáveis - Seção serviços avulso" className="rounded-lg"/>
+              <img
+                src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-servicos.jpg"
+                alt="Gestos Amáveis - Seção serviços avulso"
+                className="rounded-lg"
+              />
 
-                    <img src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-como-funciona.jpg" alt="Gestos Amáveis - Seção como funciona" className="rounded-lg"/>
-                </div>
-
-                {/** Explicação */}
-                <div className="sticky top-24 self-start h-fit">
-                    Gestos Amáveis 💚
-                </div>
+              <img
+                src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-como-funciona.jpg"
+                alt="Gestos Amáveis - Seção como funciona"
+                className="rounded-lg"
+              />
             </div>
+
+            {/** Explicação */}
+            <div className="sticky top-24 self-start h-fit">
+              <h1 className="pb-8 text-[#0E1011] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
+                Gestos Amáveis 💚
+              </h1>
+
+              <h3 className="mb-6 text-gray-700 text-lg leading-relaxed">
+                Website desenvolvido para a{" "}
+                <strong className="text-[#2F9B92]">Gestos Amáveis</strong>,
+                empresa portuguesa especializada em cuidados domiciliares.
+              </h3>
+
+              <p className="mb-6 text-gray-600 text-base leading-relaxed">
+                O projeto foi pensado para transmitir empatia e acessibilidade
+                desde o primeiro clique. A estrutura respeita a identidade já
+                existente da marca, com foco em navegação mobile e clareza
+                visual.
+                <br />
+                <br />A página apresenta a empresa, serviços, funcionamento e
+                contato, tudo em uma experiência fluida e leve. O código foi
+                otimizado para boa performance e carregamento rápido.
+              </p>
+
+              <button
+                className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
+                aria-label="Explorar projetos"
+              >
+                <SiQuicklook className="text-gray-200" />
+                <a
+                  href="https://gestosamaveis.pt"
+                  target="_blank"
+                >
+                  Visitar o site
+                </a>
+              </button>
+            </div>
+          </div>
         </GlobalContainer>
       </section>
     </>
