@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound";
 import ErrorBoundary from "./layout/ErrorBoundary";
 import "./index.css";
 import "react-toastify/dist/ReactToastify.css";
+import ProjetoReal from "./pages/projects/client/gestosamaveis/ProjetoReal";
 import Academico from "./pages/projects/Academico";
 import SobreMim from "./pages/sobre/SobreMim";
 import Services from "./pages/services/Services";
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LayoutGlobal />}>
           <Route index element={<LandingPage />} />
+           <Route path="/gestosamaveis" element={<ProjetoReal />} />
           <Route path="/academico" element={<Academico />} />
           <Route path="/sobremim" element={<SobreMim />} />
           <Route path="/servicos" element={<Services />} />

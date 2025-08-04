@@ -10,6 +10,7 @@ import firebase from "../../assets/tech/firebase.webp";
 import axure from "../../assets/tech/axure.svg";
 import esc from "../../assets/tech/esc.png";
 import ulht from "../../assets/tech/ulht.svg";
+import { Helmet } from "react-helmet";
 
 function Academico() {
   const companies = [
@@ -33,6 +34,15 @@ function Academico() {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Gestos Amáveis — Website Profissional para Cuidadores | LodeX Studio
+        </title>
+        <meta
+          name="description"
+          content="Aplicação móvel desenvolvida pela LodeX Studio em Flutter para a Biblioteca Escolar de Camarate. Projeto real com foco em organização, acessibilidade e experiência intuitiva para estudantes."
+        />
+      </Helmet>
       <section id="academico" className="pt-[192px] pb-20 border-b shadow-md">
         <GlobalContainer>
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -91,8 +101,13 @@ function Academico() {
                   className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
                   aria-label="Explorar projetos"
                 >
-                  <HiOutlineViewGrid className="text-gray-200" /> 
-                  <a href="https://github.com/lodsa-ntos/TFC_a21505293_camarate_school_library_app/tree/main" target="_blank">Ver a solução em detalhe</a>
+                  <HiOutlineViewGrid className="text-gray-200" />
+                  <a
+                    href="https://github.com/lodsa-ntos/TFC_a21505293_camarate_school_library_app/tree/main"
+                    target="_blank"
+                  >
+                    Ver a solução em detalhe
+                  </a>
                 </button>
               </div>
             </div>
