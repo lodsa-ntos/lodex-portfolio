@@ -2,6 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import GlobalContainer from "../../../../utils/GlobalContainer";
 import { SiQuicklook } from "react-icons/si";
+import { RiDoubleQuotesL } from "react-icons/ri";
+import { RiDoubleQuotesR } from "react-icons/ri";
 
 function ProjetoReal() {
   return (
@@ -77,8 +79,7 @@ function ProjetoReal() {
                 contato, tudo em uma experiência fluida e leve. O código foi
                 otimizado para boa performance e carregamento rápido.
                 <br />
-                <br />O site está publicado e em uso, com conteúdo gerido pelo
-                próprio cliente. Foi um projeto entregue com autonomia e
+                <br />O site está publicado e em uso, com conteúdo gerido pela própria cliente Foi um projeto entregue com autonomia e
                 compromisso, da estrutura até os detalhes finais.
               </p>
 
@@ -92,11 +93,18 @@ function ProjetoReal() {
                 </a>
               </button>
 
-              <div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <h4></h4>
+              <div className="mt-12 py-5 bg-[#f6f6f6] rounded-xl">
+                <div className=" pl-4 flex flex-col gap-2">
+                  <div className="relative text-sm italic  leading-relaxed">
+                    <RiDoubleQuotesL className="absolute -left-2 -top-10 size-14 text-[#2F9B92]" />
+                    <p className="pl-5 pt-2 text-gray-500">
+                    Está incrível, adorámos mesmo! Muito profissional e detalhista. <br />A página Sobre Nós ficou linda.
+                  </p>
+                  </div>
+                  <p className="text-sm italic font-semibold font-Jost text-gray-700 mt-1 pl-5">
+                    Gestos Amáveis
+                  </p>
+                </div>
               </div>
             </div>
           </div>
