@@ -174,7 +174,7 @@ function GlobalProject() {
   return (
     <>
       <Helmet>
-        <title>Lodex Studio — Portfólio</title>
+        <title>LodeX Studio — Portfólio</title>
         <meta
           name="description"
           content="Projetos reais e conceitos autorais com foco em clareza, ritmo e estrutura sólida. Veja o que foi criado recentemente."
