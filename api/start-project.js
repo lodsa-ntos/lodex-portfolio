@@ -41,13 +41,13 @@ export default async function handlerProject(req, res) {
         };
 
         // Obtém os valores dos campos, garantindo que são strings
-        const nomeCompleto = getFieldValue(fields.nomeCompleto); 
-        const email = getFieldValue(fields.email);
-        const mensagem = getFieldValue(fields.message);
-        const tipoProjeto = getFieldValue(fields.tipoProjeto);
-        const prazoIdeal = getFieldValue(fields.prazoIdeal);
-        const referencia = getFieldValue(fields.referencia);
-        const orcamentoEstimadoRaw = getFieldValue(fields.orcamentoEstimado);
+        const nomeCompleto = getFieldValue(fields.nomeCompleto).trim(); 
+        const email = getFieldValue(fields.email).trim();
+        const mensagem = getFieldValue(fields.messagem).trim();
+        const tipoProjeto = getFieldValue(fields.tipoProjeto).trim();
+        const prazoIdeal = getFieldValue(fields.prazoIdeal).trim();
+        const referencia = getFieldValue(fields.referencia).trim();
+        const orcamentoEstimadoRaw = getFieldValue(fields.orcamentoEstimado).trim();
         const orcamentoEstimado = orcamentoMap[orcamentoEstimadoRaw] || "-";
 
         // Validação dos campos obrigatórios
