@@ -10,6 +10,31 @@ export const config = {
   },
 };
 
+function gerarAssuntoEmail({nome, tipoProjeto, prazoIdeal, orcamentoEstimadoRaw, orcamentoEstimado}) {
+
+    const nomeFinal = nome || "Nome não especificado";
+    const tipo = tipoProjeto ? tipoProjeto.charAt(0).toUpperCase() + tipoProjeto.slice(1) : "Tipo indefinido";
+    const prazo = prazoIdeal || "Prazo não especificado";
+    const orcamento =  orcamentoEstimado || "Orçamento não informado";
+
+    // Define prioridade com base no orçamento bruto e prazo
+    let prefixo = "📌"; // padrão
+
+    const urgente = prazo.toLowerCase().includes("1 semana") || prazo.toLowerCase().includes("urgente");
+
+    const altoValor = orcamentoEstimadoRaw === "mais800";
+
+    if (altoValor && urgente) {
+        prefixo = "🔥🚀"; // Muito relevante
+    } else if (altoValor) {
+        prefixo = "🚀"; // Alta prioridade por valor
+    } else if (urgente) {
+        prefixo = "⏰"; // Prioridade por prazo
+    }
+
+    return `${prefixo} Novo projeto: ${tipo} – ${nomeFinal} (${prazo}, ${orcamento})`;
+}
+
 export default async function handlerProject(req, res) {
     
     if (req.method !== "POST") {
@@ -89,15 +114,23 @@ export default async function handlerProject(req, res) {
             },
         });
 
+        const assunto = gerarAssuntoEmail({
+            nome: nomeCompleto,
+            tipoProjeto,
+            prazoIdeal,
+            orcamentoEstimadoRaw,
+            orcamentoEstimado,
+        });
+
         // Construção do e-mail
         const mailOptions = {
             from: '"Lodex Studio" <noreply@lodexstudio.com>',
             to: process.env.EMAIL_TO,
             replyTo: email,
-            subject: `Estruturação para um novo projeto – ${tipoProjeto || "sem tipo definido" }`,
+            subject: assunto,
             html: `
             <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-                <h2>Pedido de Estruturação para Projeto</h2>
+                <h2>${assunto}</h2>
                 <p><strong>Nome:</strong> ${nomeCompleto}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Tipo de projeto:</strong> ${tipoProjeto || "-"}</p>
