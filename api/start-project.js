@@ -74,7 +74,7 @@ export default async function handlerProject(req, res) {
 
         // Construção do e-mail
         const mailOptions = {
-            from: `"${nomeCompleto} via LodeX Studio" <${process.env.EMAIL_USER}>`,
+            from: '"Lodex Studio" <noreply@lodexstudio.com>',
             to: process.env.EMAIL_TO,
             replyTo: email,
             subject: `Estruturação de projeto – ${tipoProjeto || "sem tipo definido" }`,
