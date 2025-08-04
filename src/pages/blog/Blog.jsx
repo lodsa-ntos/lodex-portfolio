@@ -6,7 +6,7 @@ function Blog() {
   return (
     <>
       <Helmet>
-        <title>Lodex Studio — Blog</title>
+        <title>LodeX Studio — Blog</title>
         <meta
           name="description"
           content="Reflexões autorais e soluções práticas sobre criação digital, frontend e design. Conteúdo direto, com propósito."
