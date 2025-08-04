@@ -76,6 +76,10 @@ function ProjetoReal() {
                 <br />A página apresenta a empresa, serviços, funcionamento e
                 contato, tudo em uma experiência fluida e leve. O código foi
                 otimizado para boa performance e carregamento rápido.
+                <br />
+                <br />O site está publicado e em uso, com conteúdo gerido pelo
+                próprio cliente. Foi um projeto entregue com autonomia e
+                compromisso, da estrutura até os detalhes finais.
               </p>
 
               <button
@@ -83,11 +87,8 @@ function ProjetoReal() {
                 aria-label="Explorar projetos"
               >
                 <SiQuicklook className="text-gray-200" />
-                <a
-                  href="https://gestosamaveis.pt"
-                  target="_blank"
-                >
-                  Visitar o site
+                <a href="https://gestosamaveis.pt" target="_blank">
+                  Ver site online
                 </a>
               </button>
             </div>
