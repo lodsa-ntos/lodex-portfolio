@@ -625,9 +625,8 @@ function Services() {
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="E-mail"
                             required
-                            pattern="^[a-zA-Z0-9._%+/-]+@(gmail\.com|hotmail\.com|outlook\.com)$"
                             className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500"
-                            title="O e-mail deve terminar com @gmail.com, @hotmail.com ou @outlook.com"
+                            title="Insira um e-mail válido"
                           />
                         </div>
                       </div>
