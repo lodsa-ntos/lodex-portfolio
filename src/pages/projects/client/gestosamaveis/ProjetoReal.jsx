@@ -265,7 +265,7 @@ function ProjetoReal() {
               id="projetos"
               className="text-sm w-[50%] mx-auto uppercase font-bold text-[#777] tracking-wider text-center"
             >
-              Você também pode gostar
+              Explore mais projetos
             </h1>
 
             {/* Top Line */}
