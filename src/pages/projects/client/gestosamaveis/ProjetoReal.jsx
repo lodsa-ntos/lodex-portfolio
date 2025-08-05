@@ -57,8 +57,8 @@ function ProjetoReal() {
               />
 
               <img
-                src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-como-funciona.jpg"
-                alt="Gestos Amáveis - Seção como funciona"
+                src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-contact-form.jpg"
+                alt="Gestos Amáveis - Contato"
                 className="rounded-lg"
               />
             </div>
