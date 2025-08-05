@@ -68,21 +68,22 @@ function ProjetoReal() {
               <h1 className="pb-2 text-[#0E1011] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
                 Gestos Amáveis
               </h1>
+              <p className="text-xs mb-1 text-gray-500 leading-relaxed">Website institucional para cuidados domiciliários com foco em empatia, leveza e clareza.</p>
 
-              <div className="flex items-center justify-start gap-1.5">
-                <div className="ring-1 ring-inset bg-green-50 text-[#2F9B92] ring-[#2F9B92] text-xs px-2 py-1 rounded-full flex items-center justify-end text-end gap-1 w-fit">
+              <div className="flex items-center justify-start gap-2.5">
+                <div className="ring-1 ring-inset bg-green-50 text-[#2F9B92] ring-[#2F9B92] text-xs px-2 py-1 rounded-full flex items-center justify-end text-end gap-1 w-fit hover:scale-105">
                   <TbContract />
-                  Projeto real - Cliente
+                  Projeto real • Cliente
                 </div>
 
-                <FaReact title="React.js" className="text-blue-500" />
+                <FaReact title="React.js" className="text-blue-500 hover:scale-105" />
                 <RiTailwindCssFill
                   title="Tailwind CSS"
-                  className="text-sky-400"
+                  className="text-sky-400 hover:scale-105"
                 />
                 <TbBrandFramerMotion
                   title="Framer Motion"
-                  className="text-purple-500"
+                  className="text-purple-500 hover:scale-105"
                 />
               </div>
 
@@ -238,7 +239,7 @@ function ProjetoReal() {
                     </p>
                   </div>
                   <p className="text-sm italic font-semibold font-Jost text-gray-700 mt-1 pl-5">
-                    Gestos Amáveis
+                    — Feedback da cliente Gestos Amáveis
                   </p>
                 </div>
               </div>
