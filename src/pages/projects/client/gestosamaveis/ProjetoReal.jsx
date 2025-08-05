@@ -10,6 +10,7 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 import { RxDrawingPinFilled } from "react-icons/rx";
 import { AiOutlineFileProtect } from "react-icons/ai";
 import { LiaUniversitySolid } from "react-icons/lia";
+import { BubblyLink } from "../../../../library/BubblyLink";
 
 function ProjetoReal() {
   return (
@@ -68,7 +69,10 @@ function ProjetoReal() {
               <h1 className="pb-2 text-[#0E1011] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
                 Gestos Amáveis
               </h1>
-              <p className="text-xs mb-1 text-gray-500 leading-relaxed">Website institucional para cuidados domiciliários com foco em empatia, leveza e clareza.</p>
+              <p className="text-xs mb-1 text-gray-500 leading-relaxed">
+                Website institucional para cuidados domiciliários com foco em
+                empatia, leveza e clareza.
+              </p>
 
               <div className="flex items-center justify-start gap-2.5">
                 <div className="ring-1 ring-inset bg-green-50 text-[#2F9B92] ring-[#2F9B92] text-xs px-2 py-1 rounded-full flex items-center justify-end text-end gap-1 w-fit hover:scale-105">
@@ -76,7 +80,10 @@ function ProjetoReal() {
                   Projeto real • Cliente
                 </div>
 
-                <FaReact title="React.js" className="text-blue-500 hover:scale-105" />
+                <FaReact
+                  title="React.js"
+                  className="text-blue-500 hover:scale-105"
+                />
                 <RiTailwindCssFill
                   title="Tailwind CSS"
                   className="text-sky-400 hover:scale-105"
@@ -94,18 +101,26 @@ function ProjetoReal() {
               </h3>
 
               <p className="mb-6 text-gray-600 text-base leading-relaxed">
-                O projeto foi pensado para transmitir empatia e acessibilidade desde o primeiro clique, de forma a respeitar a identidade visual da marca com foco em navegação mobile e clareza textual.
+                O projeto foi pensado para transmitir empatia e acessibilidade
+                desde o primeiro clique, de forma a respeitar a identidade
+                visual da marca com foco em navegação mobile e clareza textual.
                 <br />
-                <br />A página reúne as principais áreas, empresa, serviços, funcionamento e contato, em uma navegação fluida e leve. O código foi
-                otimizado para bom desempenho, carregamento rápido e estrutura escalável.
+                <br />A página reúne as principais áreas, empresa, serviços,
+                funcionamento e contato, em uma navegação fluida e leve. O
+                código foi otimizado para bom desempenho, carregamento rápido e
+                estrutura escalável.
                 <br />
-                <br />Atualmente o site está publicado e em uso, com conteúdo gerido pela própria cliente. Foi um projeto real que uniu escuta, colaboração e compromisso, da estrutura até os detalhes finais.
+                <br />
+                Atualmente o site está publicado e em uso, com conteúdo gerido
+                pela própria cliente. Foi um projeto real que uniu escuta,
+                colaboração e compromisso, da estrutura até os detalhes finais.
               </p>
 
               <div className="mb-6">
                 <ul className="space-y-4 text-left text-gray-500 dark:text-gray-400">
                   <h1 className="flex items-center justify-start gap-1 text-[#6a7282] font-[500] text-sm">
-                    <RxDrawingPinFilled className="text-[#2F9B92]"/> Tecnologias e Estrutura
+                    <RxDrawingPinFilled className="text-[#2F9B92]" />{" "}
+                    Tecnologias e Estrutura
                   </h1>
                   <li className="flex items-center space-x-3 rtl:space-x-reverse">
                     <span class="size-5 flex justify-center items-center rounded-full bg-green-50 text-[#2F9B92]">
@@ -270,8 +285,13 @@ function ProjetoReal() {
           {/* Cards portfolio */}
           <div className="max-w-content mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/** Card 1 */}
-            <div class="cursor-pointer group relative flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500">
-              <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
+            <BubblyLink
+              to="/academico"
+              colorStart="#004AAD"
+              colorEnd="#FFFFFF"
+              className="cursor-pointer group relative flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500"
+            >
+              <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
                 {/** Badge */}
                 <div relative>
                   <div className="absolute top-3 right-4 rounded-full p-1.5 tracking-tight ring-1 ring-inset bg-gray-50 text-gray-600 ring-purple-700/10 z-50 flex items-center gap-2">
@@ -285,36 +305,39 @@ function ProjetoReal() {
                 </div>
 
                 <img
-                  class="transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform group-hover:scale-110"
+                  className="transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform group-hover:scale-110"
                   src="images/portfolio/android.svg"
                   alt="biblioteca-escolar-camarate"
                 />
               </div>
-              <div class="p-4">
-                <h6 class="mb-2 text-slate-800 text-xl font-semibold">
+              <div className="p-4">
+                <h6 className="mb-2 text-slate-800 text-xl font-semibold">
                   Biblioteca Escolar Camarate
                 </h6>
-                <p class="text-slate-600 leading-normal font-light">
+                <p className="text-slate-600 leading-normal font-light">
                   Aplicação mobile desenvolvida como projeto final de curso, com
                   base numa colaboração real com a Escola Secundária de
                   Camarate.
                 </p>
               </div>
-              <div class="px-4 pb-4 pt-0 mt-2">
-                <a href="/academico" className="transition-all duration-500">
-                  <button
-                    class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none duration-500"
-                    type="button"
-                  >
-                    Ver caso de estudo
-                  </button>
-                </a>
+              <div className="px-4 pb-4 pt-0 mt-2">
+                <button
+                  class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none duration-500"
+                  type="button"
+                >
+                  Ver caso de estudo
+                </button>
               </div>
-            </div>
+            </BubblyLink>
 
             {/** Card 3 */}
-            <div class="md:hidden cursor-pointer group relative lg:flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500">
-              <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
+            <BubblyLink
+              to="/launchpeack"
+              colorStart="#004AAD"
+              colorEnd="#FFFFFF"
+              className="md:hidden cursor-pointer group relative lg:flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500"
+            >
+              <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
                 {/** Badge */}
                 <div className="relative">
                   <div className="absolute top-3 right-4 rounded-full p-1.5 tracking-tight ring-1 ring-inset bg-blue-50 text-[#3b82f6] ring-blue-700/10 z-50 flex items-center gap-2">
@@ -329,29 +352,29 @@ function ProjetoReal() {
                 </div>
 
                 <img
-                  class="transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform group-hover:scale-110"
+                  className="transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform group-hover:scale-110"
                   src="images/portfolio/launchPeack.svg"
                   alt="investment-seed-round"
                 />
               </div>
-              <div class="p-4">
-                <h6 class="mb-2 text-slate-800 text-xl font-semibold">
+              <div className="p-4">
+                <h6 className="mb-2 text-slate-800 text-xl font-semibold">
                   LaunchPeack
                 </h6>
-                <p class="text-slate-600 leading-normal font-light">
+                <p className="text-slate-600 leading-normal font-light">
                   Landing page criada como conceito para uma solução fictícia.
                   Feita com React, Tailwind CSS e Framer Motion.
                 </p>
               </div>
-              <div class="px-4 pb-4 pt-0 mt-2">
+              <div className="px-4 pb-4 pt-0 mt-2">
                 <button
-                  class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  className="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
                 >
                   Ver caso de estudo
                 </button>
               </div>
-            </div>
+            </BubblyLink>
           </div>
         </GlobalContainer>
       </section>
