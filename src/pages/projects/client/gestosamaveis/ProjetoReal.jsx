@@ -3,7 +3,10 @@ import { Helmet } from "react-helmet";
 import GlobalContainer from "../../../../utils/GlobalContainer";
 import { SiQuicklook } from "react-icons/si";
 import { RiDoubleQuotesL } from "react-icons/ri";
-import { RiDoubleQuotesR } from "react-icons/ri";
+import { TbContract } from "react-icons/tb";
+import { FaReact } from "react-icons/fa6";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 function ProjetoReal() {
   return (
@@ -59,11 +62,28 @@ function ProjetoReal() {
 
             {/** Explicação */}
             <div className="sticky top-24 self-start h-fit">
-              <h1 className="pb-8 text-[#0E1011] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
+              <h1 className="pb-2 text-[#0E1011] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
                 Gestos Amáveis 💚
               </h1>
 
-              <h3 className="mb-6 text-gray-700 text-lg leading-relaxed">
+              <div className="flex items-center justify-start gap-1.5">
+                <div className="ring-1 ring-inset bg-green-50 text-[#2F9B92] ring-[#2F9B92] text-xs px-2 py-1 rounded-full flex items-center justify-end text-end gap-1 w-fit">
+                <TbContract />
+                Projeto real - Cliente
+              </div>
+
+              <FaReact title="React.js" className="text-blue-500" />
+              <RiTailwindCssFill
+                title="Tailwind CSS"
+                className="text-sky-400"
+              />
+              <TbBrandFramerMotion
+                title="Framer Motion"
+                className="text-purple-500"
+              />
+              </div>
+
+              <h3 className="mb-6 mt-6 text-gray-700 text-lg leading-relaxed">
                 Website desenvolvido para a{" "}
                 <strong className="text-[#2F9B92]">Gestos Amáveis</strong>,
                 empresa portuguesa especializada em cuidados domiciliares.
@@ -79,7 +99,8 @@ function ProjetoReal() {
                 contato, tudo em uma experiência fluida e leve. O código foi
                 otimizado para boa performance e carregamento rápido.
                 <br />
-                <br />O site está publicado e em uso, com conteúdo gerido pela própria cliente Foi um projeto entregue com autonomia e
+                <br />O site está publicado e em uso, com conteúdo gerido pela
+                própria cliente Foi um projeto entregue com autonomia e
                 compromisso, da estrutura até os detalhes finais.
               </p>
 
@@ -98,8 +119,9 @@ function ProjetoReal() {
                   <div className="relative text-sm italic  leading-relaxed">
                     <RiDoubleQuotesL className="absolute -left-2 -top-10 size-14 text-[#2F9B92]" />
                     <p className="pl-5 pt-2 text-gray-500">
-                    Está incrível, adorámos mesmo! Muito profissional e detalhista. <br />A página Sobre Nós ficou linda.
-                  </p>
+                      Está incrível, adorámos mesmo! Muito profissional e
+                      detalhista. <br />A página Sobre Nós ficou linda.
+                    </p>
                   </div>
                   <p className="text-sm italic font-semibold font-Jost text-gray-700 mt-1 pl-5">
                     Gestos Amáveis
