@@ -93,18 +93,12 @@ function ProjetoReal() {
               </h3>
 
               <p className="mb-6 text-gray-600 text-base leading-relaxed">
-                O projeto foi pensado para transmitir empatia e acessibilidade
-                desde o primeiro clique. A estrutura respeita a identidade já
-                existente da marca, com foco em navegação mobile e clareza
-                visual.
+                O projeto foi pensado para transmitir empatia e acessibilidade desde o primeiro clique, de forma a respeitar a identidade visual da marca com foco em navegação mobile e clareza textual.
                 <br />
-                <br />A página apresenta a empresa, serviços, funcionamento e
-                contato, tudo em uma experiência fluida e leve. O código foi
-                otimizado para boa performance e carregamento rápido.
+                <br />A página reúne as principais áreas, empresa, serviços, funcionamento e contato, em uma navegação fluida e leve. O código foi
+                otimizado para bom desempenho, carregamento rápido e estrutura escalável.
                 <br />
-                <br />O site está publicado e em uso, com conteúdo gerido pela
-                própria cliente Foi um projeto entregue com autonomia e
-                compromisso, da estrutura até os detalhes finais.
+                <br />Atualmente o site está publicado e em uso, com conteúdo gerido pela própria cliente. Foi um projeto real que uniu escuta, colaboração e compromisso, da estrutura até os detalhes finais.
               </p>
 
               <div className="mb-6">
