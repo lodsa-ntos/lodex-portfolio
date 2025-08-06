@@ -58,7 +58,7 @@ function SobreMim() {
             {/* Left Side - Foto */}
             <img
               src={me}
-              alt="Retrato de Lodney Santos"
+              alt="Lod, desenvolvedor frontend e entusiasta de UI/UX design"
               className="w-64 mt-28 sm:w-80 aspect-square rounded-2xl object-cover mx-auto bg-gradient-to-b from-primario-claro shadow-lg hover:scale-105 hover:brightness-105 hover:contrast-100 hover:shadow-xl -translate-y-16 transform transition-all duration-500"
             />
           </div>
