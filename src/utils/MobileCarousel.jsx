@@ -3,7 +3,7 @@ import { Carousel, ChevronLeftIcon, ChevronRightIcon } from "flowbite-react";
 
 function MobileCarousel() {
   return (
-    <div className="h-56 sm:h-64 md:hidden mb-10">
+    <div className="h-72 sm:h-64 md:hidden mb-10">
       <Carousel
         slideInterval={5000}
         indicators={false}
