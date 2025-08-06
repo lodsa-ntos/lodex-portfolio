@@ -55,7 +55,7 @@ function AboutSection() {
           {/* Left Side - Foto */}
           <img
             src={me}
-            alt="Retrato de Lodney Santos"
+            alt="Lodney Santos Frontend Developer"
             className="w-52 sm:w-80 aspect-square rounded-2xl object-cover mx-auto bg-gradient-to-b from-primario-claro shadow-lg hover:scale-105 hover:brightness-105 hover:contrast-100 hover:shadow-xl transform transition-all duration-500"
           />
         </div>

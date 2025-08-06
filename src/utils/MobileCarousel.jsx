@@ -8,14 +8,16 @@ function MobileCarousel() {
         slideInterval={5000}
         indicators={false}
         leftControl={
-            <ChevronLeftIcon 
+          <ChevronLeftIcon
             className="w-6 h-6 bg-green-50
-            rounded-full text-[#2f9b92] hover:text"/>
+            rounded-full text-[#2f9b92] hover:text"
+          />
         }
         rightControl={
-            <ChevronRightIcon 
+          <ChevronRightIcon
             className="w-6 h-6 bg-green-50
-            rounded-full text-[#2f9b92] hover:text"/>
+            rounded-full text-[#2f9b92] hover:text"
+          />
         }
       >
         <img

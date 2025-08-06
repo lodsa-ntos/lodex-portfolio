@@ -267,7 +267,7 @@ function ProjetoReal() {
         </GlobalContainer>
       </section>
 
-      <section className="shadow-lg border-b mt-20 lg:mb-20 xl:mb-0 lg:mt-4 lg:py-16 bg-gray-100">
+      <section className="shadow-lg border-b mt-2 lg:mb-20 xl:mb-0 lg:mt-4 lg:py-16 bg-gray-100">
         <GlobalContainer>
           <div className="flex flex-row items-center justify-center mb-6 gap-x-1">
             {/* Top Line */}
