@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel, ChevronLeftIcon, ChevronRightIcon } from "flowbite-react";
 
-function MobileCarousel() {
+export default function MobileCarousel() {
   return (
     <div className="h-72 sm:h-64 md:hidden mb-10">
       <Carousel
@@ -45,4 +45,42 @@ function MobileCarousel() {
   );
 }
 
-export default MobileCarousel;
+export function MobileCarouselLaunchPeak() {
+  return (
+    <div className="h-72 sm:h-64 md:hidden mb-10">
+      <Carousel
+        slideInterval={5000}
+        indicators={false}
+        leftControl={
+          <ChevronLeftIcon
+            className="w-6 h-6 bg-purple-50
+            rounded-full text-[#6248d6] hover:text"
+          />
+        }
+        rightControl={
+          <ChevronRightIcon
+            className="w-6 h-6 bg-purple-50
+            rounded-full text-[#6248d6] hover:text"
+          />
+        }
+      >
+        <img
+          src="images/projetos/ficticio/conceitopessoal/bg-launchpeak-herosection.jpg"
+          alt="Launchpeak - Hero Section"
+        />
+        <img
+          src="images/projetos/ficticio/conceitopessoal/bg-launchpeak-categorysection.jpg"
+          alt="Launchpeak - Seção Categoria"
+        />
+        <img
+          src="images/projetos/ficticio/conceitopessoal/bg-launchpeak-pricesection.jpg"
+          alt="Launchpeak - Seção preço"
+        />
+        <img
+          src="images/projetos/ficticio/conceitopessoal/bg-launchpeak-projectsection.jpg"
+          alt="Launchpeak - Seção projetos"
+        />
+      </Carousel>
+    </div>
+  );
+}

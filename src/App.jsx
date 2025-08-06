@@ -7,6 +7,7 @@ import ErrorBoundary from "./layout/ErrorBoundary";
 import "./index.css";
 import "react-toastify/dist/ReactToastify.css";
 import ProjetoReal from "./pages/projects/client/gestosamaveis/ProjetoReal";
+import ConceitoPessoal from "./pages/projects/ficticio/ConceitoPessoal";
 import Academico from "./pages/projects/Academico";
 import SobreMim from "./pages/sobre/SobreMim";
 import Services from "./pages/services/Services";
@@ -23,6 +24,7 @@ function App() {
           <Route index element={<LandingPage />} />
            <Route path="/gestosamaveis" element={<ProjetoReal />} />
           <Route path="/academico" element={<Academico />} />
+          <Route path="/launchpeak" element={<ConceitoPessoal />} />
           <Route path="/sobremim" element={<SobreMim />} />
           <Route path="/servicos" element={<Services />} />
           <Route path="/blog" element={<Blog />} />

@@ -84,7 +84,7 @@ function GlobalProject() {
     {
       id: 3,
       title: "LaunchPeack",
-      link: "https://launchpeak-starter.vercel.app/",
+      link: "/launchpeak",
       primaryImg: "images/projetos/ficticio/launchpeak-home.png",
       hoverImg: "images/projetos/ficticio/launchpeak-home-hover.png",
       techIcons: [
@@ -98,9 +98,9 @@ function GlobalProject() {
         </>,
       ],
       labelBadges: "Conceito pessoal",
-      iconBadges: <AiOutlineFileProtect className="text-blue-600" />,
+      iconBadges: <AiOutlineFileProtect className="text-[#6248d6]" />,
       bagdeStyle:
-        "ring-1 ring-inset bg-blue-50 text-[#3b82f6] ring-blue-600 text-xs px-2 py-1 rounded-full  flex items-center justify-end text-end gap-1",
+        "ring-1 ring-inset bg-purple-50 text-[#6248d6] ring-[#6248d6] text-xs px-2 py-1 rounded-full  flex items-center justify-end text-end gap-1",
       description:
         "Landing page criada como conceito para uma solução fictícia. Feita com React, Tailwind CSS e Framer Motion.",
       tags: ["landing", "Landing Page"],

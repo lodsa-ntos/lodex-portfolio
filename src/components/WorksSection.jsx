@@ -119,7 +119,7 @@ function WorksSection() {
 
           {/** Card 3 */}
           <BubblyLink
-            to="/launchpeack"
+            to="/launchpeak"
             colorStart="#004AAD"
             colorEnd="#FFFFFF"
             className="md:hidden cursor-pointer group relative lg:flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500"
