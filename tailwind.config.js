@@ -2,6 +2,8 @@
 export default {
   content: [
     "./index.html",
+    "./node_modules/flowbite-react/**/*.js",
+    "./node_modules/flowbite/**/*.js",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -61,5 +63,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // eslint-disable-next-line no-undef
+    require('flowbite/plugin')
+  ],
 }

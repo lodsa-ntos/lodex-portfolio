@@ -11,6 +11,7 @@ import { RxDrawingPinFilled } from "react-icons/rx";
 import { AiOutlineFileProtect } from "react-icons/ai";
 import { LiaUniversitySolid } from "react-icons/lia";
 import { BubblyLink } from "../../../../library/BubblyLink";
+import MobileCarousel from "../../../../utils/MobileCarousel";
 
 function ProjetoReal() {
   return (
@@ -63,6 +64,8 @@ function ProjetoReal() {
                 className="rounded-lg"
               />
             </div>
+            
+            <MobileCarousel />
 
             {/** Right side - Explanation */}
             <div className="sticky top-36 self-start h-fit">
