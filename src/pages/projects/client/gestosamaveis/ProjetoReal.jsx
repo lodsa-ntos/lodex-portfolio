@@ -25,240 +25,242 @@ function ProjetoReal() {
         />
       </Helmet>
 
-      <section id="gestosamaveis" className="pt-36 pb-24 transition-all duration-500">
+      <section
+        id="gestosamaveis"
+        className="pt-36 pb-24 transition-all duration-500"
+      >
         <GlobalContainer>
-          <div className="grid grid-cols-[1fr_480px] gap-[4rem]">
-              {/** Left side - Imagens mockup */}
-              <div className="flex flex-col gap-4">
-                <img
-                  src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-herosection.jpg"
-                  alt="Gestos Amáveis - Hero Section"
-                  className="rounded-lg"
-                />
+          <div className="relative md:grid grid-cols-[1fr_480px] gap-[4rem]">
+            {/** Left side - Imagens mockup */}
+            <div className="hidden md:flex flex-col gap-4">
+              <img
+                src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-herosection.jpg"
+                alt="Gestos Amáveis - Hero Section"
+                className="rounded-lg"
+              />
 
-                <img
-                  src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-home-scroll.jpg"
-                  alt="Gestos Amáveis - Página inicial com scroll"
-                  className="rounded-lg"
-                />
+              <img
+                src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-home-scroll.jpg"
+                alt="Gestos Amáveis - Página inicial com scroll"
+                className="rounded-lg"
+              />
 
-                <img
-                  src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-sobre.jpg"
-                  alt="Gestos Amáveis - Seção sobre"
-                  className="rounded-lg"
-                />
+              <img
+                src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-sobre.jpg"
+                alt="Gestos Amáveis - Seção sobre"
+                className="rounded-lg"
+              />
 
-                <img
-                  src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-servicos.jpg"
-                  alt="Gestos Amáveis - Seção serviços avulso"
-                  className="rounded-lg"
-                />
+              <img
+                src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-servicos.jpg"
+                alt="Gestos Amáveis - Seção serviços avulso"
+                className="rounded-lg"
+              />
 
-                <img
-                  src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-contact-form.jpg"
-                  alt="Gestos Amáveis - Contato"
-                  className="rounded-lg"
+              <img
+                src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-contact-form.jpg"
+                alt="Gestos Amáveis - Contato"
+                className="rounded-lg"
+              />
+            </div>
+
+            {/** Right side - Explanation */}
+            <div className="sticky top-36 self-start h-fit">
+              <h1 className="pb-2 text-[#0E1011] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
+                Gestos Amáveis
+              </h1>
+              <p className="text-xs mb-1 text-gray-500 leading-relaxed">
+                Website institucional para cuidados domiciliários com foco em
+                empatia, leveza e clareza.
+              </p>
+
+              <div className="flex items-center justify-start gap-2.5">
+                <div className="ring-1 ring-inset bg-green-50 text-[#2F9B92] ring-[#2F9B92] text-xs px-2 py-1 rounded-full flex items-center justify-end text-end gap-1 w-fit hover:scale-105">
+                  <TbContract />
+                  Projeto real • Cliente
+                </div>
+
+                <FaReact
+                  title="React.js"
+                  className="text-blue-500 hover:scale-105"
+                />
+                <RiTailwindCssFill
+                  title="Tailwind CSS"
+                  className="text-sky-400 hover:scale-105"
+                />
+                <TbBrandFramerMotion
+                  title="Framer Motion"
+                  className="text-purple-500 hover:scale-105"
                 />
               </div>
 
-              {/** Right side - Explanation */}
-              <div className="sticky top-36 self-start h-fit">
-                <h1 className="pb-2 text-[#0E1011] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
-                  Gestos Amáveis
-                </h1>
-                <p className="text-xs mb-1 text-gray-500 leading-relaxed">
-                  Website institucional para cuidados domiciliários com foco em
-                  empatia, leveza e clareza.
-                </p>
+              <h3 className="mb-6 mt-6 text-gray-700 text-lg leading-relaxed">
+                Website desenvolvido para a{" "}
+                <strong className="text-[#2F9B92]">Gestos Amáveis</strong>,
+                empresa portuguesa especializada em cuidados domiciliares.
+              </h3>
 
-                <div className="flex items-center justify-start gap-2.5">
-                  <div className="ring-1 ring-inset bg-green-50 text-[#2F9B92] ring-[#2F9B92] text-xs px-2 py-1 rounded-full flex items-center justify-end text-end gap-1 w-fit hover:scale-105">
-                    <TbContract />
-                    Projeto real • Cliente
-                  </div>
+              <p className="mb-6 text-gray-600 text-base leading-relaxed">
+                O projeto foi pensado para transmitir empatia e acessibilidade
+                desde o primeiro clique, de forma a respeitar a identidade
+                visual da marca com foco em navegação mobile e clareza textual.
+                <br />
+                <br />A página reúne as principais áreas, empresa, serviços,
+                funcionamento e contato, em uma navegação fluida e leve. O
+                código foi otimizado para bom desempenho, carregamento rápido e
+                estrutura escalável.
+                <br />
+                <br />
+                Atualmente o site está publicado e em uso, com conteúdo gerido
+                pela própria cliente. Foi um projeto real que uniu escuta,
+                colaboração e compromisso, da estrutura até os detalhes finais.
+              </p>
 
-                  <FaReact
-                    title="React.js"
-                    className="text-blue-500 hover:scale-105"
-                  />
-                  <RiTailwindCssFill
-                    title="Tailwind CSS"
-                    className="text-sky-400 hover:scale-105"
-                  />
-                  <TbBrandFramerMotion
-                    title="Framer Motion"
-                    className="text-purple-500 hover:scale-105"
-                  />
-                </div>
+              <div className="mb-6">
+                <ul className="space-y-4 text-left text-gray-500 dark:text-gray-400">
+                  <h1 className="flex items-center justify-start gap-1 text-[#6a7282] font-[500] text-sm">
+                    <RxDrawingPinFilled className="text-[#2F9B92]" />{" "}
+                    Tecnologias e Estrutura
+                  </h1>
+                  <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <span class="size-5 flex justify-center items-center rounded-full bg-green-50 text-[#2F9B92]">
+                      <svg
+                        class="shrink-0 size-3.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span className="text-sm">
+                      Responsivo em todos os dispositivos
+                    </span>
+                  </li>
 
-                <h3 className="mb-6 mt-6 text-gray-700 text-lg leading-relaxed">
-                  Website desenvolvido para a{" "}
-                  <strong className="text-[#2F9B92]">Gestos Amáveis</strong>,
-                  empresa portuguesa especializada em cuidados domiciliares.
-                </h3>
+                  <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <span class="size-5 flex justify-center items-center rounded-full bg-green-50 text-[#2F9B92]">
+                      <svg
+                        class="shrink-0 size-3.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span className="text-sm">
+                      Navegação simples e intuitiva
+                    </span>
+                  </li>
 
-                <p className="mb-6 text-gray-600 text-base leading-relaxed">
-                  O projeto foi pensado para transmitir empatia e acessibilidade
-                  desde o primeiro clique, de forma a respeitar a identidade
-                  visual da marca com foco em navegação mobile e clareza
-                  textual.
-                  <br />
-                  <br />A página reúne as principais áreas, empresa, serviços,
-                  funcionamento e contato, em uma navegação fluida e leve. O
-                  código foi otimizado para bom desempenho, carregamento rápido
-                  e estrutura escalável.
-                  <br />
-                  <br />
-                  Atualmente o site está publicado e em uso, com conteúdo gerido
-                  pela própria cliente. Foi um projeto real que uniu escuta,
-                  colaboração e compromisso, da estrutura até os detalhes
-                  finais.
-                </p>
+                  <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <span class="size-5 flex justify-center items-center rounded-full bg-green-50 text-[#2F9B92]">
+                      <svg
+                        class="shrink-0 size-3.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span className="text-sm">
+                      Layout pensado para escalabilidade
+                    </span>
+                  </li>
 
-                <div className="mb-6">
-                  <ul className="space-y-4 text-left text-gray-500 dark:text-gray-400">
-                    <h1 className="flex items-center justify-start gap-1 text-[#6a7282] font-[500] text-sm">
-                      <RxDrawingPinFilled className="text-[#2F9B92]" />{" "}
-                      Tecnologias e Estrutura
-                    </h1>
-                    <li className="flex items-center space-x-3 rtl:space-x-reverse">
-                      <span class="size-5 flex justify-center items-center rounded-full bg-green-50 text-[#2F9B92]">
-                        <svg
-                          class="shrink-0 size-3.5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </span>
-                      <span className="text-sm">
-                        Responsivo em todos os dispositivos
-                      </span>
-                    </li>
+                  <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <span class="size-5 flex justify-center items-center rounded-full bg-green-50 text-[#2F9B92]">
+                      <svg
+                        class="shrink-0 size-3.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span className="text-sm">
+                      Código modular e reutilizável
+                    </span>
+                  </li>
 
-                    <li className="flex items-center space-x-3 rtl:space-x-reverse">
-                      <span class="size-5 flex justify-center items-center rounded-full bg-green-50 text-[#2F9B92]">
-                        <svg
-                          class="shrink-0 size-3.5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </span>
-                      <span className="text-sm">
-                        Navegação simples e intuitiva
-                      </span>
-                    </li>
+                  <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <span class="size-5 flex justify-center items-center rounded-full bg-green-50 text-[#2F9B92]">
+                      <svg
+                        class="shrink-0 size-3.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span className="text-sm">
+                      Integração futura com CMS possível
+                    </span>
+                  </li>
+                </ul>
+              </div>
 
-                    <li className="flex items-center space-x-3 rtl:space-x-reverse">
-                      <span class="size-5 flex justify-center items-center rounded-full bg-green-50 text-[#2F9B92]">
-                        <svg
-                          class="shrink-0 size-3.5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </span>
-                      <span className="text-sm">
-                        Layout pensado para escalabilidade
-                      </span>
-                    </li>
+              <button
+                className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
+                aria-label="Explorar projetos"
+              >
+                <SiQuicklook className="text-gray-200" />
+                <a href="https://gestosamaveis.pt" target="_blank">
+                  Ver site online
+                </a>
+              </button>
 
-                    <li className="flex items-center space-x-3 rtl:space-x-reverse">
-                      <span class="size-5 flex justify-center items-center rounded-full bg-green-50 text-[#2F9B92]">
-                        <svg
-                          class="shrink-0 size-3.5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </span>
-                      <span className="text-sm">
-                        Código modular e reutilizável
-                      </span>
-                    </li>
-
-                    <li className="flex items-center space-x-3 rtl:space-x-reverse">
-                      <span class="size-5 flex justify-center items-center rounded-full bg-green-50 text-[#2F9B92]">
-                        <svg
-                          class="shrink-0 size-3.5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </span>
-                      <span className="text-sm">
-                        Integração futura com CMS possível
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-
-                <button
-                  className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
-                  aria-label="Explorar projetos"
-                >
-                  <SiQuicklook className="text-gray-200" />
-                  <a href="https://gestosamaveis.pt" target="_blank">
-                    Ver site online
-                  </a>
-                </button>
-
-                <div className="mt-12 py-5 bg-[#f6f6f6] rounded-xl">
-                  <div className=" pl-4 flex flex-col gap-2">
-                    <div className="relative text-sm italic  leading-relaxed">
-                      <RiDoubleQuotesL className="absolute -left-2 -top-10 size-14 text-[#2F9B92]" />
-                      <p className="pl-5 pt-2 text-gray-500">
-                        Está incrível, adorámos mesmo! Muito profissional e
-                        detalhista. <br />A página Sobre Nós ficou linda.
-                      </p>
-                    </div>
-                    <p className="text-sm italic font-semibold font-Jost text-gray-700 mt-1 pl-5">
-                      — Feedback da cliente Gestos Amáveis
+              <div className="mt-12 py-5 bg-[#f6f6f6] rounded-xl">
+                <div className=" pl-4 flex flex-col gap-2">
+                  <div className="relative text-sm italic  leading-relaxed">
+                    <RiDoubleQuotesL className="absolute -left-2 -top-10 size-14 text-[#2F9B92]" />
+                    <p className="pl-5 pt-2 text-gray-500">
+                      Está incrível, adorámos mesmo! Muito profissional e
+                      detalhista. <br className="hidden sm:block" />A página
+                      Sobre Nós ficou linda.
                     </p>
                   </div>
+                  <p className="text-sm italic font-semibold font-Jost text-gray-700 mt-1 pl-5">
+                    — Feedback da cliente Gestos Amáveis
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
         </GlobalContainer>
       </section>
     </>
