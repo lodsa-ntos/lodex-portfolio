@@ -38,7 +38,7 @@ function SobreMim() {
             {/* Right Side - Texto */}
             <div className="text-gray-800 text-left leading-relaxed">
               <h1 className="mb-6 text-2xl font-bold text-[#757575] subpixel-antialiased">
-                Olá, sou Lodney Santos
+                 Lodney Santos — Frontend Developer &<br /> UI/UX Designer 
               </h1>
 
               <p className="max-w-xl mb-20 lg:mb-6 font-light text-xl leading-relaxed subpixel-antialiased">
