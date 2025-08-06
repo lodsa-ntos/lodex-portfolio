@@ -106,8 +106,9 @@ function ConceitoPessoal() {
                 <br />
                 <br />O projeto foi desenvolvido com base em boas práticas de
                 UI/UX, performance e escalabilidade, funcionando como prova de
-                conceito de como a <strong className="text-secundario">LØdeX</strong> atua: com estética limpa, estrutura
-                lógica e atenção ao detalhe.
+                conceito de como a{" "}
+                <strong className="text-secundario">LØdeX</strong> atua: com
+                estética limpa, estrutura lógica e atenção ao detalhe.
               </p>
 
               <div>
@@ -131,7 +132,12 @@ function ConceitoPessoal() {
                 <div className="flex flex-col gap-2">
                   <div className="relative text-sm  leading-relaxed">
                     <p className="pl-5 text-gray-700">
-                      Se quiseres algo nesta linha para o teu projeto ou marca, <strong>este é o tipo de base que podemos adaptar à tua realidade</strong>.
+                      Se quiseres algo nesta linha para o teu projeto ou marca,{" "}
+                      <strong>
+                        este é o tipo de base que podemos adaptar à tua
+                        realidade
+                      </strong>
+                      .
                     </p>
                   </div>
                 </div>
@@ -161,7 +167,8 @@ function ConceitoPessoal() {
                       </svg>
                     </span>
                     <span className="text-sm">
-                      <strong className="text-[#6248d6]">React + Vite</strong> para frontend rápido e modular
+                      <strong className="text-[#6248d6]">React + Vite</strong>{" "}
+                      para frontend rápido e modular
                     </span>
                   </li>
 
@@ -183,7 +190,8 @@ function ConceitoPessoal() {
                       </svg>
                     </span>
                     <span className="text-sm ">
-                      <strong className="text-[#6248d6]">Tailwind CSS</strong> com design 100% mobile-first
+                      <strong className="text-[#6248d6]">Tailwind CSS</strong>{" "}
+                      com design 100% mobile-first
                     </span>
                   </li>
 
@@ -205,7 +213,8 @@ function ConceitoPessoal() {
                       </svg>
                     </span>
                     <span className="text-sm">
-                      <strong className="text-[#6248d6]">Framer Motion</strong> para transições suaves
+                      <strong className="text-[#6248d6]">Framer Motion</strong>{" "}
+                      para transições suaves
                     </span>
                   </li>
 
@@ -227,7 +236,9 @@ function ConceitoPessoal() {
                       </svg>
                     </span>
                     <span className="text-sm">
-                      <strong className="text-[#6248d6]">Mock de integração de leads e planos de preço</strong> 
+                      <strong className="text-[#6248d6]">
+                        Mock de integração de leads e planos de preço
+                      </strong>
                     </span>
                   </li>
                 </ul>
@@ -238,11 +249,13 @@ function ConceitoPessoal() {
                 aria-label="Explorar projetos"
               >
                 <SiQuicklook className="text-gray-200" />
-                <a href="https://launchpeak-starter.vercel.app/" target="_blank">
+                <a
+                  href="https://launchpeak-starter.vercel.app/"
+                  target="_blank"
+                >
                   Ver site online
                 </a>
               </button>
-              
             </div>
           </div>
         </GlobalContainer>
@@ -314,45 +327,44 @@ function ConceitoPessoal() {
               </div>
             </BubblyLink>
 
-            {/** Card 3 */}
+            {/** Card 2 */}
             <BubblyLink
-              to="/launchpeack"
+              to="/gestosamaveis"
               colorStart="#004AAD"
               colorEnd="#FFFFFF"
-              className="cursor-pointer group relative lg:flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500"
+              className="cursor-pointer group relative flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500"
             >
               <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
                 {/** Badge */}
-                <div className="relative">
-                  <div className="absolute top-3 right-4 rounded-full p-1.5 tracking-tight ring-1 ring-inset bg-blue-50 text-[#3b82f6] ring-blue-700/10 z-50 flex items-center gap-2">
+                <div relative>
+                  <div className="absolute top-3 right-4 rounded-full p-1.5 tracking-tight ring-1 ring-inset bg-green-50 text-[#2F9B92] ring-purple-700/10 z-50 flex items-center gap-2">
                     <a
                       href="#preview"
                       className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-200 ease-in-out"
                     >
-                      <AiOutlineFileProtect className="text-blue-600" />{" "}
-                      Conceito pessoal
+                      <TbContract /> Projeto real - Cliente
                     </a>
                   </div>
                 </div>
 
                 <img
                   className="transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform group-hover:scale-110"
-                  src="images/portfolio/launchPeack.svg"
-                  alt="investment-seed-round"
+                  src="images/portfolio/gestosamaveis.svg"
+                  alt="Gestos-Amaveis"
                 />
               </div>
               <div className="p-4">
                 <h6 className="mb-2 text-slate-800 text-xl font-semibold">
-                  LaunchPeack
+                  Gestos Amáveis
                 </h6>
                 <p className="text-slate-600 leading-normal font-light">
-                  Landing page criada como conceito para uma solução fictícia.
-                  Feita com React, Tailwind CSS e Framer Motion.
+                  Plataforma web institucional para uma empresa de cuidados a
+                  idosos, com foco em empatia, acessibilidade e navegação clara.
                 </p>
               </div>
               <div className="px-4 pb-4 pt-0 mt-2">
                 <button
-                  className="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
                 >
                   Ver caso de estudo
