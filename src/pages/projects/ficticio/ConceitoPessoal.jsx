@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import GlobalContainer from "../../../utils/GlobalContainer";
 import { SiQuicklook } from "react-icons/si";
-import { RiDoubleQuotesL } from "react-icons/ri";
 import { TbContract } from "react-icons/tb";
 import { FaReact } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
