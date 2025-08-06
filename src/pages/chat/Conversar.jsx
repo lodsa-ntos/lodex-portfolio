@@ -137,7 +137,7 @@ function Conversar() {
                           onChange={(e) => setnomeCompleto(e.target.value)}
                           required
                           placeholder="Como te posso chamar?"
-                          className="w-full border outline-none focus:border-secundario hover:border-secundario rounded-md px-4 py-2 transition duration-500"
+                          className="w-full border border-gray-300 outline-none focus:border-secundario hover:border-secundario rounded-md px-4 py-2 placeholder-gray-400 transition duration-500"
                         />
                       </div>
 
@@ -154,7 +154,7 @@ function Conversar() {
                           onChange={(e) => setEmail(e.target.value)}
                           required
                           placeholder="teuemail@email.com"
-                          className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500"
+                          className="w-full rounded-md px-4 py-2 border border-gray-300 outline-none focus:border-secundario hover:border-secundario placeholder-gray-400 transition duration-500"
                           title="Insira um e-mail válido"
                         />
                       </div>
@@ -178,12 +178,12 @@ function Conversar() {
                         id="referencia"
                         onChange={(e) => setReferencia(e.target.value)}
                         placeholder="Se já tiveres um site, portfólio ou referência visual, partilha aqui."
-                        className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500"
+                        className="w-full rounded-md px-4 py-2 border border-gray-300  outline-none focus:border-secundario hover:border-secundario placeholder-gray-400 transition duration-500"
                       />
                     </div>
 
                     <div className="grid gap-8 md:flex md:items-start xl:gap-20 justify-start text-sm font-medium text-gray-700">
-                      <div className="justify-self-center relative w-72 ">
+                      <div className="justify-self-center relative w-72">
                         <fieldset className="max-w-content gap-2 flex flex-col py-1">
                           <legend className="flex items-center justify-between py-2 whitespace-nowrap gap-1">
                             Tipo de projeto que procuras
@@ -196,12 +196,19 @@ function Conversar() {
                             value={tipoProjeto}
                             onChange={(e) => setTipoProjeto(e.target.value)}
                             className="select select-bordered ring-1 ring-gray-200 focus:outline-none active:border-secundario active:ring-secundario 
-                          focus:ring-secundario hover:ring-secundario transition-all duration-500 rounded-md py-2 w-full"
+                          focus:ring-secundario hover:ring-secundario transition-all duration-500 rounded-md w-full mx-auto py-2"
                           >
-                            <option value="" disabled selected>
+                            <option
+                              value=""
+                              disabled
+                              selected
+                              className="text-gray-400"
+                            >
                               Seleciona um tipo de projeto
                             </option>
-                            <option value="landing">Landing pages sob medida</option>
+                            <option value="landing">
+                              Landing pages sob medida
+                            </option>
                             <option value="website">Website completo</option>
                             <option value="portfolio">Portfólio</option>
                             <option value="redesign">Redesign</option>
@@ -263,7 +270,7 @@ function Conversar() {
                               setOrcamentoEstimado(e.target.value)
                             }
                             className="select select-bordered ring-1 ring-gray-200 focus:outline-none active:border-secundario active:ring-secundario 
-                          focus:ring-secundario hover:ring-secundario transition-all duration-500 rounded-md py-2 w-full"
+                          focus:ring-secundario hover:ring-secundario transition-all duration-500 rounded-md py-2 w-full mx-auto"
                           >
                             <option value="" disabled selected>
                               Seleciona orçamento estimado
@@ -290,7 +297,7 @@ function Conversar() {
                         id="messagem"
                         value={messagem}
                         onChange={(e) => setMessagem(e.target.value)}
-                        className="w-full rounded-md px-4 py-2 border outline-none focus:border-secundario hover:border-secundario transition duration-500 resize-none"
+                        className="w-full rounded-md px-4 py-2 border border-gray-300  outline-none focus:border-secundario hover:border-secundario placeholder-gray-400 transition duration-500 resize-none"
                         aria-label="Mensagem"
                       ></textarea>
                     </div>
