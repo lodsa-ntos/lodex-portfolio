@@ -22,23 +22,23 @@ function MobileCarousel() {
       >
         <img
           src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-herosection.jpg"
-          alt="..."
+          alt="Gestos Amáveis - Hero Section"
         />
         <img
           src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-home-scroll.jpg"
-          alt="..."
+          alt="Gestos Amáveis - Página inicial com scroll"
         />
         <img
           src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-sobre.jpg"
-          alt="..."
+          alt="Gestos Amáveis - Seção sobre"
         />
         <img
           src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-servicos.jpg"
-          alt="..."
+          alt="Gestos Amáveis - Seção serviços avulso"
         />
         <img
           src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-contact-form.jpg"
-          alt="..."
+          alt="Gestos Amáveis - Contato"
         />
       </Carousel>
     </div>
