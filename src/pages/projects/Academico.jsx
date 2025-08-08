@@ -318,7 +318,7 @@ function Academico() {
       {/** FIM - Funcionalidadea  */}
 
       {/** Tecnologias utilizadas  */}
-      <section id="academico" className="pt-2 pb-20">
+      <section id="academico" className="pt-2 pb-10 md:pb-20">
         <GlobalContainer>
           <div className="flex flex-col items-center justify-center">
             <div className="flex flex-col items-center justify-center bg-[#f5f7fb] border border-[#ddd] md:w-[70%] lg:w-[50%] py-10 rounded-xl">
@@ -396,17 +396,17 @@ function Academico() {
               <img
                 src="images/portfolio/academico/solucao.svg"
                 alt="Contexto/Introdução"
-                className="w-[500px] flex items-center justify-center right-0 border boder-[#ddd py-4 lg:translate-x-10"
+                className="w-[500px] mx-auto lg:mx-0 flex items-center justify-center right-0 border boder-[#ddd py-4 lg:translate-x-10 mb-10 lg:mt-0 rounded-lg"
               />
               <img
                 src="images/portfolio/academico/contexto-introducao.svg"
                 alt="Contexto/Introdução"
-                className="w-[800px] bg-[#f5f7fb] border border-[#ddd] p-4 rounded-xl"
+                className="w-[800px] bg-[#f5f7fb] border border-[#ddd] p-4 rounded-lg"
               />
             </div>
 
             <div className="pt-12 flex flex-col items-start">
-              <h2 className="py-4 text-4xl text-[#333333]">
+              <h2 className="py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#333333]">
                 Mapeamento da Navegação e Funcionalidades
               </h2>
 
