@@ -278,7 +278,7 @@ function ProjetoReal() {
               id="projetos"
               className="mt-10 lg:mt-0 text-xs lg:text-sm whitespace-nowrap lg:whitespace-normal w-[50%] mx-auto uppercase font-bold text-[#777] tracking-wider text-center"
             >
-              Explore mais projetos
+              MAIS DO MEU PORTFÓLIO
             </h1>
 
             {/* Top Line */}
