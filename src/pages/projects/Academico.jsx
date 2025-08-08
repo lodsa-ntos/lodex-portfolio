@@ -63,7 +63,7 @@ function Academico() {
                     className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-500 ease-in-out whitespace-nowrap"
                   >
                     <LiaUniversitySolid /> Projeto académico{" "}
-                    <span className="hidden md:block">• Julho 2022</span>
+                    <span className="hidden md:block">• TFC </span>
                   </a>
                 </div>
 
@@ -111,7 +111,7 @@ function Academico() {
                 {/** Descrição */}
                 <p className="max-w-lg mt-2 mb-6 text-lg font-light text-gray-600">
                   Aplicação móvel para requisição de livros escolares,
-                  desenvolvido como projeto final de licenciatura. Criado em
+                  desenvolvido como trabalho final de curso. Criado em
                   parceria com a Escola Secundária de Camarate para tornar o
                   acesso à biblioteca mais simples e eficiente.
                 </p>
