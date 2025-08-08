@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom'
 
 function Whatsapp() {
   const location = useLocation();
-  const allowedPaths = ['/', '/servicos'];
+  const allowedPaths = ['/', '/servicos', '/pedidos'];
 
   if (!allowedPaths.includes(location.pathname)) return null;
 

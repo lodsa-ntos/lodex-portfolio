@@ -31,7 +31,6 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/portfolio" element={<GlobalProject />} />
           <Route path="/conversar" element={<Conversar />} />
-          <Route path="/pedidos" element={<Pedidos />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
