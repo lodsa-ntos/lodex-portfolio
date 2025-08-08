@@ -87,7 +87,7 @@ function Academico() {
 
               <div className="space-y-6">
                 {/** título */}
-                <h1 className="text-muted-foreground text-5xl mt-3 font-bold">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3 font-bold transition-all duration-500">
                   Biblioteca Escolar Camarate
                 </h1>
 
@@ -100,7 +100,7 @@ function Academico() {
                 </p>
 
                 <button
-                  className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
+                  className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
                   aria-label="Explorar projetos"
                 >
                   <HiOutlineViewGrid className="text-gray-200" />
@@ -119,7 +119,7 @@ function Academico() {
               <img
                 src="images/portfolio/academico/app-mockup.svg"
                 alt="App móvel"
-                className="w-96 h-96 object-cover"
+                className="w-80 pt-20 md:pt-10 lg:pt-0 md:w-96 h-96"
               />
             </div>
           </div>
