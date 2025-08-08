@@ -405,14 +405,14 @@ function Academico() {
               />
             </div>
 
-            <div className="pt-12 flex flex-col items-start">
+            <div className="pt-12 flex flex-col items-start justify-start">
               <h2 className="py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#333333]">
                 Mapeamento da Navegação e Funcionalidades
               </h2>
 
               <p className="max-w-2xl mx-auto mb-10 text-xl font-light text-[#333333] leading-relaxed">
                 Esta visualização apresenta os principais fluxos de navegação da
-                aplicação. A interface foi projetada para ser simples, acessível
+                aplicação. <br /> A interface foi projetada para ser simples, acessível
                 e funcional, garantindo uma boa experiência tanto para alunos
                 como para docentes e colaboradores da escola.
                 <br />
