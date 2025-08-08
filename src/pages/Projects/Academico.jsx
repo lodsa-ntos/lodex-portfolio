@@ -274,7 +274,7 @@ function Academico() {
               <img
                 src="images/portfolio/academico/funcionalidade.svg"
                 alt="Contexto/Introdução"
-                className="md:w-[450px] md:mx-auto lg:w-[500px] flex items-center justify-center rounded-lg right-0 border boder-[#ddd] bg-gray-50 mb-10 lg:mb-0 py-4 lg:translate-x-10"
+                className="md:w-[450px] md:mx-auto lg:mx-0 lg:w-[500px] flex items-center justify-center rounded-lg right-0 border boder-[#ddd] bg-gray-50 mb-10 lg:mb-0 py-4 lg:translate-x-10"
               />
               <img
                 src="images/portfolio/academico/funcionalidade2.svg"
@@ -324,7 +324,7 @@ function Academico() {
                 className="w-[500px]"
               />
             </div>
-            <small className="mt-4 font-bold">
+            <small className="mt-4 font-bold text-center">
               Modelo de arquitetura utilizado na aplicação para o
               desenvolvimento da solução proposta
             </small>
