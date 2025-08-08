@@ -45,20 +45,21 @@ function Academico() {
           content="Aplicação móvel desenvolvida pela LodeX Studio em Flutter para a Biblioteca Escolar de Camarate. Projeto real com foco em organização, acessibilidade e experiência intuitiva para estudantes."
         />
       </Helmet>
-      <section id="academico" className="pt-[192px] pb-20 border-b shadow-md">
+      <section id="academico" className="pt-[150px] sm:pt-[192px] pb-20 border-b shadow-md">
         <GlobalContainer>
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/** Left side */}
             <div className="flex flex-col items-start justify-start">
+              
               {/** Badge */}
               <div className="flex items-center gap-2 ">
                 <div className=" rounded-full p-1.5 tracking-tight ring-1 ring-inset bg-gray-50 text-gray-600 ring-purple-700/10 z-50 flex items-center gap-2 w-fit hover:scale-105 transition-all duration-500">
                   <a
                     href="https://informatica.ulusofona.pt/investigacao/trabalhos-finais-de-curso/tfcs-2021-22/"
                     target="_blanck"
-                    className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-500 ease-in-out"
+                    className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-500 ease-in-out whitespace-nowrap"
                   >
-                    <LiaUniversitySolid /> Projeto académico • Julho 2022
+                    <LiaUniversitySolid /> Projeto académico <span className="hidden md:block">• Julho 2022</span>
                   </a>
                 </div>
 
@@ -68,8 +69,7 @@ function Academico() {
                     target="_blanck"
                     className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-500 ease-in-out"
                   >
-                    <img src={ulht} alt="" className="w-3 h-3" /> Universidade
-                    Lusófona
+                    <img src={ulht} alt="Universidade Lusófona" className="w-3 h-3" /> Universidade Lusófona
                   </a>
                 </div>
 
@@ -79,8 +79,8 @@ function Academico() {
                     target="_blanck"
                     className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-500 ease-in-out"
                   >
-                    <img src={esc} alt="" className="w-3 h-3" /> Escola
-                    secundaria de camarate
+                    <img src={esc} alt="Escola
+                    secundaria de camarate" className="w-3 h-3" /> <span className="hidden md:block">Escola secundaria de camarate</span><span className="sm:hidden">ESC</span>
                   </a>
                 </div>
               </div>
