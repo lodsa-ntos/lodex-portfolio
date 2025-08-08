@@ -164,7 +164,8 @@ function Academico() {
 
               <p className="max-w-2xl mx-auto mb-10 text-xl font-light text-[#333333] leading-relaxed">
                 Desenvolvido como projeto final da Licenciatura em Informática
-                de Gestão. <br /><br />
+                de Gestão. <br />
+                <br />
                 <strong>Objetivo:</strong> Criar uma aplicação móvel para
                 requisição de livros, de forma a modernizar o acesso à
                 biblioteca escolar. A aplicação foi construída em{" "}
@@ -190,7 +191,10 @@ function Academico() {
       {/** FIM - Contexto/Introdução  */}
 
       {/** Identificação do Problema  */}
-      <section id="academico" className="pt-20 pb-8 transition-all duration-500">
+      <section
+        id="academico"
+        className="pt-20 pb-8 transition-all duration-500"
+      >
         <GlobalContainer>
           <div className="flex flex-col items-center justify-center">
             <div className=" bg-[#f5f7fb] border border-[#ddd] md:w-[70%] lg:w-[50%] flex items-center justify-center rounded-xl">
@@ -317,11 +321,11 @@ function Academico() {
       <section id="academico" className="pt-2 pb-20">
         <GlobalContainer>
           <div className="flex flex-col items-center justify-center">
-            <div className="flex flex-col items-center justify-center bg-[#f5f7fb] border border-[#ddd] w-[50%]  py-10 rounded-xl ">
+            <div className="flex flex-col items-center justify-center bg-[#f5f7fb] border border-[#ddd] md:w-[70%] lg:w-[50%] py-10 rounded-xl">
               <img
                 src="images/portfolio/academico/technologias.svg"
                 alt="Contexto/Introdução"
-                className="w-[500px]"
+                className="lg:w-[500px]"
               />
             </div>
             <small className="mt-4 font-bold text-center">
@@ -357,30 +361,26 @@ function Academico() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 text-center gap-10">
+            <div className="flex items-center justify-center space-x-10">
               {companies.map(({ Icon, href, title = "" }, i) => (
-                <div
+                <a
                   key={i}
-                  className="flex items-center justify-center cursor-pointer text-center translate-x-20"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center text-center w-full mx-auto hover:scale-110 transition-transform duration-500"
                 >
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-center hover:scale-110 transition-transform duration-500"
-                  >
-                    <img
-                      src={Icon}
-                      alt={title}
-                      className="w-14 h-14 flex items-center justify-center mx-auto"
-                    />
-                    {title && (
-                      <span className="flex items-center justify-center mt-2 text-xs text-center font-medium text-gray-700 ">
-                        {title}
-                      </span>
-                    )}
-                  </a>
-                </div>
+                  <img
+                    src={Icon}
+                    alt={title}
+                    className="w-10 h-10 md:w-14 md:h-14"
+                  />
+                  {title && (
+                    <span className="mt-2 text-xs font-medium text-gray-700 whitespace-nowrap">
+                      {title}
+                    </span>
+                  )}
+                </a>
               ))}
             </div>
           </div>
@@ -396,7 +396,7 @@ function Academico() {
               <img
                 src="images/portfolio/academico/solucao.svg"
                 alt="Contexto/Introdução"
-                className="w-[500px] flex items-center justify-center right-0 border boder-[#ddd py-4 translate-x-10"
+                className="w-[500px] flex items-center justify-center right-0 border boder-[#ddd py-4 lg:translate-x-10"
               />
               <img
                 src="images/portfolio/academico/contexto-introducao.svg"
