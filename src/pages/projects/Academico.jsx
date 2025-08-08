@@ -45,12 +45,15 @@ function Academico() {
           content="Aplicação móvel desenvolvida pela LodeX Studio em Flutter para a Biblioteca Escolar de Camarate. Projeto real com foco em organização, acessibilidade e experiência intuitiva para estudantes."
         />
       </Helmet>
-      <section id="academico" className="pt-[150px] sm:pt-[192px] pb-20 border-b shadow-md">
+
+      <section
+        id="academico"
+        className="pt-[150px] sm:pt-[192px] pb-20 border-b shadow-md transition-all duration-500"
+      >
         <GlobalContainer>
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/** Left side */}
             <div className="flex flex-col items-start justify-start">
-              
               {/** Badge */}
               <div className="flex items-center gap-2 ">
                 <div className=" rounded-full p-1.5 tracking-tight ring-1 ring-inset bg-gray-50 text-gray-600 ring-purple-700/10 z-50 flex items-center gap-2 w-fit hover:scale-105 transition-all duration-500">
@@ -59,7 +62,8 @@ function Academico() {
                     target="_blanck"
                     className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-500 ease-in-out whitespace-nowrap"
                   >
-                    <LiaUniversitySolid /> Projeto académico <span className="hidden md:block">• Julho 2022</span>
+                    <LiaUniversitySolid /> Projeto académico{" "}
+                    <span className="hidden md:block">• Julho 2022</span>
                   </a>
                 </div>
 
@@ -69,7 +73,12 @@ function Academico() {
                     target="_blanck"
                     className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-500 ease-in-out"
                   >
-                    <img src={ulht} alt="Universidade Lusófona" className="w-3 h-3" /> Universidade Lusófona
+                    <img
+                      src={ulht}
+                      alt="Universidade Lusófona"
+                      className="w-3 h-3"
+                    />{" "}
+                    Universidade Lusófona
                   </a>
                 </div>
 
@@ -79,8 +88,16 @@ function Academico() {
                     target="_blanck"
                     className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-500 ease-in-out"
                   >
-                    <img src={esc} alt="Escola
-                    secundaria de camarate" className="w-3 h-3" /> <span className="hidden md:block">Escola secundaria de camarate</span><span className="sm:hidden">ESC</span>
+                    <img
+                      src={esc}
+                      alt="Escola
+                    secundaria de camarate"
+                      className="w-3 h-3"
+                    />{" "}
+                    <span className="hidden md:block">
+                      Escola secundaria de camarate
+                    </span>
+                    <span className="sm:hidden">ESC</span>
                   </a>
                 </div>
               </div>
@@ -129,7 +146,7 @@ function Academico() {
       {/** Contexto/Introdução  */}
       <section
         id="academico"
-        className="pt-32 pb-20 border-b shadow-md bg-gray-50"
+        className=" pt-16 md:pt-32 pb-20 border-b shadow-md bg-gray-50 transition-all duration-500"
       >
         <GlobalContainer>
           <div className="flex flex-col items-center justify-center">
@@ -140,14 +157,14 @@ function Academico() {
               />
             </div>
 
-            <div className="pt-20 flex flex-col items-start">
+            <div className="pt-10 sm:pt-20 flex flex-col items-start">
               <h2 className="py-4 text-4xl text-[#333333]">
                 Porque este projeto existe
               </h2>
 
               <p className="max-w-2xl mx-auto mb-10 text-xl font-light text-[#333333] leading-relaxed">
                 Desenvolvido como projeto final da Licenciatura em Informática
-                de Gestão. <br />
+                de Gestão. <br /><br />
                 <strong>Objetivo:</strong> Criar uma aplicação móvel para
                 requisição de livros, de forma a modernizar o acesso à
                 biblioteca escolar. A aplicação foi construída em{" "}
@@ -173,14 +190,14 @@ function Academico() {
       {/** FIM - Contexto/Introdução  */}
 
       {/** Identificação do Problema  */}
-      <section id="academico" className="pt-20 pb-8">
+      <section id="academico" className="pt-20 pb-8 transition-all duration-500">
         <GlobalContainer>
           <div className="flex flex-col items-center justify-center">
-            <div className=" bg-[#f5f7fb] border border-[#ddd] w-[50%] flex items-center justify-center rounded-xl ">
+            <div className=" bg-[#f5f7fb] border border-[#ddd] md:w-[70%] lg:w-[50%] flex items-center justify-center rounded-xl">
               <img
                 src="images/portfolio/academico/desafio.svg"
                 alt="Contexto/Introdução"
-                className="w-[500px]"
+                className="lg:w-[500px]"
               />
             </div>
 
@@ -216,10 +233,10 @@ function Academico() {
       {/** FIM - Identificação do Problema  */}
 
       {/** Solução pensada  */}
-      <section id="academico" className="pt-2 pb-2">
+      <section id="academico" className="pt-2 pb-2 transition-all duration-500">
         <GlobalContainer>
           <div className="flex flex-col items-center justify-center">
-            <div className="border flex items-center justify-center border-[#ddd] w-[50%] py-10 rounded-xl ">
+            <div className="border flex items-center justify-center border-[#ddd] md:w-[70%] lg:w-[50%] py-10 rounded-xl ">
               <img
                 src="images/portfolio/academico/solucao.svg"
                 alt="Contexto/Introdução"
@@ -257,7 +274,7 @@ function Academico() {
               <img
                 src="images/portfolio/academico/funcionalidade.svg"
                 alt="Contexto/Introdução"
-                className="w-[500px] flex items-center justify-center right-0 border boder-[#ddd] bg-gray-50 py-4 translate-x-10"
+                className="md:w-[450px] md:mx-auto lg:w-[500px] flex items-center justify-center rounded-lg right-0 border boder-[#ddd] bg-gray-50 mb-10 lg:mb-0 py-4 lg:translate-x-10"
               />
               <img
                 src="images/portfolio/academico/funcionalidade2.svg"
