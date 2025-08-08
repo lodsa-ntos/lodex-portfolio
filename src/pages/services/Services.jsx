@@ -26,11 +26,11 @@ function Services() {
         <>
           Landing pages sob medida <br />{" "}
           <small className="text-sm flex items-center justify-start mt-1 gap-1">
-            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 300€
+            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 200€
           </small>
         </>
       ),
-      titleFunction: "Landing pages sob medida → a partir de 300€",
+      titleFunction: "Landing pages sob medida → a partir de 200€",
       titleForm: "O que preciso para estruturar a tua landing…",
       desc: "Para quem precisa comunicar uma ideia com impacto e clareza. Direto ao ponto.",
       descModal:
@@ -92,11 +92,11 @@ function Services() {
         <>
           Website completo <br />{" "}
           <small className="text-sm flex items-center justify-start mt-1 gap-1">
-            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 600€
+            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 400€
           </small>
         </>
       ),
-      titleFunction: "Website completo → a partir de 600€",
+      titleFunction: "Website completo → a partir de 400€",
       titleForm: "Vamos estruturar o teu site…",
       desc: "Do zero, com identidade — sem templates, site institucional ou pessoal com estrutura sólida.",
       descModal:
@@ -167,11 +167,11 @@ function Services() {
         <>
           Portfólio com presença <br />{" "}
           <small className="text-sm flex items-center justify-start mt-1 gap-1">
-            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 450€
+            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 350€
           </small>
         </>
       ),
-      titleFunction: "Portfólio com presença → a partir de 450€",
+      titleFunction: "Portfólio com presença → a partir de 350€",
       titleForm: "O que preciso de ti para começar:",
       desc: "Mostra o teu trabalho com estrutura, ritmo e identidade. Destaque para o trabalho e trajetória.",
       descModal:
@@ -239,11 +239,11 @@ function Services() {
         <>
           Redesign funcional <br />{" "}
           <small className="text-sm flex items-center justify-start gap-1 mt-1">
-            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 150€
+            <GiTakeMyMoney className="text-green-700 size-5" /> a partir de 100€
           </small>
         </>
       ),
-      titleFunction: "Redesign funcional → a partir de 150€",
+      titleFunction: "Redesign funcional → a partir de 100€",
       titleForm: "Para começamos o redesign…",
       desc: "Para quem já tem algo online, mas quer mais clareza, performance ou presença sem perder tua essência.",
       descModal:
