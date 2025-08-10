@@ -15,7 +15,7 @@ const cardData = [
     img: "images/blog/cad-responsivo.jpg",
     title: "Card Responsivo com Hover Animado",
     description:
-      "Um componente elegante e flexível, feito com React + TailwindCSS, com badges dinâmicas e efeito de hover suave para destacar o CTA. Totalmente responsivo, mobile-first e criado em menos de 200 linhas de código.",
+      "Aprenda a criar um card moderno e responsivo em menos de 200 linhas de código usando React + TailwindCSS.",
     Avatar: [
       {
         foto: imgAvatar,
