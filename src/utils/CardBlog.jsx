@@ -103,7 +103,7 @@ function CardBlog() {
                   </div>
                 </div>
 
-                {/* Card content */}
+                {/* Badget content */}
                 <div className="flex flex-col justify-between flex-1 pt-4">
                   <div className="flex items-center gap-3 flex-wrap">
                     {card.Badge &&
@@ -134,10 +134,10 @@ function CardBlog() {
                       key={idx}
                       className="flex items-center justify-center gap-2"
                     >
-                      <div className="flex items-center justify-center w-8 h-8 bg-terciario rounded-full">
+                      <div className="flex items-center justify-center w-8 h-8 bg-terciario rounded-full group-hover:shadow-lg">
                         <img src={avt.foto} alt="avatar" className="size-4" />
                       </div>
-                      <div className="flex ">
+                      <div className="flex text-gray-700 text-base group-hover:text-gray-500">
                         {avt.autor}{" "}
                         <PiDotDuotone className="size-6 text-secundario" />{" "}
                         {avt.date}
