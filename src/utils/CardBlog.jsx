@@ -1,30 +1,27 @@
 import React from "react";
-import { FaReact } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { DiResponsive } from "react-icons/di";
 import { HiMiniArrowTopRightOnSquare } from "react-icons/hi2";
+import { BsDot } from "react-icons/bs";
+import imgAvatar from "../assets/logo/lodexstudio-logo-white.svg"
+
+const day = new Date().toLocaleDateString("pt-PT", { day: "2-digit" });
+const month = new Date().toLocaleDateString("pt-PT", { month: "long" });
+const year = new Date().toLocaleDateString("pt-PT", { year: "numeric" });
+
+const generalDate = `${day} ${month} ${year}`;
 
 const cardData = [
   {
+    id: 1,
     img: "images/blog/office3.jpg",
     title: "Card Responsivo com Hover Animado",
     description:
       "Um componente elegante e flexível, feito com React + TailwindCSS, com badges dinâmicas e efeito de hover suave para destacar o CTA. Totalmente responsivo, mobile-first e criado em menos de 200 linhas de código.",
-    Badge: [
+    Avatar: [
       {
-        icon: <FaReact className="w-4 h-4" />,
-        label: "React.js",
-        link: "https://react.dev/",
-      },
-      {
-        icon: <RiTailwindCssFill className="w-4 h-4" />,
-        label: "TailwindCSS",
-        link: "https://tailwindcss.com/",
-      },
-      {
-        icon: <DiResponsive className="w-4 h-4" />,
-        label: "Responsive",
-        link: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design",
+        foto: imgAvatar,
+        profileFoto: "",
+        autor: "LodeX Studio",
+        date: generalDate,
       },
     ],
   },
@@ -61,6 +58,20 @@ function CardBlog() {
                   <p className="text-start font-Satoshi text-sm text-gray-500">
                     {card.description}
                   </p>
+                </div>
+
+                <div className="flex">
+                  {card.Avatar.map((avt, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center justify-center gap-1"
+                    >
+                      <div className="flex items-center justify-center w-8 h-8 bg-terciario rounded-full">
+                        <img src={avt.foto} alt="avatar" className="size-4" /> 
+                      </div>
+                      {avt.autor} <BsDot className="size-6" /> {avt.date}
+                    </div>
+                  ))}
                 </div>
               </div>
             </>
