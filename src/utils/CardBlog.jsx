@@ -89,7 +89,7 @@ function CardBlog() {
               <div className="group cursor-pointer">
                 <div
                   key={index}
-                  className="relative flex flex-col transition-shadow duration-500  overflow-hidden rounded-xl shadow-md"
+                  className="relative flex flex-col transition-shadow duration-500 overflow-hidden rounded-xl shadow-md"
                 >
                   <img
                     className="w-full h-[240px] rounded-xl object-cover transition-transform duration-500 group-hover:scale-105 group-hover:rounded-xl"
@@ -104,10 +104,7 @@ function CardBlog() {
                 </div>
 
                 {/* Card content */}
-                <div
-                  className="border-t border-[#EBEBEB] pt-4
-               flex flex-col justify-between flex-1 itemce"
-                >
+                <div className="flex flex-col justify-between flex-1 pt-4">
                   <div className="flex items-center gap-3 flex-wrap">
                     {card.Badge &&
                       card.Badge.map((badge, index) => (
