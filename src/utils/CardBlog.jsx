@@ -1,7 +1,10 @@
 import React from "react";
 import { HiMiniArrowTopRightOnSquare } from "react-icons/hi2";
 import { PiDotDuotone } from "react-icons/pi";
-import imgAvatar from "../assets/logo/lodexstudio-logo-white.svg"
+import { RiTailwindCssFill } from "react-icons/ri";
+import { DiResponsive } from "react-icons/di";
+import { FaReact } from "react-icons/fa";
+import imgAvatar from "../assets/logo/lodexstudio-logo-white.svg";
 
 const day = new Date().toLocaleDateString("pt-PT", { day: "2-digit" });
 const month = new Date().toLocaleDateString("pt-PT", { month: "long" });
@@ -24,8 +27,57 @@ const cardData = [
         date: generalDate,
       },
     ],
+
+    Badge: [
+      {
+        icon: <FaReact className="w-4 h-4" />,
+        label: "React.js",
+        link: "https://react.dev/",
+      },
+      {
+        icon: <RiTailwindCssFill className="w-4 h-4" />,
+        label: "TailwindCSS",
+        link: "https://tailwindcss.com/",
+      },
+      {
+        icon: <DiResponsive className="w-4 h-4" />,
+        label: "Responsive",
+        link: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design",
+      },
+    ],
   },
 ];
+
+// Badge Component
+const Badge = ({ icon, label, link }) => {
+  return (
+    <a
+      className={`flex items-center gap-0.5 rounded-full px-2 py-[0.5px] text-xs font-medium font-Satoshi tracking-tight ring-1 ring-inset leading-relaxed transition-transform duration-500 ease-in-out
+
+    ${
+      label === "React.js"
+        ? "bg-blue-50 text-blue-600 ring-blue-700/10"
+        : label === "TailwindCSS"
+        ? "bg-cyan-50 text-[#38bdf8] ring-[#38bdf8]/10"
+        : label === "Responsive"
+        ? "bg-purple-50 text-purple-600 ring-purple-700/10"
+        : label === "Mobile-First UI"
+        ? "bg-gray-50 text-gray-600 ring-gray-700/10"
+        : label === "Framer Motion"
+        ? "bg-pink-50 text-pink-600 ring-pink-700/10"
+        : label === "SEO Optimized"
+        ? "bg-red-50 text-red-600 ring-red-700/10"
+        : "bg-gray-50 text-gray-600 ring-gray-700/10"
+    }
+  `}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {icon} {label}
+    </a>
+  );
+};
 
 function CardBlog() {
   return (
@@ -37,7 +89,7 @@ function CardBlog() {
               <div className="group cursor-pointer">
                 <div
                   key={index}
-                  className="relative flex flex-col transition-shadow duration-500  overflow-hidden rounded-xl"
+                  className="relative flex flex-col transition-shadow duration-500  overflow-hidden rounded-xl shadow-md"
                 >
                   <img
                     className="w-full h-[240px] rounded-xl object-cover transition-transform duration-500 group-hover:scale-105 group-hover:rounded-xl"
@@ -51,7 +103,26 @@ function CardBlog() {
                   </div>
                 </div>
 
-                <div className="py-4 justify-between flex-1 items-start">
+                {/* Card content */}
+                <div
+                  className="border-t border-[#EBEBEB] pt-4
+               flex flex-col justify-between flex-1 itemce"
+                >
+                  <div className="flex items-center gap-3 flex-wrap">
+                    {card.Badge &&
+                      card.Badge.map((badge, index) => (
+                        <Badge
+                          key={index}
+                          icon={badge.icon}
+                          color={badge.color}
+                          label={badge.label}
+                          link={badge.link}
+                        />
+                      ))}
+                  </div>
+                </div>
+
+                <div className="py-2 justify-between flex-1 items-start">
                   <h5 className="sm:text-sm md:text-base lg:text-lg text-start font-bold font-Satoshi leading-tight mb-3">
                     {card.title}
                   </h5>
@@ -67,10 +138,12 @@ function CardBlog() {
                       className="flex items-center justify-center gap-2"
                     >
                       <div className="flex items-center justify-center w-8 h-8 bg-terciario rounded-full">
-                        <img src={avt.foto} alt="avatar" className="size-4" /> 
+                        <img src={avt.foto} alt="avatar" className="size-4" />
                       </div>
                       <div className="flex ">
-                        {avt.autor} <PiDotDuotone className="size-6 text-secundario" /> {avt.date}
+                        {avt.autor}{" "}
+                        <PiDotDuotone className="size-6 text-secundario" />{" "}
+                        {avt.date}
                       </div>
                     </div>
                   ))}
