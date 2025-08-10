@@ -37,7 +37,7 @@ function CardBlog() {
               <div className="group cursor-pointer">
                 <div
                   key={index}
-                  className="relative flex flex-col transition-shadow duration-500  overflow-hidden rounded-xl "
+                  className="relative flex flex-col transition-shadow duration-500  overflow-hidden rounded-xl"
                 >
                   <img
                     className="w-full h-[240px] rounded-xl object-cover transition-transform duration-500 group-hover:scale-105 group-hover:rounded-xl"
@@ -70,7 +70,7 @@ function CardBlog() {
                         <img src={avt.foto} alt="avatar" className="size-4" /> 
                       </div>
                       <div className="flex ">
-                        {avt.autor} <PiDotDuotone className="size-6" /> {avt.date}
+                        {avt.autor} <PiDotDuotone className="size-6 text-secundario" /> {avt.date}
                       </div>
                     </div>
                   ))}
