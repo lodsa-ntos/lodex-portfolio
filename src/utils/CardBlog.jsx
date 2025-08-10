@@ -4,6 +4,7 @@ import { PiDotDuotone } from "react-icons/pi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { DiResponsive } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
+import { BubblyLink } from "../library/BubblyLink";
 import imgAvatar from "../assets/logo/lodexstudio-logo-white.svg";
 
 const day = new Date().toLocaleDateString("pt-PT", { day: "2-digit" });
@@ -17,6 +18,7 @@ const cardData = [
     id: 1,
     img: "images/blog/cad-responsivo.jpg",
     title: "Card Responsivo com Hover Animado",
+    linkHref: "/cardresponsivo",
     description:
       "Aprenda a criar um card moderno e responsivo em menos de 200 linhas de código usando React + TailwindCSS.",
     Avatar: [
@@ -86,7 +88,12 @@ function CardBlog() {
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8">
           {cardData.map((card, index) => (
             <>
-              <div className="group cursor-pointer">
+              <BubblyLink
+                to={card.linkHref}
+                colorStart="#004AAD"
+                colorEnd="#FFFFFF"
+                className="group cursor-pointer"
+              >
                 <div
                   key={index}
                   className="relative flex flex-col transition-shadow duration-500 overflow-hidden rounded-xl shadow-md"
@@ -145,7 +152,7 @@ function CardBlog() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </BubblyLink>
             </>
           ))}
         </div>
