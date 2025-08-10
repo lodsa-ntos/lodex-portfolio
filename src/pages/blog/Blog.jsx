@@ -13,6 +13,7 @@ function Blog() {
           content="Reflexões autorais e soluções práticas sobre criação digital, frontend e design. Conteúdo direto, com propósito."
         />
       </Helmet>
+      
       <section
         id="sobremim"
         className="relative min-h-[95vh] pt-20 border-b shadow-md overflow-hidden bg-[url(images/blog/blog-banner-hero.jpg)] w-full h-[250px] bg-cover bg-center bg-no-repeat mb-8 md:h-[350px]"
