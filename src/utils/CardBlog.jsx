@@ -1,6 +1,6 @@
 import React from "react";
 import { HiMiniArrowTopRightOnSquare } from "react-icons/hi2";
-import { BsDot } from "react-icons/bs";
+import { PiDotDuotone } from "react-icons/pi";
 import imgAvatar from "../assets/logo/lodexstudio-logo-white.svg"
 
 const day = new Date().toLocaleDateString("pt-PT", { day: "2-digit" });
@@ -64,12 +64,14 @@ function CardBlog() {
                   {card.Avatar.map((avt, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center justify-center gap-1"
+                      className="flex items-center justify-center gap-2"
                     >
                       <div className="flex items-center justify-center w-8 h-8 bg-terciario rounded-full">
                         <img src={avt.foto} alt="avatar" className="size-4" /> 
                       </div>
-                      {avt.autor} <BsDot className="size-6" /> {avt.date}
+                      <div className="flex ">
+                        {avt.autor} <PiDotDuotone className="size-6" /> {avt.date}
+                      </div>
                     </div>
                   ))}
                 </div>
