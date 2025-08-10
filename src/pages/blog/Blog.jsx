@@ -1,6 +1,7 @@
 import React from "react";
 import GlobalContainer from "../../utils/GlobalContainer";
 import { Helmet } from "react-helmet";
+import CardBlog from "../../utils/CardBlog";
 
 function Blog() {
   return (
@@ -27,7 +28,8 @@ function Blog() {
               id="card1-title"
               className="text-base sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-3 leading-relaxed"
             >
-              Tutoriais e ideias para <br />acelerar o seu código.
+              Tutoriais e ideias para <br />
+              acelerar o seu código.
             </h3>
             <p className="text-base max-w-3xl leading-relaxed">
               Dicas práticas, guias passo a passo e exemplos reais para ajudar
@@ -37,6 +39,15 @@ function Blog() {
             </p>
           </GlobalContainer>
         </div>
+      </section>
+
+      <section className="pt-8 md:pt-10 pb-20 border-b shadow-md transition-all duration-500">
+        <GlobalContainer>
+          <div>
+            <h1 className="font-bold">Artigos Recentes</h1>
+            <CardBlog />
+          </div>
+        </GlobalContainer>
       </section>
     </>
   );
