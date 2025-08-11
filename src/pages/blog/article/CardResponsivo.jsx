@@ -104,7 +104,7 @@ function CardResponsivo() {
                     <br /><br />
                     No card da direita, os ícones e etiquetas ajudam a identificar rapidamente o conteúdo, o espaçamento torna a leitura fácil, e o design moderno (com cantos arredondados e sombras suaves) cria uma experiência agradável. 
                     <br /><br />
-                    Um card responsivo e interativo não só valoriza o conteúdo como aumenta o engajamento do usuário e melhora a usabilidade em qualquer dispositivo.
+                    Um card responsivo e interativo não só valoriza o conteúdo como aumenta o engajamento do usuário e melhora a usabilidade em qualquer dispositivo. Este é o tipo de componente que dá vida ao design e melhora a experiência do utilizador sem complicações no código.
                 </p>
               </div>
             </div>
