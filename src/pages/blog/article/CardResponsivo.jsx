@@ -61,31 +61,51 @@ function CardResponsivo() {
             <div className="flex-col text-start ">
               <div className="mb-10">
                 <h2 className="text-xl sm:text-4xl md:text-6xl font-light text-gray-900 leading-relaxed max-w-4xl">
-                Card Responsivo com Hover Animado
-              </h2>
-              <p className="mt-6 mb-2 text-base lg:text-2xl text-slate-500 leading-relaxed max-w-3xl font-light">
-                Um componente elegante e flexível, feito com React +
-                TailwindCSS, com badges dinâmicas e efeito de hover suave para
-                destacar o CTA. Totalmente responsivo, mobile-first e criado em
-                menos de 200 linhas de código.
-              </p>
+                  Card Responsivo com Hover Animado usando React + TailwindCSS
+                </h2>
+                <p className="mt-6 mb-2 text-base lg:text-2xl text-slate-500 leading-relaxed max-w-3xl font-light">
+                  Um componente elegante e flexível, feito com React +
+                  TailwindCSS, com badges dinâmicas e efeito de hover suave para
+                  destacar o CTA. Totalmente responsivo, mobile-first e criado
+                  em menos de 200 linhas de código.
+                </p>
               </div>
 
-              <div className="flex mt-4">
+              <div className="flex mt-4 mb-10">
                 {Avatar.map((avt, idx) => (
                   <div
                     key={idx}
                     className="flex items-center justify-center gap-3"
                   >
                     <div className="flex items-center justify-center w-16 h-16 bg-terciario rounded-full group-hover:shadow-lg">
-                      <img src={avt.foto} alt="avatar" className="size-7 bg-no-repeat" />
+                      <img
+                        src={avt.foto}
+                        alt="avatar"
+                        className="size-7 bg-no-repeat"
+                      />
                     </div>
                     <div className="flex flex-col text-gray-700 text-base group-hover:text-gray-500">
-                      <p className="text-lg font-light text-terciario">{avt.autor}</p>
-                      <p className="text-base text-slate-500 font-light">{avt.date}</p>
+                      <p className="text-lg font-light text-terciario">
+                        {avt.autor}
+                      </p>
+                      <p className="text-base text-slate-500 font-light">
+                        {avt.date}
+                      </p>
                     </div>
                   </div>
                 ))}
+              </div>
+
+              <div className="">
+                <img src="images/blog/cad-responsivo-differ.jpg" alt="" className="rounded-lg mb-10"/>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
+                    Um card visual é um componente essencial na construção de interfaces modernas. Ele deve ser claro, organizado e convidativo, usando hierarquia visual para guiar o usuário. 
+                    <br /><br />
+                    No card da direita, os ícones e etiquetas ajudam a identificar rapidamente o conteúdo, o espaçamento torna a leitura fácil, e o design moderno (com cantos arredondados e sombras suaves) cria uma experiência agradável. 
+                    <br /><br />
+                    Um card responsivo e interativo não só valoriza o conteúdo como aumenta o engajamento do usuário e melhora a usabilidade em qualquer dispositivo.
+                </p>
               </div>
             </div>
           </div>
