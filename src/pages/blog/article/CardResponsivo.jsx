@@ -397,20 +397,34 @@ function CardResponsivo() {
                   <p className="px-5 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light mb-10">
                     Nesse momento, temos um card simples, sem animações nem
                     badges. Ele funciona, mas ainda não chama atenção.
+                    <br />
+                    <br />
+                    O card atual cumpre o seu papel: apresenta uma imagem, um
+                    título e uma breve descrição. Porém, visualmente, ele ainda
+                    é comum e não se destaca na página.
+                    <br />
+                    <br />
+                    O utilizador não tem pistas rápidas sobre o que é importante
+                    aqui, ou seja, é só mais um bloco de texto com uma foto.
+                    Falta um elemento de identidade visual e interação que
+                    mostre de cara do que se trata e que dê vontade de clicar.
+                    <br />
+                    <br />É aqui que entram os badges (etiquetas) e o efeito de
+                    destaque: eles funcionam como "micro-pistas visuais" que
+                    guiam o olhar do visitante e transmitem informações-chave de
+                    forma instantânea. Além disso, criam um design mais
+                    profissional e moderno.
                   </p>
-
                 </div>
-
               </div>
 
               <hr className="mb-10" />
 
               <div className="mb-10">
                 <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
-                  <strong>Passo 3</strong> — 
+                  <strong>Passo 3</strong> — De simples a profissional:
+                  adicionando badges, efeitos e ação
                 </h1>
-
-                
               </div>
             </div>
           </div>
