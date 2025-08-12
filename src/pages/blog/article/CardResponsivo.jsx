@@ -394,7 +394,7 @@ function CardResponsivo() {
                     />
                   </div>
 
-                  <p className="px-5 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light mb-10">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
                     Nesse momento, temos um card simples, sem animações nem
                     badges. Ele funciona, mas ainda não chama atenção.
                     <br />
@@ -425,6 +425,37 @@ function CardResponsivo() {
                   <strong>Passo 3</strong> — De simples a profissional:
                   adicionando badges, efeitos e ação
                 </h1>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
+                  No <strong className="font-semibold">passo 2</strong>, o nosso
+                  card já funcionava, mas ainda não tinha identidade visual nem
+                  elementos interativos.
+                </p>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-2">
+                  Agora, vamos aplicar três melhorias:
+                </p>
+
+                <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-10 max-w-3xl space-y-1 list-inside dark:text-gray-400">
+                  <li className="font-medium">
+                    <span className="font-light">
+                      <strong className="font-medium">Badges (etiquetas) com ícones</strong> para indicar rapidamente sobre
+                    o que é o card;
+                    </span>
+                  </li>
+                  <li className="font-medium">
+                    <span className="font-light">
+                      <strong className="font-medium">Efeito hover na imagem</strong> para dar sensação de dinamismo;
+                    </span>
+                  </li>
+                  <li className="font-medium">
+                    <span className="font-light">
+                      <strong className="font-medium">Botão de ação (CTA)</strong> que aparece só na interação, incentivando o clique.
+                    </span>
+                  </li>
+                </ol>
+
+
               </div>
             </div>
           </div>
