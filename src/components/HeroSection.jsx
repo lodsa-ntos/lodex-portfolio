@@ -41,7 +41,7 @@ function HeroSection() {
           variants={fadeIn("left", 0.2)}
           initial="hidden"
           whileInView="show"
-          href="/Lodney Santos_CV_(pt-pt).pdf"
+          href="/Lodney-Santos-Resume-[2025-Website].pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center justify-center gap-1"
