@@ -75,6 +75,24 @@ const blocoParte4 = {
   `,
 };
 
+const blocoParte5 = {
+  language: "javascript",
+  code: `
+  {/* CTA button */}
+<div className="absolute top-2 right-3 bg-white rounded-full w-8
+ h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+  <MdArrowOutward className="size-5 text-[#e96360]" />
+</div>
+
+{/* Card content */}
+<div className="p-5">
+  <h5 className="font-bold">{card.title}</h5>
+  <p className="text-sm text-gray-500">{card.description}</p>
+</div>
+  `,
+};
+
+
 function CardResponsivo() {
   return (
     <>
@@ -538,7 +556,10 @@ function CardResponsivo() {
                 </h1>
 
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                  Até aqui, o nosso card era só uma imagem e texto. Agora é hora de dar vida a ele: <br /> — vamos adicionar badges dinâmicos para mostrar as tecnologias usadas <br />e preparar espaço para ações interativas.
+                  Até aqui, o nosso card era só uma imagem e texto. Agora é hora
+                  de dar vida a ele: <br /> — vamos adicionar badges dinâmicos
+                  para mostrar as tecnologias usadas <br />e preparar espaço
+                  para ações interativas.
                 </p>
 
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
@@ -553,12 +574,15 @@ function CardResponsivo() {
                 <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside dark:text-gray-400">
                   <li className="font-medium ">
                     <span className="font-light">
-                      Criar um componente<span className="font-medium"> Badges</span> separado, que recebe ícone, nome e link.
+                      Criar um componente
+                      <span className="font-medium"> Badges</span> separado, que
+                      recebe ícone, nome e link.
                     </span>
                   </li>
                   <li className="font-medium">
                     <span className="font-light">
-                      Aplicar cores diferentes automaticamente conforme a tecnologia.
+                      Aplicar cores diferentes automaticamente conforme a
+                      tecnologia.
                     </span>
                   </li>
                 </ol>
@@ -566,7 +590,10 @@ function CardResponsivo() {
                 <hr className="mb-10" />
 
                 <h1 className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
-                  💻 Código parcial <span className="font-light">(somente o Badge, sem o card completo):</span>
+                  💻 Código parcial{" "}
+                  <span className="font-light">
+                    (somente o Badge, sem o card completo):
+                  </span>
                 </h1>
 
                 <div>
@@ -586,7 +613,12 @@ function CardResponsivo() {
                   />
 
                   <h2 className="text-base leading-relaxed text-slate-700  my-5">
-                    <span className="font-semibold">💡 Porquê isto importa?</span> <br /> Badges dão credibilidade e clareza ao card. O leitor sabe rapidamente quais tecnologias estão por trás, e o design ganha um toque mais profissional.
+                    <span className="font-semibold">
+                      💡 Porquê isto importa?
+                    </span>{" "}
+                    <br /> Badges dão credibilidade e clareza ao card. O leitor
+                    sabe rapidamente quais tecnologias estão por trás, e o
+                    design ganha um toque mais profissional.
                   </h2>
                 </div>
               </div>
@@ -596,11 +628,15 @@ function CardResponsivo() {
               {/* PARTE 4 */}
               <div>
                 <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
-                  <strong>Passo 4</strong> — Criar impacto visual: <br />imagem com efeito hover
+                  <strong>Passo 4</strong> — Criar impacto visual: <br />
+                  imagem com efeito hover
                 </h1>
 
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                  Um bom card precisa de chamar atenção no primeiro segundo. <br />Vamos fazer isso com uma imagem que ganha vida quando o utilizador passa o rato.
+                  Um bom card precisa de chamar atenção no primeiro segundo.{" "}
+                  <br />
+                  Vamos fazer isso com uma imagem que ganha vida quando o
+                  utilizador passa o rato.
                 </p>
 
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
@@ -609,9 +645,7 @@ function CardResponsivo() {
 
                 <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside dark:text-gray-400">
                   <li className="font-medium ">
-                    <span className="font-light">
-                      Zoom suave no hover
-                    </span>
+                    <span className="font-light">Zoom suave no hover</span>
                   </li>
                   <li className="font-medium">
                     <span className="font-light">
@@ -623,7 +657,8 @@ function CardResponsivo() {
                 <hr className="mb-10" />
 
                 <h1 className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
-                  💻 Código parcial <span className="font-light">(apenas a parte da imagem)</span>
+                  💻 Código parcial{" "}
+                  <span className="font-light">(apenas a parte da imagem)</span>
                 </h1>
 
                 <div>
@@ -643,12 +678,79 @@ function CardResponsivo() {
                   />
 
                   <h2 className="text-base leading-relaxed text-slate-700  my-5">
-                    <span className="font-semibold">💡 Porquê isto importa?</span> <br /> Esse efeito subtil cria a sensação de que o card responde à interação, e isso mantém o utilizador interessado.
+                    <span className="font-semibold">
+                      💡 Porquê isto importa?
+                    </span>{" "}
+                    <br /> Esse efeito subtil cria a sensação de que o card
+                    responde à interação, e isso mantém o utilizador
+                    interessado.
                   </h2>
                 </div>
               </div>
 
+              <hr className="my-10" />
 
+              {/* PARTE 5 */}
+              <div>
+                <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
+                  <strong>Passo 5</strong> — Interatividade e chamada para ação{" "}
+                  <strong>(CTA)</strong>
+                </h1>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
+                  Agora vamos adicionar um botão que só aparece quando o
+                  utilizador interage com o card. Essa é uma ótima maneira de
+                  guiar o clique sem poluir o visual inicial.
+                </p>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
+                  O que vamos adicionar agora:
+                </p>
+
+                <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside dark:text-gray-400">
+                  <li className="font-medium ">
+                    <span className="font-light">Botão animado para abrir conteúdo externo</span>
+                  </li>
+                  <li className="font-medium">
+                    <span className="font-light">
+                      Transição suave para aparecer apenas no hover
+                    </span>
+                  </li>
+                </ol>
+
+                <hr className="mb-10" />
+
+                <h1 className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
+                  💻 Código parcial{" "}
+                  <span className="font-light">(apenas o botão e conteúdo básico)</span>
+                </h1>
+
+                <div>
+                  <CodeBlock
+                    language={blocoParte5.language}
+                    code={blocoParte5.code}
+                  />
+                </div>
+
+                <hr className="my-10" />
+
+                <div className="-mt-10 hidden">
+                  <img
+                    src="images/blog/card-video.gif"
+                    alt=""
+                    className="w-80 mx-auto h-full object-cover rounded-lg"
+                  />
+
+                  <h2 className="text-base leading-relaxed text-slate-700  my-5">
+                    <span className="font-semibold">
+                      💡 Porquê isto importa?
+                    </span>{" "}
+                    <br /> Esse efeito subtil cria a sensação de que o card
+                    responde à interação, e isso mantém o utilizador
+                    interessado.
+                  </h2>
+                </div>
+              </div>
             </div>
           </div>
         </GlobalContainer>
