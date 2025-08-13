@@ -28,7 +28,7 @@ function App() {
           <Route path="/launchpeak" element={<ConceitoPessoal />} />
           <Route path="/sobremim" element={<SobreMim />} />
           <Route path="/servicos" element={<Services />} />
-          <Route path="/blogd" element={<Blog />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/portfolio" element={<GlobalProject />} />
           <Route path="/conversar" element={<Conversar />} />
           <Route path="/cardresponsivo" element={<CardResponsivo />} />

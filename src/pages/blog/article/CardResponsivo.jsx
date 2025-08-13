@@ -276,187 +276,140 @@ function CardResponsivo() {
                   TailwindCSS
                 </h1>
 
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-3">
-                  Se ainda não tiver um projeto, crie um novo com{" "}
-                  <a
-                    href="https://vite.dev/guide/"
-                    target="_blank"
-                    className="font-medium underline hover:text-slate-500"
-                  >
-                    Vite
-                  </a>{" "}
-                  (mais rápido que o create-react-app):
-                </p>
-
-                <div className="w-full mx-auto bg-slate-100 p-5 rounded-xl mb-2">
-                  <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light">
-                    npm create vite@latest card-tutorial <br />
-                    <span className="text-yellow-500">
-                      cd
-                    </span> card-tutorial <br />
-                    npm install
-                  </p>
-                </div>
-                <p className="px-5 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light mb-10">
-                  Escolha{" "}
-                  <a
-                    href="https://react.dev/learn"
-                    target="_blank"
-                    className="font-medium underline hover:text-slate-500"
-                  >
-                    React
-                  </a>{" "}
-                  e{" "}
-                  <a
-                    href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
-                    target="_blank"
-                    className="font-medium underline hover:text-slate-500"
-                  >
-                    JavaScript
-                  </a>{" "}
-                  quando o terminal perguntar.
-                </p>
-              </div>
-
-              <div className="mb-10">
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-3">
-                  Depois, instale o TailwindCSS:
-                </p>
-
-                <div className="w-full mx-auto bg-slate-100 p-5 rounded-xl mb-2">
-                  <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light">
-                    npm install -D tailwindcss postcss autoprefixer <br />
-                    npx tailwindcss init -p
-                  </p>
-                </div>
-              </div>
-
-              <div className="mb-10">
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light">
-                  Edite o ficheiro{" "}
-                  <span className="w-fit bg-slate-100 p-0.5 rounded-lg font-regular text-base font-[400]">
-                    tailwind.config.js
-                  </span>{" "}
-                  para incluir os paths do seu código:
-                </p>
-
-                <img src="images/blog/tailwind-config-blog.svg" alt="" />
-              </div>
-
-              <div className="mb-10">
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light">
-                  No ficheiro{" "}
-                  <span className="w-fit bg-slate-100 p-0.5 rounded-lg font-regular text-base font-[400]">
-                    src/index.css
-                  </span>
-                  , substitua o conteúdo por:
-                </p>
-
-                <img src="images/blog/src_index.css-blog.png" alt="" />
-                <p className="px-5 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light mb-10">
-                  Pronto! Agora temos um projeto React com Tailwind pronto para
-                  uso.
-                </p>
-              </div>
-
-              <hr className="mb-10" />
-
-              <div className="mb-10">
-                <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
-                  <strong>Passo 2</strong> — Estrutura do Componente Base{" "}
-                  <strong>(Versão "Antes")</strong>
-                </h1>
-
-                <div className="mb-10">
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light">
-                    Crie o ficheiro{" "}
-                    <span className="w-fit bg-slate-100 p-0.5 rounded-lg font-regular text-base font-[400]">
-                      Card.jsx
-                    </span>{" "}
-                    dentro de{" "}
-                    <span className="w-fit bg-slate-100 p-0.5 rounded-lg font-regular text-base font-[400]">
-                      src/components/
-                    </span>
-                    :
-                  </p>
-
-                  <div className="grid grid-cols-1 lg:grid-cols-2">
-                    <img
-                      src="images/blog/Card.jsx-blog.png"
-                      alt=""
-                      className="w-96 h-full"
-                    />
-
-                    <img
-                      src="images/blog/card-base.jpg"
-                      alt=""
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    Nesse momento, temos um card simples, sem animações nem
-                    badges. Ele funciona, mas ainda não chama atenção.
-                    <br />
-                    <br />
-                    O card atual cumpre o seu papel: apresenta uma imagem, um
-                    título e uma breve descrição. Porém, visualmente, ele ainda
-                    é comum e não se destaca na página.
-                    <br />
-                    <br />
-                    O utilizador não tem pistas rápidas sobre o que é importante
-                    aqui, ou seja, é só mais um bloco de texto com uma foto.
-                    Falta um elemento de identidade visual e interação que
-                    mostre de cara do que se trata e que dê vontade de clicar.
-                    <br />
-                    <br />É aqui que entram os badges (etiquetas) e o efeito de
-                    destaque: eles funcionam como "micro-pistas visuais" que
-                    guiam o olhar do visitante e transmitem informações-chave de
-                    forma instantânea. Além disso, criam um design mais
-                    profissional e moderno.
-                  </p>
-                </div>
-              </div>
-
-              <hr className="mb-10" />
-
-              <div className="mb-10">
-                <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
-                  <strong>Passo 3</strong> — De simples a profissional:
-                  adicionando badges, efeitos e ação
-                </h1>
-
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                  No <strong className="font-semibold">passo 2</strong>, o nosso
-                  card já funcionava, mas ainda não tinha identidade visual nem
-                  elementos interativos.
+                  <strong className="font-medium">🎯 Objetivo:</strong> Criar a
+                  base do projeto onde o card será construído.
                 </p>
 
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-2">
-                  Agora, vamos aplicar três melhorias:
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
+                  O que vamos fazer:
                 </p>
 
-                <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-10 max-w-3xl space-y-1 list-inside dark:text-gray-400">
+                <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside dark:text-gray-400">
                   <li className="font-medium">
                     <span className="font-light">
-                      <strong className="font-medium">Badges (etiquetas) </strong> — ícones para indicar rapidamente sobre
-                     o tipo de conteúdo;
+                      Criar projeto React com Vite
+                      <strong className="font-medium">Vite</strong>
                     </span>
                   </li>
                   <li className="font-medium">
                     <span className="font-light">
-                      <strong className="font-medium">Efeito hover na imagem</strong> — dá sensação de movimento;
-                    </span>
-                  </li>
-                  <li className="font-medium">
-                    <span className="font-light">
-                      <strong className="font-medium">Botão de ação (CTA)</strong> — incentiva o clique.
+                      Instalar e configurar TailwindCSS
+                      <strong className="font-medium">TailwindCSS </strong>
                     </span>
                   </li>
                 </ol>
 
+                <hr className="mb-10" />
 
+                <h1 className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
+                  💻 Código
+                </h1>
+
+                {/* Criar projeto React com Vite */}
+                <div className="w-full mx-auto bg-gray-100 p-5 rounded-xl mb-2">
+                  <p className="text-base leading-relaxed text-slate-700 font-[400] mb-10">
+                    <span className="text-gray-400 font-[500] tracking-wide text-sm italic">
+                      # Criar projeto React com Vite
+                    </span>
+                    <br />
+                    npm create vite@latest card-tailwind
+                    <br />
+                    <span className="text-yellow-500">cd</span> card-tailwind
+                  </p>
+
+                  <p className="text-base leading-relaxed text-slate-700 font-[400]">
+                    <span className="text-gray-400 font-[500] tracking-wider text-sm italic">
+                      # Instalar TailwindCSS
+                    </span>
+                    <br />
+                    npm install -D tailwindcss postcss autoprefixer
+                    <br />
+                    npx tailwindcss init -p
+                  </p>
+                </div>
+
+                {/* tailwind.config.js */}
+                <div className="w-full mx-auto bg-gray-100 p-5 rounded-xl mb-2">
+                  <p className="text-base leading-relaxed text-slate-700 font-[400]">
+                    <span className="text-gray-400 font-[500] tracking-wide text-sm italic">
+                      // tailwind.config.js
+                    </span>
+                    <br />
+                    <span className="text-yellow-600 font-regular text-sm">
+                      {`module`}
+                    </span>
+                    <span className="font-regular text-sm">{`.exports = {`}</span>
+                    <br />
+                    <span className="text-yellow-600 ml-5 font-regular text-sm">
+                      {`content`}
+                    </span>
+                    <span className="font-regular text-sm">{`: [`}</span>
+                    <span className="font-regular text-sm text-green-600 tracking-wide">
+                      {` "./index.html", "./src/**/*.{js,jsx}" `}
+                    </span>
+                    <span className="font-regular text-sm tracking-widest">{`],`}</span>
+                    <br />
+                    <span className="text-yellow-600 ml-5 font-regular text-sm">
+                      {`theme`}
+                    </span>
+                    <span className="font-regular text-sm">{`: {`}</span>
+                    <span className="font-regular text-sm text-yellow-600 tracking-wide">
+                      {` extend`}
+                    </span>
+                    <span className="font-regular text-sm tracking-widest">{`: { } },`}</span>
+                    <br />
+                    <span className="text-yellow-600 ml-5 font-regular text-sm">
+                      {`plugins`}
+                    </span>
+                    <span className="font-regular text-sm">{`: [ ],`}</span>
+                    <br />
+                    <span className="font-regular text-sm">{`}`}</span>
+                  </p>
+                </div>
+
+                {/* index.css */}
+                <div className="w-full mx-auto bg-gray-100 p-5 rounded-xl mb-2">
+                  <p className="text-base leading-relaxed text-slate-700 font-[400]">
+                    <span className="text-gray-400 font-[500] tracking-wide text-sm italic">
+                      /* index.css */
+                    </span>
+                    <br />
+                    <span className="text-purple-600 font-regular text-sm">
+                      {`@tailwind `}
+                    </span>
+                    <span className="font-regular text-sm">{`base;`}</span>
+                    <br />
+                    <span className="text-purple-600 font-regular text-sm">
+                      {`@tailwind `}
+                    </span>
+                    <span className="font-regular text-sm">{`components;`}</span>
+                    <br />
+                    <span className="text-purple-600 font-regular text-sm">
+                      {`@tailwind `}
+                    </span>
+                    <span className="font-regular text-sm">{`utilities;`}</span>
+                  </p>
+                </div>
+
+                <hr className="my-10" />
+
+                <h2 className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
+                  💡 Teste agora!
+                </h2>
+
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light mb-10">
+                  Executa{" "}
+                  <span className="bg-gray-100 rounded-md px-1 font-medium text-base">
+                    npm run dev
+                  </span>{" "}
+                  e confirma que o Tailwind está a aplicar estilos.
+                </p>
               </div>
+
+              <hr className="my-10" />
+
+              
             </div>
           </div>
         </GlobalContainer>
