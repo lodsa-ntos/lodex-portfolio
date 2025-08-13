@@ -439,18 +439,18 @@ function CardResponsivo() {
                 <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-10 max-w-3xl space-y-1 list-inside dark:text-gray-400">
                   <li className="font-medium">
                     <span className="font-light">
-                      <strong className="font-medium">Badges (etiquetas) com ícones</strong> para indicar rapidamente sobre
-                    o que é o card;
+                      <strong className="font-medium">Badges (etiquetas) </strong> — ícones para indicar rapidamente sobre
+                     o tipo de conteúdo;
                     </span>
                   </li>
                   <li className="font-medium">
                     <span className="font-light">
-                      <strong className="font-medium">Efeito hover na imagem</strong> para dar sensação de dinamismo;
+                      <strong className="font-medium">Efeito hover na imagem</strong> — dá sensação de movimento;
                     </span>
                   </li>
                   <li className="font-medium">
                     <span className="font-light">
-                      <strong className="font-medium">Botão de ação (CTA)</strong> que aparece só na interação, incentivando o clique.
+                      <strong className="font-medium">Botão de ação (CTA)</strong> — incentiva o clique.
                     </span>
                   </li>
                 </ol>
