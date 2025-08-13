@@ -1,0 +1,89 @@
+/* Dracula Theme for Highlight.js */
+
+.hljs {
+  background: #F3F4F6;
+  color: #282a36;
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #6272a4;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #9333EA;
+  font-weight: 500;
+}
+
+.hljs-literal,
+.hljs-number,
+.hljs-tag .hljs-attr,
+.hljs-template-variable,
+.hljs-variable {
+  color: #CA8A04;
+  font-weight: 500;
+}
+
+.hljs-string,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #16A34A;
+  font-weight: 500;
+}
+
+.hljs-title.class_,
+.hljs-function .hljs-title {
+  color: #16A34A;
+  font-weight: 500;
+}
+
+.hljs-name,
+.hljs-params,
+.hljs-deletion {
+  color: #DC2626;
+  font-weight: 500;
+}
+
+.hljs-link {
+  color: #2563EB;
+  text-decoration: underline;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 500;
+}
+
+.hljs-code {
+  color: #f8f8f2;
+  background: #44475a;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+pre.hljs {
+  padding: 1em;
+  overflow-x: auto;
+  background: #282a36;
+  border-radius: 8px;
+}

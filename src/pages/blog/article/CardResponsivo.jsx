@@ -10,6 +10,7 @@ import { BubblyLink } from "../../../library/BubblyLink";
 import { MobileCarouselLaunchPeak } from "../../../utils/MobileCarousel";
 import { GiConvergenceTarget } from "react-icons/gi";
 import imgAvatar from "../../../assets/logo/lodexstudio-logo-white.svg";
+import CodeBlock from "../../../utils/CodeBlock";
 
 const day = new Date().toLocaleDateString("pt-PT", { day: "2-digit" });
 const month = new Date().toLocaleDateString("pt-PT", { month: "long" });
@@ -25,6 +26,43 @@ const Avatar = [
     date: generalDate,
   },
 ];
+
+const blocoParte2 = {
+  language: "javascript",
+  code: `export default function Card() {
+  return (
+    <div className="bg-white shadow p-4 w-[400px] rounded">
+      <img src="imagem.jpg" alt="..." className="mb-4" />
+      <h2 className="text-lg font-bold">Título do Card</h2>
+      <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+      Quod voluptatibus maiores expedita atque veritatis 
+      accusantium architecto dolor dolores enim nihil molestias
+      ad.
+      </p>
+    </div>
+  );
+}`,
+};
+
+const blocoParte3 = {
+  language: "javascript",
+  code: `
+  const Badge = ({ icon, label, link }) => (
+  <a
+    className={" flex items-center gap-0.5 rounded-full px-2 py-[0.5px] text-xs 
+    font-medium tracking-tight ring-1 ring-inset
+     \${label === "React.js" ? "bg-blue-50 text-blue-600 ring-blue-700/10" : ""}
+    "}
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {icon} {label}
+  </a>
+);
+  `,
+};
 
 function CardResponsivo() {
   return (
@@ -173,18 +211,18 @@ function CardResponsivo() {
                     Pré-requisitos
                   </h1>
                   <li className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span class="size-5 flex justify-center items-center rounded-full bg-blue-50 text-secundario">
+                    <span className="size-5 flex justify-center items-center rounded-full bg-blue-50 text-secundario">
                       <svg
-                        class="shrink-0 size-3.5"
+                        className="shrink-0 size-3.5"
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
@@ -197,18 +235,18 @@ function CardResponsivo() {
                   </li>
 
                   <li className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span class="size-5 flex justify-center items-center rounded-full bg-blue-50 text-secundario">
+                    <span className="size-5 flex justify-center items-center rounded-full bg-blue-50 text-secundario">
                       <svg
-                        class="shrink-0 size-3.5"
+                        className="shrink-0 size-3.5"
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
@@ -221,18 +259,18 @@ function CardResponsivo() {
                   </li>
 
                   <li className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span class="size-5 flex justify-center items-center rounded-full bg-blue-50 text-secundario">
+                    <span className="size-5 flex justify-center items-center rounded-full bg-blue-50 text-secundario">
                       <svg
-                        class="shrink-0 size-3.5"
+                        className="shrink-0 size-3.5"
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
@@ -244,18 +282,18 @@ function CardResponsivo() {
                   </li>
 
                   <li className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span class="size-5 flex justify-center items-center rounded-full bg-blue-50 text-secundario">
+                    <span className="size-5 flex justify-center items-center rounded-full bg-blue-50 text-secundario">
                       <svg
-                        class="shrink-0 size-3.5"
+                        className="shrink-0 size-3.5"
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
@@ -270,6 +308,7 @@ function CardResponsivo() {
 
               <hr className="mb-10" />
 
+              {/* PARTE 1 */}
               <div>
                 <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
                   <strong>Passo 1</strong> — Criar o projeto com React e
@@ -409,7 +448,138 @@ function CardResponsivo() {
 
               <hr className="my-10" />
 
-              
+              {/* PARTE 2 */}
+              <div>
+                <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
+                  <strong>Passo 2</strong> — Estrutura do Componente Base{" "}
+                  <strong>("Antes")</strong>
+                </h1>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
+                  <strong className="font-medium">🎯 Objetivo:</strong> Criar um
+                  card simples, sem efeitos, para servir de ponto de partida.
+                </p>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
+                  O que vamos fazer:
+                </p>
+
+                <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside dark:text-gray-400">
+                  <li className="font-medium ">
+                    <span className="font-light">
+                      Criar ficheiro
+                      <span className="bg-gray-100 font-medium text-base px-1 rounded-md ml-1">
+                        Card.jsx
+                      </span>
+                    </span>
+                  </li>
+                  <li className="font-medium">
+                    <span className="font-light">
+                      Adicionar imagem, título e descrição
+                      <strong className="font-medium">TailwindCSS </strong>
+                    </span>
+                  </li>
+                  <li className="font-medium">
+                    <span className="font-light">
+                      Aplicar classes básicas do TailwindCSS
+                      <strong className="font-medium">TailwindCSS </strong>
+                    </span>
+                  </li>
+                </ol>
+
+                <hr className="mb-10" />
+
+                <h1 className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
+                  💻 Código (resumo)
+                </h1>
+
+                {/* tailwind.config.js */}
+                <div>
+                  <CodeBlock
+                    language={blocoParte2.language}
+                    code={blocoParte2.code}
+                  />
+                </div>
+
+                <hr className="my-10" />
+
+                <div className="-mt-10 ">
+                  <img
+                    src="images/blog/card-base2.jpg"
+                    alt=""
+                    className="w-96 mx-auto h-full object-cover"
+                  />
+
+                  <h2 className="text-base leading-relaxed text-slate-700  mb-2">
+                    <span className="font-semibold">💡Nota:</span> Funciona, mas
+                    não chama atenção. Falta dinamismo e elementos de destaque.
+                  </h2>
+                </div>
+              </div>
+
+              <hr className="my-10" />
+
+              {/* PARTE 3 */}
+              <div>
+                <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
+                  <strong>Passo 3</strong> — De simples a profissional:
+                  adicionando badges, efeitos e ação
+                </h1>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
+                  Até aqui, o nosso card era só uma imagem e texto. Agora é hora de dar vida a ele: <br /> — vamos adicionar badges dinâmicos para mostrar as tecnologias usadas <br />e preparar espaço para ações interativas.
+                </p>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
+                  <strong className="font-medium">🎯 Objetivo:</strong> Tornar o
+                  card dinâmico e atrativo.
+                </p>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
+                  O que vamos fazer agora:
+                </p>
+
+                <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside dark:text-gray-400">
+                  <li className="font-medium ">
+                    <span className="font-light">
+                      Criar um componente<span className="font-medium"> Badges</span> separado, que recebe ícone, nome e link.
+                    </span>
+                  </li>
+                  <li className="font-medium">
+                    <span className="font-light">
+                      Aplicar cores diferentes automaticamente conforme a tecnologia.
+                    </span>
+                  </li>
+                </ol>
+
+                <hr className="mb-10" />
+
+                <h1 className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
+                  💻 Código parcial <span className="font-light">(somente o Badge, sem o card completo):</span>
+                </h1>
+
+                {/* tailwind.config.js */}
+                <div>
+                  <CodeBlock
+                    language={blocoParte3.language}
+                    code={blocoParte3.code}
+                  />
+                </div>
+
+                <hr className="my-10" />
+
+                <div className="-mt-10 ">
+                  <img
+                    src="images/blog/antes-depois-1.jpg"
+                    alt=""
+                    className="w-full mx-auto h-full object-cover pt-10 rounded-lg rounded-t-lg"
+                  />
+
+                  <h2 className="text-base leading-relaxed text-slate-700  my-2">
+                    <span className="font-semibold">💡 Porquê isto importa?</span> <br /> Badges dão credibilidade e clareza ao card. O leitor sabe rapidamente quais tecnologias estão por trás, e o design ganha um toque mais profissional.
+                  </h2>
+                </div>
+              </div>
             </div>
           </div>
         </GlobalContainer>
