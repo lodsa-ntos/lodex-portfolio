@@ -64,6 +64,17 @@ const blocoParte3 = {
   `,
 };
 
+const blocoParte4 = {
+  language: "javascript",
+  code: `
+  <img className="w-full h-[280px] object-cover
+  transition-transform duration-500 group-hover:scale-105"
+    src={card.img}
+    alt={card.title}
+  />
+  `,
+};
+
 function CardResponsivo() {
   return (
     <>
@@ -327,14 +338,14 @@ function CardResponsivo() {
                 <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside dark:text-gray-400">
                   <li className="font-medium">
                     <span className="font-light">
-                      Criar projeto React com Vite
-                      <strong className="font-medium">Vite</strong>
+                      Criar projeto React com
+                      <strong className="font-medium"> Vite</strong>
                     </span>
                   </li>
                   <li className="font-medium">
                     <span className="font-light">
-                      Instalar e configurar TailwindCSS
-                      <strong className="font-medium">TailwindCSS </strong>
+                      Instalar e configurar
+                      <strong className="font-medium"> TailwindCSS </strong>
                     </span>
                   </li>
                 </ol>
@@ -558,7 +569,6 @@ function CardResponsivo() {
                   💻 Código parcial <span className="font-light">(somente o Badge, sem o card completo):</span>
                 </h1>
 
-                {/* tailwind.config.js */}
                 <div>
                   <CodeBlock
                     language={blocoParte3.language}
@@ -568,18 +578,77 @@ function CardResponsivo() {
 
                 <hr className="my-10" />
 
-                <div className="-mt-10 ">
+                <div className="mt-10 ">
                   <img
                     src="images/blog/antes-depois-1.jpg"
                     alt=""
-                    className="w-full mx-auto h-full object-cover pt-10 rounded-lg rounded-t-lg"
+                    className="w-full mx-auto h-full object-cover rounded-lg"
                   />
 
-                  <h2 className="text-base leading-relaxed text-slate-700  my-2">
+                  <h2 className="text-base leading-relaxed text-slate-700  my-5">
                     <span className="font-semibold">💡 Porquê isto importa?</span> <br /> Badges dão credibilidade e clareza ao card. O leitor sabe rapidamente quais tecnologias estão por trás, e o design ganha um toque mais profissional.
                   </h2>
                 </div>
               </div>
+
+              <hr className="my-10" />
+
+              {/* PARTE 4 */}
+              <div>
+                <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
+                  <strong>Passo 4</strong> — Criar impacto visual: <br />imagem com efeito hover
+                </h1>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
+                  Um bom card precisa de chamar atenção no primeiro segundo. <br />Vamos fazer isso com uma imagem que ganha vida quando o utilizador passa o rato.
+                </p>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
+                  O que vamos fazer agora:
+                </p>
+
+                <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside dark:text-gray-400">
+                  <li className="font-medium ">
+                    <span className="font-light">
+                      Zoom suave no hover
+                    </span>
+                  </li>
+                  <li className="font-medium">
+                    <span className="font-light">
+                      Espaço visual limpo e adaptável
+                    </span>
+                  </li>
+                </ol>
+
+                <hr className="mb-10" />
+
+                <h1 className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
+                  💻 Código parcial <span className="font-light">(apenas a parte da imagem)</span>
+                </h1>
+
+                <div>
+                  <CodeBlock
+                    language={blocoParte4.language}
+                    code={blocoParte4.code}
+                  />
+                </div>
+
+                <hr className="my-10" />
+
+                <div className="-mt-10">
+                  <img
+                    src="images/blog/card-video.gif"
+                    alt=""
+                    className="w-80 mx-auto h-full object-cover rounded-lg"
+                  />
+
+                  <h2 className="text-base leading-relaxed text-slate-700  my-5">
+                    <span className="font-semibold">💡 Porquê isto importa?</span> <br /> Esse efeito subtil cria a sensação de que o card responde à interação, e isso mantém o utilizador interessado.
+                  </h2>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </GlobalContainer>

@@ -47,7 +47,7 @@ export default function CodeBlock({ code = "", language = "javascript" }) {
         }}
       >
         {copied ? (
-          <span className="flex items-center justify-end gap-0.5 text-xs">
+          <span className="flex items-center justify-end text-sm">
             <RxCheck className="text-green-500 size-5" />
             Copiado
           </span>
