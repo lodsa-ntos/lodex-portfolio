@@ -246,7 +246,7 @@ function CardResponsivo() {
 
                 <div className="mb-10">
                   <ul className="space-y-4 text-left text-gray-500 dark:text-gray-400">
-                    <h1 className="flex items-center justify-start gap-1 text-[#6a7282] font-[500] text-base">
+                    <h1 className="flex items-center justify-start gap-1 text-[#6a7282] font-[500] text-lg">
                       <RxDrawingPinFilled className="text-secundario" />{" "}
                       Índice
                     </h1>
@@ -255,37 +255,53 @@ function CardResponsivo() {
                     <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside dark:text-gray-400">
                     <li className="font-medium">
                       <span className="font-light">
-                        Criar projeto com React e TailwindCSS
+                        <a href="#passo-1" className="underline hover:text-secundario focus-within:text-secundario">Criar projeto com React e TailwindCSS</a>
                       </span>
                     </li>
                     <li className="font-medium">
                       <span className="font-light">
-                        Estruturar o componente base (Card)
+                        <a href="#passo-2" className="underline hover:text-secundario focus-within:text-secundario">
+                           Estruturar o componente base (Card)
+                        </a>
                       </span>
                     </li>
                     <li className="font-medium">
                       <span className="font-light">
-                        Adicionar badges e ícones de tecnologia
+                        <a href="#passo-3" className="underline hover:text-secundario focus-within:text-secundario">
+                           Adicionar badges e ícones de tecnologia
+                        </a>
                       </span>
                     </li>
                     <li className="font-medium">
                       <span className="font-light">
-                        Criar imagem visual impactante
+                        <a href="#passo-4" className="underline hover:text-secundario focus-within:text-secundario">
+                           Criar imagem visual impactante
+                        </a>
+                        
                       </span>
                     </li>
                     <li className="font-medium">
                       <span className="font-light">
-                        Incluir título e botão de ação (CTA)
+                        <a href="#passo-5" className="underline hover:text-secundario focus-within:text-secundario">
+                           Incluir título e botão de ação (CTA)
+                        </a>
+                        
                       </span>
                     </li>
                     <li className="font-medium">
                       <span className="font-light">
-                        Tornar o card responsivo
+                        <a href="#passo-6" className="underline hover:text-secundario focus-within:text-secundario">
+                           Tornar o card responsivo
+                        </a>
+                        
                       </span>
                     </li>
                     <li className="font-medium">
                       <span className="font-light">
-                        Código final e repositório no GitHub
+                        <a href="#passo-final" className="underline hover:text-secundario focus-within:text-secundario">
+                           Código final e repositório no GitHub
+                        </a>
+                        
                       </span>
                     </li>
                   </ol>
@@ -296,7 +312,7 @@ function CardResponsivo() {
                 <hr className="mb-10" />
 
                 {/* PARTE 1 */}
-                <div>
+                <div id="passo-1">
                   <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
                     <strong>Passo 1</strong> — Criar o projeto com React e
                     TailwindCSS
@@ -447,7 +463,7 @@ function CardResponsivo() {
                 <hr className="my-10" />
 
                 {/* PARTE 2 */}
-                <div>
+                <div id="passo-2">
                   <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
                     <strong>Passo 2</strong> — Estruturar o componente base{" "}
                     <strong>("Antes")</strong>
@@ -529,7 +545,7 @@ function CardResponsivo() {
                 <hr className="my-10" />
 
                 {/* PARTE 3 */}
-                <div>
+                <div id="passo-3">
                   <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
                     <strong>Passo 3</strong> — De simples a profissional:
                     adicionando badges, efeitos e ação
@@ -617,7 +633,7 @@ function CardResponsivo() {
                 <hr className="my-10" />
 
                 {/* PARTE 4 */}
-                <div>
+                <div id="passo-4">
                   <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
                     <strong>Passo 4</strong> — Criar impacto visual: <br />
                     imagem com efeito hover
@@ -696,7 +712,7 @@ function CardResponsivo() {
                 <hr className="my-10" />
 
                 {/* PARTE 5 */}
-                <div>
+                <div id="passo-5">
                   <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
                     <strong>Passo 5</strong> — Interatividade e chamada para
                     ação <strong>(CTA)</strong>
@@ -789,7 +805,7 @@ function CardResponsivo() {
                 <hr className="my-10" />
 
                 {/* PARTE 6 */}
-                <div>
+                <div id="passo-6">
                   <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
                     <strong>Passo 6</strong> — Tornar o card responsivo
                   </h1>
@@ -903,7 +919,7 @@ function CardResponsivo() {
                 <hr className="my-10" />
 
                 {/* PASSO FINAL  */}
-                <div>
+                <div id="passo-final">
                   <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
                     <strong>Passo Final </strong> — Código completo no GitHub
                   </h1>
