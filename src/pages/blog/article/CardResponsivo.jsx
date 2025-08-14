@@ -223,8 +223,7 @@ function CardResponsivo() {
                   </h1>
 
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    Neste tutorial, vamos criar um card moderno, responsivo e
-                    com efeito de hover animado, utilizando{" "}
+                    Um card bem feito pode transformar a experiência do utilizador. Neste tutorial, vamos criar um card responsivo com animação de hover , usando{" "}
                     <a
                       href="https://react.dev/learn"
                       target="_blank"
@@ -236,116 +235,61 @@ function CardResponsivo() {
                     <a
                       href="https://tailwindcss.com/"
                       target="_blank"
-                      className="font-medium underline hover:text-slate-500"
+                      className="font-medium underline hover:text-slate-500 mr-1"
                     >
-                      TailwindCSS
+                      TailwindCSS 
                     </a>
-                    . O objetivo é que qualquer pessoa, mesmo com pouca
-                    experiência, consiga implementar um componente bonito e
-                    funcional para portfólios, lojas virtuais, landing pages e
-                    blogs.
+                    rápido, moderno e sem complicação.
+                    Você vai aprender a estruturar o componente, estilizar com Tailwind, adicionar efeitos visuais e garantir que ele funcione bem em qualquer dispositivo.
                   </p>
                 </div>
 
                 <div className="mb-10">
                   <ul className="space-y-4 text-left text-gray-500 dark:text-gray-400">
-                    <h1 className="flex items-center justify-start gap-1 text-[#6a7282] font-[500] text-sm">
+                    <h1 className="flex items-center justify-start gap-1 text-[#6a7282] font-[500] text-base">
                       <RxDrawingPinFilled className="text-secundario" />{" "}
-                      Pré-requisitos
+                      Índice
                     </h1>
-                    <li className="flex items-center space-x-3 rtl:space-x-reverse">
-                      <span className="size-5 flex justify-center items-center rounded-full bg-blue-50 text-secundario">
-                        <svg
-                          className="shrink-0 size-3.5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </span>
-                      <span className="text-sm">
-                        Conhecimento básico de{" "}
-                        <strong className="text-secundario">React </strong>e
-                        <strong className="text-secundario"> JavaScript</strong>
-                      </span>
-                    </li>
 
-                    <li className="flex items-center space-x-3 rtl:space-x-reverse">
-                      <span className="size-5 flex justify-center items-center rounded-full bg-blue-50 text-secundario">
-                        <svg
-                          className="shrink-0 size-3.5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </span>
-                      <span className="text-sm ">
-                        Noções de{" "}
-                        <strong className="text-secundario">React</strong>{" "}
-                        (componentes, props, JSX)
-                      </span>
-                    </li>
 
-                    <li className="flex items-center space-x-3 rtl:space-x-reverse">
-                      <span className="size-5 flex justify-center items-center rounded-full bg-blue-50 text-secundario">
-                        <svg
-                          className="shrink-0 size-3.5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </span>
-                      <span className="text-sm">
-                        <strong className="text-secundario">TailwindCSS</strong>{" "}
-                        instalado no projeto
+                    <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside dark:text-gray-400">
+                    <li className="font-medium">
+                      <span className="font-light">
+                        Criar projeto com React e TailwindCSS
                       </span>
                     </li>
-
-                    <li className="flex items-center space-x-3 rtl:space-x-reverse">
-                      <span className="size-5 flex justify-center items-center rounded-full bg-blue-50 text-secundario">
-                        <svg
-                          className="shrink-0 size-3.5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </span>
-                      <span className="text-sm">
-                        Editor de código (recomendo{" "}
-                        <strong className="text-secundario">VS Code</strong>)
+                    <li className="font-medium">
+                      <span className="font-light">
+                        Estruturar o componente base (Card)
                       </span>
                     </li>
+                    <li className="font-medium">
+                      <span className="font-light">
+                        Adicionar badges e ícones de tecnologia
+                      </span>
+                    </li>
+                    <li className="font-medium">
+                      <span className="font-light">
+                        Criar imagem visual impactante
+                      </span>
+                    </li>
+                    <li className="font-medium">
+                      <span className="font-light">
+                        Incluir título e botão de ação (CTA)
+                      </span>
+                    </li>
+                    <li className="font-medium">
+                      <span className="font-light">
+                        Tornar o card responsivo
+                      </span>
+                    </li>
+                    <li className="font-medium">
+                      <span className="font-light">
+                        Código final e repositório no GitHub
+                      </span>
+                    </li>
+                  </ol>
+                    
                   </ul>
                 </div>
 
