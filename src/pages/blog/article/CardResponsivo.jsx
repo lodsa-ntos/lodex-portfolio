@@ -113,11 +113,12 @@ function CardResponsivo() {
     <>
       <Helmet>
         <title>
-          Card Responsivo com Hover Animado — React + TailwindCSS (Tutorial Passo a Passo) | LodeX Studio
+          Card Responsivo com Hover Animado — React + TailwindCSS (Tutorial
+          Passo a Passo) | LodeX Studio
         </title>
         <meta
           name="description"
-          content="Aprenda a criar um card responsivo com badges usando React e Tailwind. Inclui hover animado, responsividade e design moderno passo a passo."
+          content="Aprenda passo a passo a criar um card responsivo com hover animado usando React e TailwindCSS. Inclui código, dicas de design e responsividade."
         />
         <meta
           name="keywords"
@@ -148,13 +149,14 @@ function CardResponsivo() {
         <GlobalContainer>
           <div className="flex items-center justify-center py-[9.6rem] px-[19%]">
             <div className="flex-col text-start ">
-
               <div className="mb-10">
                 <h1 className="text-xl sm:text-4xl md:text-6xl font-light text-gray-900 leading-relaxed max-w-4xl">
                   Card Responsivo com Hover Animado usando React + TailwindCSS
                 </h1>
                 <p className="mt-6 mb-2 text-base lg:text-2xl text-slate-500 leading-relaxed max-w-3xl font-light">
-                  Sabe aquele efeito suave de hover que faz um card parecer ganhar vida? Vamos criar o seu, do zero, com menos de 200 linhas de código.
+                  Sabe aquele efeito suave de hover que faz um card parecer
+                  ganhar vida? Vamos criar o seu, do zero, com menos de 200
+                  linhas de código.
                 </p>
               </div>
 
@@ -193,20 +195,20 @@ function CardResponsivo() {
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
                   Um card visual é essencial em interfaces modernas: deve ser
                   claro, organizado e usar hierarquia visual para guiar o
-                  usuário. 
-                  <br /><br />
-                  No exemplo da direita, ícones e badges destacam o
-                  conteúdo, o espaçamento facilita a leitura e o design moderno
-                  cria uma experiência agradável.
-                  <br /><br />
-                  Responsivo e interativo, esse
-                  tipo de componente valoriza o conteúdo, aumenta o engajamento
-                  e melhora a usabilidade, tudo com código simples. 
-                  <br /><br />
-                  E a melhor
-                  forma de aprender é criando.
-                  Vamos direto às dicas práticas e
-                  ao código.
+                  usuário.
+                  <br />
+                  <br />
+                  No exemplo da direita, ícones e badges destacam o conteúdo, o
+                  espaçamento facilita a leitura e o design moderno cria uma
+                  experiência agradável.
+                  <br />
+                  <br />
+                  Responsivo e interativo, esse tipo de componente valoriza o
+                  conteúdo, aumenta o engajamento e melhora a usabilidade, tudo
+                  com código simples.
+                  <br />
+                  <br />E a melhor forma de aprender é criando. Vamos direto às
+                  dicas práticas e ao código.
                 </p>
               </div>
 
@@ -869,10 +871,12 @@ function CardResponsivo() {
                 </h1>
 
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                  Agora é a sua vez: personalize este card, mude as cores, troque os ícones e publique no seu portfólio. Quanto mais praticar, mais rápido vai criar componentes incríveis. 
-                  <br /><br />
-                  O código completo (com badges dinâmicos, imagem com hover
-                  e CTA) está disponível no meu GitHub.
+                  Agora é a sua vez: personalize este card, mude as cores,
+                  troque os ícones e publique no seu portfólio. Quanto mais
+                  praticar, mais rápido vai criar componentes incríveis.
+                  <br />
+                  <br />O código completo (com badges dinâmicos, imagem com
+                  hover e CTA) está disponível no meu GitHub.
                 </p>
 
                 <button
@@ -887,6 +891,48 @@ function CardResponsivo() {
                     Ver código final no GitHub
                   </a>
                 </button>
+              </div>
+
+              <hr className="my-10" />
+
+              <div className="flex flex-col items-center justify-center py-10">
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold uppercase text-gray-900 text-center leading-relaxed mb-10">
+                  Quer receber mais tutoriais como este?
+                </h1>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-600 text-center">
+                  📩 Subscreva e receba mais dicas práticas sobre React + Tailwind diretamente
+                  no seu e-mail. Ou siga-nos no 
+                  <a
+                    href="https://www.instagram.com/lodex.studio/"
+                    target="_blank"
+                    className="text-[#e4405f] ml-1"
+                  >
+                     instagram
+                  </a>.
+                </p>
+
+                {/* E-mail */}
+                <div className="max-w-lg md:max-w-3xl w-full mx-auto bg-gray-100 flex p-1 rounded-full text-left focus-within:border-blue-600 focus-within:bg-white border mt-10">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    placeholder="Endereço de e-mail"
+                    className="w-full rounded-full px-5 py-4  font-regular tracking-tight outline-none border-none
+                          text-slate-900 bg-transparent text-base
+                          focus:border-secundario
+                          hover:border-secundario placeholder-gray-500 transition duration-500"
+                    title="Insira um e-mail válido"
+                  />
+                  <button
+                    type="button"
+                    class="bg-secundario hover:bg-blue-700 transition-all text-white font-semibold text-sm rounded-full px-6 py-3 cursor-pointer"
+                  >
+                    Subscrever
+                  </button>
+                </div>
               </div>
             </div>
           </div>
