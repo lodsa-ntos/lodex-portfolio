@@ -533,7 +533,7 @@ function CardResponsivo() {
                 <hr className="mb-10" />
 
                 <h1 className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
-                  💻 Código (resumo)
+                  💻 Código (resumo) <span className="font-light">Aqui criamos o componente base que irá servir de estrutura para o card.</span>
                 </h1>
 
                 {/* tailwind.config.js */}
