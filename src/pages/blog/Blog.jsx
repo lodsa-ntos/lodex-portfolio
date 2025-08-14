@@ -16,7 +16,7 @@ function Blog() {
       
       <section
         id="sobremim"
-        className="relative min-h-[95vh] pt-20 border-b shadow-md overflow-hidden bg-[url(images/blog/blog-banner-hero.jpg)] w-full h-[250px] bg-cover bg-center bg-no-repeat mb-8 md:h-[350px]"
+        className="relative min-h-[45vh] md:min-h-[10vh] lg:min-h-[95vh] pt-20 border-b shadow-md overflow-hidden bg-[url(images/blog/blog-banner-hero.jpg)] w-full h-[250px] bg-cover bg-center bg-no-repeat mb-8 md:h-[350px]"
       >
         <div className="absolute inset-0 bg-gradient-to-t to-gray-100/40 via-gray-600/20 from-transparent"></div>
 
