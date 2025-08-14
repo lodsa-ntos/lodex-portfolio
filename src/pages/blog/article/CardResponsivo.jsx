@@ -851,6 +851,9 @@ function CardResponsivo() {
                     type="video/mp4"
                     className="w-full mx-auto h-full object-cover rounded-lg"
                   />
+                  <div className="text-center text-slate-700">
+                    <small>Repare como o card se adapta de forma suave entre desktop e mobile.</small>
+                  </div>
 
                   <h2 className="text-base leading-relaxed text-slate-700  my-5">
                     <span className="font-semibold">
