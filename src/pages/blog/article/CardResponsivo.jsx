@@ -749,6 +749,8 @@ function CardResponsivo() {
                     <span className="font-light">
                       (apenas o botão e conteúdo básico)
                     </span>
+                    <br />
+                    <small className="font-light">Crie um botão chamativo para direcionar o usuário.</small>
                   </h1>
 
                   <div>
