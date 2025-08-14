@@ -4,10 +4,7 @@ import GlobalContainer from "../../../utils/GlobalContainer";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { RxDrawingPinFilled } from "react-icons/rx";
-import { AiOutlineFileProtect } from "react-icons/ai";
-import { LiaUniversitySolid } from "react-icons/lia";
-import { BubblyLink } from "../../../library/BubblyLink";
-import { MobileCarouselLaunchPeak } from "../../../utils/MobileCarousel";
+import { IoMdCodeWorking } from "react-icons/io";
 import { GiConvergenceTarget } from "react-icons/gi";
 import imgAvatar from "../../../assets/logo/lodexstudio-logo-white.svg";
 import CodeBlock from "../../../utils/CodeBlock";
@@ -111,13 +108,12 @@ const blocoParte61 = {
   />  `,
 };
 
-
 function CardResponsivo() {
   return (
     <>
       <Helmet>
         <title>
-          Card Responsivo com Badges - React + Tailwind | LodeX Studio
+          Card Responsivo com Hover Animado — React + TailwindCSS (Tutorial Passo a Passo) | LodeX Studio
         </title>
         <meta
           name="description"
@@ -152,15 +148,13 @@ function CardResponsivo() {
         <GlobalContainer>
           <div className="flex items-center justify-center py-[9.6rem] px-[19%]">
             <div className="flex-col text-start ">
+
               <div className="mb-10">
                 <h1 className="text-xl sm:text-4xl md:text-6xl font-light text-gray-900 leading-relaxed max-w-4xl">
                   Card Responsivo com Hover Animado usando React + TailwindCSS
                 </h1>
                 <p className="mt-6 mb-2 text-base lg:text-2xl text-slate-500 leading-relaxed max-w-3xl font-light">
-                  Um componente elegante e flexível, feito com React +
-                  TailwindCSS, com badges dinâmicas e efeito de hover suave para
-                  destacar o CTA. Totalmente responsivo, mobile-first e criado
-                  em menos de 200 linhas de código.
+                  Sabe aquele efeito suave de hover que faz um card parecer ganhar vida? Vamos criar o seu, do zero, com menos de 200 linhas de código.
                 </p>
               </div>
 
@@ -197,26 +191,22 @@ function CardResponsivo() {
                 />
 
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                  Um card visual é um componente essencial na construção de
-                  interfaces modernas. Ele deve ser claro, organizado e
-                  convidativo, usando hierarquia visual para guiar o usuário.
-                  <br />
-                  <br />
-                  No card da direita, os ícones e etiquetas ajudam a identificar
-                  rapidamente o conteúdo, o espaçamento torna a leitura fácil, e
-                  o design moderno (com cantos arredondados e sombras suaves)
+                  Um card visual é essencial em interfaces modernas: deve ser
+                  claro, organizado e usar hierarquia visual para guiar o
+                  usuário. 
+                  <br /><br />
+                  No exemplo da direita, ícones e badges destacam o
+                  conteúdo, o espaçamento facilita a leitura e o design moderno
                   cria uma experiência agradável.
-                  <br />
-                  <br />
-                  Um card responsivo e interativo não só valoriza o conteúdo
-                  como aumenta o engajamento do usuário e melhora a usabilidade
-                  em qualquer dispositivo. Este é o tipo de componente que dá
-                  vida ao design e melhora a experiência do utilizador sem
-                  complicações no código.
-                  <br />
-                  <br />E qual é a melhor maneira de aprender? Fazendo. Então,
-                  vamos mergulhar em algumas dicas práticas de design de
-                  interface do utilizador.
+                  <br /><br />
+                  Responsivo e interativo, esse
+                  tipo de componente valoriza o conteúdo, aumenta o engajamento
+                  e melhora a usabilidade, tudo com código simples. 
+                  <br /><br />
+                  E a melhor
+                  forma de aprender é criando.
+                  Vamos direto às dicas práticas e
+                  ao código.
                 </p>
               </div>
 
@@ -728,7 +718,9 @@ function CardResponsivo() {
 
                 <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside dark:text-gray-400">
                   <li className="font-medium ">
-                    <span className="font-light">Botão animado para abrir conteúdo externo</span>
+                    <span className="font-light">
+                      Botão animado para abrir conteúdo externo
+                    </span>
                   </li>
                   <li className="font-medium">
                     <span className="font-light">
@@ -741,7 +733,9 @@ function CardResponsivo() {
 
                 <h1 className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
                   💻 Código parcial{" "}
-                  <span className="font-light">(apenas o botão e conteúdo básico)</span>
+                  <span className="font-light">
+                    (apenas o botão e conteúdo básico)
+                  </span>
                 </h1>
 
                 <div>
@@ -764,7 +758,10 @@ function CardResponsivo() {
                     <span className="font-semibold">
                       💡 Porquê isto importa?
                     </span>{" "}
-                    <br /> O botão CTA (chamada para ação) em inglês "Call to action", que é representado pela seta no canto superior direito, que surge de forma discreta, mantém o design limpo, mas convida à ação no momento certo.
+                    <br /> O botão CTA (chamada para ação) em inglês "Call to
+                    action", que é representado pela seta no canto superior
+                    direito, que surge de forma discreta, mantém o design limpo,
+                    mas convida à ação no momento certo.
                   </h2>
                 </div>
               </div>
@@ -778,7 +775,8 @@ function CardResponsivo() {
                 </h1>
 
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                  Um card bonito no desktop que quebra no mobile perde toda a experiência. Vamos garantir que ele se adapta a qualquer ecrã.
+                  Um card bonito no desktop que quebra no mobile perde toda a
+                  experiência. Vamos garantir que ele se adapta a qualquer ecrã.
                 </p>
 
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
@@ -787,7 +785,23 @@ function CardResponsivo() {
 
                 <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside dark:text-gray-400">
                   <li className="font-medium ">
-                    <span className="font-light">Usar o sistema de <strong className="font-medium">grid responsivo</strong> do Tailwind (<span className="bg-gray-100 rounded-lg px-1 font-[400]">sm:</span>, <span className="bg-gray-100 rounded-lg px-1 font-[400]">md:</span>, <span className="bg-gray-100 rounded-lg px-1 font-[400]">lg:</span>)</span>
+                    <span className="font-light">
+                      Usar o sistema de{" "}
+                      <strong className="font-medium">grid responsivo</strong>{" "}
+                      do Tailwind (
+                      <span className="bg-gray-100 rounded-lg px-1 font-[400]">
+                        sm:
+                      </span>
+                      ,{" "}
+                      <span className="bg-gray-100 rounded-lg px-1 font-[400]">
+                        md:
+                      </span>
+                      ,{" "}
+                      <span className="bg-gray-100 rounded-lg px-1 font-[400]">
+                        lg:
+                      </span>
+                      )
+                    </span>
                   </li>
                   <li className="font-medium">
                     <span className="font-light">
@@ -827,6 +841,8 @@ function CardResponsivo() {
                     src="images/blog/responsividade.mp4"
                     autoPlay
                     muted
+                    loop
+                    playsInline
                     type="video/mp4"
                     className="w-full mx-auto h-full object-cover rounded-lg"
                   />
@@ -835,11 +851,43 @@ function CardResponsivo() {
                     <span className="font-semibold">
                       💡 Porquê isto importa?
                     </span>{" "}
-                    <br /> Mais de <strong className="font-medium">60% dos acessos</strong> à web hoje vêm de dispositivos móveis. Um card que se adapta não só melhora a experiência como também aumenta as hipóteses de conversão.
+                    <br /> Mais de{" "}
+                    <strong className="font-medium">60% dos acessos</strong> à
+                    web hoje vêm de dispositivos móveis. Um card que se adapta
+                    não só melhora a experiência como também aumenta as
+                    hipóteses de conversão.
                   </h2>
                 </div>
               </div>
-              
+
+              <hr className="my-10" />
+
+              {/* PASSO FINAL  */}
+              <div>
+                <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
+                  <strong>Passo Final </strong> — Card completo no GitHub
+                </h1>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
+                  Agora é a sua vez: personalize este card, mude as cores, troque os ícones e publique no seu portfólio. Quanto mais praticar, mais rápido vai criar componentes incríveis. 
+                  <br /><br />
+                  O código completo (com badges dinâmicos, imagem com hover
+                  e CTA) está disponível no meu GitHub.
+                </p>
+
+                <button
+                  className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
+                  aria-label="Explorar projetos"
+                >
+                  <IoMdCodeWorking className="text-gray-200 font-bold size-5" />
+                  <a
+                    href="https://github.com/lodsa-ntos/TFC_a21505293_camarate_school_library_app/tree/main"
+                    target="_blank"
+                  >
+                    Ver código final no GitHub
+                  </a>
+                </button>
+              </div>
             </div>
           </div>
         </GlobalContainer>
