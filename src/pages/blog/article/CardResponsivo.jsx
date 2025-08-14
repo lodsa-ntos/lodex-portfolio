@@ -208,7 +208,9 @@ function CardResponsivo() {
                   conteúdo, aumenta o engajamento e melhora a usabilidade, tudo
                   com código simples.
                   <br />
-                  <br />E a melhor forma de aprender é criando. Vamos direto às
+                  <br />E a melhor forma de aprender?  
+                  
+                  Criando. Vamos direto às
                   dicas práticas e ao código.
                 </p>
               </div>
