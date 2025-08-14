@@ -147,8 +147,9 @@ function CardResponsivo() {
 
       <section className="min-h-[95vh] border-b shadow-md">
         <GlobalContainer>
-          <div className="flex items-center justify-center py-[9.6rem] px-[19%]">
-            <div className="flex-col text-start ">
+          <div className="flex items-center justify-center py-[7.6rem] md:py-[9.6rem] ">
+            <div className="w-full max-w-content mx-auto sm:px-6 md:px-8 lg:px-[18%]">
+              <div className="flex-col text-start ">
               <div className="mb-10">
                 <h1 className="text-xl sm:text-4xl md:text-6xl font-light text-gray-900 leading-relaxed max-w-4xl">
                   Card Responsivo com Hover Animado usando React + TailwindCSS
@@ -215,7 +216,7 @@ function CardResponsivo() {
               <hr className="mb-10" />
 
               <div>
-                <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
+                <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-5 sm:mb-10">
                   Tutorial passo a passo
                 </h1>
 
@@ -932,6 +933,7 @@ function CardResponsivo() {
                   </button>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </GlobalContainer>
