@@ -849,7 +849,7 @@ function CardResponsivo() {
                       code={blocoParte61.code}
                     />
 
-                    <small className="text-base leading-relaxed text-slate-700 ">💡 O atributo loop garante que o vídeo funcione como um GIF animado.</small>
+                    <small className="text-base leading-relaxed text-slate-700 ">💡 O atributo <span className="italic bg-gray-100 px-2 font-medium rounded-lg"> loop</span> garante que o vídeo funcione como um GIF animado.</small>
                   </div>
 
                   <hr className="my-10" />
