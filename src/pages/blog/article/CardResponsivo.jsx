@@ -80,7 +80,8 @@ const blocoParte5 = {
   code: `
   {/* CTA button */}
 <div className="absolute top-2 right-3 bg-white rounded-full w-8
- h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+ h-8 flex items-center justify-center opacity-0
+  group-hover:opacity-100 transition duration-500">
   <MdArrowOutward className="size-5 text-[#e96360]" />
 </div>
 
@@ -90,6 +91,24 @@ const blocoParte5 = {
   <p className="text-sm text-gray-500">{card.description}</p>
 </div>
   `,
+};
+
+const blocoParte6 = {
+  language: "javascript",
+  code: `
+  <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    {/* cards */}
+  </div>  `,
+};
+
+const blocoParte61 = {
+  language: "javascript",
+  code: `
+  <img
+  className="w-full h-[280px] sm:h-[200px] object-cover"
+    src={card.img}
+    alt={card.title}
+  />  `,
 };
 
 
@@ -734,9 +753,9 @@ function CardResponsivo() {
 
                 <hr className="my-10" />
 
-                <div className="-mt-10 hidden">
+                <div className="-mt-10">
                   <img
-                    src="images/blog/card-video.gif"
+                    src="images/blog/card-video-CTA.gif"
                     alt=""
                     className="w-80 mx-auto h-full object-cover rounded-lg"
                   />
@@ -745,12 +764,82 @@ function CardResponsivo() {
                     <span className="font-semibold">
                       💡 Porquê isto importa?
                     </span>{" "}
-                    <br /> Esse efeito subtil cria a sensação de que o card
-                    responde à interação, e isso mantém o utilizador
-                    interessado.
+                    <br /> O botão CTA (chamada para ação) em inglês "Call to action", que é representado pela seta no canto superior direito, que surge de forma discreta, mantém o design limpo, mas convida à ação no momento certo.
                   </h2>
                 </div>
               </div>
+
+              <hr className="my-10" />
+
+              {/* PARTE 6 */}
+              <div>
+                <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
+                  <strong>Passo 6</strong> — Tornar o card responsivo
+                </h1>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
+                  Um card bonito no desktop que quebra no mobile perde toda a experiência. Vamos garantir que ele se adapta a qualquer ecrã.
+                </p>
+
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
+                  O que vamos fazer:
+                </p>
+
+                <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside dark:text-gray-400">
+                  <li className="font-medium ">
+                    <span className="font-light">Usar o sistema de <strong className="font-medium">grid responsivo</strong> do Tailwind (<span className="bg-gray-100 rounded-lg px-1 font-[400]">sm:</span>, <span className="bg-gray-100 rounded-lg px-1 font-[400]">md:</span>, <span className="bg-gray-100 rounded-lg px-1 font-[400]">lg:</span>)</span>
+                  </li>
+                  <li className="font-medium">
+                    <span className="font-light">
+                      Garantir que imagens e textos se redimensionam bem
+                    </span>
+                  </li>
+                  <li className="font-medium">
+                    <span className="font-light">
+                      Ajustar espaçamentos e alinhamentos conforme o dispositivo
+                    </span>
+                  </li>
+                </ol>
+
+                <hr className="mb-10" />
+
+                <h1 className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
+                  💻 Exemplo de classes responsivas no grid
+                </h1>
+
+                <div>
+                  <CodeBlock
+                    language={blocoParte6.language}
+                    code={blocoParte6.code}
+                  />
+                </div>
+                <div>
+                  <CodeBlock
+                    language={blocoParte61.language}
+                    code={blocoParte61.code}
+                  />
+                </div>
+
+                <hr className="my-10" />
+
+                <div className="-mt-3">
+                  <video
+                    src="images/blog/responsividade.mp4"
+                    autoPlay
+                    muted
+                    type="video/mp4"
+                    className="w-full mx-auto h-full object-cover rounded-lg"
+                  />
+
+                  <h2 className="text-base leading-relaxed text-slate-700  my-5">
+                    <span className="font-semibold">
+                      💡 Porquê isto importa?
+                    </span>{" "}
+                    <br /> Mais de <strong className="font-medium">60% dos acessos</strong> à web hoje vêm de dispositivos móveis. Um card que se adapta não só melhora a experiência como também aumenta as hipóteses de conversão.
+                  </h2>
+                </div>
+              </div>
+              
             </div>
           </div>
         </GlobalContainer>
