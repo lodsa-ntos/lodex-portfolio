@@ -66,8 +66,8 @@ const blocoParte4 = {
   code: `
   <img className="w-full h-[280px] object-cover
   transition-transform duration-500 group-hover:scale-105"
-    src={card.img}
-    alt={card.title}
+    src="images/blog/card-example.jpg"
+    alt="Exemplo de card visual"
   />
   `,
 };
@@ -494,7 +494,7 @@ function CardResponsivo() {
                 {/* PARTE 2 */}
                 <div>
                   <h1 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10">
-                    <strong>Passo 2</strong> — Estrutura do Componente Base{" "}
+                    <strong>Passo 2</strong> — Estruturar o componente base{" "}
                     <strong>("Antes")</strong>
                   </h1>
 
@@ -547,6 +547,8 @@ function CardResponsivo() {
                       language={blocoParte2.language}
                       code={blocoParte2.code}
                     />
+
+                     <small className="text-base leading-relaxed text-slate-700">🔍 Aqui criamos o esqueleto que receberá o design, as badges e a animação.</small>
                   </div>
 
                   <hr className="my-10" />
@@ -614,6 +616,9 @@ function CardResponsivo() {
                     <span className="font-light">
                       (somente o Badge, sem o card completo):
                     </span>
+
+                      <br />
+                    <small className="font-light">As <strong className="font-medium">badges</strong> ajudam a identificar rapidamente o conteúdo e tornam o card mais visual.</small>
                   </h1>
 
                   <div>
@@ -621,6 +626,8 @@ function CardResponsivo() {
                       language={blocoParte3.language}
                       code={blocoParte3.code}
                     />
+
+                    <small className="text-base leading-relaxed text-slate-700">💡 Use cores específicas para destacar tecnologias importantes.</small>
                   </div>
 
                   <hr className="my-10" />
@@ -681,6 +688,8 @@ function CardResponsivo() {
                     <span className="font-light">
                       (apenas a parte da imagem)
                     </span>
+                      <br />
+                    <small className="font-light">Adicione uma imagem que se encaixe bem no design.</small>
                   </h1>
 
                   <div>
@@ -688,6 +697,7 @@ function CardResponsivo() {
                       language={blocoParte4.language}
                       code={blocoParte4.code}
                     />
+                    <small className="text-base leading-relaxed text-slate-700 ">📸 Dica: use imagens otimizadas para web (formato <span className="italic bg-gray-100 px-2 font-medium rounded-lg"> .webp</span> se possível),</small>
                   </div>
 
                   <hr className="my-10" />
@@ -759,6 +769,8 @@ function CardResponsivo() {
                       code={blocoParte5.code}
                     />
                   </div>
+
+                  <small className="text-base leading-relaxed text-slate-700 ">💡 O ícone <span className="italic bg-gray-100 px-2 font-medium rounded-lg"> MdArrowOutward </span> faz parte da biblioteca <strong className="font-medium">react-icons</strong>. <br />Você pode encontrar e explorar outros ícones <a href="https://react-icons.github.io/react-icons/search/#q=MdArrowOutward" target="_blank" className="underline text-secundario"> neste link</a>.</small>
 
                   <hr className="my-10" />
 
