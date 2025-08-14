@@ -871,9 +871,7 @@ function CardResponsivo() {
                 </h1>
 
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                  Agora é a sua vez: personalize este card, mude as cores,
-                  troque os ícones e publique no seu portfólio. Quanto mais
-                  praticar, mais rápido vai criar componentes incríveis.
+                  Agora que você aprendeu a criar este card responsivo, tente personalizar as cores, trocar os ícones e integrá-lo ao seu próximo projeto. Quanto mais praticar, mais rápido criará interfaces modernas e atraentes.
                   <br />
                   <br />O código completo (com badges dinâmicos, imagem com
                   hover e CTA) está disponível no meu GitHub.
