@@ -18,6 +18,7 @@
 Professional portfolio website for **LodeX Studio**, specializing in modern web development, responsive design, and user experience optimization. Showcasing real client projects, technical expertise, and comprehensive web solutions.
 
 **🎯 Key Highlights:**
+
 - 📱 Mobile-first responsive design
 - ⚡ Performance-optimized React application
 - 🎨 Modern UI/UX with smooth animations
@@ -31,19 +32,22 @@ If this project helps or inspires you, please consider giving it a star! ⭐ It 
 ## 🎯 Featured Projects
 
 ### 🏥 [Gestos Amáveis - Healthcare Platform](https://lodexstudio.com/gestosamaveis)
+
 **Result:** 200% increase in appointment bookings
+
 - Modern healthcare booking system
 - Mobile-responsive design
 - Performance optimization (3s load time reduction)
 
 ### 📚 [Academic Projects Portfolio](https://lodexstudio.com/academico)
+
 - University assignment showcases
 - Technical documentation examples
 - Code quality demonstrations
 
 ## 💼 Services Offered
 
-| Service | Technologies | 
+| Service | Technologies |
 |---------|-------------|
 | 🎨 **Landing Pages** | React, Vite, TailwindCSS |
 | 🏢 **Business Websites** | Full-stack solutions |
@@ -54,12 +58,14 @@ If this project helps or inspires you, please consider giving it a star! ⭐ It 
 ## ✨ Features
 
 ### 🎨 **Design & User Experience**
+
 - Modern, responsive design with mobile-first approach
 - Smooth animations with Framer Motion
 - Clean, professional UI with TailwindCSS
 - Accessibility-focused components
 
 ### 📱 **Portfolio Sections**
+
 - **Hero Section** - Professional introduction and CTA
 - **Services** - Detailed service offerings with pricing
 - **Portfolio** - Real client projects and case studies
@@ -68,6 +74,7 @@ If this project helps or inspires you, please consider giving it a star! ⭐ It 
 - **Contact** - Direct communication channels
 
 ### 🔧 **Technical Stack**
+
 - **Frontend**: React 19.1.0 + Vite 7.0.4
 - **Styling**: TailwindCSS 3.4.17
 - **Animations**: Framer Motion 12.23.12
@@ -77,6 +84,7 @@ If this project helps or inspires you, please consider giving it a star! ⭐ It 
 - **Deployment**: Vercel
 
 ### 📊 **SEO & Performance**
+
 - Google Analytics integration
 - Enhanced meta tags and Open Graph
 - Schema.org structured data
@@ -85,6 +93,7 @@ If this project helps or inspires you, please consider giving it a star! ⭐ It 
 - Optimized loading performance
 
 ### 📧 **Contact Forms**
+
 - Project inquiry form with detailed fields
 - Service request forms
 - Newsletter subscription
@@ -93,6 +102,7 @@ If this project helps or inspires you, please consider giving it a star! ⭐ It 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js (v18 or higher)
 - npm or yarn
 
@@ -192,6 +202,7 @@ The portfolio uses Zoho SMTP for email functionality:
 ## 📱 Mobile Responsiveness
 
 Fully responsive design with breakpoints:
+
 - **xs**: 320px (Mobile small)
 - **sm**: 640px (Mobile medium)  
 - **md**: 768px (Tablets)
@@ -201,11 +212,13 @@ Fully responsive design with breakpoints:
 ## 🎨 Design System
 
 ### Colors
+
 - **Primary**: Custom blue gradients
 - **Secondary**: Professional grays
 - **Accent**: Green (#2F9B92)
 
 ### Typography
+
 - **Primary**: Satoshi (Headings)
 - **Secondary**: Jost (Body text)
 - **Accent**: Lobster (Special cases)
@@ -213,6 +226,7 @@ Fully responsive design with breakpoints:
 ## 🔒 Security & Privacy
 
 ### Implemented Security Measures
+
 - Security headers via Vercel configuration
 - Input validation on all forms
 - XSS protection
@@ -220,6 +234,7 @@ Fully responsive design with breakpoints:
 - Content Security Policy headers
 
 ### Legal Compliance
+
 - Privacy Policy (GDPR compliant)
 - Terms of Service
 - Cookie Policy
@@ -236,6 +251,7 @@ Fully responsive design with breakpoints:
 ## 🔍 SEO Features
 
 ### Technical SEO
+
 - Semantic HTML structure
 - Meta tags optimization
 - Schema.org structured data
@@ -243,6 +259,7 @@ Fully responsive design with breakpoints:
 - Robots.txt configuration
 
 ### Content SEO
+
 - Optimized page titles and descriptions
 - Alt text for all images
 - Clean URL structure
@@ -282,16 +299,19 @@ npm run build
 ## 🛠️ Customization
 
 ### Adding New Pages
+
 1. Create component in `src/pages/`
 2. Add route in `src/App.jsx`
 3. Update sitemap if public page
 
 ### Modifying Styles
+
 - Main styles in `src/index.css`
 - TailwindCSS configuration in `tailwind.config.js`
 - Component-specific styles inline
 
 ### Adding New Services
+
 1. Update `src/pages/services/Services.jsx`
 2. Add service data to services array
 3. Update pricing in structured data
@@ -299,10 +319,12 @@ npm run build
 ## 📞 Support & Contact
 
 **Professional Contact:**
-- **Email**: lodexstudio@gmail.com
-- **Website**: https://lodexstudio.com
+
+- **Email**: <lodexstudio@gmail.com>
+- **Website**: <https://lodexstudio.com>
 
 **Development:**
+
 - **GitHub**: [lodsa-ntos/lodex-portfolio](https://github.com/lodsa-ntos/lodex-portfolio)
 - **Issues**: Please report bugs via GitHub Issues
 
@@ -310,18 +332,20 @@ npm run build
 
 © 2025 Lodney Santos - LodeX Studio. All Rights Reserved.
 
-This portfolio is proprietary software. The design, code, and content are protected by copyright. 
+This portfolio is proprietary software. The design, code, and content are protected by copyright.
 
 **Allowed:**
+
 - Viewing the source code for educational purposes
 - Using code snippets as learning examples
 
 **Not Allowed:**
+
 - Commercial use without permission
 - Copying design or content in whole or in part.
 - Redistribution of the complete codebase
 
-For permissions beyond the scope of this license, contact: lodex.studio@gmail.com
+For permissions beyond the scope of this license, contact: <lodex.studio@gmail.com>
 
 ## 🌟 GitHub Stats
 
@@ -338,7 +362,7 @@ For permissions beyond the scope of this license, contact: lodex.studio@gmail.co
 
 - 🌐 **Website**: [lodexstudio.com](https://lodexstudio.com)
 - 💼 **LinkedIn**: [Connect with Lodney Santos](https://linkedin.com/in/lodney-santos)
-- 📧 **Email**: lodexstudio@gmail.com
+- 📧 **Email**: <lodexstudio@gmail.com>
 - 📱 **WhatsApp**: +351 935 895 551
 - 📍 **Location**: Sacavém, Lisboa, Portugal
 

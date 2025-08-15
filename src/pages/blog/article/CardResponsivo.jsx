@@ -179,9 +179,9 @@ function NewsletterForm() {
     formData.append("email", email);
 
     // Valida os campos obrigatórios
-    const email = formData.get("email")?.trim();
+    const emailValue = formData.get("email")?.trim();
 
-    if (!email) {
+    if (!emailValue) {
       toast.error("Por favor, insira um email válido.");
       setIsSubmitting(false);
       return;
