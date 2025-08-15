@@ -36,7 +36,7 @@ If this project helps or inspires you, please consider giving it a star! ⭐ It 
 - Mobile-responsive design
 - Performance optimization (3s load time reduction)
 
-### 📚 Academic Projects Portfolio
+### 📚 [Academic Projects Portfolio](https://lodexstudio.com/academico)
 - University assignment showcases
 - Technical documentation examples
 - Code quality demonstrations
