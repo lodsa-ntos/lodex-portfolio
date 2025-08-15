@@ -257,7 +257,6 @@ npm run build
 
 **Professional Contact:**
 - **Email**: lodexstudio@gmail.com
-- **WhatsApp**: +351 935 895 551
 - **Website**: https://lodexstudio.com
 
 **Development:**
