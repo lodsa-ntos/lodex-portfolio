@@ -9,7 +9,7 @@ function PrivacyPolicy() {
         <title>Política de Privacidade | LodeX Studio</title>
         <meta
           name="description"
-          content="Política de privacidade da LodeX Studio. Como coletamos, utilizamos e protegemos os seus dados pessoais."
+          content="Política de privacidade da LodeX Studio. Como recolhemos, utilizamos e protegemos os seus dados pessoais."
         />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
