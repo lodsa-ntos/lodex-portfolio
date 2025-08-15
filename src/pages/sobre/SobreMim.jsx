@@ -60,7 +60,7 @@ const HeroSection = () => (
             clareza e presença visual.
             <br />
             <br />
-            Ajudo pessoas que têm uma ideia — mas ainda não têm alguém que saiba
+            Ajudo pessoas que têm uma ideia, mas ainda não têm alguém que saiba
             dar forma a isso com código, design e usabilidade.
           </p>
         </div>
@@ -79,7 +79,7 @@ const whatIDoItems = [
   {
     icon: <PiWallDuotone className="size-10 text-gray-500" />,
     title: "Construo",
-    text: "Websites e interfaces sob medida — sem templates, com base na ideia e no público.",
+    text: "Websites e interfaces sob medida, sem templates, com base na ideia e no público.",
   },
   {
     icon: <MdOutlineDesignServices className="size-10 text-gray-500" />,
@@ -151,7 +151,7 @@ const ForWhomSection = () => (
 
           <p className="max-w-xl mb-6 font-light text-lg leading-relaxed subpixel-antialiased">
             Se tens uma ideia, um projeto, um negócio ou até só um rascunho mal
-            definido — posso ajudar a dar forma a isso. Já trabalhei com quem
+            definido, posso ajudar a dar forma a isso. Já trabalhei com quem
             tinha tudo pronto e só precisava de execução, mas também com quem só
             tinha uma frase e nenhuma certeza.
             <br /> <br />
@@ -160,7 +160,7 @@ const ForWhomSection = () => (
             visualmente certo para quem vai usar.
             <br /> <br />
             Trabalho com quem está a começar, com freelancers, pequenos
-            negócios, criadores ou equipas que querem algo próprio — sem
+            negócios, criadores ou equipas que querem algo próprio, sem
             complicação. Não importa se tens experiência técnica ou não sabes
             por onde começar. O meu papel é facilitar, guiar e construir
             contigo, com transparência e foco no essencial. Se valorizas isso,
@@ -187,7 +187,7 @@ const WhySection = () => (
             em clareza.
             <br />
             <br />É isso que faço hoje: ajudo pessoas a transformar ideias
-            soltas em experiências digitais reais — com estrutura, beleza e
+            soltas em experiências digitais reais, com estrutura, beleza e
             funcionalidade, mesmo que o ponto de partida seja incerto.
           </p>
         </div>
