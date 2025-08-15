@@ -17,7 +17,6 @@ import { fadeIn } from "../utils/motion";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
-
 function Navbar() {
   const location = useLocation();
   const [shouldAnimate, setShouldAnimate] = useState(false);
@@ -108,7 +107,7 @@ function Navbar() {
     */
   }
   const dropdownRef = React.useRef(null);
- 
+
   const currentPath = location.pathname;
   useEffect(() => {
     if (dropdownOpen && dropdownRef.current) {
@@ -232,8 +231,7 @@ function Navbar() {
                   })}
                 </a>
               ))}
-            </div>
-
+            </div>{" "}
             {/* Hamburger Menu Icon */}
             <div className="relative inline-flex flex-wrap items-center transition-all duration-500">
               <button
@@ -370,7 +368,7 @@ function Navbar() {
         </div>
       </GlobalContainer>
     </motion.nav>
-  ) : null;;
+  ) : null;
 }
 
 export default Navbar;
