@@ -28,10 +28,10 @@ function PrivacyPolicy() {
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  1. Informações que Coletamos
+                  1. Informações que Recolhemos
                 </h2>
                 <p>
-                  Coletamos informações que você nos fornece diretamente quando:
+                  Recolhemos informações que você nos fornece diretamente quando:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Entra em contacto através dos nossos formulários</li>
