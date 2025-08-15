@@ -3,33 +3,80 @@ import GlobalContainer from "../../utils/GlobalContainer";
 import { Helmet } from "react-helmet";
 import CardBlog from "../../utils/CardBlog";
 
-function HeroBanner() {
+const HERO_DEFAULTS = {
+  overline: "Insights",
+  title: "Tutoriais e ideias para acelerar o seu código.",
+  description:
+    "Dicas práticas, guias passo a passo e exemplos reais para ajudar programadores e designers a criarem projetos mais rápidos, bonitos e eficientes. Conteúdo focado em React, TailwindCSS, UI/UX e ferramentas modernas para web.",
+  imageSrc: "/images/blog/blog-banner-hero.jpg",
+  imageAlt: "Abstração tecnológica representando ideias e código"
+};
+
+function HeroBanner({
+  overline = HERO_DEFAULTS.overline,
+  title = HERO_DEFAULTS.title,
+  description = HERO_DEFAULTS.description,
+  imageSrc = HERO_DEFAULTS.imageSrc,
+  imageAlt = HERO_DEFAULTS.imageAlt
+}) {
   return (
     <section
-      id="sobremim"
-      className="relative min-h-[45vh] md:min-h-[10vh] lg:min-h-[95vh] pt-20 border-b shadow-md overflow-hidden w-full h-[250px] bg-cover bg-center bg-no-repeat mb-8 md:h-[350px]"
-      style={{ backgroundImage: "url(/images/blog/blog-banner-hero.jpg)" }}
+      id="blog-hero"
+      role="banner"
+      aria-labelledby="blog-hero-heading"
+      className="relative isolate overflow-hidden w-full min-h-[55vh] lg:min-h-[70vh] flex items-end pt-20 border-b shadow-md"
     >
-      <div className="absolute inset-0 bg-gradient-to-t to-gray-100/40 via-gray-600/20 from-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b to-gray-900/40 via-gray-900/20 from-transparent" />
-      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/50 to-transparent backdrop-blur-[2px] text-white py-5 space-y-2 text-left">
-        <GlobalContainer>
-          <h1 className="mb-1 lg:text-3xl">Insights</h1>
-          <h3
-            id="card1-title"
-            className="text-base sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-3 leading-relaxed"
+      {/* Background media */}
+      <picture
+        className="pointer-events-none absolute inset-0 -z-10"
+        aria-hidden="true"
+      >
+        <img
+            src={imageSrc}
+            alt={imageAlt}
+            loading="eager"
+            decoding="async"
+            className="w-full h-full object-cover object-center"
+            fetchpriority="high"
+          />
+      </picture>
+
+      {/* Overlays for contrast */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white/80 via-black/55 to-black/80" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_65%)]" />
+
+      <GlobalContainer>
+        <div className="text-white max-w-4xl pb-10 md:pb-14">
+          {overline && (
+            <p className="mb-3 text-sm md:text-base font-medium uppercase tracking-wide text-white/90 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
+              {overline}
+            </p>
+          )}
+          <h1
+            id="blog-hero-heading"
+            className="text-3xl sm:text-5xl md:text-6xl font-semibold leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]"
           >
-            Tutoriais e ideias para <br />
-            acelerar o seu código.
-          </h3>
-          <p className="text-base max-w-3xl leading-relaxed">
-            Dicas práticas, guias passo a passo e exemplos reais para ajudar
-            programadores e designers a criarem projetos mais rápidos, bonitos
-            e eficientes. Conteúdo focado em React, TailwindCSS, UI/UX e
-            ferramentas modernas para web.
-          </p>
-        </GlobalContainer>
-      </div>
+            {title}
+          </h1>
+            <p className="mt-5 text-base md:text-lg leading-relaxed text-gray-100/90">
+              {description}
+            </p>
+        </div>
+      </GlobalContainer>
+
+      {/* Reduced motion: soft fade-in */}
+      <style>{`
+        @media (prefers-reduced-motion: no-preference) {
+          #blog-hero picture img {
+            opacity: 0;
+            transform: scale(1.04);
+            animation: heroFade 1.2s ease forwards;
+          }
+          @keyframes heroFade {
+            to { opacity: 1; transform: scale(1); }
+          }
+        }
+      `}</style>
     </section>
   );
 }
