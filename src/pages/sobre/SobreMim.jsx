@@ -132,7 +132,7 @@ const WhatIDoSection = () => (
 const ForWhomSection = () => (
   <section
     id="paraqueme"
-    className="min-h-[95vh] lg:min-h-[95vh] 2xl:min-h-[35vh] pb-20 lg:pb-0 pt-24 border-b shadow-md bg-gray-50"
+    className="min-h-[95vh] lg:min-h-[95vh] 2xl:min-h-[35vh] pb-20 pt-16 lg:pb-0 lg:pt-24 border-b shadow-md bg-gray-50"
   >
     <GlobalContainer>
       <div className="grid grid-cols-1 md:grid-cols-2">
