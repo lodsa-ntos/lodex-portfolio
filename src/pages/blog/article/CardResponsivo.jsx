@@ -715,7 +715,7 @@ function CardResponsivo() {
                       Ver código no GitHub
                     </a>
                     <p className="text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light mt-6">
-                      🔥 <strong className="font-medium">Quer ver este código sendo desenvolvido ao vivo?</strong> 
+                      🔥 <strong className="font-medium mr-1">Quer ver este código sendo desenvolvido ao vivo?</strong> 
                       Siga <a href="https://instagram.com/lodex.studio" target="_blank" rel="noopener noreferrer" 
                       className="text-purple-600 underline hover:text-purple-800">@lodex.studio</a> no Instagram 
                       para acompanhar sessões de live coding!
