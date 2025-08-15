@@ -112,24 +112,24 @@ function FooterSection() {
                   reservados.
                 </p>
                 <div className="flex items-center gap-4 text-xs">
-                  <a
-                    href="/privacidade"
+                  <BubblyLink
+              to="/privacidade"
                     className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
                   >
                     Privacidade
-                  </a>
-                  <a
-                    href="/termos"
+                  </BubblyLink>
+                  <BubblyLink
+              to="/termos"
                     className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
                   >
                     Termos
-                  </a>
-                  <a
-                    href="/cookies"
+                  </BubblyLink>
+                  <BubblyLink
+              to="/cookies"
                     className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
                   >
                     Cookies
-                  </a>
+                  </BubblyLink>
                 </div>
               </div>
               <p className="text-[#4a5565] hover:text-gray-800 transition-colors text-sm font-Satoshi flex items-center justify-center gap-1">
