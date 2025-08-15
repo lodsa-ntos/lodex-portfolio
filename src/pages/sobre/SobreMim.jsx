@@ -107,7 +107,7 @@ const WhatIDoSection = () => (
   <section id="Oquefaco" className="pb-32 pt-20 border-b">
     <GlobalContainer>
       <div className="mb-16">
-        <h2 className="mb-6 text-4xl font-light text-[#333333] subpixel-antialiased text-center">
+        <h2 className="mb-6 text-4xl font-light text-[##333333] subpixel-antialiased text-center">
           Dou forma ao que <br />
           ainda está só na cabeça.
         </h2>
@@ -145,7 +145,7 @@ const ForWhomSection = () => (
         </div>
 
         <div className="text-gray-800">
-          <h1 className="mb-6 mt-6 lg:mt-0 text-4xl font-light text-[#333333] subpixel-antialiased">
+          <h1 className="mb-6 mt-6 lg:mt-0 text-4xl font-light text-[##333333] subpixel-antialiased">
             Para quem é
           </h1>
 
@@ -173,11 +173,11 @@ const ForWhomSection = () => (
 );
 
 const WhySection = () => (
-  <section id="porquefacoisso" className="py-16 bg-white border-b">
+  <section id="porquefacoisso" className="-mb-1.2 py-16 bg-white border-b">
     <GlobalContainer>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="text-gray-800">
-          <h1 className="mb-6 text-4xl font-light text-[#333333] subpixel-antialiased">
+          <h1 className="mb-6 text-4xl font-light text-[##333333] subpixel-antialiased">
             Por que faço isso?
           </h1>
           <p className="max-w-lg font-light text-xl leading-relaxed subpixel-antialiased">
@@ -245,7 +245,7 @@ const CallToActionSection = () => (
 const DividerLabel = ({ label }) => (
   <div className="relative flex items-center justify-center pb-10">
     <div className="w-full mx-auto border border-gray-200"></div>
-    <div className="absolute w-24 h-10 flex items-center justify-center text-center text-sm font-light text-white bg-secundario border border-white rounded-full -rotate-6">
+    <div className="absolute w-24 h-10 flex items-center justify-center text-center text-sm font-light text-white bg-secundario border-1 border-white rounded-full -rotate-6">
       {label}
     </div>
   </div>
