@@ -275,7 +275,7 @@ This portfolio is proprietary software. The design, code, and content are protec
 
 **Not Allowed:**
 - Commercial use without permission
-- Copying design or content
+- Copying design or content in whole or in part.
 - Redistribution of the complete codebase
 
 For permissions beyond the scope of this license, contact: lodex.studio@gmail.com
