@@ -37,7 +37,7 @@ export default async function handler(req, res) {
     console.log("Fields recebidos:", fields);
 
     // Configure email transporter
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       host: "smtp.zoho.eu",
       port: 465,
       secure: true,
