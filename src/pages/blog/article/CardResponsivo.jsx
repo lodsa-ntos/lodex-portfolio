@@ -194,6 +194,8 @@ function NewsletterForm() {
         const data = await response.json();
         toast.success(data.message || "Subscrição realizada com sucesso!");
         setEmail("");
+        // Limpa os campos não-controlados
+        e.target.reset();
       } else {
         const data = await response.json();
         toast.error(data.error || "Erro ao processar subscrição.");
@@ -208,16 +210,21 @@ function NewsletterForm() {
   return (
     <div className="flex flex-col items-center justify-center py-10">
       <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 text-center leading-relaxed mb-5">
-        📩 Quer receber <br className=" md:hidden"/>mais tutoriais como este?
+        📩 Quer receber <br className=" md:hidden" />
+        mais tutoriais como este?
       </h1>
       <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-600 text-center">
-        Assine minha newsletter <br className=" md:hidden"/>e receba novidades direto no seu e-mail.
+        Assine minha newsletter <br className=" md:hidden" />e receba novidades
+        direto no seu e-mail.
       </p>
       <form
+        method="POST"
+        encType="multipart/form-data"
         onSubmit={handleSubmit}
         className="max-w-lg md:max-w-3xl w-full mx-auto bg-gray-100 flex p-1 rounded-full mt-10 focus-within:bg-white border focus-within:ring-1 focus-within:ring-secundario transition"
       >
         <input
+          id="email"
           type="email"
           name="email"
           value={email}
