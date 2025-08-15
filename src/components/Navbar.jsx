@@ -30,7 +30,7 @@ function Navbar() {
       hoverClass: "hover:fill-[#e4405f] hover:scale-105",
     },
     {
-      href: "https://github.com/lodsa-ntos",
+      href: "https://github.com/lodsa-ntos/lodex-portfolio",
       label: "GitHub Lodex Studio (abre em nova aba)",
       icon: FaGithub,
       hoverClass: `${
