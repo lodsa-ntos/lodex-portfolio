@@ -181,8 +181,17 @@ function NewsletterForm() {
 
     setIsSubmitting(true);
 
-    const formData = new FormData();
+    const formData = new FormData(e.target);
     formData.append("email", email);
+
+    // Valida os campos obrigatórios
+    const email = formData.get("email")?.trim();
+
+    if (!email) {
+      toast.error("O email é um campo obrigatório a ser preenchido.");
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const response = await fetch("/api/newsletter", {
