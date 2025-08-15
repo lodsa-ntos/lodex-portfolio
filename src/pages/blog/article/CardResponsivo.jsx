@@ -208,10 +208,10 @@ function NewsletterForm() {
   return (
     <div className="flex flex-col items-center justify-center py-10">
       <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 text-center leading-relaxed mb-5">
-        📩 Quer receber mais tutoriais como este?
+        📩 Quer receber <br className=" md:hidden"/>mais tutoriais como este?
       </h1>
       <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-600 text-center">
-        Assine minha newsletter e receba novidades direto no seu e-mail.
+        Assine minha newsletter <br className=" md:hidden"/>e receba novidades direto no seu e-mail.
       </p>
       <form
         onSubmit={handleSubmit}
