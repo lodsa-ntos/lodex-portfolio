@@ -173,12 +173,6 @@ function NewsletterForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!email) {
-      toast.error("Por favor, insira um email válido.");
-      return;
-    }
-
     setIsSubmitting(true);
 
     const formData = new FormData(e.target);
@@ -188,7 +182,7 @@ function NewsletterForm() {
     const email = formData.get("email")?.trim();
 
     if (!email) {
-      toast.error("O email é um campo obrigatório a ser preenchido.");
+      toast.error("Por favor, insira um email válido.");
       setIsSubmitting(false);
       return;
     }
