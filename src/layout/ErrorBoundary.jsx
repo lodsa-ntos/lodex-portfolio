@@ -12,7 +12,7 @@ class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    // You can also log the error to an error reporting service
+    // Log error to external service in production
     console.error("ErrorBoundary caught an error:", error, errorInfo);
   }
 
@@ -31,9 +31,10 @@ class ErrorBoundary extends Component {
           </p>
           <p className="text-sm text-gray-500">
             Se o problema persistir, por favor,{" "}
-            <a 
-            className="text-blue-500 underline hover:underline"
-            href="https://api.whatsapp.com/send?phone=351935895551&text=Problema%20%F0%9F%91%8B%20I%27m%20interested%20in%20the%20services%20of%20Lodex Studio.%20%0A%0ACould%20you%20give%20me%20more%20details%3F">
+            <a
+              className="text-blue-500 underline hover:underline"
+              href="https://api.whatsapp.com/send?phone=351935895551&text=Problema%20%F0%9F%91%8B%20I%27m%20interested%20in%20the%20services%20of%20Lodex Studio.%20%0A%0ACould%20you%20give%20me%20more%20details%3F"
+            >
               contacta-nos.
             </a>
           </p>

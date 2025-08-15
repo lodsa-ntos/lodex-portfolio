@@ -146,7 +146,7 @@ function Indice() {
           <RxDrawingPinFilled className="text-secundario" /> Índice
         </h1>
         <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside">
-          {indice.map(item => (
+          {indice.map((item) => (
             <li key={item.id} className="font-medium">
               <span className="font-light">
                 <a
@@ -164,7 +164,47 @@ function Indice() {
   );
 }
 
+import { useState } from "react";
+import { toast } from "react-toastify";
+
 function NewsletterForm() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!email) {
+      toast.error("Por favor, insira um email válido.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const formData = new FormData();
+    formData.append("email", email);
+
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        toast.success(data.message || "Subscrição realizada com sucesso!");
+        setEmail("");
+      } else {
+        const data = await response.json();
+        toast.error(data.error || "Erro ao processar subscrição.");
+      }
+    } catch {
+      toast.error("Erro inesperado. Tente novamente.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="flex flex-col items-center justify-center py-10">
       <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 text-center leading-relaxed mb-5">
@@ -174,24 +214,26 @@ function NewsletterForm() {
         Assine minha newsletter e receba novidades direto no seu e-mail.
       </p>
       <form
-        onSubmit={e => {
-          e.preventDefault();
-        }}
+        onSubmit={handleSubmit}
         className="max-w-lg md:max-w-3xl w-full mx-auto bg-gray-100 flex p-1 rounded-full mt-10 focus-within:bg-white border focus-within:ring-1 focus-within:ring-secundario transition"
       >
         <input
           type="email"
           name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
           placeholder="Endereço de e-mail"
-          className="w-full rounded-full px-5 py-4 border-none tracking-tight outline-none bg-transparent text-base text-slate-900 placeholder-gray-500"
+          disabled={isSubmitting}
+          className="w-full rounded-full px-5 py-4 border-none tracking-tight outline-none bg-transparent text-base text-slate-900 placeholder-gray-500 disabled:opacity-50"
           title="Insira um e-mail válido"
         />
         <button
           type="submit"
-            className="bg-secundario hover:bg-blue-700 transition-all text-white font-semibold text-sm rounded-full px-6 py-3"
+          disabled={isSubmitting}
+          className="bg-secundario hover:bg-blue-700 transition-all text-white font-semibold text-sm rounded-full px-6 py-3 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Subscrever
+          {isSubmitting ? "..." : "Subscrever"}
         </button>
       </form>
     </div>
@@ -206,10 +248,12 @@ function SocialMediaCTA() {
           📱 Siga @lodex.studio no Instagram
         </h3>
         <p className="text-lg sm:text-xl leading-relaxed mb-6 text-white/90">
-          Tutoriais rápidos em stories, dicas de design, código ao vivo e bastidores do desenvolvimento. 
-          <strong className="text-yellow-300"> Conteúdo diário</strong> para devs que querem evoluir!
+          Tutoriais rápidos em stories, dicas de design, código ao vivo e
+          bastidores do desenvolvimento.
+          <strong className="text-yellow-300"> Conteúdo diário</strong> para
+          devs que querem evoluir!
         </p>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 text-sm">
           <div className="bg-white/10 backdrop-blur rounded-lg p-4">
             <span className="block font-semibold mb-1">💡 Stories Diários</span>
@@ -229,15 +273,15 @@ function SocialMediaCTA() {
           </div>
         </div>
 
-        <a 
-          href="https://instagram.com/lodex.studio" 
+        <a
+          href="https://instagram.com/lodex.studio"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 bg-white text-purple-600 font-bold text-lg px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-xl"
           aria-label="Seguir LodeX Studio no Instagram"
         >
           <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
           </svg>
           Seguir Agora
         </a>
@@ -251,7 +295,8 @@ function CardResponsivo() {
     <>
       <Helmet>
         <title>
-          Card Responsivo com Hover Animado — React + TailwindCSS (Tutorial Passo a Passo) | LodeX Studio
+          Card Responsivo com Hover Animado — React + TailwindCSS (Tutorial
+          Passo a Passo) | LodeX Studio
         </title>
         <meta
           name="description"
@@ -261,7 +306,10 @@ function CardResponsivo() {
           name="keywords"
           content="React, Tailwind, card responsivo, badges, UI components, web design, frontend"
         />
-        <meta property="og:title" content="Card Responsivo com Badges - React + Tailwind" />
+        <meta
+          property="og:title"
+          content="Card Responsivo com Badges - React + Tailwind"
+        />
         <meta
           property="og:description"
           content="Aprenda a criar um card responsivo com badges usando React e Tailwind."
@@ -284,7 +332,11 @@ function CardResponsivo() {
         Ir para conteúdo principal
       </a>
 
-      <main id="conteudo-principal" className="min-h-[95vh] border-b shadow-md" role="main">
+      <main
+        id="conteudo-principal"
+        className="min-h-[95vh] border-b shadow-md"
+        role="main"
+      >
         <GlobalContainer>
           <div className="flex items-center justify-center py-[7.6rem] md:py-[9.6rem]">
             <div className="w-full max-w-content mx-auto sm:px-6 md:px-8 lg:px-[18%]">
@@ -297,7 +349,8 @@ function CardResponsivo() {
                     Card Responsivo com Hover Animado usando React + TailwindCSS
                   </h1>
                   <p className="mt-6 mb-2 text-base lg:text-2xl text-slate-600 leading-relaxed max-w-3xl font-light">
-                    Efeito suave de hover que dá vida ao card com menos de 200 linhas de código.
+                    Efeito suave de hover que dá vida ao card com menos de 200
+                    linhas de código.
                   </p>
                 </header>
 
@@ -316,10 +369,12 @@ function CardResponsivo() {
                 </figure>
 
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                  Um card visual deve ser claro, organizado e usar hierarquia visual para guiar o
-                  usuário. No exemplo otimizado, ícones e badges destacam o conteúdo, o espaçamento
-                  melhora a leitura e o design moderno cria uma experiência agradável. Responsivo e
-                  interativo, valoriza o conteúdo e aumenta o engajamento com código simples.
+                  Um card visual deve ser claro, organizado e usar hierarquia
+                  visual para guiar o usuário. No exemplo otimizado, ícones e
+                  badges destacam o conteúdo, o espaçamento melhora a leitura e
+                  o design moderno cria uma experiência agradável. Responsivo e
+                  interativo, valoriza o conteúdo e aumenta o engajamento com
+                  código simples.
                 </p>
 
                 <hr className="mb-10" />
@@ -336,21 +391,24 @@ function CardResponsivo() {
                     id="heading-passo-1"
                     className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10"
                   >
-                    <strong>Passo 1</strong> — Criar o projeto com React e TailwindCSS
+                    <strong>Passo 1</strong> — Criar o projeto com React e
+                    TailwindCSS
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    <strong className="font-medium">Objetivo:</strong> Criar a base do projeto onde
-                    o card será construído.
+                    <strong className="font-medium">Objetivo:</strong> Criar a
+                    base do projeto onde o card será construído.
                   </p>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
                     O que será feito:
                   </p>
                   <ol className="list-decimal font-medium text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside">
                     <li className="font-light">
-                      Criar projeto React com <strong className="font-medium">Vite</strong>
+                      Criar projeto React com{" "}
+                      <strong className="font-medium">Vite</strong>
                     </li>
                     <li className="font-light">
-                      Instalar e configurar <strong className="font-medium">TailwindCSS</strong>
+                      Instalar e configurar{" "}
+                      <strong className="font-medium">TailwindCSS</strong>
                     </li>
                   </ol>
 
@@ -359,7 +417,10 @@ function CardResponsivo() {
                     Código
                   </h3>
 
-                  <div className="w-full mx-auto bg-gray-100 p-5 rounded-xl mb-2" aria-label="Comandos para criar projeto">
+                  <div
+                    className="w-full mx-auto bg-gray-100 p-5 rounded-xl mb-2"
+                    aria-label="Comandos para criar projeto"
+                  >
                     <p className="text-base leading-relaxed text-slate-700 font-[400] mb-10">
                       <span className="text-gray-500 font-[500] tracking-wide text-sm italic">
                         # Criar projeto React com Vite
@@ -390,24 +451,30 @@ function CardResponsivo() {
                       </span>
                       <br />
                       <span className="text-yellow-600 text-sm">module</span>
-                      <span className="text-sm">.exports = {'{'}</span>
+                      <span className="text-sm">.exports = {"{"}</span>
                       <br />
-                      <span className="text-yellow-600 ml-5 text-sm">content</span>
+                      <span className="text-yellow-600 ml-5 text-sm">
+                        content
+                      </span>
                       <span className="text-sm">: [</span>
                       <span className="text-sm text-green-600 tracking-wide">
                         {" ./index.html, ./src/**/*.{js,jsx} "}
                       </span>
                       <span className="text-sm">],</span>
                       <br />
-                      <span className="text-yellow-600 ml-5 text-sm">theme</span>
-                      <span className="text-sm">: {'{'} </span>
+                      <span className="text-yellow-600 ml-5 text-sm">
+                        theme
+                      </span>
+                      <span className="text-sm">: {"{"} </span>
                       <span className="text-yellow-600 text-sm">extend</span>
-                      <span className="text-sm">: {'{}'}, </span>
+                      <span className="text-sm">: {"{}"}, </span>
                       <br />
-                      <span className="text-yellow-600 ml-5 text-sm">plugins</span>
+                      <span className="text-yellow-600 ml-5 text-sm">
+                        plugins
+                      </span>
                       <span className="text-sm">: [],</span>
                       <br />
-                      <span className="text-sm">{'}'}</span>
+                      <span className="text-sm">{"}"}</span>
                     </p>
                   </div>
 
@@ -420,24 +487,37 @@ function CardResponsivo() {
                         /* index.css */
                       </span>
                       <br />
-                      <span className="text-purple-600 text-sm">@tailwind </span>
+                      <span className="text-purple-600 text-sm">
+                        @tailwind{" "}
+                      </span>
                       <span className="text-sm">base;</span>
                       <br />
-                      <span className="text-purple-600 text-sm">@tailwind </span>
+                      <span className="text-purple-600 text-sm">
+                        @tailwind{" "}
+                      </span>
                       <span className="text-sm">components;</span>
                       <br />
-                      <span className="text-purple-600 text-sm">@tailwind </span>
+                      <span className="text-purple-600 text-sm">
+                        @tailwind{" "}
+                      </span>
                       <span className="text-sm">utilities;</span>
                     </p>
                   </div>
 
                   <p className="text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light mb-5">
                     Configure o arquivo{" "}
-                    <span className="bg-gray-100 px-2 rounded-lg">tailwind.config.js</span> e
-                    importe o CSS em <span className="bg-gray-100 px-2 rounded-lg">index.css</span>.
+                    <span className="bg-gray-100 px-2 rounded-lg">
+                      tailwind.config.js
+                    </span>{" "}
+                    e importe o CSS em{" "}
+                    <span className="bg-gray-100 px-2 rounded-lg">
+                      index.css
+                    </span>
+                    .
                   </p>
                   <p className="text-base leading-relaxed text-slate-700">
-                    Dica: mantenha a estrutura organizada para facilitar manutenção.
+                    Dica: mantenha a estrutura organizada para facilitar
+                    manutenção.
                   </p>
 
                   <hr className="my-10" />
@@ -464,18 +544,25 @@ function CardResponsivo() {
                     <strong>Passo 2</strong> — Estruturar o componente base
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    <strong className="font-medium">Objetivo:</strong> Criar um card simples sem
-                    efeitos para servir de ponto de partida.
+                    <strong className="font-medium">Objetivo:</strong> Criar um
+                    card simples sem efeitos para servir de ponto de partida.
                   </p>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
                     O que será feito:
                   </p>
                   <ol className="list-decimal font-medium text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside">
                     <li className="font-light">
-                      Criar o arquivo <code className="bg-gray-100 px-1 rounded-md">Card.jsx</code>
+                      Criar o arquivo{" "}
+                      <code className="bg-gray-100 px-1 rounded-md">
+                        Card.jsx
+                      </code>
                     </li>
-                    <li className="font-light">Adicionar imagem, título e descrição</li>
-                    <li className="font-light">Aplicar classes básicas do TailwindCSS</li>
+                    <li className="font-light">
+                      Adicionar imagem, título e descrição
+                    </li>
+                    <li className="font-light">
+                      Aplicar classes básicas do TailwindCSS
+                    </li>
                   </ol>
 
                   <hr className="mb-10" />
@@ -484,7 +571,10 @@ function CardResponsivo() {
                   </h3>
 
                   <div>
-                    <CodeBlock language={blocoParte2.language} code={blocoParte2.code} />
+                    <CodeBlock
+                      language={blocoParte2.language}
+                      code={blocoParte2.code}
+                    />
                     <p className="text-base leading-relaxed text-slate-700">
                       Estrutura base que receberá design e animações.
                     </p>
@@ -515,20 +605,24 @@ function CardResponsivo() {
                     <strong>Passo 3</strong> — Adicionando badges e ação
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    Transformar o card estático em algo dinâmico com badges e elementos visuais.
+                    Transformar o card estático em algo dinâmico com badges e
+                    elementos visuais.
                   </p>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    <strong className="font-medium">Objetivo:</strong> Tornar o card mais atrativo e
-                    semântico.
+                    <strong className="font-medium">Objetivo:</strong> Tornar o
+                    card mais atrativo e semântico.
                   </p>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
                     Ações:
                   </p>
                   <ol className="list-decimal font-medium text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside">
                     <li className="font-light">
-                      Criar componente <span className="font-medium">Badge</span>
+                      Criar componente{" "}
+                      <span className="font-medium">Badge</span>
                     </li>
-                    <li className="font-light">Aplicar cores dinâmicas por tecnologia</li>
+                    <li className="font-light">
+                      Aplicar cores dinâmicas por tecnologia
+                    </li>
                   </ol>
 
                   <hr className="mb-10" />
@@ -536,7 +630,10 @@ function CardResponsivo() {
                     Código parcial (Badge)
                   </h3>
                   <div>
-                    <CodeBlock language={blocoParte3.language} code={blocoParte3.code} />
+                    <CodeBlock
+                      language={blocoParte3.language}
+                      code={blocoParte3.code}
+                    />
                     <p className="text-base leading-relaxed text-slate-700">
                       Use contraste suficiente para texto dentro das badges.
                     </p>
@@ -567,7 +664,8 @@ function CardResponsivo() {
                     <strong>Passo 4</strong> — Imagem com efeito hover
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    Criar impacto inicial com uma imagem que responde à interação.
+                    Criar impacto inicial com uma imagem que responde à
+                    interação.
                   </p>
 
                   <hr className="mb-10" />
@@ -575,7 +673,10 @@ function CardResponsivo() {
                     Código parcial (imagem)
                   </h3>
                   <div>
-                    <CodeBlock language={blocoParte4.language} code={blocoParte4.code} />
+                    <CodeBlock
+                      language={blocoParte4.language}
+                      code={blocoParte4.code}
+                    />
                     <p className="text-base leading-relaxed text-slate-700">
                       Prefira formatos otimizados (ex: .webp) para performance.
                     </p>
@@ -606,7 +707,8 @@ function CardResponsivo() {
                     <strong>Passo 5</strong> — Interatividade e CTA
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    Botão visível apenas no hover para manter layout limpo e direcionar ação.
+                    Botão visível apenas no hover para manter layout limpo e
+                    direcionar ação.
                   </p>
 
                   <hr className="mb-10" />
@@ -614,15 +716,27 @@ function CardResponsivo() {
                     Código parcial (CTA)
                   </h3>
                   <div>
-                    <CodeBlock language={blocoParte5.language} code={blocoParte5.code} />
+                    <CodeBlock
+                      language={blocoParte5.language}
+                      code={blocoParte5.code}
+                    />
                   </div>
                   <p className="text-base leading-relaxed text-slate-700">
-                    Ícones devem ter aria-hidden="true" se puramente decorativos.
+                    Ícones devem ter aria-hidden="true" se puramente
+                    decorativos.
                   </p>
                   <p className="text-sm leading-relaxed text-slate-600 font-light mt-4">
-                    💡 <strong>Dica:</strong> Vejo implementações criativas da comunidade no 
-                    <a href="https://instagram.com/lodexstudio" target="_blank" rel="noopener noreferrer" 
-                    className="text-purple-600 hover:text-purple-800 ml-1">Instagram usando #LodeXStudio</a>!
+                    💡 <strong>Dica:</strong> Vejo implementações criativas da
+                    comunidade no
+                    <a
+                      href="https://instagram.com/lodexstudio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-purple-600 hover:text-purple-800 ml-1"
+                    >
+                      Instagram usando #LodeXStudio
+                    </a>
+                    !
                   </p>
 
                   <hr className="my-10" />
@@ -650,7 +764,8 @@ function CardResponsivo() {
                     <strong>Passo 6</strong> — Tornar o card responsivo
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    Garantir boa leitura e estrutura em qualquer largura de ecrã.
+                    Garantir boa leitura e estrutura em qualquer largura de
+                    ecrã.
                   </p>
 
                   <hr className="mb-10" />
@@ -658,10 +773,16 @@ function CardResponsivo() {
                     Exemplo de classes responsivas
                   </h3>
                   <div>
-                    <CodeBlock language={blocoParte6.language} code={blocoParte6.code} />
+                    <CodeBlock
+                      language={blocoParte6.language}
+                      code={blocoParte6.code}
+                    />
                   </div>
                   <div>
-                    <CodeBlock language={blocoParte61.language} code={blocoParte61.code} />
+                    <CodeBlock
+                      language={blocoParte61.language}
+                      code={blocoParte61.code}
+                    />
                     <p className="text-base leading-relaxed text-slate-700">
                       O atributo loop simula GIF com melhor performance.
                     </p>
@@ -691,35 +812,45 @@ function CardResponsivo() {
 
                 {/* PASSO FINAL */}
                 <section id="passo-final" aria-labelledby="heading-passo-final">
-                    <h2
-                      id="heading-passo-final"
-                      className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10"
-                    >
-                      <strong>Passo Final</strong> — Código completo no GitHub
-                    </h2>
-                    <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                      Acesse e clone o repositório para testes.
-                    </p>
+                  <h2
+                    id="heading-passo-final"
+                    className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10"
+                  >
+                    <strong>Passo Final</strong> — Código completo no GitHub
+                  </h2>
+                  <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
+                    Acesse e clone o repositório para testes.
+                  </p>
+                  <a
+                    href="https://github.com/lodsa-ntos/lodexstudio-blog"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-fit hover:bg-secundario transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secundario hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset items-center gap-2"
+                    aria-label="Ver código completo deste tutorial no GitHub"
+                  >
+                    <IoMdCodeWorking
+                      className="text-gray-200 font-bold size-5"
+                      aria-hidden="true"
+                      focusable="false"
+                    />
+                    Ver código no GitHub
+                  </a>
+                  <p className="text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light mt-6">
+                    🔥{" "}
+                    <strong className="font-medium mr-1">
+                      Quer ver este código sendo desenvolvido ao vivo?
+                    </strong>
+                    Siga{" "}
                     <a
-                      href="https://github.com/lodsa-ntos/lodexstudio-blog"
+                      href="https://instagram.com/lodex.studio"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-fit hover:bg-secundario transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secundario hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset items-center gap-2"
-                      aria-label="Ver código completo deste tutorial no GitHub"
+                      className="text-purple-600 underline hover:text-purple-800"
                     >
-                      <IoMdCodeWorking
-                        className="text-gray-200 font-bold size-5"
-                        aria-hidden="true"
-                        focusable="false"
-                      />
-                      Ver código no GitHub
-                    </a>
-                    <p className="text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light mt-6">
-                      🔥 <strong className="font-medium mr-1">Quer ver este código sendo desenvolvido ao vivo?</strong> 
-                      Siga <a href="https://instagram.com/lodex.studio" target="_blank" rel="noopener noreferrer" 
-                      className="text-purple-600 underline hover:text-purple-800">@lodex.studio</a> no Instagram 
-                      para acompanhar sessões de live coding!
-                    </p>
+                      @lodex.studio
+                    </a>{" "}
+                    no Instagram para acompanhar sessões de live coding!
+                  </p>
                 </section>
 
                 <hr className="my-10" />
@@ -732,18 +863,18 @@ function CardResponsivo() {
                     <strong>Conclusão</strong>
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    Agora você tem um card responsivo, moderno e animado que pode adaptar para vários
-                    contextos. Personalize cores, troque ícones e integre em layouts reais para
-                    ganhar velocidade e consistência na criação de interfaces.
+                    Agora você tem um card responsivo, moderno e animado que
+                    pode adaptar para vários contextos. Personalize cores,
+                    troque ícones e integre em layouts reais para ganhar
+                    velocidade e consistência na criação de interfaces.
                   </p>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    💡 <strong className="font-medium">Dica:</strong> Acompanhe mais tutoriais e 
-                    variações deste card no meu Instagram. Lá compartilho o processo de desenvolvimento, 
-                    dicas rápidas em stories e respondo dúvidas da comunidade!
+                    💡 <strong className="font-medium">Dica:</strong> Acompanhe
+                    mais tutoriais e variações deste card no meu Instagram. Lá
+                    compartilho o processo de desenvolvimento, dicas rápidas em
+                    stories e respondo dúvidas da comunidade!
                   </p>
                 </section>
-
-                
 
                 <hr className="my-10" />
 

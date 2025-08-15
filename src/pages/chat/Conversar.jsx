@@ -40,10 +40,6 @@ function Conversar() {
         body: formData,
       });
 
-      for (let [key, value] of formData.entries()) {
-        console.log(`${key}:${value}`);
-      }
-
       if (response.ok) {
         toast.success(
           "Mensagem enviada com sucesso! Obrigado, entrarei em contacto em breve."
@@ -64,8 +60,7 @@ function Conversar() {
         const data = await response.json();
         toast.error(data.error || "Erro ao enviar mensagem.");
       }
-    } catch (error) {
-      console.error("Erro ao enviar a mensagem:", error);
+    } catch {
       toast.error(
         "Erro inesperado. Tente mais tarde. Se o problema persistir, contacte-nos."
       );

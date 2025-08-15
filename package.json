@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev-clean": "copy index.dev.html index.html && vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

@@ -15,6 +15,10 @@ import Blog from "./pages/blog/Blog";
 import GlobalProject from "./pages/projects/GlobalProject";
 import Conversar from "./pages/chat/Conversar";
 import CardResponsivo from "./pages/blog/article/CardResponsivo";
+import DataProtection from "./pages/legal/DataProtection";
+import TermsOfService from "./pages/legal/TermsOfService";
+import WebsiteTerms from "./pages/legal/WebsiteTerms";
+import ConsentNotice from "./components/ConsentNotice";
 import Whatsapp from "./utils/Whatsapp";
 
 function App() {
@@ -23,7 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LayoutGlobal />}>
           <Route index element={<LandingPage />} />
-           <Route path="/gestosamaveis" element={<ProjetoReal />} />
+          <Route path="/gestosamaveis" element={<ProjetoReal />} />
           <Route path="/academico" element={<Academico />} />
           <Route path="/launchpeak" element={<ConceitoPessoal />} />
           <Route path="/sobremim" element={<SobreMim />} />
@@ -32,9 +36,13 @@ function App() {
           <Route path="/portfolio" element={<GlobalProject />} />
           <Route path="/conversar" element={<Conversar />} />
           <Route path="/cardresponsivo" element={<CardResponsivo />} />
+          <Route path="/privacidade" element={<DataProtection />} />
+          <Route path="/termos" element={<TermsOfService />} />
+          <Route path="/cookies" element={<WebsiteTerms />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+      <ConsentNotice />
       <Whatsapp />
     </ErrorBoundary>
   );

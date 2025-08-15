@@ -395,10 +395,6 @@ function Services() {
         body: formData,
       });
 
-      for (let [key, value] of formData.entries()) {
-        console.log(`${key}:${value}`);
-      }
-
       if (response.ok) {
         toast.success(
           "Mensagem enviada com sucesso! Obrigado, entrarei em contacto em breve."
@@ -409,13 +405,11 @@ function Services() {
         setnomeCompleto("");
         setEmail("");
         setMessage("");
-        
       } else {
         toast.error("Erro ao enviar mensagem. Por favor, tente novamente.");
         setselectedService(false);
       }
-    } catch (error) {
-      console.error("Erro ao enviar a mensagem:", error);
+    } catch {
       toast.error(
         "Erro inesperado. Tente mais tarde. Se o problema persistir, contacte-nos."
       );

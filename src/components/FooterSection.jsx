@@ -106,10 +106,32 @@ function FooterSection() {
           {/* Footer bottom  */}
           <div className="border-t border-gray-300 mt-6">
             <div className="flex flex-col md:flex-row items-center justify-between text-center gap-4 mt-6">
-              <p className="text-[#4a5565] hover:text-gray-800 transition-colors duration-500 text-sm font-Satoshi">
-                © {new Date().getFullYear()} Lodney Santos. Todos os direitos
-                reservados.
-              </p>
+              <div className="flex flex-col sm:flex-row items-center gap-4">
+                <p className="text-[#4a5565] hover:text-gray-800 transition-colors duration-500 text-sm font-Satoshi">
+                  © {new Date().getFullYear()} Lodney Santos. Todos os direitos
+                  reservados.
+                </p>
+                <div className="flex items-center gap-4 text-xs">
+                  <a
+                    href="/privacidade"
+                    className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
+                  >
+                    Privacidade
+                  </a>
+                  <a
+                    href="/termos"
+                    className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
+                  >
+                    Termos
+                  </a>
+                  <a
+                    href="/cookies"
+                    className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
+                  >
+                    Cookies
+                  </a>
+                </div>
+              </div>
               <p className="text-[#4a5565] hover:text-gray-800 transition-colors text-sm font-Satoshi flex items-center justify-center gap-1">
                 <strong className="text-primario hover:text-secundario">
                   Frontend Developer
