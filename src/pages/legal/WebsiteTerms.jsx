@@ -16,7 +16,7 @@ function WebsiteTerms() {
 
       <section className="pt-36 pb-24 min-h-screen">
         <GlobalContainer>
-          <div className="max-w-4xl mx-auto">
+          <div className="">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
               Política de Cookies
             </h1>
@@ -32,7 +32,7 @@ function WebsiteTerms() {
                 </h2>
                 <p>
                   Cookies são pequenos ficheiros de texto que são armazenados no
-                  seu dispositivo quando visita um website. Eles são amplamente
+                  seu dispositivo quando visita um website. <br />Eles são amplamente
                   utilizados para fazer com que os websites funcionem de forma
                   mais eficiente e para fornecer informações aos proprietários
                   do site.
@@ -162,7 +162,7 @@ function WebsiteTerms() {
                 </h2>
                 <p>
                   Pode controlar e/ou eliminar cookies como desejar. Pode
-                  eliminar todos os cookies que já estão no seu computador e
+                  eliminar todos os cookies que já estão no seu computador <br />e
                   pode configurar a maioria dos navegadores para impedir que
                   sejam colocados.
                 </p>
@@ -205,7 +205,7 @@ function WebsiteTerms() {
                 </h2>
                 <p>
                   Ao continuar a utilizar o nosso website, você concorda com o
-                  uso de cookies conforme descrito nesta política. Se não
+                  uso de cookies conforme descrito nesta política. <br />Se não
                   concordar, deve ajustar as configurações do seu navegador ou
                   deixar de utilizar o website.
                 </p>
@@ -217,7 +217,7 @@ function WebsiteTerms() {
                 </h2>
                 <p>
                   Esta política de cookies pode ser atualizada periodicamente.
-                  Recomendamos que revise esta página regularmente para se
+                  Recomendamos que revise esta página regularmente <br />para se
                   manter informado sobre como utilizamos cookies.
                 </p>
               </section>
