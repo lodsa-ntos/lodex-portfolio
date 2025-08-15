@@ -105,27 +105,27 @@ function FooterSection() {
         <div>
           {/* Footer bottom  */}
           <div className="border-t border-gray-300 mt-6">
-            <div className="flex flex-col md:flex-row items-center justify-between text-center gap-4 mt-6">
-              <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex flex-col lg:flex-row items-center justify-between text-center gap-4 mt-6 ">
+              <div className="flex flex-col lg:flex-row items-center gap-4">
                 <p className="text-[#4a5565] hover:text-gray-800 transition-colors duration-500 text-sm font-Satoshi">
                   © {new Date().getFullYear()} Lodney Santos. Todos os direitos
                   reservados.
                 </p>
-                <div className="flex items-center gap-4 text-xs">
+                <div className="flex items-center lg:flex-row gap-4 text-xs">
                   <BubblyLink
-              to="/privacidade"
+                    to="/privacidade"
                     className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
                   >
                     Privacidade
                   </BubblyLink>
                   <BubblyLink
-              to="/termos"
+                    to="/termos"
                     className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
                   >
                     Termos
                   </BubblyLink>
                   <BubblyLink
-              to="/cookies"
+                    to="/cookies"
                     className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
                   >
                     Cookies
