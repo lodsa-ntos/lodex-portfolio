@@ -1,6 +1,6 @@
 # LodeX Studio - Portfolio Website
 
-![LodeX Studio](https://lodexstudio.com/lodney-santos-developer.jpg)
+![LodeX Studio](https://lodexstudio.com/LodeX-Studio-Website.jpg)
 
 ## 🌟 Overview
 
