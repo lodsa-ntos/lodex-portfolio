@@ -16,7 +16,7 @@ function DataProtection() {
 
       <section className="pt-36 pb-24 min-h-screen">
         <GlobalContainer>
-          <div className="max-w-4xl mx-auto">
+          <div className="">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
               Política de Privacidade
             </h1>
@@ -80,7 +80,7 @@ function DataProtection() {
                 </h2>
                 <p>
                   Utilizamos cookies e tecnologias similares para melhorar a sua
-                  experiência no nosso website. Os cookies são pequenos
+                  experiência no nosso website. <br />Os cookies são pequenos
                   ficheiros armazenados no seu dispositivo que nos ajudam a:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
@@ -96,7 +96,7 @@ function DataProtection() {
                 </h2>
                 <p>
                   Implementamos medidas de segurança adequadas para proteger as
-                  suas informações pessoais contra acesso, alteração, divulgação
+                  suas informações pessoais <br />contra acesso, alteração, divulgação
                   ou destruição não autorizados.
                 </p>
               </section>
@@ -122,7 +122,7 @@ function DataProtection() {
                 <p>
                   Mantemos as suas informações pessoais apenas pelo tempo
                   necessário para cumprir os propósitos descritos nesta
-                  política, a menos que seja exigido um período de retenção mais
+                  política, <br />a menos que seja exigido um período de retenção mais
                   longo por lei.
                 </p>
               </section>
@@ -132,7 +132,7 @@ function DataProtection() {
                   8. Contacto
                 </h2>
                 <p>
-                  Se tem questões sobre esta Política de Privacidade ou sobre
+                  Se tem questões sobre esta Política de Privacidade ou sobre <br />
                   como tratamos os seus dados pessoais, pode contactar-nos:
                 </p>
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -151,7 +151,7 @@ function DataProtection() {
                 </h2>
                 <p>
                   Podemos atualizar esta Política de Privacidade periodicamente.
-                  Notificaremos sobre alterações significativas publicando a
+                  Notificaremos sobre alterações significativas publicando a <br />
                   nova política nesta página com uma data de atualização.
                 </p>
               </section>
