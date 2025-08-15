@@ -265,7 +265,7 @@ npm run build
 
 ## 📄 License
 
-© 2025 Lodney Santos - LodeX Studio. All rights reserved.
+© 2025 Lodney Santos - LodeX Studio. All Rights Reserved.
 
 This portfolio is proprietary software. The design, code, and content are protected by copyright. 
 
@@ -277,6 +277,8 @@ This portfolio is proprietary software. The design, code, and content are protec
 - Commercial use without permission
 - Copying design or content
 - Redistribution of the complete codebase
+
+For permissions beyond the scope of this license, contact: lodex.studio@gmail.com
 
 ---
 
