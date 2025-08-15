@@ -15,19 +15,16 @@ function NotFound() {
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 
-      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="min-h-screen py-24 flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50">
         <GlobalContainer>
           <div className="text-center max-w-2xl mx-auto">
-            <div className="mb-8">
-              <span className="text-8xl">🔍</span>
-            </div>
 
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
               404
             </h1>
 
             <h2 className="text-xl md:text-2xl text-gray-600 mb-6">
-              Página não encontrada
+              🔍 Página não encontrada
             </h2>
 
             <p className="text-gray-500 mb-8 leading-relaxed">
