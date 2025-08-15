@@ -16,7 +16,7 @@ function TermsOfService() {
 
       <section className="pt-36 pb-24 min-h-screen">
         <GlobalContainer>
-          <div className="max-w-4xl mx-auto">
+          <div className="">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
               Termos de Serviço
             </h1>
@@ -32,7 +32,7 @@ function TermsOfService() {
                 </h2>
                 <p>
                   Ao aceder e utilizar os serviços da LodeX Studio, você
-                  concorda em ficar vinculado por estes Termos de Serviço. Se
+                  concorda em ficar vinculado por estes Termos de Serviço. <br />Se
                   não concordar com qualquer parte destes termos, não deve
                   utilizar os nossos serviços.
                 </p>
@@ -174,7 +174,7 @@ function TermsOfService() {
                 </h2>
                 <p>
                   Oferecemos 30 dias de suporte gratuito após a entrega do
-                  projeto para correção de bugs. Alterações de conteúdo ou
+                  projeto para correção de bugs. <br />Alterações de conteúdo ou
                   funcionalidades estão sujeitas a orçamento separado.
                 </p>
               </section>
@@ -221,7 +221,7 @@ function TermsOfService() {
                 </h2>
                 <p>
                   Reservamos o direito de modificar estes termos a qualquer
-                  momento. As alterações serão comunicadas através do website e
+                  momento. As alterações serão comunicadas através do website <br />e
                   entrarão em vigor 30 dias após a publicação.
                 </p>
               </section>
