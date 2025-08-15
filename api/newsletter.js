@@ -34,6 +34,8 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Email inválido" });
     }
 
+    console.log("Fields recebidos:", fields);
+
     // Configure email transporter
     const transporter = nodemailer.createTransporter({
       host: "smtp.zoho.eu",
