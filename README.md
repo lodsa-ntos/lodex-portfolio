@@ -43,13 +43,13 @@ If this project helps or inspires you, please consider giving it a star! ⭐ It 
 
 ## 💼 Services Offered
 
-| Service | Technologies | Pricing Range |
+| Service | Technologies |  |
 |---------|-------------|---------------|
-| 🎨 **Landing Pages** | React, Vite, TailwindCSS | €800 - €1,500 |
-| 🏢 **Business Websites** | Full-stack solutions | €2,000 - €5,000 |
-| 📱 **Web Applications** | React, Node.js, APIs | €3,000 - €8,000 |
-| 🔧 **Performance Optimization** | Core Web Vitals focus | €300 - €800 |
-| 📊 **SEO & Analytics** | Google Analytics, Schema | €200 - €500 |
+| 🎨 **Landing Pages** | React, Vite, TailwindCSS |  |
+| 🏢 **Business Websites** | Full-stack solutions |  |
+| 📱 **Web Applications** | React, Node.js, APIs | |
+| 🔧 **Performance Optimization** | Core Web Vitals focus |  |
+| 📊 **SEO & Analytics** | Google Analytics, Schema |  |
 
 ## ✨ Features
 
