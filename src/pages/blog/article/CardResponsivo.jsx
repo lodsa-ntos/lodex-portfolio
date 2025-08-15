@@ -729,7 +729,7 @@ function CardResponsivo() {
                     💡 <strong>Dica:</strong> Vejo implementações criativas da
                     comunidade no
                     <a
-                      href="https://instagram.com/lodexstudio"
+                      href="https://instagram.com/lodex.studio"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-purple-600 hover:text-purple-800 ml-1"

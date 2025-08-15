@@ -5,8 +5,17 @@ import { FaLaptopCode } from "react-icons/fa";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
+import { trackDownload, trackExternalLink } from "../utils/analytics";
 
 function HeroSection() {
+  const handleCVDownload = () => {
+    trackDownload("Lodney-Santos-Currículo-[2025-Website].pdf", "pdf");
+  };
+
+  const handleProjectLink = (projectUrl, projectName) => {
+    trackExternalLink(projectUrl, projectName);
+  };
+
   return (
     <section
       id="home"
@@ -44,6 +53,7 @@ function HeroSection() {
           href="/Lodney-Santos-Currículo-[2025-Website].pdf"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleCVDownload}
           className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center justify-center gap-1"
           aria-label="Falar comigo"
         >
@@ -70,6 +80,7 @@ function HeroSection() {
               rel="noopener noreferrer"
               tabIndex={0}
               aria-label="Visite o site Gestos Amáveis (abre em nova aba)"
+              onClick={() => handleProjectLink("https://www.gestosamaveis.pt/sobre-nos", "Gestos Amáveis - Sobre Nós")}
             >
               <motion.img
                 variants={fadeIn("down", 0.2)}
@@ -92,6 +103,7 @@ function HeroSection() {
               tabIndex={0}
               aria-label="Visite o site Gestos Amáveis (abre em nova aba)"
               className="rounded-xl shadow-2xl"
+              onClick={() => handleProjectLink("https://www.gestosamaveis.pt/", "Gestos Amáveis - Homepage")}
             >
               <motion.img
                 variants={fadeIn("up", 0.2)}
@@ -123,6 +135,7 @@ function HeroSection() {
               rel="noopener noreferrer"
               tabIndex={0}
               aria-label="Visite o site Gestos Amáveis (abre em nova aba)"
+              onClick={() => handleProjectLink("https://www.gestosamaveis.pt/servicos-avulso", "Gestos Amáveis - Serviços")}
             >
               <motion.img
                 variants={fadeIn("down", 0.2)}
