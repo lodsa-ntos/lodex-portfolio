@@ -16,7 +16,7 @@ function PrivacyPolicy() {
 
       <section className="pt-36 pb-24 min-h-screen">
         <GlobalContainer>
-          <div className="max-w-4xl mx-auto">
+          <div className="">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
               Política de Privacidade
             </h1>
