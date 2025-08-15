@@ -77,27 +77,27 @@ const HeroSection = () => (
 
 const whatIDoItems = [
   {
-    icon: PiWallDuotone,
+    icon: <PiWallDuotone className="size-10 text-gray-500" />,
     title: "Construo",
     text: "Websites e interfaces sob medida — sem templates, com base na ideia e no público.",
   },
   {
-    icon: MdOutlineDesignServices,
+    icon: <MdOutlineDesignServices className="size-10 text-gray-500" />,
     title: "Desenho",
     text: "Protótipos e interfaces funcionais com foco em estrutura, hierarquia e intenção visual.",
   },
   {
-    icon: MdImportantDevices,
+    icon: <MdImportantDevices className="size-10 text-gray-500" />,
     title: "Desenvolvo",
     text: "Frontend com React, Tailwind e animações leves com Framer Motion",
   },
   {
-    icon: PiRocketLaunchDuotone,
+    icon: <PiRocketLaunchDuotone className="size-10 text-gray-500" />,
     title: "Lanço",
     text: "Transformo ideias iniciais em MVPs prontos para ir ao ar — simples, diretos e viáveis.",
   },
   {
-    icon: VscCompassDot,
+    icon: <VscCompassDot className="size-10 text-gray-500" />,
     title: "Guio",
     text: "Ajudas pontuais para quem quer clareza no que precisa construir (mesmo antes do código).",
   },
@@ -116,10 +116,10 @@ const WhatIDoSection = () => (
       <DividerLabel label="O que faço?" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-4">
-        {whatIDoItems.map(({ icon: Icon, title, text }) => (
+        {whatIDoItems.map(({ icon, title, text }) => (
           <InfoCard
             key={title}
-            icon={<Icon className="size-10 text-gray-500" />}
+            icon={icon}
             title={title}
             text={text}
           />
