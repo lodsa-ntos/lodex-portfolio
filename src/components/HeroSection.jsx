@@ -5,12 +5,9 @@ import { FaLaptopCode } from "react-icons/fa";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-import { trackDownload, trackExternalLink } from "../utils/analytics";
+import { trackExternalLink } from "../utils/analytics";
 
 function HeroSection() {
-  const handleCVDownload = () => {
-    trackDownload("Lodney-Santos-Currículo-[2025-Website].pdf", "pdf");
-  };
 
   const handleProjectLink = (projectUrl, projectName) => {
     trackExternalLink(projectUrl, projectName);
@@ -30,7 +27,7 @@ function HeroSection() {
 
       <SectionTitle id="hero-title" />
 
-      <div className="flex flex-row items-center justify-center w-full gap-4 mt-6 px-4 z-10">
+      <div className="flex flex-row items-center justify-center w-full gap-4 mt-6 px-4 z-20">
         <motion.button
           variants={fadeIn("right", 0.2)}
           initial="hidden"
@@ -53,8 +50,7 @@ function HeroSection() {
           href="/Lodney-Santos-Currículo-[2025-Website].pdf"
           target="_blank"
           rel="noopener noreferrer"
-          
-          className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center justify-center gap-1"
+          className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center justify-center gap-1 z-20"
           aria-label="Falar comigo"
         >
           <TbFileTypePdf className="text-[#F40F02]" /> Currículo
