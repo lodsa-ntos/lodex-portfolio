@@ -9,7 +9,7 @@ function DataProtection() {
         <title>Política de Privacidade | LodeX Studio</title>
         <meta
           name="description"
-          content="Política de privacidade da LodeX Studio. Como coletamos, utilizamos e protegemos os seus dados pessoais."
+          content="Política de privacidade da LodeX Studio. Como recolhemos, utilizamos e protegemos os seus dados pessoais."
         />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
@@ -28,10 +28,10 @@ function DataProtection() {
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  1. Informações que Coletamos
+                  1. Informações que Recolhemos
                 </h2>
                 <p>
-                  Coletamos informações que você nos fornece diretamente quando:
+                  Recolhemos informações que você nos fornece diretamente quando:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Entra em contacto através dos nossos formulários</li>
@@ -49,7 +49,7 @@ function DataProtection() {
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                   2. Como Utilizamos as Suas Informações
                 </h2>
-                <p>Utilizamos as informações coletadas para:</p>
+                <p>Utilizamos as informações recolhidas para:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Responder às suas consultas e pedidos</li>
                   <li>Fornecer os nossos serviços</li>
