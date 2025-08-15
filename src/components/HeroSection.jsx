@@ -53,7 +53,7 @@ function HeroSection() {
           href="/Lodney-Santos-Currículo-[2025-Website].pdf"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={handleCVDownload}
+          
           className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center justify-center gap-1"
           aria-label="Falar comigo"
         >
