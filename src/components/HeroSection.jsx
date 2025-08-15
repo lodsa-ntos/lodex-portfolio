@@ -32,7 +32,7 @@ function HeroSection() {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView="show"
-          className="bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center justify-center gap-1"
+          className="bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center justify-center gap-1 z-20"
           aria-label="Explorar projetos"
         >
           <a
