@@ -43,13 +43,13 @@ If this project helps or inspires you, please consider giving it a star! ⭐ It 
 
 ## 💼 Services Offered
 
-| Service | Technologies |  |
-|---------|-------------|---------------|
-| 🎨 **Landing Pages** | React, Vite, TailwindCSS |  |
-| 🏢 **Business Websites** | Full-stack solutions |  |
-| 📱 **Web Applications** | React, Node.js, APIs | |
-| 🔧 **Performance Optimization** | Core Web Vitals focus |  |
-| 📊 **SEO & Analytics** | Google Analytics, Schema |  |
+| Service | Technologies | 
+|---------|-------------|
+| 🎨 **Landing Pages** | React, Vite, TailwindCSS |
+| 🏢 **Business Websites** | Full-stack solutions |
+| 📱 **Web Applications** | React, Node.js, APIs |
+| 🔧 **Performance Optimization** | Core Web Vitals focus |
+| 📊 **SEO & Analytics** | Google Analytics, Schema |
 
 ## ✨ Features
 
