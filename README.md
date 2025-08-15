@@ -1,12 +1,55 @@
 # LodeX Studio - Portfolio Website
 
+<div align="center">
+
 ![LodeX Studio](https://lodexstudio.com/LodeX-Studio-Website.jpg)
+
+[![Live Website](https://img.shields.io/badge/🌐_Live_Website-lodexstudio.com-blue?style=for-the-badge)](https://lodexstudio.com)
+[![React](https://img.shields.io/badge/React-19.1.0-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.0.4-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.17-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+
+**🚀 Modern Frontend Development & UI/UX Design Portfolio**
+
+</div>
 
 ## 🌟 Overview
 
-Professional portfolio website for LodeX Studio, specializing in modern web development, landing pages, and UI design. Built with React, Vite, and TailwindCSS for optimal performance and user experience.
+Professional portfolio website for **LodeX Studio**, specializing in modern web development, responsive design, and user experience optimization. Showcasing real client projects, technical expertise, and comprehensive web solutions.
 
-**Live Website:** [https://lodexstudio.com](https://lodexstudio.com)
+**🎯 Key Highlights:**
+- 📱 Mobile-first responsive design
+- ⚡ Performance-optimized React application
+- 🎨 Modern UI/UX with smooth animations
+- 📊 SEO-optimized with analytics integration
+- 🔒 GDPR-compliant privacy features
+
+## ⭐ Star this Repository
+
+If this project helps or inspires you, please consider giving it a star! ⭐ It helps other developers discover this work.
+
+## 🎯 Featured Projects
+
+### 🏥 [Gestos Amáveis - Healthcare Platform](https://lodexstudio.com/gestosamaveis)
+**Result:** 200% increase in appointment bookings
+- Modern healthcare booking system
+- Mobile-responsive design
+- Performance optimization (3s load time reduction)
+
+### 📚 Academic Projects Portfolio
+- University assignment showcases
+- Technical documentation examples
+- Code quality demonstrations
+
+## 💼 Services Offered
+
+| Service | Technologies | Pricing Range |
+|---------|-------------|---------------|
+| 🎨 **Landing Pages** | React, Vite, TailwindCSS | €800 - €1,500 |
+| 🏢 **Business Websites** | Full-stack solutions | €2,000 - €5,000 |
+| 📱 **Web Applications** | React, Node.js, APIs | €3,000 - €8,000 |
+| 🔧 **Performance Optimization** | Core Web Vitals focus | €300 - €800 |
+| 📊 **SEO & Analytics** | Google Analytics, Schema | €200 - €500 |
 
 ## ✨ Features
 
@@ -280,6 +323,31 @@ This portfolio is proprietary software. The design, code, and content are protec
 
 For permissions beyond the scope of this license, contact: lodex.studio@gmail.com
 
+## 🌟 GitHub Stats
+
+![GitHub repo size](https://img.shields.io/github/repo-size/lodsa-ntos/lodex-portfolio)
+![GitHub last commit](https://img.shields.io/github/last-commit/lodsa-ntos/lodex-portfolio)
+![GitHub issues](https://img.shields.io/github/issues/lodsa-ntos/lodex-portfolio)
+![GitHub stars](https://img.shields.io/github/stars/lodsa-ntos/lodex-portfolio)
+
+## 🏷️ Topics & Keywords
+
+`portfolio` `react` `vite` `tailwindcss` `frontend-developer` `web-development` `ui-ux-design` `responsive-design` `javascript` `modern-web` `performance-optimization` `seo` `portugal-developer` `freelance-developer` `business-website`
+
+## 🌍 Connect & Follow
+
+- 🌐 **Website**: [lodexstudio.com](https://lodexstudio.com)
+- 💼 **LinkedIn**: [Connect with Lodney Santos](https://linkedin.com/in/lodney-santos)
+- 📧 **Email**: lodexstudio@gmail.com
+- 📱 **WhatsApp**: +351 935 895 551
+- 📍 **Location**: Sacavém, Lisboa, Portugal
+
 ---
 
+<div align="center">
+
+**⭐ Star this repo if it helped you! | 🍴 Fork it to customize for your own use**
+
 **Built with ❤️ by LodeX Studio** | *Modern Web Development & UI Design*
+
+</div>
