@@ -21,6 +21,7 @@ body {
 
 body {
   overflow-x: hidden;
+  font-family: Satoshi, sans-serif;
   @apply font-Satoshi;
 }
 

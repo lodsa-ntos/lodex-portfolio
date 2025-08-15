@@ -21,7 +21,7 @@ function SectionTitle({ align = "center" }) {
             initial="hidden"
             whileInView="show"
         id="section-title-heading"
-        className="text-2xl sm:text-5xl w-full mx-auto font-[800] uppercase leading-tight sm:text-terciario text-[#111827] focus-visible:ring-secundario"
+        className="text-2xl sm:text-5xl w-full mx-auto font-[800] uppercase leading-tight sm:text-terciario text-[#111827] focus-visible:ring-secundario font-Satoshi"
         tabIndex={0}
       >
         Design leve
