@@ -934,7 +934,7 @@ function CardResponsivo() {
                   >
                     <IoMdCodeWorking className="text-gray-200 font-bold size-5" />
                     <a
-                      href="https://github.com/lodsa-ntos/TFC_a21505293_camarate_school_library_app/tree/main"
+                      href="https://github.com/lodsa-ntos/lodexstudio-blog"
                       target="_blank"
                     >
                       Ver código no GitHub
