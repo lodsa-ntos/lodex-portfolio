@@ -168,7 +168,7 @@ function Navbar() {
           <div className="hidden lg:flex items-start lg:flex-col text-left">
             <p
               className={`text-xs xlplus:mt-6 lg:mt-3 font-medium leading-4 mb-1 uppercase tracking-wide transition-all duration-500
-                ${scrolled ? "text-white" : "text-gray-800"}
+                ${scrolled ? "text-white" : "text-gray-800 "}
               `}
             >
               <strong>Simple.</strong> <br /> <strong>Useful.</strong> <br />{" "}
@@ -204,7 +204,7 @@ function Navbar() {
           <div className="inline-flex items-center justify-center ml-auto space-x-8">
             <small
               className={`flex justify-start contrast-100 ${
-                scrolled ? "text-green-400" : "text-green-500"
+                scrolled ? "text-green-400" : "text-green-500 "
               } gap-2 tracking-wide transition-all duration-500`}
             >
               <span class="relative flex mt-1 size-3">
