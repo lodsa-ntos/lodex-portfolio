@@ -39,7 +39,7 @@ function HeroSection() {
             href="#projetos"
             className="flex items-center justify-center gap-1"
           >
-            <FaLaptopCode className="text-green-400" /> Ver projetos
+            <FaLaptopCode className="text-green-400" /> Explore Work
           </a>
         </motion.button>
 
@@ -53,7 +53,7 @@ function HeroSection() {
           className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center justify-center gap-1 z-20"
           aria-label="Falar comigo"
         >
-          <TbFileTypePdf className="text-[#F40F02]" /> Currículo
+          <TbFileTypePdf className="text-[#F40F02]" /> Download CV
         </motion.a>
       </div>
 
