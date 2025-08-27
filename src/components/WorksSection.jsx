@@ -34,7 +34,7 @@ function WorksSection() {
             colorEnd="#FFFFFF"
             className="cursor-pointer group relative flex flex-col my-6 mx-auto bg-white shadow border border-slate-200 rounded-lg w-full max-w-sm hover:shadow-lg transition-shadow duration-500"
           >
-            <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
+            <div className="relative h-56 m-2.5 overflow-hidden  text-white rounded-md">
               {/** Badge */}
               <div relative>
                 <div className="absolute top-3 right-4 rounded-full p-1.5 tracking-tight ring-1 ring-inset bg-gray-50 text-gray-600 ring-purple-700/10 z-50 flex items-center gap-2">
@@ -42,7 +42,7 @@ function WorksSection() {
                     href="#preview"
                     className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-500 ease-in-out"
                   >
-                    <LiaUniversitySolid /> Projeto académico
+                    <LiaUniversitySolid /> Academic Project
                   </a>
                 </div>
               </div>
@@ -58,16 +58,15 @@ function WorksSection() {
                 Biblioteca Escolar Camarate
               </h6>
               <p className="text-slate-600 leading-normal font-light">
-                Aplicação mobile desenvolvida como projeto final de curso, com
-                base numa colaboração real com a Escola Secundária de Camarate.
+                A mobile application developed as a final course project, in collaboration with Camarate Secondary School. Designed to make library resources more accessible and engaging for students.
               </p>
             </div>
-            <div className="px-4 pb-4 pt-0 mt-2">
+            <div className="px-4 pb-4 pt-0 mt-2 absolute bottom-0 left-0">
               <button
                 class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none duration-500"
                 type="button"
               >
-                Ver caso de estudo
+                View case study
               </button>
             </div>
           </BubblyLink>
@@ -87,7 +86,7 @@ function WorksSection() {
                     href="#preview"
                     className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-200 ease-in-out"
                   >
-                    <TbContract /> Projeto real - Cliente
+                    <TbContract /> Client Project
                   </a>
                 </div>
               </div>
@@ -103,16 +102,15 @@ function WorksSection() {
                 Gestos Amáveis
               </h6>
               <p className="text-slate-600 leading-normal font-light">
-                Plataforma web institucional para uma empresa de cuidados a
-                idosos, com foco em empatia, acessibilidade e navegação clara.
+                An institutional web platform for a senior care company. Built with a focus on empathy, accessibility, and clear navigation to connect families with trusted caregivers.
               </p>
             </div>
-            <div className="px-4 pb-4 pt-0 mt-2">
+            <div className="px-4 pb-4 pt-0 mt-2 absolute bottom-0 left-0">
               <button
                 class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 type="button"
               >
-                Ver caso de estudo
+                View case study
               </button>
             </div>
           </BubblyLink>
@@ -132,8 +130,7 @@ function WorksSection() {
                     href="#preview"
                     className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-200 ease-in-out"
                   >
-                    <AiOutlineFileProtect className="text-blue-600" /> Conceito
-                    pessoal
+                    <AiOutlineFileProtect className="text-blue-600" /> Personal Project
                   </a>
                 </div>
               </div>
@@ -148,17 +145,16 @@ function WorksSection() {
               <h6 className="mb-2 text-slate-800 text-xl font-semibold">
                 LaunchPeack
               </h6>
-              <p className="text-slate-600 leading-normal font-light">
-                Landing page criada como conceito para uma solução fictícia.
-                Feita com React, Tailwind CSS e Framer Motion.
+              <p className="text-slate-600 leading-normal font-light mb-20">
+                A conceptual landing page created for a fictional digital solution. Designed with React, Tailwind CSS, and Framer Motion to showcase modern, scalable front-end development.
               </p>
             </div>
-            <div className="px-4 pb-4 pt-0 mt-2">
+            <div className="px-4 pb-4 pt-0 mt-2 absolute bottom-0 left-0">
               <button
                 className="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 type="button"
               >
-                Ver caso de estudo
+                View case study
               </button>
             </div>
           </BubblyLink>
