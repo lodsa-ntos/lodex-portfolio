@@ -41,15 +41,13 @@ function GlobalProject() {
           className="w-5"
         />,
       ],
-      labelBadges: "Projeto académico",
+      labelBadges: "Academic Project",
       iconBadges: <LiaUniversitySolid />,
       bagdeStyle:
         "ring-1 ring-inset bg-gray-50 text-gray-600 ring-gray-500 text-xs px-2 py-1 rounded-full flex items-center justify-end text-end gap-1",
       description: (
         <>
-          Aplicação móvel desenvolvida como projeto final de curso, com base
-          numa colaboração real com a{" "}
-          <strong>Escola Secundária de Camarate</strong>.
+          A mobile application developed as a final course project in collaboration with{" "} <strong>Camarate Secondary School</strong>. Designed to make the school’s library resources more accessible and engaging for students.
         </>
       ),
       tags: ["app", "Apps"],
@@ -72,12 +70,12 @@ function GlobalProject() {
           />
         </>,
       ],
-      labelBadges: "Projeto real - Cliente",
+      labelBadges: "Client Project",
       iconBadges: <TbContract />,
       bagdeStyle:
         "ring-1 ring-inset bg-green-50 text-[#2F9B92] ring-[#2F9B92] text-xs px-2 py-1 rounded-full  flex items-center justify-end text-end gap-1",
       description:
-        "Plataforma web institucional desenvolvida para uma empresa de cuidadores a idosos.",
+        "An institutional web platform for a senior care company. Built with empathy, accessibility, and clear navigation in mind, helping families connect with trusted caregivers more easily.",
       tags: ["website", "Website"],
     },
 
@@ -97,12 +95,12 @@ function GlobalProject() {
           />
         </>,
       ],
-      labelBadges: "Conceito pessoal",
+      labelBadges: "Personal Project",
       iconBadges: <AiOutlineFileProtect className="text-[#6248d6]" />,
       bagdeStyle:
         "ring-1 ring-inset bg-purple-50 text-[#6248d6] ring-[#6248d6] text-xs px-2 py-1 rounded-full  flex items-center justify-end text-end gap-1",
       description:
-        "Landing page criada como conceito para uma solução fictícia. Feita com React, Tailwind CSS e Framer Motion.",
+        "A conceptual landing page created for a fictional digital solution. Designed with React, Tailwind CSS, and Framer Motion to showcase modern front-end development and smooth user experiences.",
       tags: ["landing", "Landing Page"],
     },
   ];
@@ -131,7 +129,7 @@ function GlobalProject() {
 
   // Marca/desmarca as tags no estado selectedTags.
   const toggleTag = (tag) => {
-    if (tag === "todos") {
+    if (tag === "all") {
       // Se "todos" for clicado
       if (selectedTags.length === allTags.length) {
         // Desmarca tudo // Limpa Tudo
@@ -180,7 +178,7 @@ function GlobalProject() {
       <section id="sobremim" className="min-h-[95vh] pt-36 border-b shadow-md">
         <GlobalContainer>
           <span className="text-xs sm:text-sm text-gray-600  font-semibold text-start block mb-2 uppercase tracking-wide">
-            Projectos
+            Case Studies
           </span>
 
           {/* Título and filter button */}
@@ -188,13 +186,13 @@ function GlobalProject() {
             {/* Título, subtítulo e Descrição */}
             <div className="flex flex-col items-start justify-center flex-1">
               <h2 className="text-xl sm:text-3xl md:text-4xl text-left font-medium text-gray-900 leading-tight">
-                Cada projeto tem
+                Every project has
                 <br />
-                <strong>lógica</strong> e <strong>função</strong>.
+                <strong>purpose</strong> and <strong>clarity</strong>.
               </h2>
               <p className="mt-6 mb-2 text-base max-w-xl lg:text-lg text-left text-slate-500 font-Satoshi leading-relaxed text-balance">
-                Para comunicar com clareza. Para guiar decisões. <br />
-                Para transformar ideias em experiência digital.
+                Clear communication. Smart decisions. <br />
+                Ideas transformed into digital experiences.
               </p>
             </div>
 
@@ -211,7 +209,7 @@ function GlobalProject() {
               aria-controls="dropdownMenu"
               tabIndex={0}
             >
-              Filtrar <BiFilter />
+              Filter <BiFilter />
             </button>
 
             {/* Dropdown menu */}
@@ -227,19 +225,19 @@ function GlobalProject() {
                 >
                   <li className="flex items-center">
                     <input
-                      id="todos"
+                      id="all"
                       type="checkbox"
-                      checked={selectedTags.includes("todos")}
-                      onChange={() => toggleTag("todos")}
+                      checked={selectedTags.includes("all")}
+                      onChange={() => toggleTag("all")}
                       className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                     />
 
                     <label
-                      htmlFor="Todos"
+                      htmlFor="All"
                       className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center justify-center gap-1"
                     >
                       <GrStatusGoodSmall className="text-white border-2 rounded-full" />{" "}
-                      Todos
+                      All
                     </label>
                   </li>
 
