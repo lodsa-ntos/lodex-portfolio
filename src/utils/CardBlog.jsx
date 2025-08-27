@@ -7,12 +7,6 @@ import { FaReact } from "react-icons/fa";
 import { BubblyLink } from "../library/BubblyLink";
 import imgAvatar from "../assets/logo/lodexstudio-logo-white.svg";
 
-const day = new Date().toLocaleDateString("pt-PT", { day: "2-digit" });
-const month = new Date().toLocaleDateString("pt-PT", { month: "long" });
-const year = new Date().toLocaleDateString("pt-PT", { year: "numeric" });
-
-const generalDate = `${day} ${month} ${year}`;
-
 const cardData = [
   {
     id: 1,
@@ -26,10 +20,9 @@ const cardData = [
         foto: imgAvatar,
         profileFoto: "",
         autor: "LodeX Studio",
-        date: generalDate,
+        date: "09 de agosto de 2025",
       },
     ],
-
     Badge: [
       {
         icon: <FaReact className="w-4 h-4" />,
@@ -48,6 +41,7 @@ const cardData = [
       },
     ],
   },
+  
 ];
 
 // Badge Component
@@ -99,7 +93,9 @@ function CardBlog() {
                   className="relative flex flex-col transition-shadow duration-500 overflow-hidden rounded-xl shadow-md"
                 >
                   <img
-                    className="w-full h-[240px] rounded-xl object-cover transition-transform duration-500 group-hover:scale-105 group-hover:rounded-xl"
+                    className={`w-full h-[240px] rounded-xl object-cover ${
+                      card.imagePosition || "object-center"
+                    } transition-transform duration-500 group-hover:scale-105 group-hover:rounded-xl`}
                     src={card.img}
                     alt={`example-${index + 1}`}
                   />

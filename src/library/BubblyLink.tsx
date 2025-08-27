@@ -10,6 +10,7 @@ export type BubblyLinkProps = {
   colorEnd?: string;
   className?: string;
   duration?: number;
+  onClick?: () => void;
 };
 
 export const BubblyLink: FC<BubblyLinkProps> = ({
@@ -19,11 +20,13 @@ export const BubblyLink: FC<BubblyLinkProps> = ({
   colorEnd = "#ffffff",
   className = "",
   duration = 1250,
+  onClick,
 }) => {
   const navigate = useNavigate();
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement> | undefined) => {
     e?.preventDefault();
+    try { onClick?.(); } catch {}
 
     if (
       !document.getElementById("react-bubbly-transitions__bubbles") &&

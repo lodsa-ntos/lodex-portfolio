@@ -171,17 +171,9 @@ function Navbar() {
                 ${scrolled ? "text-white" : "text-gray-800"}
               `}
             >
-              <strong>Frontend Developer</strong> <br /> focado em experiências{" "}
-              <br /> simples, úteis e escaláveis.
+              <strong>Simple.</strong> <br /> <strong>Useful.</strong> <br />{" "}
+              <strong>Scalable. </strong> <br /> <strong>Unlimited.</strong>
             </p>
-            <small
-              className={`flex justify-start contrast-100 ${
-                scrolled ? "text-green-400" : "text-green-500"
-              } gap-2 tracking-wide transition-all duration-500`}
-            >
-              <VscSymbolInterface className="size-5" />
-              Aberto a colaborações
-            </small>
           </div>
 
           {/* Logo center */}
@@ -209,7 +201,18 @@ function Navbar() {
           </div>
 
           {/* Right side - Social & Hamburger Menu */}
-          <div className="flex items-center ml-auto space-x-8">
+          <div className="inline-flex items-center justify-center ml-auto space-x-8">
+            <small
+              className={`flex justify-start contrast-100 ${
+                scrolled ? "text-green-400" : "text-green-500"
+              } gap-2 tracking-wide transition-all duration-500`}
+            >
+              <span class="relative flex mt-1 size-3">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex size-3 rounded-full bg-green-500"></span>
+              </span>
+              Open to collaborations
+            </small>
             {/* Social media */}
             <div className="hidden lg:flex gap-x-4 items-center pr-6">
               {socialLinks.map(({ href, label, icon, hoverClass }) => (

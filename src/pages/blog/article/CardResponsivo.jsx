@@ -9,18 +9,12 @@ import { GiConvergenceTarget } from "react-icons/gi";
 import imgAvatar from "../../../assets/logo/lodexstudio-logo-white.svg";
 import CodeBlock from "../../../utils/CodeBlock";
 
-const day = new Date().toLocaleDateString("pt-PT", { day: "2-digit" });
-const month = new Date().toLocaleDateString("pt-PT", { month: "long" });
-const year = new Date().toLocaleDateString("pt-PT", { year: "numeric" });
-
-const generalDate = `${day} ${month} ${year}`;
-
 const Avatar = [
   {
     foto: imgAvatar,
     profileFoto: "",
     autor: "LodeX Studio",
-    date: generalDate,
+    date: "09 de agosto de 2025",
   },
 ];
 

@@ -1,0 +1,3 @@
+data	origem	nome	email	empresa	mensagem	açao	status	erro	tags	prioridade	responsavel	link	notas
+2025-08-18	form	João Silva	joao@acme.pt	Acme	Landing page e orçamento	reply-sent	ok		orcamento;web	media	Lodney	https://exemplo.com/pedido/123	Primeiro contacto
+2025-08-19	email	Maria Costa	maria@loja.pt	Loja X	Dúvida sobre prazos	queued	ok		suporte	baixa	Bruna	https://exemplo.com/pedido/124	Responder amanhã

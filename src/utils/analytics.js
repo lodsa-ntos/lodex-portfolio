@@ -1,14 +1,35 @@
-// Google Analytics tracking utilities
-export const trackEvent = (eventName, eventParameters = {}) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', eventName, {
-      custom_parameter: 'lodex_studio_interaction',
-      page_location: window.location.href,
-      page_title: document.title,
-      ...eventParameters
-    });
+// Tiny analytics helper: Plausible -> Umami -> GA fallback
+export function trackEvent(name, props = {}) {
+  try {
+    // Plausible
+    if (typeof window !== 'undefined' && typeof window.plausible === 'function') {
+      window.plausible(name, { props });
+      return;
+    }
+    // Umami
+    if (typeof window !== 'undefined' && window.umami && typeof window.umami.track === 'function') {
+      window.umami.track(name, props);
+      return;
+    }
+    // Google Analytics (gtag) fallback
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', name, props);
+      return;
+    }
+  } catch {
+    // no-op
   }
-};
+}
+
+// Semantic wrappers for common CTA events
+export const trackCtaClick = (label, context = {}) =>
+  trackEvent('cta_click', { label, ...context });
+
+export const trackViewProject = (slug, context = {}) =>
+  trackEvent('view_project', { slug, ...context });
+
+export const trackSectionView = (section, context = {}) =>
+  trackEvent('section_view', { section, ...context });
 
 // Enhanced tracking events
 export const trackProjectView = (projectName) => {
@@ -123,6 +144,9 @@ export const trackError = (errorMessage, errorLocation) => {
 
 export default {
   trackEvent,
+  trackCtaClick,
+  trackViewProject,
+  trackSectionView,
   trackProjectView,
   trackContactFormSubmit,
   trackServiceView,

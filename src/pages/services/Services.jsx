@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import GlobalContainer from "../../utils/GlobalContainer";
 import { TbFileTypePdf } from "react-icons/tb";
 import { RiPagesLine } from "react-icons/ri";
@@ -14,10 +14,34 @@ import { GiTakeMyMoney } from "react-icons/gi";
 import { SiLibreofficewriter } from "react-icons/si";
 import { BubblyLink } from "../../library/BubblyLink";
 import { BsPersonWorkspace } from "react-icons/bs";
+import { trackCtaClick, trackSectionView } from "../../utils/analytics";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet";
 
 function Services() {
+  // Section view tracking
+  useEffect(() => {
+    const seen = new Set();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target;
+          const id = el.getAttribute("data-track-section");
+          if (id && entry.isIntersecting && !seen.has(id)) {
+            seen.add(id);
+            trackSectionView(id, { page: "services" });
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    document
+      .querySelectorAll("[data-track-section]")
+      .forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
   const cardsTop = [
     {
       icon: <RiPagesLine className="size-10 text-white" />,
@@ -426,10 +450,32 @@ function Services() {
           name="description"
           content="Landing pages, websites completos, portfólios e redesigns. Soluções digitais para marcas pequenas com identidade forte."
         />
+        {/* Review JSON-LD — prova social do cliente Gestos Amáveis */}
+        <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Organization",
+    "name": "LodeX Studio"
+  },
+  "reviewBody": "Ficámos muito satisfeitas com o site. Está incrível, adorámos mesmo! Muito profissional e detalhista. A página Sobre Nós ficou linda e transmite exatamente o que queríamos.",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Gestos Amáveis"
+  }
+}
+        `}</script>
       </Helmet>
       <section
         id="servicos"
         className="min-h-[95vh] pt-36 border-b shadow-md bg-[#f6f6f6] transition-all duration-500"
+        data-track-section="services_hero"
       >
         <GlobalContainer>
           <div className="flex flex-col items-start justify-start mb-2 transition-all duration-500">
@@ -437,13 +483,12 @@ function Services() {
               <div className="flex flex-col items-center justify-center text-center">
                 <div className="flex flex-col items-center justify-center p-2 text-terciario">
                   <h1 className="text-3xl md:text-4xl lg:text-5xl mb-4 mt-2 tracking-wide leading-10 font-medium text-black/90">
-                    Como posso ajudar a tua marca?
+                    Transformo ideias em crescimento visível.
                   </h1>
                   <p className="text-2xl font-light text-[#0e101199]">
-                    <strong>
-                      Acredito que cada projeto é uma oportunidade para praticar
-                      o cuidado nos detalhes.
-                    </strong>
+                    Sites e experiências que geram leads, autoridade e vendas.{" "}
+                    <br />
+                    Do primeiro pixel ao primeiro cliente.
                   </p>
                 </div>
                 <div className="flex gap-3 mt-2 transition-all duration-500">
@@ -456,9 +501,14 @@ function Services() {
                       colorStart="#004AAD"
                       colorEnd="#FFFFFF"
                       className="flex items-center justify-center gap-1"
+                      onClick={() =>
+                        trackCtaClick("cta_comecar_projeto", {
+                          page: "services",
+                        })
+                      }
                     >
-                      <SiLibreofficewriter className="text-green-400" />{" "}
-                      Preencher formulário
+                      <SiLibreofficewriter className="text-green-400" /> Começar
+                      projeto
                     </BubblyLink>
                   </button>
 
@@ -468,9 +518,67 @@ function Services() {
                     colorEnd="#FFFFFF"
                     className="bg-white border-2 border-secundario text-secundario py-2 px-3 rounded-full shadow-sm text-sm font-medium w-full sm:w-fit max-w-xs ring-1 ring-inset ring-transparent hover:ring-secundario hover:scale-105 flex items-center gap-1 transition-all duration-500"
                     aria-label="Falar comigo"
+                    onClick={() =>
+                      trackCtaClick("cta_ver_casos", { page: "services" })
+                    }
                   >
-                    <BsPersonWorkspace className="text-indigo-600" /> Ver
-                    portfólio
+                    <BsPersonWorkspace className="text-indigo-600" /> Ver casos
+                    & resultados
+                  </BubblyLink>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Testemunho curto (prova social) */}
+          <div
+            className="w-full mb-6"
+            data-track-section="services_testimonial"
+          >
+            <div className="mx-auto max-w-3xl bg-white border rounded-2xl p-5 flex gap-3 items-start">
+              <div className="shrink-0">
+                <div className="w-10 h-10 rounded-full bg-white ring-1 ring-slate-200 overflow-hidden flex items-center justify-center">
+                  <img
+                    src="/images/projetos/cliente/gestosamaveis/gestos-amaveis-logo.jpg"
+                    alt="Gestos Amáveis — logotipo"
+                    className="w-9 h-9 object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div className="flex-1">
+                <p className="text-gray-800 italic">
+                  “Ficámos muito satisfeitas com o site. Está incrível, adorámos
+                  mesmo! Muito profissional e detalhista. A página Sobre Nós
+                  ficou linda e transmite exatamente o que queríamos.”
+                </p>
+                <div className="mt-2 flex items-center gap-3 text-sm text-slate-600">
+                  <span className="font-semibold text-gray-900">
+                    Gestos Amáveis
+                  </span>
+                  <span>•</span>
+                  <span>Projeto de website</span>
+                  <span>•</span>
+                  <span
+                    aria-label="5 estrelas no Google"
+                    title="5 estrelas no Google"
+                  >
+                    ★★★★★
+                  </span>
+                  <span>•</span>
+                  <BubblyLink
+                    to="/gestosamaveis"
+                    colorStart="#004AAD"
+                    colorEnd="#FFFFFF"
+                    className="text-primario hover:underline"
+                    aria-label="Ver projeto Gestos Amáveis"
+                    onClick={() =>
+                      trackCtaClick("cta_ver_projeto_gestosamaveis", {
+                        page: "services",
+                      })
+                    }
+                  >
+                    Ver projeto
                   </BubblyLink>
                 </div>
               </div>
@@ -682,6 +790,305 @@ function Services() {
                 </div>
               </>
             )}
+          </div>
+        </GlobalContainer>
+      </section>
+
+      {/* Prova & transformação */}
+      <section
+        className="bg-white"
+        data-track-section="services_prova_transformacao"
+      >
+        <GlobalContainer>
+          <div className="py-14 max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-light text-gray-900 mb-2">
+              Prova & transformação
+            </h2>
+            <p className="text-sm text-slate-600 mb-8">
+              Antes → Depois (exemplo real)
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Antes/Depois */}
+              <div className="bg-white border rounded-xl p-5">
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-slate-500">
+                    Antes
+                  </p>
+                  <ul className="mt-1 text-slate-700 text-sm list-disc pl-5 space-y-1">
+                    <li>Site lento, sem leads.</li>
+                  </ul>
+                </div>
+                <div className="mt-5">
+                  <p className="text-xs uppercase tracking-wide text-slate-500">
+                    Depois
+                  </p>
+                  <ul className="mt-1 text-slate-700 text-sm list-disc pl-5 space-y-1">
+                    <li>+X% velocidade.</li>
+                    <li>Formulário a captar Y contactos/semana.</li>
+                  </ul>
+                </div>
+              </div>
+              {/* Gráfico simples (ilustrativo) */}
+              <div className="bg-white border rounded-xl p-5">
+                <p className="text-xs uppercase tracking-wide text-slate-500">
+                  Gráfico simples (ilustrativo)
+                </p>
+                <div className="mt-3 space-y-4">
+                  <div>
+                    <div className="flex items-center justify-between text-xs text-slate-600">
+                      <span>Velocidade</span>
+                      <span>Antes</span>
+                    </div>
+                    <div
+                      className="h-2 bg-slate-100 rounded-full overflow-hidden mt-1"
+                      aria-hidden="true"
+                    >
+                      <div className="h-2 bg-red-400 w-1/2"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex items-center justify-between text-xs text-slate-600">
+                      <span>Velocidade</span>
+                      <span>Depois</span>
+                    </div>
+                    <div
+                      className="h-2 bg-slate-100 rounded-full overflow-hidden mt-1"
+                      aria-hidden="true"
+                    >
+                      <div className="h-2 bg-green-500 w-4/5"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex items-center justify-between text-xs text-slate-600">
+                      <span>Leads/semana</span>
+                      <span>Antes</span>
+                    </div>
+                    <div
+                      className="h-2 bg-slate-100 rounded-full overflow-hidden mt-1"
+                      aria-hidden="true"
+                    >
+                      <div className="h-2 bg-red-400 w-1/6"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex items-center justify-between text-xs text-slate-600">
+                      <span>Leads/semana</span>
+                      <span>Depois</span>
+                    </div>
+                    <div
+                      className="h-2 bg-slate-100 rounded-full overflow-hidden mt-1"
+                      aria-hidden="true"
+                    >
+                      <div className="h-2 bg-green-500 w-2/3"></div>
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-3 text-[11px] text-slate-500">
+                  Exemplo ilustrativo. Os valores exatos variam por projeto.
+                </p>
+              </div>
+            </div>
+
+            {/* Depoimento curto */}
+            <div className="mt-6 max-w-3xl">
+              <div className="border rounded-xl p-4 bg-white">
+                <p className="text-sm text-slate-800 italic">
+                  “Ficámos muito satisfeitas com o site. Muito profissional e
+                  detalhista.”
+                </p>
+                <p className="mt-2 text-xs text-slate-600">
+                  Gestos Amáveis — Cliente real
+                </p>
+              </div>
+            </div>
+          </div>
+        </GlobalContainer>
+      </section>
+
+      {/* Como funciona (processo curto) */}
+      <section
+        className="bg-white border-t"
+        data-track-section="services_processo_passos"
+      >
+        <GlobalContainer>
+          <div className="py-14 max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-light text-gray-900 mb-6">
+              Como funciona (processo curto)
+            </h2>
+            <div className="grid md:grid-cols-4 gap-4">
+              <div className="bg-gray-50 border rounded-xl p-4">
+                <p className="text-sm font-semibold text-gray-900">
+                  Diagnóstico gratuito (30 min)
+                </p>
+                <p className="text-sm text-slate-700">
+                  Objetivos, público, proposta de valor.
+                </p>
+              </div>
+              <div className="bg-gray-50 border rounded-xl p-4">
+                <p className="text-sm font-semibold text-gray-900">
+                  Plano em 48h
+                </p>
+                <p className="text-sm text-slate-700">
+                  Escopo, preço fechado, prazos.
+                </p>
+              </div>
+              <div className="bg-gray-50 border rounded-xl p-4">
+                <p className="text-sm font-semibold text-gray-900">
+                  Entrega em sprints
+                </p>
+                <p className="text-sm text-slate-700">
+                  Ver/validar por etapas.
+                </p>
+              </div>
+              <div className="bg-gray-50 border rounded-xl p-4">
+                <p className="text-sm font-semibold text-gray-900">
+                  Lançamento + medição
+                </p>
+                <p className="text-sm text-slate-700">
+                  Métricas, ajustes e checklist SEO.
+                </p>
+              </div>
+            </div>
+          </div>
+        </GlobalContainer>
+      </section>
+
+      {/* Como funciona (processo curto) — base/focos */}
+      <section
+        className="bg-white border-t"
+        data-track-section="services_processo_base"
+      >
+        <GlobalContainer>
+          <div className="py-10 max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-light text-gray-900 mb-6">
+              Como funciona (processo curto)
+            </h2>
+            <ul className="grid md:grid-cols-2 gap-4 text-slate-700">
+              <li className="bg-gray-50 border rounded-xl p-4">
+                <strong>Base própria:</strong> React.js + TailwindCSS + Headless
+                CMS (rápido, seguro, editável).
+              </li>
+              <li className="bg-gray-50 border rounded-xl p-4">
+                <strong>Copy de conversão:</strong> páginas pensadas para gerar
+                ação.
+              </li>
+              <li className="bg-gray-50 border rounded-xl p-4">
+                <strong>Performance & SEO:</strong> técnica de gente grande, em
+                sites de gente pequena que quer crescer.
+              </li>
+              <li className="bg-gray-50 border rounded-xl p-4">
+                <strong>Mentoria de conteúdo:</strong> orientações para
+                publicares sem travar.
+              </li>
+            </ul>
+          </div>
+        </GlobalContainer>
+      </section>
+
+      {/* Garantia simples */}
+      <section
+        className="bg-white border-t"
+        data-track-section="services_garantia"
+      >
+        <GlobalContainer>
+          <div className="py-10 max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-light text-gray-900 mb-4">
+              Garantia
+            </h2>
+            <div className="rounded-xl border bg-gray-50 p-5">
+              <p className="text-slate-800">
+                Se o projeto não arrancar em 7 dias úteis após o kickoff,
+                devolvo 100% do sinal.
+              </p>
+            </div>
+          </div>
+        </GlobalContainer>
+      </section>
+
+      {/* Perguntas rápidas (FAQ) */}
+      <section className="bg-white border-t" data-track-section="services_faq">
+        <GlobalContainer>
+          <div className="py-12 max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-light text-gray-900 mb-6">
+              Perguntas rápidas (FAQ)
+            </h2>
+            <div className="space-y-3">
+              <details className="group border rounded-xl p-4 bg-white">
+                <summary className="cursor-pointer list-none text-sm font-semibold text-slate-900 flex items-center justify-between">
+                  Por que não apenas WordPress/Webflow?
+                  <span className="ml-3 text-slate-400 group-open:rotate-180 transition">
+                    ▾
+                  </span>
+                </summary>
+                <p className="mt-2 text-sm text-slate-700">
+                  Uso quando faz sentido; normalmente entrego Headless CMS para
+                  velocidade, segurança e liberdade.
+                </p>
+              </details>
+              <details className="group border rounded-xl p-4 bg-white">
+                <summary className="cursor-pointer list-none text-sm font-semibold text-slate-900 flex items-center justify-between">
+                  Fazes só design?
+                  <span className="ml-3 text-slate-400 group-open:rotate-180 transition">
+                    ▾
+                  </span>
+                </summary>
+                <p className="mt-2 text-sm text-slate-700">
+                  Posso, mas o foco é resultado (design + dev + copy).
+                </p>
+              </details>
+              <details className="group border rounded-xl p-4 bg-white">
+                <summary className="cursor-pointer list-none text-sm font-semibold text-slate-900 flex items-center justify-between">
+                  Prazos?
+                  <span className="ml-3 text-slate-400 group-open:rotate-180 transition">
+                    ▾
+                  </span>
+                </summary>
+                <p className="mt-2 text-sm text-slate-700">
+                  Landing 7–14 dias; website 3–6 semanas (consoante conteúdo).
+                </p>
+              </details>
+              <details className="group border rounded-xl p-4 bg-white">
+                <summary className="cursor-pointer list-none text-sm font-semibold text-slate-900 flex items-center justify-between">
+                  Pagamentos?
+                  <span className="ml-3 text-slate-400 group-open:rotate-180 transition">
+                    ▾
+                  </span>
+                </summary>
+                <p className="mt-2 text-sm text-slate-700">
+                  40% início, 40% meio, 20% entrega.
+                </p>
+              </details>
+            </div>
+          </div>
+        </GlobalContainer>
+      </section>
+
+      {/* CTA final */}
+      <section
+        className="bg-white border-t"
+        data-track-section="services_final_cta"
+      >
+        <GlobalContainer>
+          <div className="py-16 max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-medium text-gray-900">
+              Pronto para crescer?
+            </h2>
+            <p className="mt-3 text-lg text-slate-700">
+              Marca um diagnóstico gratuito. Saímos com um mini-plano e próximos
+              passos claros.
+            </p>
+            <div className="mt-6">
+              <a
+                href="/conversar"
+                className="inline-flex bg-primario text-white px-6 py-3 rounded-full font-semibold hover:bg-secundario transition"
+                data-umami-event="cta_agendar_diagnostico"
+                onClick={() =>
+                  trackCtaClick("cta_agendar_diagnostico", { page: "services" })
+                }
+              >
+                Agendar diagnóstico
+              </a>
+            </div>
           </div>
         </GlobalContainer>
       </section>

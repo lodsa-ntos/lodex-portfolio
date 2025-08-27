@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import GlobalContainer from "../../../../utils/GlobalContainer";
 import { SiQuicklook } from "react-icons/si";
@@ -12,8 +12,54 @@ import { AiOutlineFileProtect } from "react-icons/ai";
 import { LiaUniversitySolid } from "react-icons/lia";
 import { BubblyLink } from "../../../../library/BubblyLink";
 import MobileCarousel from "../../../../utils/MobileCarousel";
+import { trackCtaClick, trackSectionView } from "../../../../utils/analytics";
 
 function ProjetoReal() {
+  const [previewImage, setPreviewImage] = useState(null); // { src, alt } | null
+  useEffect(() => {
+    const seen = new Set();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.getAttribute("data-track-section");
+          if (id && entry.isIntersecting && !seen.has(id)) {
+            seen.add(id);
+            trackSectionView(id, { page: "project_gestosamaveis" });
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    document
+      .querySelectorAll("[data-track-section]")
+      .forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Close preview on ESC
+  useEffect(() => {
+    if (!previewImage) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") setPreviewImage(null);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [previewImage]);
+
+  const openPreview = (src, alt) => {
+    setPreviewImage({ src, alt });
+    try {
+      trackCtaClick("open_before_image", {
+        page: "project_gestosamaveis",
+        src,
+      });
+    } catch {
+      // no-op
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -24,11 +70,33 @@ function ProjetoReal() {
           name="description"
           content="Website desenvolvido pela LodeX Studio para a empresa real Gestos Amáveis. Design leve, acessível e com foco em empatia e navegação simples."
         />
+        {/* Review JSON-LD deste projeto */}
+        <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "CreativeWork",
+    "name": "Website Gestos Amáveis"
+  },
+  "reviewBody": "Ficámos muito satisfeitas com o site. Está incrível, adorámos mesmo! Muito profissional e detalhista. A página Sobre Nós ficou linda e transmite exatamente o que queríamos.",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Gestos Amáveis"
+  }
+}
+        `}</script>
       </Helmet>
 
       <section
         id="gestosamaveis"
         className="pt-36 pb-24 transition-all duration-500"
+        data-track-section="project_hero"
       >
         <GlobalContainer>
           <div className="relative md:grid grid-cols-[1fr_480px] gap-[4rem]">
@@ -118,6 +186,114 @@ function ProjetoReal() {
                 pela própria cliente. Foi um projeto real que uniu escuta,
                 colaboração e compromisso, da estrutura até os detalhes finais.
               </p>
+
+              {/* Antes, solução e impacto — em texto com imagens pequenas do site antigo */}
+              <div className="mb-6" data-track-section="project_antes_depois">
+                <h2 className="text-gray-700 text-lg font-medium mb-3">
+                  Antes • A solução • O impacto
+                </h2>
+
+                {/* Antes */}
+                <p className="text-xs uppercase tracking-wide text-slate-500">
+                  Antes
+                </p>
+                <p className="mt-1 text-sm text-gray-600 leading-relaxed">
+                  A Gestos Amáveis utilizava um site no Wix, com design genérico
+                  e sem ligação ao domínio próprio. Isso limitava a visibilidade
+                  da marca e transmitia pouca confiança para potenciais
+                  clientes.
+                </p>
+                <div className="mt-3 flex flex-wrap items-center gap-3">
+                  <img
+                    src="/Gestos Amáveis antes/gestosamaveis-landing-antes.png"
+                    alt="Página inicial do site antigo da Gestos Amáveis"
+                    className="h-16 w-28 object-cover rounded-md ring-1 ring-slate-200 bg-white cursor-zoom-in"
+                    loading="lazy"
+                    role="button"
+                    tabIndex={0}
+                    onClick={() =>
+                      openPreview(
+                        "/Gestos Amáveis antes/gestosamaveis-landing-antes.png",
+                        "Página inicial do site antigo da Gestos Amáveis"
+                      )
+                    }
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ")
+                        openPreview(
+                          "/Gestos Amáveis antes/gestosamaveis-landing-antes.png",
+                          "Página inicial do site antigo da Gestos Amáveis"
+                        );
+                    }}
+                    aria-label="Abrir visualização da página inicial antiga"
+                  />
+                  <img
+                    src="/Gestos Amáveis antes/gestosamaveis-sobrenos-antes.png"
+                    alt="Secção Sobre Nós do site antigo"
+                    className="h-16 w-28 object-cover rounded-md ring-1 ring-slate-200 bg-white cursor-zoom-in"
+                    loading="lazy"
+                    role="button"
+                    tabIndex={0}
+                    onClick={() =>
+                      openPreview(
+                        "/Gestos Amáveis antes/gestosamaveis-sobrenos-antes.png",
+                        "Secção Sobre Nós do site antigo"
+                      )
+                    }
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ")
+                        openPreview(
+                          "/Gestos Amáveis antes/gestosamaveis-sobrenos-antes.png",
+                          "Secção Sobre Nós do site antigo"
+                        );
+                    }}
+                    aria-label="Abrir visualização da secção Sobre Nós antiga"
+                  />
+                  <img
+                    src="/Gestos Amáveis antes/gestosamaveis-contactoform-antes.png"
+                    alt="Formulário de contacto do site antigo"
+                    className="h-16 w-28 object-cover rounded-md ring-1 ring-slate-200 bg-white cursor-zoom-in"
+                    loading="lazy"
+                    role="button"
+                    tabIndex={0}
+                    onClick={() =>
+                      openPreview(
+                        "/Gestos Amáveis antes/gestosamaveis-contactoform-antes.png",
+                        "Formulário de contacto do site antigo"
+                      )
+                    }
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ")
+                        openPreview(
+                          "/Gestos Amáveis antes/gestosamaveis-contactoform-antes.png",
+                          "Formulário de contacto do site antigo"
+                        );
+                    }}
+                    aria-label="Abrir visualização do formulário de contacto antigo"
+                  />
+                </div>
+
+                {/* A solução */}
+                <p className="mt-5 text-xs uppercase tracking-wide text-slate-500">
+                  A solução
+                </p>
+                <p className="mt-1 text-sm text-gray-700 leading-relaxed">
+                  Redesenhei a experiência e a identidade visual, organizando o
+                  conteúdo em páginas claras (serviços, pacotes, testemunhos e
+                  contactos). O site foi publicado na Vercel com o domínio
+                  oficial, otimizado para carregamento rápido, escalabilidade e
+                  acessibilidade em mobile e desktop.
+                </p>
+
+                {/* O impacto */}
+                <p className="mt-5 text-xs uppercase tracking-wide text-slate-500">
+                  O impacto
+                </p>
+                <p className="mt-1 text-sm text-gray-700 leading-relaxed">
+                  O novo website profissional aumentou a confiança da marca,
+                  melhorou a presença no Google e facilitou os contactos de
+                  interessados. O feedback da cliente foi extremamente positivo.
+                </p>
+              </div>
 
               <div className="mb-6">
                 <ul className="space-y-4 text-left text-gray-500 dark:text-gray-400">
@@ -240,6 +416,12 @@ function ProjetoReal() {
               <button
                 className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
                 aria-label="Explorar projetos"
+                data-umami-event="cta_ver_site_online"
+                onClick={() =>
+                  trackCtaClick("cta_ver_site_online", {
+                    page: "project_gestosamaveis",
+                  })
+                }
               >
                 <SiQuicklook className="text-gray-200" />
                 <a href="https://gestosamaveis.pt" target="_blank">
@@ -247,14 +429,18 @@ function ProjetoReal() {
                 </a>
               </button>
 
-              <div className="mt-12 py-5 bg-[#f6f6f6] rounded-xl">
+              <div
+                className="mt-12 py-5 bg-[#f6f6f6] rounded-xl"
+                data-track-section="project_testimonial"
+              >
                 <div className=" pl-4 flex flex-col gap-2">
                   <div className="relative text-sm italic  leading-relaxed">
                     <RiDoubleQuotesL className="absolute -left-2 -top-10 size-14 text-[#2F9B92]" />
-                    <p className="pl-5 pt-2 text-gray-500">
-                      Está incrível, adorámos mesmo! Muito profissional e
-                      detalhista. <br className="hidden sm:block" />A página
-                      Sobre Nós ficou linda.
+                    <p className="pl-5 pt-2 text-gray-600">
+                      Ficámos muito satisfeitas com o site. Está incrível,
+                      adorámos mesmo! Muito profissional e detalhista.
+                      <br className="hidden sm:block" />A página Sobre Nós ficou
+                      linda e transmite exatamente o que queríamos.
                     </p>
                   </div>
                   <p className="text-sm italic font-semibold font-Jost text-gray-700 mt-1 pl-5">
@@ -266,6 +452,37 @@ function ProjetoReal() {
           </div>
         </GlobalContainer>
       </section>
+
+      {previewImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Pré-visualização da imagem do site antigo"
+          onClick={() => setPreviewImage(null)}
+        >
+          <div
+            className="relative max-w-[95vw] max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute -top-3 -right-3 bg-white text-gray-700 hover:text-black rounded-full w-8 h-8 flex items-center justify-center shadow ring-1 ring-slate-200"
+              aria-label="Fechar pré-visualização"
+              onClick={() => setPreviewImage(null)}
+            >
+              ×
+            </button>
+            <img
+              src={previewImage.src}
+              alt={previewImage.alt}
+              className="block max-h-[90vh] max-w-[95vw] object-contain rounded-lg bg-white"
+            />
+            <p className="mt-2 text-center text-xs text-slate-200/90">
+              Premir Esc para fechar
+            </p>
+          </div>
+        </div>
+      )}
 
       <section className="shadow-lg border-b mt-2 lg:mb-20 xl:mb-0 lg:mt-4 lg:py-16 bg-gray-100">
         <GlobalContainer>

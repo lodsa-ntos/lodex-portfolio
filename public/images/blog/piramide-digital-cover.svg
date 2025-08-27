@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Pirâmide Digital — método LodeX</title>
+  <desc id="desc">Capa social para artigo: Base (Identidade + Website), Meio (Conteúdo + Confiança), Topo (Crescimento + Automação).</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A2A6B"/>
+      <stop offset="100%" stop-color="#3FA0FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Pyramid -->
+  <g transform="translate(200,60)" fill="#ffffff" opacity="0.95">
+    <polygon points="400,40 720,480 80,480" fill="#ffffff" opacity="0.12"/>
+    <line x1="400" y1="40" x2="80" y2="480" stroke="#ffffff" opacity="0.25"/>
+    <line x1="400" y1="40" x2="720" y2="480" stroke="#ffffff" opacity="0.25"/>
+
+    <!-- levels labels -->
+    <text x="400" y="120" text-anchor="middle" font-family="Inter, Segoe UI, Arial" font-size="28" fill="#ffffff">Topo • Crescimento + Automação</text>
+    <text x="400" y="270" text-anchor="middle" font-family="Inter, Segoe UI, Arial" font-size="28" fill="#ffffff">Meio • Conteúdo + Confiança</text>
+    <text x="400" y="420" text-anchor="middle" font-family="Inter, Segoe UI, Arial" font-size="28" fill="#ffffff">Base • Identidade + Website</text>
+  </g>
+
+  <!-- Title -->
+  <g fill="#ffffff">
+    <text x="70" y="80" font-family="Inter, Segoe UI, Arial" font-size="56" font-weight="700">Pirâmide Digital</text>
+    <text x="70" y="120" font-family="Inter, Segoe UI, Arial" font-size="26" opacity="0.9">Como estruturar o seu negócio online sem se perder em ferramentas</text>
+    <text x="70" y="160" font-family="Inter, Segoe UI, Arial" font-size="22" opacity="0.9">método LodeX • lodexstudio.com</text>
+  </g>
+</svg>

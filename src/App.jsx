@@ -15,6 +15,12 @@ import Blog from "./pages/blog/Blog";
 import GlobalProject from "./pages/projects/GlobalProject";
 import Conversar from "./pages/chat/Conversar";
 import CardResponsivo from "./pages/blog/article/CardResponsivo";
+import IAAjuda from "./pages/blog/article/IAAjuda";
+import PiramideDigital from "./pages/blog/article/PiramideDigital";
+import SmartUX from "./pages/blog/article/SmartUX";
+import BrandingIdentidade from "./pages/blog/article/BrandingIdentidade";
+import AutomacaoSimples from "./pages/blog/article/AutomacaoSimples";
+import DoBlogAoCliente from "./pages/blog/article/DoBlogAoCliente";
 import DataProtection from "./pages/legal/DataProtection";
 import TermsOfService from "./pages/legal/TermsOfService";
 import WebsiteTerms from "./pages/legal/WebsiteTerms";
@@ -36,6 +42,12 @@ function App() {
           <Route path="/portfolio" element={<GlobalProject />} />
           <Route path="/conversar" element={<Conversar />} />
           <Route path="/cardresponsivo" element={<CardResponsivo />} />
+          <Route path="/ia-que-ajuda" element={<IAAjuda />} />
+          <Route path="/piramide-digital" element={<PiramideDigital />} />
+          <Route path="/smart-ux" element={<SmartUX />} />
+          <Route path="/branding-identidade" element={<BrandingIdentidade />} />
+          <Route path="/automacao-simples" element={<AutomacaoSimples />} />
+          <Route path="/do-blog-ao-cliente" element={<DoBlogAoCliente />} />
           <Route path="/privacidade" element={<DataProtection />} />
           <Route path="/termos" element={<TermsOfService />} />
           <Route path="/cookies" element={<WebsiteTerms />} />
