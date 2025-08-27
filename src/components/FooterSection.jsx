@@ -52,24 +52,24 @@ function FooterSection() {
           </div>
 
           {/* Links */}
-          <div className="grid grid-cols-4 mt-6 md:mt-0 gap-x-4">
+          <div className="grid grid-cols-4 mt-6 md:mt-0 gap-x-1">
             <BubblyLink
-              to="/sobremim"
+              to="/about"
               className="text-[#4a5565] hover:text-gray-800 transition-colors no-underline"
             >
-              sobre
+              about
             </BubblyLink>
             <BubblyLink
-              to="/portfolio"
+              to="/case-studies"
               className="text-[#4a5565] hover:text-gray-800 transition-colors"
             >
-              portfólio
+              case studies
             </BubblyLink>
             <BubblyLink
-              to="/servicos"
+              to="/services"
               className="text-[#4a5565] hover:text-gray-800 transition-colors"
             >
-              serviços
+              services
             </BubblyLink>
             <BubblyLink
               to="/blog"
@@ -108,22 +108,24 @@ function FooterSection() {
             <div className="flex flex-col lg:flex-row items-center justify-between text-center gap-4 mt-6 ">
               <div className="flex flex-col lg:flex-row items-center gap-4">
                 <p className="text-[#4a5565] hover:text-gray-800 transition-colors duration-500 text-sm font-Satoshi">
-                  © {new Date().getFullYear()} Lodney Santos. Todos os direitos
-                  reservados.
+                  © {new Date().getFullYear()} Lodney Santos. All rights reserved.
                 </p>
-                <div className="flex items-center lg:flex-row gap-4 text-xs">
+                <div className="flex items-center lg:flex-row gap-2 text-xs">
+                  ·
                   <BubblyLink
                     to="/privacidade"
                     className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
                   >
-                    Privacidade
+                    Privacy Policy
                   </BubblyLink>
+                  ·
                   <BubblyLink
                     to="/termos"
                     className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
                   >
-                    Termos
+                    Terms
                   </BubblyLink>
+                  ·
                   <BubblyLink
                     to="/cookies"
                     className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
@@ -134,11 +136,7 @@ function FooterSection() {
               </div>
               <p className="text-[#4a5565] hover:text-gray-800 transition-colors text-sm font-Satoshi flex items-center justify-center gap-1">
                 <strong className="text-primario hover:text-secundario">
-                  Frontend Developer
-                </strong>{" "}
-                &{" "}
-                <strong className="text-primario hover:text-secundario">
-                  UI Designer
+                  Building digital experiences that grow.
                 </strong>
               </p>
             </div>

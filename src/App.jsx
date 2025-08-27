@@ -36,10 +36,10 @@ function App() {
           <Route path="/gestosamaveis" element={<ProjetoReal />} />
           <Route path="/academico" element={<Academico />} />
           <Route path="/launchpeak" element={<ConceitoPessoal />} />
-          <Route path="/sobremim" element={<SobreMim />} />
-          <Route path="/servicos" element={<Services />} />
+          <Route path="/about" element={<SobreMim />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/portfolio" element={<GlobalProject />} />
+          <Route path="/case-studies" element={<GlobalProject />} />
           <Route path="/conversar" element={<Conversar />} />
           <Route path="/cardresponsivo" element={<CardResponsivo />} />
           <Route path="/ia-que-ajuda" element={<IAAjuda />} />
@@ -48,8 +48,8 @@ function App() {
           <Route path="/branding-identidade" element={<BrandingIdentidade />} />
           <Route path="/automacao-simples" element={<AutomacaoSimples />} />
           <Route path="/do-blog-ao-cliente" element={<DoBlogAoCliente />} />
-          <Route path="/privacidade" element={<DataProtection />} />
-          <Route path="/termos" element={<TermsOfService />} />
+          <Route path="/privacypolicy" element={<DataProtection />} />
+          <Route path="/terms" element={<TermsOfService />} />
           <Route path="/cookies" element={<WebsiteTerms />} />
           <Route path="*" element={<NotFound />} />
         </Route>
