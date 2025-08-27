@@ -18,7 +18,7 @@ function WorksSection() {
             id="projetos"
             className="text-sm whitespace-nowrap px-2 uppercase font-bold text-[#777] tracking-wider text-center"
           >
-            O que tenho criado ultimamente
+            Latest Projects
           </h1>
 
           {/* Top Line */}
