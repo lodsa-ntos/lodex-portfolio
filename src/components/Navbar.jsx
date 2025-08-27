@@ -362,7 +362,7 @@ function Navbar() {
                         aria-hidden="true"
                       />
                     </span>{" "}
-                    Iniciar projeto <IoArrowForward aria-hidden="true" />
+                    Start Project <IoArrowForward aria-hidden="true" />
                   </BubblyLink>
                 </div>
               </div>
