@@ -51,10 +51,10 @@ function Navbar() {
 
   const links = [
     { label: "Home", to: "/" },
-    { label: "Portfólio", to: "/portfolio" },
-    { label: "Serviços", to: "/servicos" },
+    { label: "Cases Studies", to: "/case-studies" },
+    { label: "Services", to: "/services" },
     { label: "Blog", to: "/blog" },
-    { label: "Sobre mim", to: "/sobremim" },
+    { label: "About me", to: "/about" },
   ];
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
