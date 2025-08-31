@@ -12,6 +12,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { BubblyLink } from "../library/BubblyLink";
 import { useLocation } from "react-router-dom";
+import { BiSolidCard } from "react-icons/bi";
 
 import { fadeIn } from "../utils/motion";
 // eslint-disable-next-line no-unused-vars
@@ -45,6 +46,14 @@ function Navbar() {
       icon: FaLinkedinIn,
       hoverClass: `${
         scrolled ? "hover:scale-105" : "hover:fill-primario hover:scale-105"
+      }`,
+    },
+    {
+      href: "https://lodexstudio-cards.vercel.app/",
+      label: "Cards (abre em nova aba)",
+      icon: BiSolidCard,
+      hoverClass: `${
+        scrolled ? "hover:scale-105" : "hover:fill-indigo-500 hover:scale-105"
       }`,
     },
   ];
