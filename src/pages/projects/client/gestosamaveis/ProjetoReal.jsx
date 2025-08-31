@@ -64,22 +64,22 @@ function ProjetoReal() {
     <>
       <Helmet>
         <title>
-          Gestos Amáveis — Website Profissional para Cuidadores | LodeX Studio
+          Gestos Amáveis — Professional Home‑Care Website | LodeX Studio
         </title>
         <meta
           name="description"
-          content="Website desenvolvido pela LodeX Studio para a empresa real Gestos Amáveis. Design leve, acessível e com foco em empatia e navegação simples."
+          content="Website developed by LodeX Studio for the real client Gestos Amáveis. Lightweight, accessible design focused on empathy and clear navigation."
         />
-        {/* Review JSON-LD deste projeto */}
+        {/* Review JSON-LD for this project */}
         <script type="application/ld+json">{`
 {
   "@context": "https://schema.org",
   "@type": "Review",
   "itemReviewed": {
     "@type": "CreativeWork",
-    "name": "Website Gestos Amáveis"
+    "name": "Gestos Amáveis Website"
   },
-  "reviewBody": "Ficámos muito satisfeitas com o site. Está incrível, adorámos mesmo! Muito profissional e detalhista. A página Sobre Nós ficou linda e transmite exatamente o que queríamos.",
+  "reviewBody": "We were very pleased with the website. It looks amazing — we truly loved it! Very professional and detail‑oriented. The About Us page is beautiful and expresses exactly what we wanted.",
   "reviewRating": {
     "@type": "Rating",
     "ratingValue": "5",
@@ -104,31 +104,31 @@ function ProjetoReal() {
             <div className="hidden md:flex flex-col gap-4">
               <img
                 src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-herosection.jpg"
-                alt="Gestos Amáveis - Hero Section"
+                alt="Gestos Amáveis — Hero section"
                 className="rounded-lg"
               />
 
               <img
                 src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-home-scroll.jpg"
-                alt="Gestos Amáveis - Página inicial com scroll"
+                alt="Gestos Amáveis — Homepage with scroll"
                 className="rounded-lg"
               />
 
               <img
                 src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-sobre.jpg"
-                alt="Gestos Amáveis - Seção sobre"
+                alt="Gestos Amáveis — About section"
                 className="rounded-lg"
               />
 
               <img
                 src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-servicos.jpg"
-                alt="Gestos Amáveis - Seção serviços avulso"
+                alt="Gestos Amáveis — Services section"
                 className="rounded-lg"
               />
 
               <img
                 src="images/projetos/cliente/gestosamaveis/sobregestosamaveis/bg-contact-form.jpg"
-                alt="Gestos Amáveis - Contato"
+                alt="Gestos Amáveis — Contact"
                 className="rounded-lg"
               />
             </div>
@@ -141,14 +141,14 @@ function ProjetoReal() {
                 Gestos Amáveis
               </h1>
               <p className="text-xs mb-1 text-gray-500 leading-relaxed">
-                Website institucional para cuidados domiciliários com foco em
-                empatia, leveza e clareza.
+                Institutional home‑care website focused on empathy, lightness,
+                and clarity.
               </p>
 
               <div className="flex items-center justify-start gap-2.5">
                 <div className="ring-1 ring-inset bg-green-50 text-[#2F9B92] ring-[#2F9B92] text-xs px-2 py-1 rounded-full flex items-center justify-end text-end gap-1 w-fit hover:scale-105">
                   <TbContract />
-                  Projeto real • Cliente
+                  Real project • Client
                 </div>
 
                 <FaReact
@@ -166,47 +166,46 @@ function ProjetoReal() {
               </div>
 
               <h3 className="mb-6 mt-6 text-gray-700 text-lg leading-relaxed">
-                Website desenvolvido para a{" "}
-                <strong className="text-[#2F9B92]">Gestos Amáveis</strong>,
-                empresa portuguesa especializada em cuidados domiciliares.
+                Website developed for{" "}
+                <strong className="text-[#2F9B92]">Gestos Amáveis</strong>, a
+                Portuguese company specialized in home care.
               </h3>
 
               <p className="mb-6 text-gray-600 text-base leading-relaxed">
-                O projeto foi pensado para transmitir empatia e acessibilidade
-                desde o primeiro clique, de forma a respeitar a identidade
-                visual da marca com foco em navegação mobile e clareza textual.
+                The project was designed to convey empathy and accessibility
+                from the first click, while respecting the brand identity with a
+                focus on mobile navigation and clear copy.
                 <br />
-                <br />A página reúne as principais áreas, empresa, serviços,
-                funcionamento e contato, em uma navegação fluida e leve. O
-                código foi otimizado para bom desempenho, carregamento rápido e
-                estrutura escalável.
+                <br />The site brings together the key areas — company,
+                services, how it works, and contact — in a smooth, lightweight
+                navigation. The code was optimized for performance, fast loads,
+                and a scalable structure.
                 <br />
                 <br />
-                Atualmente o site está publicado e em uso, com conteúdo gerido
-                pela própria cliente. Foi um projeto real que uniu escuta,
-                colaboração e compromisso, da estrutura até os detalhes finais.
+                The site is now live and in use, with content managed by the
+                client. This real project combined listening, collaboration, and
+                commitment, from structure to final details.
               </p>
 
-              {/* Antes, solução e impacto — em texto com imagens pequenas do site antigo */}
+        {/* Before, solution and impact — text with small images of the old site */}
               <div className="mb-6" data-track-section="project_antes_depois">
                 <h2 className="text-gray-700 text-lg font-medium mb-3">
-                  Antes • A solução • O impacto
+          Before • The solution • The impact
                 </h2>
 
-                {/* Antes */}
+                {/* Before */}
                 <p className="text-xs uppercase tracking-wide text-slate-500">
-                  Antes
+                  Before
                 </p>
                 <p className="mt-1 text-sm text-gray-600 leading-relaxed">
-                  A Gestos Amáveis utilizava um site no Wix, com design genérico
-                  e sem ligação ao domínio próprio. Isso limitava a visibilidade
-                  da marca e transmitia pouca confiança para potenciais
-                  clientes.
+                  Gestos Amáveis used a Wix site with a generic design and no
+                  connection to their own domain. That limited brand visibility
+                  and conveyed little trust to potential clients.
                 </p>
                 <div className="mt-3 flex flex-wrap items-center gap-3">
                   <img
                     src="/Gestos Amáveis antes/gestosamaveis-landing-antes.png"
-                    alt="Página inicial do site antigo da Gestos Amáveis"
+                    alt="Old website homepage of Gestos Amáveis"
                     className="h-16 w-28 object-cover rounded-md ring-1 ring-slate-200 bg-white cursor-zoom-in"
                     loading="lazy"
                     role="button"
@@ -214,21 +213,21 @@ function ProjetoReal() {
                     onClick={() =>
                       openPreview(
                         "/Gestos Amáveis antes/gestosamaveis-landing-antes.png",
-                        "Página inicial do site antigo da Gestos Amáveis"
+                        "Old website homepage of Gestos Amáveis"
                       )
                     }
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ")
                         openPreview(
                           "/Gestos Amáveis antes/gestosamaveis-landing-antes.png",
-                          "Página inicial do site antigo da Gestos Amáveis"
+                          "Old website homepage of Gestos Amáveis"
                         );
                     }}
-                    aria-label="Abrir visualização da página inicial antiga"
+                    aria-label="Open preview of the old homepage"
                   />
                   <img
                     src="/Gestos Amáveis antes/gestosamaveis-sobrenos-antes.png"
-                    alt="Secção Sobre Nós do site antigo"
+                    alt="Old About Us section"
                     className="h-16 w-28 object-cover rounded-md ring-1 ring-slate-200 bg-white cursor-zoom-in"
                     loading="lazy"
                     role="button"
@@ -236,21 +235,21 @@ function ProjetoReal() {
                     onClick={() =>
                       openPreview(
                         "/Gestos Amáveis antes/gestosamaveis-sobrenos-antes.png",
-                        "Secção Sobre Nós do site antigo"
+                        "Old About Us section"
                       )
                     }
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ")
                         openPreview(
                           "/Gestos Amáveis antes/gestosamaveis-sobrenos-antes.png",
-                          "Secção Sobre Nós do site antigo"
+                          "Old About Us section"
                         );
                     }}
-                    aria-label="Abrir visualização da secção Sobre Nós antiga"
+                    aria-label="Open preview of the old About Us section"
                   />
                   <img
                     src="/Gestos Amáveis antes/gestosamaveis-contactoform-antes.png"
-                    alt="Formulário de contacto do site antigo"
+                    alt="Old contact form"
                     className="h-16 w-28 object-cover rounded-md ring-1 ring-slate-200 bg-white cursor-zoom-in"
                     loading="lazy"
                     role="button"
@@ -258,40 +257,40 @@ function ProjetoReal() {
                     onClick={() =>
                       openPreview(
                         "/Gestos Amáveis antes/gestosamaveis-contactoform-antes.png",
-                        "Formulário de contacto do site antigo"
+                        "Old contact form"
                       )
                     }
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ")
                         openPreview(
                           "/Gestos Amáveis antes/gestosamaveis-contactoform-antes.png",
-                          "Formulário de contacto do site antigo"
+                          "Old contact form"
                         );
                     }}
-                    aria-label="Abrir visualização do formulário de contacto antigo"
+                    aria-label="Open preview of the old contact form"
                   />
                 </div>
 
-                {/* A solução */}
+                {/* The solution */}
                 <p className="mt-5 text-xs uppercase tracking-wide text-slate-500">
-                  A solução
+                  The solution
                 </p>
                 <p className="mt-1 text-sm text-gray-700 leading-relaxed">
-                  Redesenhei a experiência e a identidade visual, organizando o
-                  conteúdo em páginas claras (serviços, pacotes, testemunhos e
-                  contactos). O site foi publicado na Vercel com o domínio
-                  oficial, otimizado para carregamento rápido, escalabilidade e
-                  acessibilidade em mobile e desktop.
+                  I redesigned the experience and visual identity, organizing
+                  content into clear pages (services, plans, testimonials, and
+                  contacts). The site was deployed on Vercel on the official
+                  domain, optimized for fast loads, scalability, and
+                  accessibility on mobile and desktop.
                 </p>
 
-                {/* O impacto */}
+                {/* The impact */}
                 <p className="mt-5 text-xs uppercase tracking-wide text-slate-500">
-                  O impacto
+                  The impact
                 </p>
                 <p className="mt-1 text-sm text-gray-700 leading-relaxed">
-                  O novo website profissional aumentou a confiança da marca,
-                  melhorou a presença no Google e facilitou os contactos de
-                  interessados. O feedback da cliente foi extremamente positivo.
+                  The new professional website increased brand trust, improved
+                  Google presence, and made it easier for prospects to get in
+                  touch. Client feedback was extremely positive.
                 </p>
               </div>
 
@@ -299,7 +298,7 @@ function ProjetoReal() {
                 <ul className="space-y-4 text-left text-gray-500 dark:text-gray-400">
                   <h1 className="flex items-center justify-start gap-1 text-[#6a7282] font-[500] text-sm">
                     <RxDrawingPinFilled className="text-[#2F9B92]" />{" "}
-                    Tecnologias e Estrutura
+                    Technologies and structure
                   </h1>
                   <li className="flex items-center space-x-3 rtl:space-x-reverse">
                     <span class="size-5 flex justify-center items-center rounded-full bg-green-50 text-[#2F9B92]">
@@ -318,9 +317,7 @@ function ProjetoReal() {
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </span>
-                    <span className="text-sm">
-                      Responsivo em todos os dispositivos
-                    </span>
+                    <span className="text-sm">Responsive on all devices</span>
                   </li>
 
                   <li className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -340,9 +337,7 @@ function ProjetoReal() {
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </span>
-                    <span className="text-sm">
-                      Navegação simples e intuitiva
-                    </span>
+                    <span className="text-sm">Simple, intuitive navigation</span>
                   </li>
 
                   <li className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -362,9 +357,7 @@ function ProjetoReal() {
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </span>
-                    <span className="text-sm">
-                      Layout pensado para escalabilidade
-                    </span>
+                    <span className="text-sm">Layout designed for scalability</span>
                   </li>
 
                   <li className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -384,9 +377,7 @@ function ProjetoReal() {
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </span>
-                    <span className="text-sm">
-                      Código modular e reutilizável
-                    </span>
+                    <span className="text-sm">Modular, reusable code</span>
                   </li>
 
                   <li className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -406,16 +397,14 @@ function ProjetoReal() {
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </span>
-                    <span className="text-sm">
-                      Integração futura com CMS possível
-                    </span>
+                    <span className="text-sm">Future CMS integration possible</span>
                   </li>
                 </ul>
               </div>
 
               <button
                 className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
-                aria-label="Explorar projetos"
+                aria-label="Explore projects"
                 data-umami-event="cta_ver_site_online"
                 onClick={() =>
                   trackCtaClick("cta_ver_site_online", {
@@ -425,7 +414,7 @@ function ProjetoReal() {
               >
                 <SiQuicklook className="text-gray-200" />
                 <a href="https://gestosamaveis.pt" target="_blank">
-                  Ver site online
+                  View website
                 </a>
               </button>
 
@@ -437,14 +426,14 @@ function ProjetoReal() {
                   <div className="relative text-sm italic  leading-relaxed">
                     <RiDoubleQuotesL className="absolute -left-2 -top-10 size-14 text-[#2F9B92]" />
                     <p className="pl-5 pt-2 text-gray-600">
-                      Ficámos muito satisfeitas com o site. Está incrível,
-                      adorámos mesmo! Muito profissional e detalhista.
-                      <br className="hidden sm:block" />A página Sobre Nós ficou
-                      linda e transmite exatamente o que queríamos.
+                      We were very pleased with the website. It looks amazing —
+                      we truly loved it! Very professional and detail‑oriented.
+                      <br className="hidden sm:block" />The About Us page looks
+                      beautiful and conveys exactly what we wanted.
                     </p>
                   </div>
                   <p className="text-sm italic font-semibold font-Jost text-gray-700 mt-1 pl-5">
-                    — Feedback da cliente Gestos Amáveis
+                    — Client feedback, Gestos Amáveis
                   </p>
                 </div>
               </div>
@@ -458,7 +447,7 @@ function ProjetoReal() {
           className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
-          aria-label="Pré-visualização da imagem do site antigo"
+      aria-label="Preview of the old site image"
           onClick={() => setPreviewImage(null)}
         >
           <div
@@ -467,7 +456,7 @@ function ProjetoReal() {
           >
             <button
               className="absolute -top-3 -right-3 bg-white text-gray-700 hover:text-black rounded-full w-8 h-8 flex items-center justify-center shadow ring-1 ring-slate-200"
-              aria-label="Fechar pré-visualização"
+        aria-label="Close preview"
               onClick={() => setPreviewImage(null)}
             >
               ×
@@ -478,7 +467,7 @@ function ProjetoReal() {
               className="block max-h-[90vh] max-w-[95vw] object-contain rounded-lg bg-white"
             />
             <p className="mt-2 text-center text-xs text-slate-200/90">
-              Premir Esc para fechar
+        Press Esc to close
             </p>
           </div>
         </div>
@@ -495,7 +484,7 @@ function ProjetoReal() {
               id="projetos"
               className="mt-10 lg:mt-0 text-xs lg:text-sm whitespace-nowrap lg:whitespace-normal w-[50%] mx-auto uppercase font-bold text-[#777] tracking-wider text-center"
             >
-              MAIS DO MEU PORTFÓLIO
+              MORE FROM MY PORTFOLIO
             </h1>
 
             {/* Top Line */}
@@ -519,7 +508,7 @@ function ProjetoReal() {
                       href="#preview"
                       className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-500 ease-in-out"
                     >
-                      <LiaUniversitySolid /> Projeto académico
+                      <LiaUniversitySolid /> Academic project
                     </a>
                   </div>
                 </div>
@@ -527,17 +516,16 @@ function ProjetoReal() {
                 <img
                   className="transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform group-hover:scale-110"
                   src="images/portfolio/android.svg"
-                  alt="biblioteca-escolar-camarate"
+                  alt="camarate-school-library"
                 />
               </div>
               <div className="p-4">
                 <h6 className="mb-2 text-slate-800 text-xl font-semibold">
-                  Biblioteca Escolar Camarate
+                  Camarate School Library
                 </h6>
                 <p className="text-slate-600 leading-normal font-light">
-                  Aplicação mobile desenvolvida como projeto final de curso, com
-                  base numa colaboração real com a Escola Secundária de
-                  Camarate.
+                  Mobile app developed as a final degree project in real
+                  collaboration with Camarate Secondary School.
                 </p>
               </div>
               <div className="px-4 pb-4 pt-0 mt-2">
@@ -545,7 +533,7 @@ function ProjetoReal() {
                   class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none duration-500"
                   type="button"
                 >
-                  Ver caso de estudo
+                  View case study
                 </button>
               </div>
             </BubblyLink>
@@ -566,7 +554,7 @@ function ProjetoReal() {
                       className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-200 ease-in-out"
                     >
                       <AiOutlineFileProtect className="text-blue-600" />{" "}
-                      Conceito pessoal
+                      Personal concept
                     </a>
                   </div>
                 </div>
@@ -582,8 +570,8 @@ function ProjetoReal() {
                   LaunchPeack
                 </h6>
                 <p className="text-slate-600 leading-normal font-light">
-                  Landing page criada como conceito para uma solução fictícia.
-                  Feita com React, Tailwind CSS e Framer Motion.
+                  Concept landing page for a fictional solution. Built with
+                  React, Tailwind CSS, and Framer Motion.
                 </p>
               </div>
               <div className="px-4 pb-4 pt-0 mt-2">
@@ -591,7 +579,7 @@ function ProjetoReal() {
                   className="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
                 >
-                  Ver caso de estudo
+                  View case study
                 </button>
               </div>
             </BubblyLink>

@@ -113,14 +113,14 @@ function FooterSection() {
                 <div className="flex items-center lg:flex-row gap-2 text-xs">
                   ·
                   <BubblyLink
-                    to="/privacidade"
+                    to="/privacypolicy"
                     className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
                   >
                     Privacy Policy
                   </BubblyLink>
                   ·
                   <BubblyLink
-                    to="/termos"
+                    to="/terms"
                     className="text-[#4a5565] hover:text-gray-800 transition-colors duration-300"
                   >
                     Terms

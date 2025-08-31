@@ -6,153 +6,159 @@ function PrivacyPolicy() {
   return (
     <>
       <Helmet>
-        <title>Política de Privacidade | LodeX Studio</title>
+        <title>Privacy Policy | LodeX Studio</title>
         <meta
           name="description"
-          content="Política de privacidade da LodeX Studio. Como recolhemos, utilizamos e protegemos os seus dados pessoais."
+          content="Learn how LodeX Studio collects, uses, and protects your personal data."
         />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 
       <section className="pt-36 pb-24 min-h-screen">
         <GlobalContainer>
-          <div className="">
+          <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-              Política de Privacidade
+              Privacy Policy
             </h1>
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-8">
               <p className="text-lg text-gray-600 mb-8">
-                <strong>Última atualização:</strong> 15 de agosto de 2025
+                <strong>Last updated:</strong> 30 August 2025
               </p>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  1. Informações que Recolhemos
+                  1. Introduction
                 </h2>
                 <p>
-                  Recolhemos informações que você nos fornece diretamente quando:
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Entra em contacto através dos nossos formulários</li>
-                  <li>Subscreve a nossa newsletter</li>
-                  <li>Interage com o nosso website</li>
-                </ul>
-                <p>
-                  As informações podem incluir: nome, endereço de email, número
-                  de telefone, mensagem e outras informações que escolha
-                  partilhar connosco.
+                  We respect your privacy and are committed to protecting your
+                  personal data. This policy explains how we collect, use,
+                  disclose, and protect your information.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  2. Como Utilizamos as Suas Informações
+                  2. Data we collect
                 </h2>
-                <p>Utilizamos as informações coletadas para:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Responder às suas consultas e pedidos</li>
-                  <li>Fornecer os nossos serviços</li>
-                  <li>Enviar newsletters (apenas com o seu consentimento)</li>
-                  <li>Melhorar o nosso website e serviços</li>
-                  <li>Cumprir obrigações legais</li>
+                  <li>Contact data (name, email, phone)</li>
+                  <li>Technical data (IP address, browser type)</li>
+                  <li>Usage data (pages visited, interactions)</li>
+                  <li>Data you provide via forms</li>
                 </ul>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  3. Partilha de Informações
+                  3. How we use your data
                 </h2>
-                <p>
-                  Não vendemos, alugamos ou partilhamos as suas informações
-                  pessoais com terceiros, exceto quando:
-                </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Necessário para fornecer os nossos serviços</li>
-                  <li>Exigido por lei</li>
-                  <li>Com o seu consentimento explícito</li>
+                  <li>Respond to inquiries and deliver services</li>
+                  <li>Improve the website and user experience</li>
+                  <li>Send marketing communications where permitted</li>
+                  <li>Comply with legal obligations</li>
                 </ul>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  4. Cookies e Tecnologias Similares
+                  4. Legal bases for processing
                 </h2>
                 <p>
-                  Utilizamos cookies e tecnologias similares para melhorar a sua
-                  experiência no nosso website. Os cookies são pequenos
-                  ficheiros armazenados no seu dispositivo que nos ajudam a:
+                  Depending on the activity, processing may be based on your
+                  consent, performance of a contract, legitimate interests, or
+                  compliance with a legal obligation.
                 </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  5. Sharing your data
+                </h2>
+                <p>
+                  We may share data with service providers who help us operate
+                  the website, analyse traffic, or provide functionality (e.g.,
+                  hosting, analytics, chat).
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  6. Data retention
+                </h2>
+                <p>
+                  We retain personal data only for as long as necessary to
+                  fulfil the purposes for which it was collected, unless a
+                  longer retention period is required by law.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  7. Your rights
+                </h2>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Analisar o tráfego do website</li>
-                  <li>Personalizar conteúdo</li>
-                  <li>Melhorar a funcionalidade do site</li>
+                  <li>Access, correct, or delete your data</li>
+                  <li>Withdraw consent where applicable</li>
+                  <li>Object to processing or request restriction</li>
+                  <li>Data portability where applicable</li>
                 </ul>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  5. Segurança dos Dados
+                  8. Cookies and similar technologies
                 </h2>
                 <p>
-                  Implementamos medidas de segurança adequadas para proteger as
-                  suas informações pessoais contra acesso, alteração, divulgação
-                  ou destruição não autorizados.
+                  We use cookies to enhance your experience. See our
+                  <a href="/legal/cookies">Cookie Policy</a> to learn more.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  6. Os Seus Direitos
-                </h2>
-                <p>De acordo com o RGPD, você tem o direito de:</p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Aceder às suas informações pessoais</li>
-                  <li>Rectificar informações incorretas</li>
-                  <li>Solicitar a eliminação dos seus dados</li>
-                  <li>Retirar o consentimento a qualquer momento</li>
-                  <li>Portar os seus dados</li>
-                </ul>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  7. Retenção de Dados
+                  9. International transfers
                 </h2>
                 <p>
-                  Mantemos as suas informações pessoais apenas pelo tempo
-                  necessário para cumprir os propósitos descritos nesta
-                  política, a menos que seja exigido um período de retenção mais
-                  longo por lei.
+                  Your data may be transferred and processed outside your
+                  country of residence. We take appropriate measures to protect
+                  data as required by applicable law.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  8. Contacto
+                  10. Security
                 </h2>
                 <p>
-                  Se tem questões sobre esta Política de Privacidade ou sobre
-                  como tratamos os seus dados pessoais, pode contactar-nos:
+                  We implement appropriate technical and organisational measures
+                  to protect your data against unauthorised access, alteration,
+                  disclosure, or destruction.
                 </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  11. Contact
+                </h2>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <p>
                     <strong>LodeX Studio</strong>
                   </p>
                   <p>Email: lodexstudio@gmail.com</p>
-                  <p>Telefone: +351 935 895 551</p>
-                  <p>Morada: Sacavém, Lisboa, Portugal</p>
+                  <p>Phone: +351 935 895 551</p>
+                  <p>Address: Sacavém, Lisbon, Portugal</p>
                 </div>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  9. Alterações a Esta Política
+                  12. Updates to this policy
                 </h2>
                 <p>
-                  Podemos atualizar esta Política de Privacidade periodicamente.
-                  Notificaremos sobre alterações significativas publicando a
-                  nova política nesta página com uma data de atualização.
+                  We may update this Privacy Policy from time to time. Please
+                  review this page regularly.
                 </p>
               </section>
             </div>

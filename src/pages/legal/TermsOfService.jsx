@@ -6,223 +6,199 @@ function TermsOfService() {
   return (
     <>
       <Helmet>
-        <title>Termos de Serviço | LodeX Studio</title>
+        <title>Terms of Service | LodeX Studio</title>
         <meta
           name="description"
-          content="Termos de serviço da LodeX Studio. Condições de utilização dos nossos serviços de desenvolvimento web."
+          content="LodeX Studio Terms of Service. Conditions for using our web development services."
         />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 
       <section className="pt-36 pb-24 min-h-screen">
         <GlobalContainer>
-          <div className="">
+          <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-              Termos de Serviço
+              Terms of Service
             </h1>
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-8">
               <p className="text-lg text-gray-600 mb-8">
-                <strong>Última atualização:</strong> 15 de agosto de 2025
+                <strong>Last updated:</strong> 30 August 2025
               </p>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  1. Aceitação dos Termos
+                  1. Acceptance of terms
                 </h2>
                 <p>
-                  Ao aceder e utilizar os serviços da LodeX Studio, você
-                  concorda em ficar vinculado por estes Termos de Serviço. <br />Se
-                  não concordar com qualquer parte destes termos, não deve
-                  utilizar os nossos serviços.
+                  By accessing and using LodeX Studio's services, you agree to be
+                  bound by these Terms of Service. If you do not agree to any
+                  part of these terms, you should not use our services.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  2. Descrição dos Serviços
+                  2. Description of services
                 </h2>
-                <p>A LodeX Studio oferece os seguintes serviços:</p>
+                <p>LodeX Studio provides the following services:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Desenvolvimento de websites e landing pages</li>
-                  <li>Criação de portfólios profissionais</li>
-                  <li>Redesign de websites existentes</li>
-                  <li>Consultoria em UX/UI Design</li>
-                  <li>Manutenção e suporte técnico</li>
+                  <li>Website and landing page development</li>
+                  <li>Professional portfolio creation</li>
+                  <li>Redesign of existing websites</li>
+                  <li>UX/UI design consulting</li>
+                  <li>Maintenance and technical support</li>
                 </ul>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  3. Processo de Trabalho
+                  3. Work process
                 </h2>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-gray-900">
-                    3.1 Consulta Inicial
-                  </h3>
+                  <h3 className="text-xl font-medium text-gray-900">3.1 Initial consultation</h3>
                   <p>
-                    Todo projeto começa com uma consulta gratuita para entender
-                    as suas necessidades e objectivos.
+                    Every project begins with a free consultation to understand
+                    your needs and goals.
                   </p>
 
-                  <h3 className="text-xl font-medium text-gray-900">
-                    3.2 Proposta e Orçamento
-                  </h3>
+                  <h3 className="text-xl font-medium text-gray-900">3.2 Proposal and quote</h3>
                   <p>
-                    Após a consulta, fornecemos uma proposta detalhada com
-                    prazos e custos.
+                    After the consultation, we provide a detailed proposal with
+                    timeline and costs.
                   </p>
 
-                  <h3 className="text-xl font-medium text-gray-900">
-                    3.3 Desenvolvimento
-                  </h3>
+                  <h3 className="text-xl font-medium text-gray-900">3.3 Development</h3>
                   <p>
-                    O trabalho inicia após a aprovação da proposta e pagamento
-                    inicial (50%).
+                    Work starts after the proposal is approved and the initial
+                    payment (50%) is made.
                   </p>
 
-                  <h3 className="text-xl font-medium text-gray-900">
-                    3.4 Entrega e Pagamento Final
-                  </h3>
+                  <h3 className="text-xl font-medium text-gray-900">3.4 Delivery and final payment</h3>
                   <p>
-                    O restante pagamento (50%) é devido na entrega do projeto
-                    completo.
+                    The remaining payment (50%) is due upon delivery of the
+                    completed project.
                   </p>
                 </div>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  4. Pagamentos e Reembolsos
+                  4. Payments and refunds
                 </h2>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-gray-900">
-                    4.1 Estrutura de Pagamento
-                  </h3>
+                  <h3 className="text-xl font-medium text-gray-900">4.1 Payment structure</h3>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>50% no início do projeto</li>
-                    <li>50% na entrega final</li>
+                    <li>50% at project start</li>
+                    <li>50% upon final delivery</li>
                   </ul>
 
-                  <h3 className="text-xl font-medium text-gray-900">
-                    4.2 Política de Reembolso
-                  </h3>
+                  <h3 className="text-xl font-medium text-gray-900">4.2 Refund policy</h3>
                   <p>
-                    Os reembolsos são analisados caso a caso. Se o trabalho já
-                    foi iniciado, o reembolso será proporcional ao trabalho não
-                    realizado.
+                    Refunds are assessed on a case-by-case basis. If work has
+                    already begun, any refund will be proportional to the work not
+                    performed.
                   </p>
                 </div>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  5. Propriedade Intelectual
+                  5. Intellectual property
                 </h2>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-gray-900">
-                    5.1 Direitos do Cliente
-                  </h3>
+                  <h3 className="text-xl font-medium text-gray-900">5.1 Client rights</h3>
                   <p>
-                    Após o pagamento completo, o cliente detém os direitos sobre
-                    o design final e código desenvolvido especificamente para o
-                    seu projeto.
+                    Upon full payment, the client owns the rights to the final
+                    design and code developed specifically for their project.
                   </p>
 
-                  <h3 className="text-xl font-medium text-gray-900">
-                    5.2 Direitos da LodeX Studio
-                  </h3>
+                  <h3 className="text-xl font-medium text-gray-900">5.2 LodeX Studio rights</h3>
                   <p>
-                    Reservamos o direito de utilizar o trabalho realizado no
-                    nosso portfólio e materiais promocionais, salvo acordo em
-                    contrário.
+                    We reserve the right to showcase the work in our portfolio and
+                    promotional materials, unless otherwise agreed in writing.
                   </p>
                 </div>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  6. Responsabilidades do Cliente
+                  6. Client responsibilities
                 </h2>
-                <p>O cliente compromete-se a:</p>
+                <p>The client agrees to:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>
-                    Fornecer conteúdo e informações necessárias em tempo útil
-                  </li>
-                  <li>
-                    Responder a pedidos de feedback dentro de 7 dias úteis
-                  </li>
-                  <li>Efectuar pagamentos nos prazos acordados</li>
-                  <li>Respeitar os direitos de propriedade intelectual</li>
+                  <li>Provide necessary content and information on time</li>
+                  <li>Respond to feedback requests within 7 business days</li>
+                  <li>Make payments within agreed timelines</li>
+                  <li>Respect intellectual property rights</li>
                 </ul>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  7. Limitação de Responsabilidade
+                  7. Limitation of liability
                 </h2>
                 <p>
-                  A LodeX Studio não será responsável por danos indirectos,
-                  especiais, incidentais ou consequenciais resultantes da
-                  utilização dos nossos serviços.
+                  LodeX Studio will not be liable for any indirect, special,
+                  incidental, or consequential damages arising from the use of our
+                  services.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  8. Suporte e Manutenção
+                  8. Support and maintenance
                 </h2>
                 <p>
-                  Oferecemos 30 dias de suporte gratuito após a entrega do
-                  projeto para correção de bugs. <br />Alterações de conteúdo ou
-                  funcionalidades estão sujeitas a orçamento separado.
+                  We offer 30 days of free support after project delivery to fix
+                  bugs. Content or feature changes are subject to separate quotes.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  9. Rescisão
+                  9. Termination
                 </h2>
                 <p>
-                  Qualquer parte pode rescindir o acordo com aviso prévio de 7
-                  dias. Em caso de rescisão, o pagamento será devido pelo
-                  trabalho já realizado.
+                  Either party may terminate the agreement with 7 days' prior
+                  notice. In case of termination, payment is due for work already
+                  performed.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  10. Lei Aplicável
+                  10. Governing law
                 </h2>
                 <p>
-                  Estes termos são regidos pelas leis portuguesas. Qualquer
-                  disputa será resolvida nos tribunais competentes em Portugal.
+                  These terms are governed by Portuguese law. Any dispute will be
+                  resolved in the competent courts in Portugal.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  11. Contacto
+                  11. Contact
                 </h2>
-                <p>Para questões sobre estes Termos de Serviço:</p>
+                <p>For questions about these Terms of Service:</p>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <p>
                     <strong>LodeX Studio</strong>
                   </p>
                   <p>Email: lodexstudio@gmail.com</p>
-                  <p>Telefone: +351 935 895 551</p>
-                  <p>Morada: Sacavém, Lisboa, Portugal</p>
+                  <p>Phone: +351 935 895 551</p>
+                  <p>Address: Sacavém, Lisbon, Portugal</p>
                 </div>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  12. Alterações aos Termos
+                  12. Changes to these terms
                 </h2>
                 <p>
-                  Reservamos o direito de modificar estes termos a qualquer
-                  momento. As alterações serão comunicadas através do website <br />e
-                  entrarão em vigor 30 dias após a publicação.
+                  We reserve the right to modify these terms at any time. Changes
+                  will be communicated via the website and will take effect 30 days
+                  after publication.
                 </p>
               </section>
             </div>

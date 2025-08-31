@@ -37,12 +37,12 @@ function Academico() {
     <>
       <Helmet>
         <title>
-          Biblioteca Escolar Camarate — Experiência mobile em Flutter, simples e
-          funcional | LodeX Studio
+          Camarate School Library — Simple, functional Flutter mobile experience
+          | LodeX Studio
         </title>
         <meta
           name="description"
-          content="Aplicação móvel desenvolvida pela LodeX Studio em Flutter para a Biblioteca Escolar de Camarate. Projeto real com foco em organização, acessibilidade e experiência intuitiva para estudantes."
+          content="Mobile app developed by LodeX Studio in Flutter for the Camarate School Library. Real collaboration focused on organization, accessibility, and an intuitive student experience."
         />
       </Helmet>
 
@@ -62,8 +62,8 @@ function Academico() {
                     target="_blanck"
                     className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-500 ease-in-out whitespace-nowrap"
                   >
-                    <LiaUniversitySolid /> Projeto académico{" "}
-                    <span className="hidden md:block">• TFC </span>
+                    <LiaUniversitySolid /> Academic project{" "}
+                    <span className="hidden md:block">• Final degree project</span>
                   </a>
                 </div>
 
@@ -75,10 +75,10 @@ function Academico() {
                   >
                     <img
                       src={ulht}
-                      alt="Universidade Lusófona"
+                      alt="Lusófona University"
                       className="w-3 h-3"
                     />{" "}
-                    Universidade Lusófona
+                    Lusófona University
                   </a>
                 </div>
 
@@ -90,12 +90,11 @@ function Academico() {
                   >
                     <img
                       src={esc}
-                      alt="Escola
-                    secundaria de camarate"
+                      alt="Camarate Secondary School"
                       className="w-3 h-3"
                     />{" "}
                     <span className="hidden md:block">
-                      Escola secundaria de camarate
+                      Camarate Secondary School
                     </span>
                     <span className="sm:hidden">ESC</span>
                   </a>
@@ -105,27 +104,27 @@ function Academico() {
               <div className="space-y-6">
                 {/** título */}
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3 font-bold transition-all duration-500">
-                  Biblioteca Escolar Camarate
+                  Camarate School Library
                 </h1>
 
                 {/** Descrição */}
                 <p className="max-w-lg mt-2 mb-6 text-lg font-light text-gray-600">
-                  Aplicação móvel para requisição de livros escolares,
-                  desenvolvido como trabalho final de curso. Criado em
-                  parceria com a Escola Secundária de Camarate para tornar o
-                  acesso à biblioteca mais simples e eficiente.
+                  Mobile app for borrowing school books, developed as a final
+                  degree project. Built in collaboration with Camarate
+                  Secondary School to make library access simpler and more
+                  efficient.
                 </p>
 
                 <button
                   className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
-                  aria-label="Explorar projetos"
+                  aria-label="Explore projects"
                 >
                   <HiOutlineViewGrid className="text-gray-200" />
                   <a
                     href="https://github.com/lodsa-ntos/TFC_a21505293_camarate_school_library_app/tree/main"
                     target="_blank"
                   >
-                    Ver a solução em detalhe
+                    View the solution in detail
                   </a>
                 </button>
               </div>
@@ -135,7 +134,7 @@ function Academico() {
             <div className="flex items-center justify-center">
               <img
                 src="images/portfolio/academico/app-mockup.svg"
-                alt="App móvel"
+                alt="Mobile app"
                 className="w-80 pt-20 md:pt-10 lg:pt-0 md:w-96 h-96"
               />
             </div>
@@ -153,36 +152,35 @@ function Academico() {
             <div className="">
               <img
                 src="images/portfolio/academico/contexto-introducao.svg"
-                alt="Contexto/Introdução"
+                alt="Context / Introduction"
               />
             </div>
 
             <div className="pt-10 sm:pt-20 flex flex-col items-start">
               <h2 className="py-4 text-4xl text-[#333333]">
-                Porque este projeto existe
+                Why this project exists
               </h2>
 
               <p className="max-w-2xl mx-auto mb-10 text-xl font-light text-[#333333] leading-relaxed">
-                Desenvolvido como projeto final da Licenciatura em Informática
-                de Gestão. <br />
+                Developed as the final project for a BSc in Management
+                Informatics. <br />
                 <br />
-                <strong>Objetivo:</strong> Criar uma aplicação móvel para
-                requisição de livros, de forma a modernizar o acesso à
-                biblioteca escolar. A aplicação foi construída em{" "}
-                <strong>parceria</strong> com a{" "}
+                <strong>Goal:</strong> Build a mobile app for borrowing books to
+                modernize access to the school library. The app was built in
+                <strong>partnership</strong> with the{" "}
                 <strong>
                   <a
                     target="_blanck"
                     href="https://portalesc.wixsite.com/site"
                     className="underline cursor-pointer text-[#111111] hover:text-[#717171]"
                   >
-                    Escola Secundária de Camarate
+                    Camarate Secondary School
                   </a>
                 </strong>
-                , funcionando como uma solução digital para uma biblioteca
-                escolar real. A proposta foi inicialmente apresentada a outras
-                entidades, mas foi <strong>nesta escola</strong> que o projeto
-                encontrou <strong>viabilidade e apoio institucional</strong>.
+                , acting as a real digital solution for a real school library.
+                The proposal was initially presented to other institutions, but
+                it was <strong>at this school</strong> that the project found
+                <strong> viability and institutional support</strong>.
               </p>
             </div>
           </div>
@@ -200,35 +198,33 @@ function Academico() {
             <div className=" bg-[#f5f7fb] border border-[#ddd] md:w-[70%] lg:w-[50%] flex items-center justify-center rounded-xl">
               <img
                 src="images/portfolio/academico/desafio.svg"
-                alt="Contexto/Introdução"
+                alt="Challenge overview"
                 className="lg:w-[500px]"
               />
             </div>
 
             <div className="pt-6 flex flex-col items-start">
               <h2 className="py-4 text-4xl text-[#333333]">
-                Identificação do Problema
+                Problem identification
               </h2>
 
               <p className="max-w-xl mx-auto mb-10 text-xl font-light text-[#333333] leading-relaxed">
-                A biblioteca da escola utilizava um sistema manual para gerir a
-                requisição de livros. Todo o processo era feito em papel e
-                folhas de Excel, o que dificultava o acesso dos alunos, consumia
-                tempo dos funcionários e aumentava o risco de erros.
+                The school library used a manual system to manage book loans.
+                The entire process was done on paper and Excel sheets, making
+                student access difficult, consuming staff time, and increasing
+                the risk of errors.
                 <br />
                 <br />
-                Não havia qualquer integração digital. Os alunos preenchiam uma
-                ficha física e os dados eram anotados à mão num caderno. Para
-                controlar devoluções, os responsáveis precisavam verificar
-                manualmente, todos os dias, quem tinha livros requisitados e se
-                já os havia devolvido.
+                There was no digital integration. Students filled out a physical
+                form and data was hand-written in a notebook. To track returns,
+                staff had to manually check every day who had books on loan and
+                whether they had been returned.
                 <br />
                 <br />
-                Esse modelo, embora funcional em pequena escala, tornou-se
-                insustentável. Além de ineficiente, era vulnerável a perdas,
-                difícil de atualizar e pouco acessível para os estudantes.
-                Modernizar esse fluxo não era apenas uma melhoria: era uma
-                necessidade.
+                While workable at a very small scale, this model became
+                unsustainable. Besides being inefficient, it was vulnerable to
+                loss, hard to update, and not accessible to students. Modernizing
+                the flow wasn’t just an improvement: it was a necessity.
               </p>
             </div>
           </div>
@@ -243,26 +239,25 @@ function Academico() {
             <div className="border flex items-center justify-center border-[#ddd] md:w-[70%] lg:w-[50%] py-10 rounded-xl ">
               <img
                 src="images/portfolio/academico/solucao.svg"
-                alt="Contexto/Introdução"
+                alt="Proposed solution"
                 className="w-[500px]"
               />
             </div>
 
             <div className="pt-6 flex flex-col items-start">
-              <h2 className="py-4 text-4xl text-[#333333]">Solução pensada</h2>
+              <h2 className="py-4 text-4xl text-[#333333]">Proposed solution</h2>
 
               <p className="max-w-xl mx-auto mb-10 text-xl font-light text-[#333333] leading-relaxed">
-                Propus uma aplicação móvel simples, acessível e segura para
-                facilitar o processo de requisição de livros, com foco na
-                usabilidade para professores, alunos e equipa responsável pela
-                biblioteca.
+                I proposed a simple, accessible, and secure mobile app to make
+                the book-loan process easier, with usability in mind for
+                teachers, students, and the library staff.
                 <br />
-                <br />O sistema foi desenvolvido para responder às necessidades
-                reais da biblioteca escolar, oferecendo suporte às tarefas
-                diárias de gestão e requisição de livros. O objetivo foi tornar
-                o ambiente da biblioteca mais acessível e atrativo, incentivando
-                os alunos a utilizarem os seus recursos com maior frequência,
-                agora integrados numa experiência digital simples e moderna.
+                <br />The system was designed to meet the real needs of the
+                school library, supporting daily tasks around book management
+                and loans. The goal was to make the library environment more
+                accessible and engaging, encouraging students to use its
+                resources more often through a modern, simple digital
+                experience.
               </p>
             </div>
           </div>
@@ -277,39 +272,37 @@ function Academico() {
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center">
               <img
                 src="images/portfolio/academico/funcionalidade.svg"
-                alt="Contexto/Introdução"
+                alt="Feature overview"
                 className="md:w-[450px] md:mx-auto lg:mx-0 lg:w-[500px] flex items-center justify-center rounded-lg right-0 border boder-[#ddd] bg-gray-50 mb-10 lg:mb-0 py-4 lg:translate-x-10"
               />
               <img
                 src="images/portfolio/academico/funcionalidade2.svg"
-                alt="Contexto/Introdução"
+                alt="Feature detail"
                 className="w-[800px]"
               />
             </div>
 
             <div className="pt-12 flex flex-col items-start">
               <h2 className="py-4 text-4xl text-[#333333]">
-                Funcionalidades principais
+                Key features
               </h2>
 
               <p className="max-w-xl mb-10 text-xl font-light text-[#333333] leading-relaxed ">
-                Ao longo do desenvolvimento, priorizei funcionalidades que
-                realmente respondessem aos desafios enfrentados pela biblioteca.
+                Throughout development, I prioritized features that truly
+                addressed the challenges faced by the library.
                 <br />
                 <br />
-                A pesquisa por título ou autor foi pensada para tornar mais
-                rápido o acesso a livros, algo que antes exigia procura física
-                ou consulta em papel. O histórico de requisições oferece
-                autonomia aos alunos e reduz a sobrecarga administrativa. A
-                autenticação com perfis individuais garante segurança e
-                personalização.
+                Search by title or author was designed to speed up access to
+                books—previously a physical search or paper-based lookup. The
+                loan history gives students autonomy and reduces administrative
+                overhead. Authentication with individual profiles ensures
+                security and personalization.
                 <br />
                 <br />
-                Além disso, funcionalidades como o centro de ajuda, os contactos
-                do corpo docente e os procedimentos internos reforçam a
-                utilidade da aplicação para o dia a dia da escola, de forma a
-                permitir que alunos, professores e visitantes acedam facilmente
-                à informação certa, no momento certo.
+                In addition, features like a help center, staff contacts, and
+                internal procedures strengthen the app’s usefulness in the
+                school’s day-to-day, allowing students, teachers, and visitors to
+                quickly find the right information at the right time.
               </p>
             </div>
           </div>
@@ -324,40 +317,37 @@ function Academico() {
             <div className="flex flex-col items-center justify-center bg-[#f5f7fb] border border-[#ddd] md:w-[70%] lg:w-[50%] py-10 rounded-xl">
               <img
                 src="images/portfolio/academico/technologias.svg"
-                alt="Contexto/Introdução"
+                alt="Architecture model"
                 className="lg:w-[500px]"
               />
             </div>
             <small className="mt-4 font-bold text-center">
-              Modelo de arquitetura utilizado na aplicação para o
-              desenvolvimento da solução proposta
+              Architecture model used in the app for the proposed solution
             </small>
 
             <div className="pt-6 flex flex-col items-start">
               <h2 className="py-4 text-4xl text-[#333333]">
-                Tecnologias utilizadas
+                Technologies used
               </h2>
 
               <p className="max-w-2xl mx-auto mb-10 text-xl font-light text-[#333333] leading-relaxed">
-                A aplicação foi desenvolvida com o framework Flutter, utilizando
-                Dart como linguagem principal, escolhida pela sua capacidade de
-                criar interfaces móveis modernas com alta performance e design
-                consistente entre plataformas. Para autenticação, base de dados
-                e armazenamento, foi utilizado o Firebase, de forma a permitir
-                sincronizações sem atrasos e gestão simplificada de utilizadores
-                e dados, uma solução eficiente para ambientes escolares com
-                recursos limitados.
+                The app was built with the Flutter framework, using Dart as the
+                main language, chosen for its ability to create modern, high
+                performance mobile interfaces with consistent cross‑platform
+                design. For authentication, database, and storage, Firebase was
+                used to enable real‑time sync and simplified user/data
+                management—an efficient choice for school environments with
+                limited resources.
                 <br />
                 <br />
-                A prototipagem da interface e dos fluxos de navegação foi feita
-                no Axure RP 9, priorizando clareza, simplicidade e usabilidade
-                para o público-alvo (professores, alunos e funcionários da
-                biblioteca).
+                Interface prototyping and navigation flows were designed in
+                Axure RP 9, prioritizing clarity, simplicity, and usability for
+                the target audience (teachers, students, and library staff).
                 <br />
-                <br />A arquitetura da aplicação foi dividida em três camadas
-                principais: interface de utilizador, lógica de negócio e camada
-                de dados. Esta separação facilitou o desenvolvimento e permitiu
-                manter o foco na acessibilidade e escalabilidade futura.
+                <br />The app’s architecture was split into three main layers:
+                user interface, business logic, and data layer. This separation
+                streamlined development and kept the focus on accessibility and
+                future scalability.
               </p>
             </div>
 
@@ -395,41 +385,36 @@ function Academico() {
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center">
               <img
                 src="images/portfolio/academico/solucao.svg"
-                alt="Contexto/Introdução"
+                alt="Flow map (solution)"
                 className="w-[500px] mx-auto lg:mx-0 flex items-center justify-center right-0 border boder-[#ddd py-4 lg:translate-x-10 mb-10 lg:mt-0 rounded-lg"
               />
               <img
                 src="images/portfolio/academico/contexto-introducao.svg"
-                alt="Contexto/Introdução"
+                alt="Flow map (context)"
                 className="w-[800px] bg-[#f5f7fb] border border-[#ddd] p-4 rounded-lg"
               />
             </div>
 
             <div className="pt-12 flex flex-col items-start justify-start">
               <h2 className="py-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#333333]">
-                Mapeamento da Navegação e Funcionalidades
+                Navigation and feature mapping
               </h2>
 
               <p className="max-w-2xl mx-auto mb-10 text-xl font-light text-[#333333] leading-relaxed">
-                Esta visualização apresenta os principais fluxos de navegação da
-                aplicação. <br /> A interface foi projetada para ser simples, acessível
-                e funcional, garantindo uma boa experiência tanto para alunos
-                como para docentes e colaboradores da escola.
+                This visualization shows the key navigation flows of the app.
+                <br />The interface was designed to be simple, accessible, and
+                functional, ensuring a good experience for students, teachers,
+                and school staff.
                 <br />
-                <br />O fluxo cobre desde o{" "}
-                <strong>
-                  login, pesquisa de livros, requisição e devolução
-                </strong>
-                , até áreas de apoio como{" "}
-                <strong>
-                  ajuda, informações institucionais, e procedimentos internos
-                </strong>
-                .
+                <br />The flow covers everything from{" "}
+                <strong>login, book search, loan, and return</strong> to support
+                areas like{" "}
+                <strong>help, institutional information, and internal procedures</strong>.
                 <br />
-                <br />O objetivo foi reduzir fricções e tornar o processo
-                bibliotecário mais fluido com poucos toques, especialmente num
-                ambiente escolar com recursos limitados e utilizadores com
-                diferentes níveis de literacia digital.
+                <br />The goal was to reduce friction and make library tasks
+                smoother in a few taps—especially in a school setting with
+                limited resources and users with different levels of digital
+                literacy.
               </p>
             </div>
           </div>
@@ -449,7 +434,7 @@ function Academico() {
               id="projetos"
               className="mt-10 lg:mt-0 text-xs lg:text-sm whitespace-nowrap lg:whitespace-normal w-[50%] mx-auto uppercase font-bold text-[#777] tracking-wider text-center"
             >
-              MAIS DO MEU PORTFÓLIO
+              MORE FROM MY PORTFOLIO
             </h1>
 
             {/* Top Line */}
@@ -473,7 +458,7 @@ function Academico() {
                       href="#preview"
                       className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-200 ease-in-out"
                     >
-                      <TbContract /> Projeto real - Cliente
+                      <TbContract /> Client project
                     </a>
                   </div>
                 </div>
@@ -481,7 +466,7 @@ function Academico() {
                 <img
                   className="transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform group-hover:scale-110"
                   src="images/portfolio/gestosamaveis.svg"
-                  alt="Gestos-Amaveis"
+                  alt="Gestos Amáveis"
                 />
               </div>
               <div className="p-4">
@@ -489,8 +474,8 @@ function Academico() {
                   Gestos Amáveis
                 </h6>
                 <p className="text-slate-600 leading-normal font-light">
-                  Plataforma web institucional para uma empresa de cuidados a
-                  idosos, com foco em empatia, acessibilidade e navegação clara.
+                  Institutional website for a senior home‑care company, focused
+                  on empathy, accessibility, and clear navigation.
                 </p>
               </div>
               <div className="px-4 pb-4 pt-0 mt-2">
@@ -498,7 +483,7 @@ function Academico() {
                   class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
                 >
-                  Ver caso de estudo
+                  View case study
                 </button>
               </div>
             </BubblyLink>
@@ -519,7 +504,7 @@ function Academico() {
                       className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-200 ease-in-out"
                     >
                       <AiOutlineFileProtect className="text-blue-600" />{" "}
-                      Conceito pessoal
+                      Personal concept
                     </a>
                   </div>
                 </div>
@@ -535,8 +520,8 @@ function Academico() {
                   LaunchPeack
                 </h6>
                 <p className="text-slate-600 leading-normal font-light">
-                  Landing page criada como conceito para uma solução fictícia.
-                  Feita com React, Tailwind CSS e Framer Motion.
+                  Concept landing page for a fictional solution. Built with
+                  React, Tailwind CSS, and Framer Motion.
                 </p>
               </div>
               <div className="px-4 pb-4 pt-0 mt-2">
@@ -544,7 +529,7 @@ function Academico() {
                   className="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
                 >
-                  Ver caso de estudo
+                  View case study
                 </button>
               </div>
             </BubblyLink>

@@ -18,12 +18,12 @@ function ConceitoPessoal() {
     <>
       <Helmet>
         <title>
-          LaunchPeack — Landing Page de Alto Impacto (conceito pessoal) | LodeX
+          LaunchPeack — High‑Impact Landing Page (personal concept) | LodeX
           Studio
         </title>
         <meta
           name="description"
-          content="Landing page conceito criada pela LodeX Studio com foco em conversão, performance e estrutura mobile-first. Ideal para produtos digitais."
+          content="Concept landing page created by LodeX Studio focused on conversion, performance, and a mobile‑first structure. Ideal for digital products."
         />
       </Helmet>
 
@@ -65,13 +65,13 @@ function ConceitoPessoal() {
                 LaunchPeak
               </h1>
               <p className="text-xs mb-1 text-gray-500 leading-relaxed">
-                Plataforma Conceito para lançamentos digitais
+                Concept platform for digital launches
               </p>
 
               <div className="flex items-center justify-start gap-2.5">
                 <div className="ring-1 ring-inset bg-purple-50 text-[#6248d6] ring-[#6248d6] text-xs px-2 py-1 rounded-full flex items-center justify-end text-end gap-1 w-fit hover:scale-105">
                   <AiOutlineFileProtect className="text-[#6248d6]" />
-                  Conceito pessoal
+                  Personal concept
                 </div>
 
                 <FaReact
@@ -89,40 +89,38 @@ function ConceitoPessoal() {
               </div>
 
               <h3 className="mb-6 mt-6 text-gray-700 text-lg leading-relaxed">
-                Um conceito de landing page pensado para escalar produtos
-                digitais.
+                A landing page concept designed to scale digital products.
               </h3>
 
               <p className="mb-6 text-gray-600 text-base leading-relaxed">
-                O <strong className="text-[#6248d6]">LaunchPeak</strong> é um
-                projeto-conceito criado pela{" "}
-                <strong className="text-secundario">LØdeX Studio</strong> como
-                exercício estratégico de design + desenvolvimento com foco em
-                conversão. A proposta era simples: simular uma landing page
-                moderna, personalizável e com estrutura realista para
-                lançamentos de produtos digitais, como eBooks, cursos, SaaS ou
-                serviços criativos.
+                <strong className="text-[#6248d6]">LaunchPeak</strong> is a
+                concept project by{" "}
+                <strong className="text-secundario">LØdeX Studio</strong>, a
+                strategic design + development exercise focused on conversion.
+                The goal was simple: simulate a modern, customizable landing
+                page with a realistic structure for launching digital products
+                like eBooks, courses, SaaS, or creative services.
                 <br />
-                <br />O projeto foi desenvolvido com base em boas práticas de
-                UI/UX, performance e escalabilidade, funcionando como prova de
-                conceito de como a{" "}
-                <strong className="text-secundario">LØdeX</strong> atua: com
-                estética limpa, estrutura lógica e atenção ao detalhe.
+                <br />The project follows best practices in UI/UX, performance,
+                and scalability, acting as a proof of how{" "}
+                <strong className="text-secundario">LØdeX</strong> works:
+                clean aesthetics, logical structure, and attention to detail.
               </p>
 
               <div>
                 <h1 className="flex items-center justify-start gap-1 text-terciario font-[600] text-base mb-2">
                   <GiConvergenceTarget className="text-[#6248d6]" />
-                  Propósito:
+                  Purpose:
                 </h1>
 
                 <p className="mb-6 text-gray-600 text-base leading-relaxed">
-                  Mais do que um exercício estético, o{" "}
-                  <strong className="text-[#6248d6]">LaunchPeak</strong> foi
-                  pensado como uma fundação reutilizável para marcas que querem
-                  lançar rápido e com presença. É uma ferramenta de
-                  apresentação, mas também um exemplo funcional de como
-                  entregamos valor visual e técnico aqui na{" "}
+                  More than an aesthetic exercise,{
+                  " "}
+                  <strong className="text-[#6248d6]">LaunchPeak</strong> was
+                  designed as a reusable foundation for brands that want to
+                  launch quickly with presence. It’s a presentation tool and a
+                  functional example of how we deliver visual and technical
+                  value here at{" "}
                   <strong className="text-secundario">LØdeX</strong>.
                 </p>
               </div>
@@ -131,12 +129,11 @@ function ConceitoPessoal() {
                 <div className="flex flex-col gap-2">
                   <div className="relative text-sm  leading-relaxed">
                     <p className="pl-5 text-gray-700">
-                      Se quiseres algo nesta linha para o teu projeto ou marca,{" "}
-                      <strong>
-                        este é o tipo de base que podemos adaptar à tua
-                        realidade
-                      </strong>
-                      .
+                      If you’d like something along these lines for your
+                      project or brand,{
+                      " "}
+                      <strong>this is the kind of base we can adapt</strong>
+                      to your reality.
                     </p>
                   </div>
                 </div>
@@ -146,7 +143,7 @@ function ConceitoPessoal() {
                 <ul className="space-y-4 text-left text-gray-500 dark:text-gray-400">
                   <h1 className="flex items-center justify-start gap-1 text-[#6a7282] font-[500] text-sm">
                     <RxDrawingPinFilled className="text-[#6248d6]" />{" "}
-                    Tecnologias e Estrutura
+                    Technologies and structure
                   </h1>
                   <li className="flex items-center space-x-3 rtl:space-x-reverse">
                     <span class="size-5 flex justify-center items-center rounded-full bg-purple-50 text-[#6248d6]">
@@ -167,7 +164,7 @@ function ConceitoPessoal() {
                     </span>
                     <span className="text-sm">
                       <strong className="text-[#6248d6]">React + Vite</strong>{" "}
-                      para frontend rápido e modular
+                      for a fast, modular frontend
                     </span>
                   </li>
 
@@ -190,7 +187,7 @@ function ConceitoPessoal() {
                     </span>
                     <span className="text-sm ">
                       <strong className="text-[#6248d6]">Tailwind CSS</strong>{" "}
-                      com design 100% mobile-first
+                      with a 100% mobile‑first design
                     </span>
                   </li>
 
@@ -213,7 +210,7 @@ function ConceitoPessoal() {
                     </span>
                     <span className="text-sm">
                       <strong className="text-[#6248d6]">Framer Motion</strong>{" "}
-                      para transições suaves
+                      for smooth transitions
                     </span>
                   </li>
 
@@ -236,7 +233,7 @@ function ConceitoPessoal() {
                     </span>
                     <span className="text-sm">
                       <strong className="text-[#6248d6]">
-                        Mock de integração de leads e planos de preço
+                        Mock lead integration and pricing plans
                       </strong>
                     </span>
                   </li>
@@ -245,14 +242,14 @@ function ConceitoPessoal() {
 
               <button
                 className="bg-primario font-semibold text-white py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset flex items-center gap-1"
-                aria-label="Explorar projetos"
+                aria-label="Explore projects"
               >
                 <SiQuicklook className="text-gray-200" />
                 <a
                   href="https://launchpeak-starter.vercel.app/"
                   target="_blank"
                 >
-                  Ver site online
+                  View website
                 </a>
               </button>
             </div>
@@ -271,7 +268,7 @@ function ConceitoPessoal() {
               id="projetos"
               className="mt-10 lg:mt-0 text-xs lg:text-sm whitespace-nowrap lg:whitespace-normal w-[50%] mx-auto uppercase font-bold text-[#777] tracking-wider text-center"
             >
-              MAIS DO MEU PORTFÓLIO
+              MORE FROM MY PORTFOLIO
             </h1>
 
             {/* Top Line */}
@@ -295,7 +292,7 @@ function ConceitoPessoal() {
                       href="#preview"
                       className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-500 ease-in-out"
                     >
-                      <LiaUniversitySolid /> Projeto académico
+                      <LiaUniversitySolid /> Academic project
                     </a>
                   </div>
                 </div>
@@ -303,17 +300,16 @@ function ConceitoPessoal() {
                 <img
                   className="transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform group-hover:scale-110"
                   src="images/portfolio/android.svg"
-                  alt="biblioteca-escolar-camarate"
+                  alt="camarate-school-library"
                 />
               </div>
               <div className="p-4">
                 <h6 className="mb-2 text-slate-800 text-xl font-semibold">
-                  Biblioteca Escolar Camarate
+                  Camarate School Library
                 </h6>
                 <p className="text-slate-600 leading-normal font-light">
-                  Aplicação mobile desenvolvida como projeto final de curso, com
-                  base numa colaboração real com a Escola Secundária de
-                  Camarate.
+                  Mobile app developed as a final degree project in real
+                  collaboration with Camarate Secondary School.
                 </p>
               </div>
               <div className="px-4 pb-4 pt-0 mt-2">
@@ -321,7 +317,7 @@ function ConceitoPessoal() {
                   class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none duration-500"
                   type="button"
                 >
-                  Ver caso de estudo
+                  View case study
                 </button>
               </div>
             </BubblyLink>
@@ -341,7 +337,7 @@ function ConceitoPessoal() {
                       href="#preview"
                       className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-200 ease-in-out"
                     >
-                      <TbContract /> Projeto real - Cliente
+                      <TbContract /> Client project
                     </a>
                   </div>
                 </div>
@@ -357,16 +353,16 @@ function ConceitoPessoal() {
                   Gestos Amáveis
                 </h6>
                 <p className="text-slate-600 leading-normal font-light">
-                  Plataforma web institucional para uma empresa de cuidados a
-                  idosos, com foco em empatia, acessibilidade e navegação clara.
+                  Institutional website for a senior home‑care company, focused
+                  on empathy, accessibility, and clear navigation.
                 </p>
               </div>
               <div className="px-4 pb-4 pt-0 mt-2">
                 <button
-                  class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:shadow-none"
                   type="button"
                 >
-                  Ver caso de estudo
+                  View case study
                 </button>
               </div>
             </BubblyLink>
