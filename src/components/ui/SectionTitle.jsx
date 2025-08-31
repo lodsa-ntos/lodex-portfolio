@@ -42,7 +42,7 @@ function SectionTitle({ align = "center" }) {
           <br className="md:hidden" />
           Built to grow with you.
         </strong>
-        .
+        
       </motion.p>
     </section>
   );
