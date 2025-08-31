@@ -36,11 +36,11 @@ function SectionTitle({ align = "center" }) {
         whileInView="show"
         className="mt-6 md:text-lg font-medium text-[#4b5563] lg:text-gray-500 text-base whitespace-nowrap"
       >
-        I don’t promise everything.
+        LØdeX Studio,
         <strong className="text-secundario">
           {" "}
           <br className="md:hidden" />
-          I deliver what grows with you
+          Built to grow with you.
         </strong>
         .
       </motion.p>
