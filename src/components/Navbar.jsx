@@ -178,8 +178,8 @@ function Navbar() {
                 ${scrolled ? "text-white" : "text-gray-800 "}
               `}
             >
-              <strong>Simple.</strong> <br /> <strong>Useful.</strong> <br />{" "}
-              <strong>Scalable. </strong> <br /> <strong>Unlimited.</strong>
+              <strong>Ideas.</strong> <br /> <strong>Code.</strong> <br />{" "}
+              <strong>Design. </strong> <br /> <strong>Unlimited.</strong>
             </p>
           </div>
 

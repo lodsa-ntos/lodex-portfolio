@@ -24,9 +24,9 @@ function SectionTitle({ align = "center" }) {
         className="text-2xl sm:text-5xl w-full mx-auto font-[800] uppercase leading-tight sm:text-terciario text-[#111827] focus-visible:ring-secundario font-Satoshi"
         tabIndex={0}
       >
-        Lean design
-        <span className="text-secundario">.</span> <br /> Scalable code. <br />
-        <span className="relative">Limitless results</span>
+        Exploring design
+        <span className="text-secundario">.</span> <br /> Building code. <br />
+        <span className="relative">Sharing ideas</span>
         <span className="text-secundario">.</span>
       </motion.h2>
 
@@ -36,11 +36,11 @@ function SectionTitle({ align = "center" }) {
         whileInView="show"
         className="mt-6 md:text-lg font-medium text-[#4b5563] lg:text-gray-500 text-base whitespace-nowrap"
       >
-        LØdeX Studio,
+        LØdeX Studio
         <strong className="text-secundario">
           {" "}
           <br className="md:hidden" />
-          Built to grow with you.
+          is where creativity grows.
         </strong>
         
       </motion.p>
