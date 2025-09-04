@@ -61,13 +61,11 @@ function Navbar() {
   const links = [
     { label: "Home", to: "/" },
     { label: "Cases Studies", to: "/case-studies" },
-    { label: "Services", to: "/services" },
     { label: "Blog", to: "/blog" },
     { label: "About me", to: "/about" },
   ];
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [language, setLanguage] = useState("pt-pt");
 
   // Function to handle dropdown menu toggle
   const toggleDropdown = (e) => {
@@ -318,62 +316,7 @@ function Navbar() {
                       </BubblyLink>
                     ))}
                   </li>
-
-                  <li className="block lg:hidden">
-                    <div className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded">
-                      <GrLanguage aria-hidden="true" /> Idioma:{" "}
-                      <button
-                        className="flex items-center text-sm transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
-                        onClick={() =>
-                          setLanguage((prev) =>
-                            prev === "pt-pt" ? "en-gb" : "pt-pt"
-                          )
-                        }
-                        aria-label="Trocar idioma"
-                        aria-pressed={language === "en-gb"}
-                        tabIndex={dropdownOpen ? 0 : -1}
-                      >
-                        <span
-                          className={
-                            language === "pt-pt"
-                              ? "text-primario underline font-black"
-                              : "text-gray-500 font-medium hover:text-primario hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primario"
-                          }
-                        >
-                          PT
-                        </span>
-                        <span className="ml-1"> /</span>
-                        <span
-                          className={
-                            language === "en-gb"
-                              ? "text-primario underline font-black ml-1"
-                              : "text-gray-500 font-medium hover:text-primario hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primario ml-1"
-                          }
-                        >
-                          EN
-                        </span>
-                      </button>
-                    </div>
-                  </li>
                 </ul>
-                <div className="py-2">
-                  <BubblyLink
-                    to="/conversar"
-                    colorStart="#004AAD"
-                    colorEnd="#FFFFFF"
-                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white hover:scale-105 transition-all duration-500 focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primario rounded"
-                    role="menuitem"
-                    tabIndex={dropdownOpen ? 0 : -1}
-                  >
-                    <span className="w-7 h-7 flex items-center justify-center rounded-full bg-blue-50 hover:bg-blue-100 py-2">
-                      <PiRocketLaunchDuotone
-                        className="fill-secundario size-4"
-                        aria-hidden="true"
-                      />
-                    </span>{" "}
-                    Start Project <IoArrowForward aria-hidden="true" />
-                  </BubblyLink>
-                </div>
               </div>
             </div>
           </div>

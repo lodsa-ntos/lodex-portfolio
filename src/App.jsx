@@ -12,7 +12,6 @@ import Academico from "./pages/projects/Academico";
 import SobreMim from "./pages/sobre/SobreMim";
 import Blog from "./pages/blog/Blog";
 import GlobalProject from "./pages/projects/GlobalProject";
-import Conversar from "./pages/chat/Conversar";
 import CardResponsivo from "./pages/blog/article/CardResponsivo";
 import IAAjuda from "./pages/blog/article/IAAjuda";
 import PiramideDigital from "./pages/blog/article/PiramideDigital";
@@ -38,7 +37,6 @@ function App() {
           <Route path="/about" element={<SobreMim />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/case-studies" element={<GlobalProject />} />
-          <Route path="/conversar" element={<Conversar />} />
           <Route path="/cardresponsivo" element={<CardResponsivo />} />
           <Route path="/ia-que-ajuda" element={<IAAjuda />} />
           <Route path="/piramide-digital" element={<PiramideDigital />} />
