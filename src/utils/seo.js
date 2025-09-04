@@ -64,6 +64,47 @@ export const updatePageSEO = (seoData) => {
   }
 };
 
+// Generate Person structured data
+export const generatePersonStructuredData = (person) => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: person.name || 'Lodney Santos',
+    alternateName: person.alternateName || 'Lod',
+    jobTitle: person.jobTitle || 'Frontend Developer & UI Designer',
+    url: person.url || 'https://lodexstudio.com',
+    image: person.image || 'https://lodexstudio.com/lodney-santos-developer.jpg',
+    sameAs: person.sameAs || [
+      'https://www.instagram.com/lodneysantos/',
+      'https://www.linkedin.com/in/lodney-santos/',
+      'https://github.com/lodsa-ntos'
+    ],
+    worksFor: {
+      '@type': 'Organization',
+      name: 'LodeX Studio',
+      url: 'https://lodexstudio.com'
+    }
+  };
+};
+
+// Generate ImageObject structured data (array)
+export const generateImageObjectsStructuredData = (images) => {
+  return images.map((img) => ({
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    contentUrl: img.url,
+    url: img.url,
+    name: img.name,
+    caption: img.caption,
+    creator: {
+      '@type': 'Person',
+      name: 'Lodney Santos'
+    },
+    creditText: img.creditText || 'LodeX Studio',
+    license: img.license || 'https://creativecommons.org/licenses/by-nc/4.0/'
+  }));
+};
+
 // Generate structured data for projects
 export const generateProjectStructuredData = (project) => {
   return {
@@ -85,7 +126,7 @@ export const generateProjectStructuredData = (project) => {
     image: project.image,
     genre: project.category,
     keywords: project.keywords,
-    inLanguage: 'pt-PT',
+  inLanguage: project.inLanguage || 'en',
     copyrightHolder: {
       '@type': 'Organization',
       name: 'LodeX Studio'
@@ -216,7 +257,8 @@ export const SEO_TEMPLATES = {
     title: 'LodeX Studio | Frontend Developer & UI Designer Portugal | Lodney Santos',
     description: 'Lodney Santos - Frontend Developer & UI Designer especializado em websites modernos, landing pages e soluções digitais escaláveis em Portugal. React.js, JavaScript, UI/UX Design.',
     keywords: 'frontend developer portugal, ui designer portugal, lodney santos, lodex studio, react developer, javascript developer, landing pages portugal, website design portugal',
-    canonical: 'https://lodexstudio.com'
+  canonical: 'https://lodexstudio.com',
+  image: 'https://lodexstudio.com/lodney-santos-developer.jpg'
   },
   
   portfolio: {
@@ -257,11 +299,13 @@ export const SEO_TEMPLATES = {
 
 export default {
   updatePageSEO,
+  generatePersonStructuredData,
   generateProjectStructuredData,
   generateBreadcrumbStructuredData,
   generateFAQStructuredData,
   generateServiceStructuredData,
   generateArticleStructuredData,
+  generateImageObjectsStructuredData,
   insertStructuredData,
   SEO_TEMPLATES
 };
