@@ -60,16 +60,15 @@ const HeroSection = () => (
           </h1>
 
           <p className="max-w-xl mb-20 lg:mb-6 font-light text-xl leading-relaxed subpixel-antialiased">
-            I’ve always been curious about how things work — taking computers apart,
-            studying interfaces, and finding the logic most people don’t see. In digital
-            design I found the place where form meets structure. Today I’m a frontend
-            developer and UI/UX designer who turns ideas into clear, fast, and expressive
-            web experiences.
+            I’ve always been curious about how things work — from dismantling
+            computers to experimenting with code and interfaces. In design and
+            development I found a space where creativity meets logic, where
+            ideas can take shape and grow.
             <br />
             <br />
-            I help freelancers, founders, and small businesses shape early ideas into
-            something real — usable, beautiful, and ready to ship. My focus is simple:
-            clarity, momentum, and outcomes.
+            LodeX Studio is my personal lab. It’s where I explore design, code,
+            and motion — not to sell services, but to learn, experiment, and
+            share what I create along the way.
           </p>
         </div>
 
@@ -86,47 +85,43 @@ const HeroSection = () => (
 const whatIDoItems = [
   {
     icon: <PiWallDuotone className="size-10 text-gray-500" />,
-  title: "I build",
-  text: "Websites and interfaces tailored to your idea and audience — no templates.",
+    title: "I build",
+    text: "Websites and interfaces as personal projects, no templates, just experiments.",
   },
   {
     icon: <MdOutlineDesignServices className="size-10 text-gray-500" />,
-  title: "I design",
-  text: "Functional prototypes and interfaces with structure, hierarchy, and visual intent.",
+    title: "I design",
+    text: "Prototypes and layouts to test structure, hierarchy, and flow.",
   },
   {
     icon: <MdImportantDevices className="size-10 text-gray-500" />,
-  title: "I develop",
-  text: "Frontend with React and Tailwind, with smooth motion using Framer Motion.",
-  },
-  {
-    icon: <PiRocketLaunchDuotone className="size-10 text-gray-500" />,
-  title: "I launch",
-  text: "Turn early ideas into MVPs — simple, lean, and ready to go live.",
-  },
-  {
-    icon: <VscCompassDot className="size-10 text-gray-500" />,
-  title: "I guide",
-  text: "Hands-on guidance to define what to build — even before writing code.",
+    title: "I develop",
+    text: "Frontend with React and Tailwind, often adding motion with Framer",
   },
 ];
 
 const WhatIDoSection = () => (
-  <section id="Oquefaco" className="pb-32 pt-20 border-b">
+  <section id="Oquefaco" className="pb-20 pt-20 border-b">
     <GlobalContainer>
       <div className="mb-16">
         <h2 className="mb-6 text-4xl font-light text-[##333333] subpixel-antialiased text-center">
-      I give shape to what’s <br />
-      still only in your head.
+          I use this space to play, practice, <br />
+          and push myself in design and development.
         </h2>
       </div>
 
-    <DividerLabel label="What I do" />
+      <DividerLabel label="What I do" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
         {whatIDoItems.map(({ icon, title, text }) => (
           <InfoCard key={title} icon={icon} title={title} text={text} />
         ))}
+      </div>
+
+      <div className="flex text-center items-center justify-center mt-16">
+        <p className="italic">
+          This is my playground to combine creativity with code.
+        </p>
       </div>
     </GlobalContainer>
   </section>
@@ -135,7 +130,7 @@ const WhatIDoSection = () => (
 const ForWhomSection = () => (
   <section
     id="paraqueme"
-    className="min-h-[95vh] lg:min-h-[95vh] 2xl:min-h-[35vh] pb-20 pt-16 lg:pb-0 lg:pt-24 border-b shadow-md bg-gray-50"
+    className="min-h-[95vh] lg:min-h-[95vh] 2xl:min-h-[35vh] pb-20 pt-16 lg:pb-0 lg:pt-24 border-b shadow-xl bg-gray-50"
   >
     <GlobalContainer>
       <div className="grid grid-cols-1 md:grid-cols-2">
@@ -149,25 +144,25 @@ const ForWhomSection = () => (
 
         <div className="text-gray-800">
           <h1 className="mb-6 mt-6 lg:mt-0 text-4xl font-light text-[##333333] subpixel-antialiased">
-            Who I help
+            1. What I’m exploring now
           </h1>
 
-          <p className="max-w-xl mb-6 font-light text-lg leading-relaxed subpixel-antialiased">
-            If you have an idea, a project, a business, or even a rough sketch,
-            I can help give it shape. I’ve worked with clients who had everything
-            ready and just needed clean execution — and with those who only had
-            a sentence and lots of uncertainty.
-            <br /> <br />
-            Whether it’s a simple website, a landing page, an app, or something
-            larger, the foundation is the same: listen, understand, and build
-            something functional and right for your users.
-            <br /> <br />
-            I work with people who are starting out — freelancers, small
-            businesses, creators, and teams who want something of their own,
-            without complexity. You don’t need technical experience. My role is
-            to simplify, guide, and build with you — with transparency and focus
-            on what matters: clarity, momentum, and results.
-          </p>
+          <ol className="list-disc ml-6  mb-6 font-light text-lg leading-relaxed subpixel-antialiased">
+            <li>Learning more about TypeScript.</li>
+            <li>Playing with motion in Framer</li>
+            <li>Experimenting with minimal UI patterns.</li>
+            <li>Writing cleaner, scalable React code.</li>
+          </ol>
+
+          <h1 className="mb-6 mt-6 lg:mt-0 text-4xl font-light text-[##333333] subpixel-antialiased">
+            2. Current experiments
+          </h1>
+
+          <ol className="list-decimal ml-6 mb-6 font-light text-lg leading-relaxed subpixel-antialiased">
+            <li>Micro animations with React + Framer Motion.</li>
+            <li>Dark-mode friendly layouts.</li>
+            <li>A personal design system with Tailwind.</li>
+          </ol>
         </div>
       </div>
     </GlobalContainer>
@@ -175,7 +170,7 @@ const ForWhomSection = () => (
 );
 
 const WhySection = () => (
-  <section id="porquefacoisso" className="-mb-1.2 py-16 bg-white border-b">
+  <section id="porquefacoisso" className="-mb-1.2 py-16 bg-gray-50 border-b">
     <GlobalContainer>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="text-gray-800">
@@ -183,13 +178,15 @@ const WhySection = () => (
             Why I do this
           </h1>
           <p className="max-w-lg font-light text-xl leading-relaxed subpixel-antialiased">
-            It took me years to find my place. I started by dismantling
-            computers, struggled with programming, and graduated later than planned.
-            I learned my strength isn’t speed — it’s turning confusion into clarity.
+            It took me years to find my path. I struggled with programming,
+            graduated later than planned, and often felt behind. But I realized
+            my strength isn’t speed, it’s persistence and clarity.
             <br />
-            <br />That’s what I do today: I help people turn scattered ideas into real
-            digital experiences with structure, craft, and function — even when the
-            starting point is uncertain.
+            <br />
+            Now, LodeX Studio is where I turn scattered thoughts into digital
+            experiments. It’s not about deadlines or clients, it’s about
+            curiosity, practice, and the joy of building things that didn’t
+            exist before.
           </p>
         </div>
 
@@ -206,11 +203,11 @@ const WhySection = () => (
 );
 
 const CallToActionSection = () => (
-  <section id="construir" className="py-24 border-b shadow-md bg-gray-50">
+  <section id="construir" className="py-24 border-b shadow-md bg-white">
     <GlobalContainer>
       <div className="flex flex-col items-center justify-center text-center">
         <h1 className="text-3xl font-bold uppercase text-terciario mb-2">
-          Ready to build it?
+          Want to see what I’ve been building?
         </h1>
         <p className="text-terciario text-base mb-6 font-regular">
           When the idea is good, the execution should match.
