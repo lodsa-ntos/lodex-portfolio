@@ -14,7 +14,7 @@ const Avatar = [
     foto: imgAvatar,
     profileFoto: "",
     autor: "LodeX Studio",
-    date: "09 de agosto de 2025",
+    date: "August 9, 2025",
   },
 ];
 
@@ -24,7 +24,7 @@ const blocoParte2 = {
   return (
     <div className="bg-white shadow p-4 w-[400px] rounded">
       <img src="imagem.jpg" alt="..." className="mb-4" />
-      <h2 className="text-lg font-bold">Título do Card</h2>
+  <h2 className="text-lg font-bold">Card title</h2>
       <p>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
       Quod voluptatibus maiores expedita atque veritatis 
@@ -61,7 +61,7 @@ const blocoParte4 = {
   <img className="w-full h-[280px] object-cover
   transition-transform duration-500 group-hover:scale-105"
     src="images/blog/card-example.jpg"
-    alt="Exemplo de card visual"
+  alt="Card visual example"
   />
   `,
 };
@@ -88,7 +88,7 @@ const blocoParte6 = {
   language: "javascript",
   code: `
   <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-    {/* Cards aqui */}
+  {/* Cards here */}
   </div>`,
 };
 
@@ -123,13 +123,13 @@ function AuthorInfo() {
 }
 
 const indice = [
-  { id: "passo-1", label: "Criar projeto com React e TailwindCSS" },
-  { id: "passo-2", label: "Estruturar o componente base (Card)" },
-  { id: "passo-3", label: "Adicionar badges e ícones de tecnologia" },
-  { id: "passo-4", label: "Criar imagem visual impactante" },
-  { id: "passo-5", label: "Incluir título e botão de ação (CTA)" },
-  { id: "passo-6", label: "Tornar o card responsivo" },
-  { id: "passo-final", label: "Código final e repositório no GitHub" },
+  { id: "passo-1", label: "Create the project with React and TailwindCSS" },
+  { id: "passo-2", label: "Structure the base component (Card)" },
+  { id: "passo-3", label: "Add technology badges and icons" },
+  { id: "passo-4", label: "Create an impactful visual image" },
+  { id: "passo-5", label: "Include title and call-to-action (CTA)" },
+  { id: "passo-6", label: "Make the card responsive" },
+  { id: "passo-final", label: "Final code and GitHub repository" },
 ];
 
 function Indice() {
@@ -137,7 +137,7 @@ function Indice() {
     <div className="mb-10">
       <ul className="space-y-4 text-left text-gray-500">
         <h1 className="flex items-center gap-1 text-[#6a7282] font-[500] text-lg">
-          <RxDrawingPinFilled className="text-secundario" /> Índice
+          <RxDrawingPinFilled className="text-secundario" /> Table of contents
         </h1>
         <ol className="list-decimal font-semibold text-sm sm:text-base md:text-lg leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside">
           {indice.map((item) => (
@@ -171,11 +171,11 @@ function NewsletterForm() {
 
     const formData = new FormData(e.target);
 
-    // Valida os campos obrigatórios
+    // Validate required fields
     const email = formData.get("email")?.trim();
 
     if (!email) {
-      toast.error("Por favor, insira um email válido.");
+      toast.error("Please enter a valid email.");
       setIsSubmitting(false);
       return;
     }
@@ -188,16 +188,16 @@ function NewsletterForm() {
 
       if (response.ok) {
         const data = await response.json();
-        toast.success(data.message || "Subscrição realizada com sucesso!");
+        toast.success(data.message || "Subscribed successfully!");
         setEmail("");
         // Limpa os campos não-controlados
         e.target.reset();
       } else {
         const data = await response.json();
-        toast.error(data.error || "Erro ao processar subscrição.");
+        toast.error(data.error || "Error processing subscription.");
       }
     } catch {
-      toast.error("Erro inesperado. Tente novamente.");
+      toast.error("Unexpected error. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -206,12 +206,12 @@ function NewsletterForm() {
   return (
     <div className="flex flex-col items-center justify-center py-10">
       <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 text-center leading-relaxed mb-5">
-        📩 Quer receber <br className=" md:hidden" />
-        mais tutoriais como este?
+        📩 Want more tutorials
+        <br className=" md:hidden" /> like this?
       </h1>
       <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-600 text-center">
-        Assine minha newsletter <br className=" md:hidden" />e receba novidades
-        direto no seu e-mail.
+        Subscribe to my newsletter
+        <br className=" md:hidden" /> and get new posts in your inbox.
       </p>
       <form
         method="POST"
@@ -226,17 +226,17 @@ function NewsletterForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          placeholder="Endereço de e-mail"
+          placeholder="Email address"
           disabled={isSubmitting}
           className="w-full rounded-full px-5 py-4 border-none tracking-tight outline-none bg-transparent text-base text-slate-900 placeholder-gray-500 disabled:opacity-50"
-          title="Insira um e-mail válido"
+          title="Enter a valid email"
         />
         <button
           type="submit"
           disabled={isSubmitting}
           className="bg-secundario hover:bg-blue-700 transition-all text-white font-semibold text-sm rounded-full px-6 py-3 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isSubmitting ? "..." : "Subscrever"}
+          {isSubmitting ? "..." : "Subscribe"}
         </button>
       </form>
     </div>
@@ -248,24 +248,24 @@ function CardResponsivo() {
     <>
       <Helmet>
         <title>
-          Card Responsivo com Hover Animado — React + TailwindCSS (Tutorial
-          Passo a Passo) | LodeX Studio
+          Responsive Card with Animated Hover — React + TailwindCSS
+          (Step-by-Step Tutorial) | LodeX Studio
         </title>
         <meta
           name="description"
-          content="Aprenda passo a passo a criar um card responsivo com hover animado usando React e TailwindCSS. Inclui código, dicas de design e responsividade."
+          content="Learn how to build a responsive card with an animated hover using React and TailwindCSS. Step-by-step guide with code, design tips, and responsiveness."
         />
         <meta
           name="keywords"
-          content="React, Tailwind, card responsivo, badges, UI components, web design, frontend"
+          content="React, Tailwind, responsive card, badges, UI components, web design, frontend"
         />
         <meta
           property="og:title"
-          content="Card Responsivo com Badges - React + Tailwind"
+          content="Responsive Card with Badges — React + Tailwind"
         />
         <meta
           property="og:description"
-          content="Aprenda a criar um card responsivo com badges usando React e Tailwind."
+          content="Build a responsive card with badges using React and Tailwind."
         />
         <meta
           property="og:image"
@@ -273,20 +273,20 @@ function CardResponsivo() {
         />
         <meta
           property="og:url"
-          content="https://lodexstudio.com/images/blog/card-responsivo-lodex-studio.png"
+          content="https://lodexstudio.com/blog/cardresponsive"
         />
         <meta property="og:type" content="article" />
       </Helmet>
 
       <a
-        href="#conteudo-principal"
+        href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-secundario text-white px-4 py-2 rounded-md"
       >
-        Ir para conteúdo principal
+        Skip to main content
       </a>
 
       <main
-        id="conteudo-principal"
+        id="main-content"
         className="min-h-[95vh] border-b shadow-md"
         role="main"
       >
@@ -295,15 +295,16 @@ function CardResponsivo() {
             <div className="w-full max-w-content mx-auto sm:px-6 md:px-8 lg:px-[18%]">
               <article
                 className="flex-col text-start"
-                aria-label="Tutorial: Card Responsivo com Hover Animado"
+                aria-label="Tutorial: Responsive Card with Animated Hover"
               >
                 <header className="mb-10">
                   <h1 className="text-2xl sm:text-4xl md:text-5xl font-light text-gray-900 leading-relaxed max-w-4xl">
-                    Card Responsivo com Hover Animado usando React + TailwindCSS
+                    Responsive Card with Animated Hover using React +
+                    TailwindCSS
                   </h1>
                   <p className="mt-6 mb-2 text-base lg:text-2xl text-slate-600 leading-relaxed max-w-3xl font-light">
-                    Efeito suave de hover que dá vida ao card com menos de 200
-                    linhas de código.
+                    A subtle hover effect that brings your card to life in under
+                    200 lines of code.
                   </p>
                 </header>
 
@@ -312,27 +313,27 @@ function CardResponsivo() {
                 <figure className="mb-10">
                   <img
                     src="images/blog/cad-responsivo-differ.jpg"
-                    alt="Comparação entre card simples e card melhorado com badges e animação"
+                    alt="Comparison between a simple card and an improved card with badges and animation"
                     className="rounded-lg"
                     loading="lazy"
                   />
                   <figcaption className="sr-only">
-                    Comparação visual entre dois estados do card.
+                    Visual comparison between two card states.
                   </figcaption>
                 </figure>
 
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                  Um card visual deve ser claro, organizado e usar hierarquia
-                  visual para guiar o usuário. No exemplo otimizado, ícones e
-                  badges destacam o conteúdo, o espaçamento melhora a leitura e
-                  o design moderno cria uma experiência agradável. Responsivo e
-                  interativo, valoriza o conteúdo e aumenta o engajamento com
-                  código simples.
+                  A visual card should be clear, organized, and use hierarchy to
+                  guide the eye. In the optimized example, icons and badges add
+                  context, spacing improves readability, and a clean design
+                  makes it pleasant to scan. It’s responsive and interactive,
+                  which elevates the content and increases engagement — with
+                  simple code.
                 </p>
 
                 <hr className="mb-10" />
 
-                <nav aria-label="Índice do artigo">
+                <nav aria-label="Article table of contents">
                   <Indice />
                 </nav>
 
@@ -344,39 +345,39 @@ function CardResponsivo() {
                     id="heading-passo-1"
                     className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10"
                   >
-                    <strong>Passo 1</strong> — Criar o projeto com React e
+                    <strong>Step 1</strong> — Create the project with React &
                     TailwindCSS
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    <strong className="font-medium">Objetivo:</strong> Criar a
-                    base do projeto onde o card será construído.
+                    <strong className="font-medium">Goal:</strong> Set up the
+                    base project where the card will be built.
                   </p>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
-                    O que será feito:
+                    What you’ll do:
                   </p>
                   <ol className="list-decimal font-medium text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside">
                     <li className="font-light">
-                      Criar projeto React com{" "}
+                      Create a React project with{" "}
                       <strong className="font-medium">Vite</strong>
                     </li>
                     <li className="font-light">
-                      Instalar e configurar{" "}
+                      Install and configure{" "}
                       <strong className="font-medium">TailwindCSS</strong>
                     </li>
                   </ol>
 
                   <hr className="mb-10" />
                   <h3 className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
-                    Código
+                    Code
                   </h3>
 
                   <div
                     className="w-full mx-auto bg-gray-100 p-5 rounded-xl mb-2"
-                    aria-label="Comandos para criar projeto"
+                    aria-label="Commands to create the project"
                   >
                     <p className="text-base leading-relaxed text-slate-700 font-[400] mb-10">
                       <span className="text-gray-500 font-[500] tracking-wide text-sm italic">
-                        # Criar projeto React com Vite
+                        # Create React project with Vite
                       </span>
                       <br />
                       npm create vite@latest card-tailwind
@@ -385,7 +386,7 @@ function CardResponsivo() {
                     </p>
                     <p className="text-base leading-relaxed text-slate-700 font-[400]">
                       <span className="text-gray-500 font-[500] tracking-wider text-sm italic">
-                        # Instalar TailwindCSS
+                        # Install TailwindCSS
                       </span>
                       <br />
                       npm install -D tailwindcss postcss autoprefixer
@@ -396,7 +397,7 @@ function CardResponsivo() {
 
                   <div
                     className="w-full mx-auto bg-gray-100 p-5 rounded-xl mb-2"
-                    aria-label="Configuração Tailwind"
+                    aria-label="Tailwind configuration"
                   >
                     <p className="text-base leading-relaxed text-slate-700 font-[400]">
                       <span className="text-gray-500 font-[500] tracking-wide text-sm italic">
@@ -433,7 +434,7 @@ function CardResponsivo() {
 
                   <div
                     className="w-full mx-auto bg-gray-100 p-5 rounded-xl mb-2"
-                    aria-label="Importação CSS Tailwind"
+                    aria-label="Tailwind CSS import"
                   >
                     <p className="text-base leading-relaxed text-slate-700 font-[400]">
                       <span className="text-gray-500 font-[500] tracking-wide text-sm italic">
@@ -458,31 +459,30 @@ function CardResponsivo() {
                   </div>
 
                   <p className="text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light mb-5">
-                    Configure o arquivo{" "}
+                    Configure the{" "}
                     <span className="bg-gray-100 px-2 rounded-lg">
                       tailwind.config.js
                     </span>{" "}
-                    e importe o CSS em{" "}
+                    file and import CSS in{" "}
                     <span className="bg-gray-100 px-2 rounded-lg">
                       index.css
                     </span>
                     .
                   </p>
                   <p className="text-base leading-relaxed text-slate-700">
-                    Dica: mantenha a estrutura organizada para facilitar
-                    manutenção.
+                    Tip: keep your structure organized for easier maintenance.
                   </p>
 
                   <hr className="my-10" />
                   <h3 className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
-                    Teste agora
+                    Try it now
                   </h3>
                   <p className="text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light mb-10">
-                    Execute{" "}
+                    Run{" "}
                     <code className="bg-gray-100 rounded-md px-1 font-medium text-sm">
                       npm run dev
                     </code>{" "}
-                    e confirme que o Tailwind está a aplicar estilos.
+                    and confirm Tailwind styles are applied.
                   </p>
                 </section>
 
@@ -494,33 +494,33 @@ function CardResponsivo() {
                     id="heading-passo-2"
                     className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10"
                   >
-                    <strong>Passo 2</strong> — Estruturar o componente base
+                    <strong>Step 2</strong> — Structure the base component
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    <strong className="font-medium">Objetivo:</strong> Criar um
-                    card simples sem efeitos para servir de ponto de partida.
+                    <strong className="font-medium">Goal:</strong> Create a
+                    simple card without effects as a starting point.
                   </p>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
-                    O que será feito:
+                    What you’ll do:
                   </p>
                   <ol className="list-decimal font-medium text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside">
                     <li className="font-light">
-                      Criar o arquivo{" "}
+                      Create the file{" "}
                       <code className="bg-gray-100 px-1 rounded-md">
                         Card.jsx
                       </code>
                     </li>
                     <li className="font-light">
-                      Adicionar imagem, título e descrição
+                      Add image, title, and description
                     </li>
                     <li className="font-light">
-                      Aplicar classes básicas do TailwindCSS
+                      Apply basic TailwindCSS classes
                     </li>
                   </ol>
 
                   <hr className="mb-10" />
                   <h3 className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
-                    Código (resumo)
+                    Code (summary)
                   </h3>
 
                   <div>
@@ -529,7 +529,7 @@ function CardResponsivo() {
                       code={blocoParte2.code}
                     />
                     <p className="text-base leading-relaxed text-slate-700">
-                      Estrutura base que receberá design e animações.
+                      Base structure that will receive design and animations.
                     </p>
                   </div>
 
@@ -537,12 +537,12 @@ function CardResponsivo() {
                   <figure className="-mt-10">
                     <img
                       src="images/blog/card-base2.jpg"
-                      alt="Primeira versão do card apenas com imagem e texto"
+                      alt="First version of the card with only image and text"
                       className="w-96 mx-auto h-full object-cover"
                       loading="lazy"
                     />
                     <figcaption className="text-base leading-relaxed text-slate-700 mb-2">
-                      Funciona, mas falta apelo visual e dinamismo.
+                      It works, but it lacks visual appeal and motion.
                     </figcaption>
                   </figure>
                 </section>
@@ -555,32 +555,32 @@ function CardResponsivo() {
                     id="heading-passo-3"
                     className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10"
                   >
-                    <strong>Passo 3</strong> — Adicionando badges e ação
+                    <strong>Step 3</strong> — Add badges and actions
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    Transformar o card estático em algo dinâmico com badges e
-                    elementos visuais.
+                    Turn the static card into something dynamic with badges and
+                    visual elements.
                   </p>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    <strong className="font-medium">Objetivo:</strong> Tornar o
-                    card mais atrativo e semântico.
+                    <strong className="font-medium">Goal:</strong> Make the card
+                    more attractive and semantic.
                   </p>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium mb-2">
-                    Ações:
+                    Actions:
                   </p>
                   <ol className="list-decimal font-medium text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 mb-5 max-w-3xl space-y-1 list-inside">
                     <li className="font-light">
-                      Criar componente{" "}
-                      <span className="font-medium">Badge</span>
+                      Create a <span className="font-medium">Badge</span>{" "}
+                      component
                     </li>
                     <li className="font-light">
-                      Aplicar cores dinâmicas por tecnologia
+                      Apply dynamic colors by technology
                     </li>
                   </ol>
 
                   <hr className="mb-10" />
                   <h3 className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
-                    Código parcial (Badge)
+                    Partial code (Badge)
                   </h3>
                   <div>
                     <CodeBlock
@@ -588,7 +588,7 @@ function CardResponsivo() {
                       code={blocoParte3.code}
                     />
                     <p className="text-base leading-relaxed text-slate-700">
-                      Use contraste suficiente para texto dentro das badges.
+                      Use sufficient contrast for text inside badges.
                     </p>
                   </div>
 
@@ -596,12 +596,12 @@ function CardResponsivo() {
                   <figure className="mt-10">
                     <img
                       src="images/blog/antes-depois-1.jpg"
-                      alt="Comparação visual antes e depois da aplicação das badges"
+                      alt="Visual comparison before and after adding badges"
                       className="w-full mx-auto h-full object-cover rounded-lg"
                       loading="lazy"
                     />
                     <figcaption className="text-base leading-relaxed text-slate-700 my-5">
-                      Badges adicionam clareza e contexto visual.
+                      Badges add clarity and visual context.
                     </figcaption>
                   </figure>
                 </section>
@@ -614,16 +614,16 @@ function CardResponsivo() {
                     id="heading-passo-4"
                     className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10"
                   >
-                    <strong>Passo 4</strong> — Imagem com efeito hover
+                    <strong>Step 4</strong> — Image with hover effect
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    Criar impacto inicial com uma imagem que responde à
-                    interação.
+                    Create initial impact with an image that responds to
+                    interaction.
                   </p>
 
                   <hr className="mb-10" />
                   <h3 className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
-                    Código parcial (imagem)
+                    Partial code (image)
                   </h3>
                   <div>
                     <CodeBlock
@@ -631,7 +631,7 @@ function CardResponsivo() {
                       code={blocoParte4.code}
                     />
                     <p className="text-base leading-relaxed text-slate-700">
-                      Prefira formatos otimizados (ex: .webp) para performance.
+                      Prefer optimized formats (e.g., .webp) for performance.
                     </p>
                   </div>
 
@@ -639,12 +639,12 @@ function CardResponsivo() {
                   <figure className="-mt-10">
                     <img
                       src="images/blog/card-video.gif"
-                      alt="Animação demonstrando o efeito de zoom suave ao passar o cursor sobre a imagem"
+                      alt="Animation showing smooth zoom effect when hovering over the image"
                       className="w-80 mx-auto h-full object-cover rounded-lg"
                       loading="lazy"
                     />
                     <figcaption className="text-base leading-relaxed text-slate-700 my-5">
-                      Efeito sutil reforça a sensação de resposta visual.
+                      A subtle effect reinforces responsive visual feedback.
                     </figcaption>
                   </figure>
                 </section>
@@ -657,16 +657,16 @@ function CardResponsivo() {
                     id="heading-passo-5"
                     className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10"
                   >
-                    <strong>Passo 5</strong> — Interatividade e CTA
+                    <strong>Step 5</strong> — Interactivity and CTA
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    Botão visível apenas no hover para manter layout limpo e
-                    direcionar ação.
+                    Show a button only on hover to keep the layout clean and
+                    steer action.
                   </p>
 
                   <hr className="mb-10" />
                   <h3 className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
-                    Código parcial (CTA)
+                    Partial code (CTA)
                   </h3>
                   <div>
                     <CodeBlock
@@ -675,19 +675,19 @@ function CardResponsivo() {
                     />
                   </div>
                   <p className="text-base leading-relaxed text-slate-700">
-                    Ícones devem ter aria-hidden="true" se puramente
-                    decorativos.
+                    Icons should have aria-hidden="true" if they’re purely
+                    decorative.
                   </p>
                   <p className="text-sm leading-relaxed text-slate-600 font-light mt-4">
-                    💡 <strong>Dica:</strong> Vejo implementações criativas da
-                    comunidade no
+                    💡 <strong>Tip:</strong> I post community highlights and
+                    creative implementations on
                     <a
                       href="https://instagram.com/lodex.studio"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-purple-600 hover:text-purple-800 ml-1"
                     >
-                      Instagram usando #LodeXStudio
+                      Instagram — use #LodeXStudio
                     </a>
                     !
                   </p>
@@ -696,12 +696,12 @@ function CardResponsivo() {
                   <figure className="-mt-10">
                     <img
                       src="images/blog/card-video-CTA.gif"
-                      alt="Demonstração da aparição do botão CTA ao passar o cursor"
+                      alt="Demonstration of the CTA button appearing on hover"
                       className="w-80 mx-auto h-full object-cover rounded-lg"
                       loading="lazy"
                     />
                     <figcaption className="text-base leading-relaxed text-slate-700 my-5">
-                      CTA discreto reduz ruído visual e mantém foco.
+                      A discreet CTA reduces visual noise and keeps focus.
                     </figcaption>
                   </figure>
                 </section>
@@ -714,16 +714,15 @@ function CardResponsivo() {
                     id="heading-passo-6"
                     className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10"
                   >
-                    <strong>Passo 6</strong> — Tornar o card responsivo
+                    <strong>Step 6</strong> — Make the card responsive
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    Garantir boa leitura e estrutura em qualquer largura de
-                    ecrã.
+                    Ensure readability and structure at any screen width.
                   </p>
 
                   <hr className="mb-10" />
                   <h3 className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-semibold mb-2">
-                    Exemplo de classes responsivas
+                    Example responsive classes
                   </h3>
                   <div>
                     <CodeBlock
@@ -737,7 +736,8 @@ function CardResponsivo() {
                       code={blocoParte61.code}
                     />
                     <p className="text-base leading-relaxed text-slate-700">
-                      O atributo loop simula GIF com melhor performance.
+                      The loop attribute simulates a GIF with better
+                      performance.
                     </p>
                   </div>
 
@@ -750,14 +750,14 @@ function CardResponsivo() {
                       loop
                       playsInline
                       className="w-full mx-auto h-full object-cover rounded-lg"
-                      aria-label="Demonstração da adaptação do card em tamanhos diferentes"
+                      aria-label="Demonstration of the card adapting to different sizes"
                     />
                     <figcaption className="text-center text-slate-700">
-                      Adaptação suave entre desktop e mobile.
+                      Smooth adaptation between desktop and mobile.
                     </figcaption>
                   </figure>
                   <p className="text-base leading-relaxed text-slate-700 my-5">
-                    Importante para acessos móveis (mais de 60% hoje).
+                    Important for mobile traffic (often 60%+ today).
                   </p>
                 </section>
 
@@ -769,31 +769,31 @@ function CardResponsivo() {
                     id="heading-passo-final"
                     className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10"
                   >
-                    <strong>Passo Final</strong> — Código completo no GitHub
+                    <strong>Final Step</strong> — Full code on GitHub
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    Acesse e clone o repositório para testes.
+                    Access and clone the repository to test it locally.
                   </p>
                   <a
                     href="https://github.com/lodsa-ntos/lodexstudio-blog"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-fit hover:bg-secundario transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secundario hover:ring-2 hover:ring-secundario hover:scale-105 hover:ring-inset items-center gap-2"
-                    aria-label="Ver código completo deste tutorial no GitHub"
+                    aria-label="See the full code for this tutorial on GitHub"
                   >
                     <IoMdCodeWorking
                       className="text-gray-200 font-bold size-5"
                       aria-hidden="true"
                       focusable="false"
                     />
-                    Ver código no GitHub
+                    View code on GitHub
                   </a>
                   <p className="text-sm md:text-base lg:text-lg leading-relaxed text-slate-700 font-light mt-6">
                     🔥{" "}
                     <strong className="font-medium mr-1">
-                      Quer ver este código sendo desenvolvido ao vivo?
+                      Want to see this being built live?
                     </strong>
-                    Siga{" "}
+                    Follow{" "}
                     <a
                       href="https://instagram.com/lodex.studio"
                       target="_blank"
@@ -802,7 +802,7 @@ function CardResponsivo() {
                     >
                       @lodex.studio
                     </a>{" "}
-                    no Instagram para acompanhar sessões de live coding!
+                    on Instagram for live coding sessions!
                   </p>
                 </section>
 
@@ -813,19 +813,19 @@ function CardResponsivo() {
                     id="heading-conclusao"
                     className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-relaxed mb-10"
                   >
-                    <strong>Conclusão</strong>
+                    <strong>Conclusion</strong>
                   </h2>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    Agora você tem um card responsivo, moderno e animado que
-                    pode adaptar para vários contextos. Personalize cores,
-                    troque ícones e integre em layouts reais para ganhar
-                    velocidade e consistência na criação de interfaces.
+                    Now you have a responsive, modern, animated card that you
+                    can adapt to many contexts. Customize colors, swap icons,
+                    and integrate it into real layouts to gain speed and
+                    consistency when building interfaces.
                   </p>
                   <p className="text-base md:text-lg lg:text-xl leading-relaxed text-slate-700 font-light mb-10">
-                    💡 <strong className="font-medium">Dica:</strong> Acompanhe
-                    mais tutoriais e variações deste card no meu Instagram. Lá
-                    compartilho o processo de desenvolvimento, dicas rápidas em
-                    stories e respondo dúvidas da comunidade!
+                    💡 <strong className="font-medium">Tip:</strong> Follow more
+                    tutorials and card variations on my Instagram. I share my
+                    development process, quick tips in stories, and answer
+                    community questions!
                   </p>
                 </section>
 
