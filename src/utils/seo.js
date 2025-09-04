@@ -9,10 +9,6 @@ export const updatePageSEO = (seoData) => {
     // Update OG title
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.content = seoData.title;
-    
-    // Update Twitter title
-    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-    if (twitterTitle) twitterTitle.content = seoData.title;
   }
 
   // Update description
@@ -23,10 +19,6 @@ export const updatePageSEO = (seoData) => {
     // Update OG description
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) ogDescription.content = seoData.description;
-    
-    // Update Twitter description
-    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
-    if (twitterDescription) twitterDescription.content = seoData.description;
   }
 
   // Update canonical URL
@@ -42,10 +34,6 @@ export const updatePageSEO = (seoData) => {
     // Update OG URL
     const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) ogUrl.content = seoData.canonical;
-    
-    // Update Twitter URL
-    const twitterUrl = document.querySelector('meta[name="twitter:url"]');
-    if (twitterUrl) twitterUrl.content = seoData.canonical;
   }
 
   // Update keywords
@@ -58,9 +46,6 @@ export const updatePageSEO = (seoData) => {
   if (seoData.image) {
     const ogImage = document.querySelector('meta[property="og:image"]');
     if (ogImage) ogImage.content = seoData.image;
-    
-    const twitterImage = document.querySelector('meta[name="twitter:image"]');
-    if (twitterImage) twitterImage.content = seoData.image;
   }
 };
 

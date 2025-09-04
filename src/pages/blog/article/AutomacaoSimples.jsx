@@ -35,11 +35,7 @@ function AutomacaoSimples() {
         />
         <meta property="og:image" content={imageSvg} />
         <meta property="og:image:type" content="image/svg+xml" />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={imageJpg} />
+        {/* Twitter removed (no Twitter presence) */}
         {/* JSON-LD */}
         <script type="application/ld+json">
           {JSON.stringify({

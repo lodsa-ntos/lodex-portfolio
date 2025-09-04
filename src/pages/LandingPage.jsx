@@ -77,15 +77,6 @@ function LandingPage() {
         />
         <meta property="og:url" content="https://lodexstudio.com" />
         <meta property="og:type" content="website" />
-
-        <meta
-          name="twitter:title"
-          content="LodeX Studio | Frontend Developer & UI Designer Portugal | Lodney Santos"
-        />
-        <meta
-          name="twitter:description"
-          content="Lodney Santos - Frontend Developer & UI Designer especializado em websites modernos, landing pages e soluções digitais escaláveis em Portugal."
-        />
       </Helmet>
 
       <div className="shadow bg-gradient-to-b from-[#f4f8ff] via-white to-white">

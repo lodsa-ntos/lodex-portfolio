@@ -48,24 +48,7 @@ function IAAjuda() {
           property="og:url"
           content="https://lodexstudio.com/ia-que-ajuda"
         />
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="IA que Ajuda — 7 formas práticas de usar IA no dia a dia"
-        />
-        <meta
-          name="twitter:description"
-          content="Prompts, workflows e ferramentas para implementar IA sem complicação."
-        />
-        <meta
-          name="twitter:image"
-          content="https://lodexstudio.com/images/blog/blog-banner-hero.jpg"
-        />
-        <meta
-          name="twitter:image:alt"
-          content="IA que Ajuda — 7 formas práticas de usar IA no dia a dia"
-        />
+        {/* Twitter removed (no Twitter presence) */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
