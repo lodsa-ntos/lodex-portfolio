@@ -86,7 +86,8 @@ function DataProtection() {
                   <li>Improve site functionality</li>
                 </ul>
                 <p>
-                  For more details, see our <a href="/legal/cookies">Cookie Policy</a>.
+                  For more details, see our{" "}
+                  <a href="/legal/cookies">Cookie Policy</a>.
                 </p>
               </section>
 
@@ -120,9 +121,9 @@ function DataProtection() {
                   7. Data retention
                 </h2>
                 <p>
-                  We keep your personal information only for as long as necessary
-                  to fulfil the purposes described in this policy, unless a longer
-                  retention period is required by law.
+                  We keep your personal information only for as long as
+                  necessary to fulfil the purposes described in this policy,
+                  unless a longer retention period is required by law.
                 </p>
               </section>
 
@@ -130,7 +131,10 @@ function DataProtection() {
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                   8. Contact
                 </h2>
-                <p>If you have questions about this policy or how we handle your data:</p>
+                <p>
+                  If you have questions about this policy or how we handle your
+                  data:
+                </p>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <p>
                     <strong>LodeX Studio</strong>

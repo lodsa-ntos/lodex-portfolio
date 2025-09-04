@@ -31,8 +31,8 @@ function TermsOfService() {
                   1. Acceptance of terms
                 </h2>
                 <p>
-                  By accessing and using LodeX Studio's services, you agree to be
-                  bound by these Terms of Service. If you do not agree to any
+                  By accessing and using LodeX Studio's services, you agree to
+                  be bound by these Terms of Service. If you do not agree to any
                   part of these terms, you should not use our services.
                 </p>
               </section>
@@ -56,25 +56,33 @@ function TermsOfService() {
                   3. Work process
                 </h2>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-gray-900">3.1 Initial consultation</h3>
+                  <h3 className="text-xl font-medium text-gray-900">
+                    3.1 Initial consultation
+                  </h3>
                   <p>
                     Every project begins with a free consultation to understand
                     your needs and goals.
                   </p>
 
-                  <h3 className="text-xl font-medium text-gray-900">3.2 Proposal and quote</h3>
+                  <h3 className="text-xl font-medium text-gray-900">
+                    3.2 Proposal and quote
+                  </h3>
                   <p>
                     After the consultation, we provide a detailed proposal with
                     timeline and costs.
                   </p>
 
-                  <h3 className="text-xl font-medium text-gray-900">3.3 Development</h3>
+                  <h3 className="text-xl font-medium text-gray-900">
+                    3.3 Development
+                  </h3>
                   <p>
                     Work starts after the proposal is approved and the initial
                     payment (50%) is made.
                   </p>
 
-                  <h3 className="text-xl font-medium text-gray-900">3.4 Delivery and final payment</h3>
+                  <h3 className="text-xl font-medium text-gray-900">
+                    3.4 Delivery and final payment
+                  </h3>
                   <p>
                     The remaining payment (50%) is due upon delivery of the
                     completed project.
@@ -87,17 +95,21 @@ function TermsOfService() {
                   4. Payments and refunds
                 </h2>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-gray-900">4.1 Payment structure</h3>
+                  <h3 className="text-xl font-medium text-gray-900">
+                    4.1 Payment structure
+                  </h3>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>50% at project start</li>
                     <li>50% upon final delivery</li>
                   </ul>
 
-                  <h3 className="text-xl font-medium text-gray-900">4.2 Refund policy</h3>
+                  <h3 className="text-xl font-medium text-gray-900">
+                    4.2 Refund policy
+                  </h3>
                   <p>
                     Refunds are assessed on a case-by-case basis. If work has
-                    already begun, any refund will be proportional to the work not
-                    performed.
+                    already begun, any refund will be proportional to the work
+                    not performed.
                   </p>
                 </div>
               </section>
@@ -107,16 +119,21 @@ function TermsOfService() {
                   5. Intellectual property
                 </h2>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-gray-900">5.1 Client rights</h3>
+                  <h3 className="text-xl font-medium text-gray-900">
+                    5.1 Client rights
+                  </h3>
                   <p>
                     Upon full payment, the client owns the rights to the final
                     design and code developed specifically for their project.
                   </p>
 
-                  <h3 className="text-xl font-medium text-gray-900">5.2 LodeX Studio rights</h3>
+                  <h3 className="text-xl font-medium text-gray-900">
+                    5.2 LodeX Studio rights
+                  </h3>
                   <p>
-                    We reserve the right to showcase the work in our portfolio and
-                    promotional materials, unless otherwise agreed in writing.
+                    We reserve the right to showcase the work in our portfolio
+                    and promotional materials, unless otherwise agreed in
+                    writing.
                   </p>
                 </div>
               </section>
@@ -140,8 +157,8 @@ function TermsOfService() {
                 </h2>
                 <p>
                   LodeX Studio will not be liable for any indirect, special,
-                  incidental, or consequential damages arising from the use of our
-                  services.
+                  incidental, or consequential damages arising from the use of
+                  our services.
                 </p>
               </section>
 
@@ -151,7 +168,8 @@ function TermsOfService() {
                 </h2>
                 <p>
                   We offer 30 days of free support after project delivery to fix
-                  bugs. Content or feature changes are subject to separate quotes.
+                  bugs. Content or feature changes are subject to separate
+                  quotes.
                 </p>
               </section>
 
@@ -161,8 +179,8 @@ function TermsOfService() {
                 </h2>
                 <p>
                   Either party may terminate the agreement with 7 days' prior
-                  notice. In case of termination, payment is due for work already
-                  performed.
+                  notice. In case of termination, payment is due for work
+                  already performed.
                 </p>
               </section>
 
@@ -171,8 +189,8 @@ function TermsOfService() {
                   10. Governing law
                 </h2>
                 <p>
-                  These terms are governed by Portuguese law. Any dispute will be
-                  resolved in the competent courts in Portugal.
+                  These terms are governed by Portuguese law. Any dispute will
+                  be resolved in the competent courts in Portugal.
                 </p>
               </section>
 
@@ -196,9 +214,9 @@ function TermsOfService() {
                   12. Changes to these terms
                 </h2>
                 <p>
-                  We reserve the right to modify these terms at any time. Changes
-                  will be communicated via the website and will take effect 30 days
-                  after publication.
+                  We reserve the right to modify these terms at any time.
+                  Changes will be communicated via the website and will take
+                  effect 30 days after publication.
                 </p>
               </section>
             </div>

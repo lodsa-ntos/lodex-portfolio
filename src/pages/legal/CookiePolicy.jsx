@@ -127,18 +127,26 @@ function CookiePolicy() {
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-medium text-gray-900">Google Analytics</h4>
+                      <h4 className="font-medium text-gray-900">
+                        Google Analytics
+                      </h4>
                       <p className="text-sm text-gray-600">
                         Used to analyse traffic and user behaviour
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-900">WhatsApp widget</h4>
-                      <p className="text-sm text-gray-600">For direct chat functionality</p>
+                      <h4 className="font-medium text-gray-900">
+                        WhatsApp widget
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        For direct chat functionality
+                      </p>
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">Vercel</h4>
-                      <p className="text-sm text-gray-600">For hosting and site performance</p>
+                      <p className="text-sm text-gray-600">
+                        For hosting and site performance
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -168,7 +176,8 @@ function CookiePolicy() {
                   </h3>
                   <ul className="space-y-3">
                     <li>
-                      <strong>Chrome:</strong> Settings → Privacy & security → Cookies
+                      <strong>Chrome:</strong> Settings → Privacy & security →
+                      Cookies
                     </li>
                     <li>
                       <strong>Firefox:</strong> Preferences → Privacy & Security
@@ -177,7 +186,8 @@ function CookiePolicy() {
                       <strong>Safari:</strong> Preferences → Privacy
                     </li>
                     <li>
-                      <strong>Edge:</strong> Settings → Privacy, search and services
+                      <strong>Edge:</strong> Settings → Privacy, search and
+                      services
                     </li>
                   </ul>
                 </div>

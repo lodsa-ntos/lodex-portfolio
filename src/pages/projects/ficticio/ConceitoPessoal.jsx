@@ -101,10 +101,11 @@ function ConceitoPessoal() {
                 page with a realistic structure for launching digital products
                 like eBooks, courses, SaaS, or creative services.
                 <br />
-                <br />The project follows best practices in UI/UX, performance,
-                and scalability, acting as a proof of how{" "}
-                <strong className="text-secundario">LØdeX</strong> works:
-                clean aesthetics, logical structure, and attention to detail.
+                <br />
+                The project follows best practices in UI/UX, performance, and
+                scalability, acting as a proof of how{" "}
+                <strong className="text-secundario">LØdeX</strong> works: clean
+                aesthetics, logical structure, and attention to detail.
               </p>
 
               <div>
@@ -114,8 +115,7 @@ function ConceitoPessoal() {
                 </h1>
 
                 <p className="mb-6 text-gray-600 text-base leading-relaxed">
-                  More than an aesthetic exercise,{
-                  " "}
+                  More than an aesthetic exercise,{" "}
                   <strong className="text-[#6248d6]">LaunchPeak</strong> was
                   designed as a reusable foundation for brands that want to
                   launch quickly with presence. It’s a presentation tool and a
@@ -129,9 +129,8 @@ function ConceitoPessoal() {
                 <div className="flex flex-col gap-2">
                   <div className="relative text-sm  leading-relaxed">
                     <p className="pl-5 text-gray-700">
-                      If you’d like something along these lines for your
-                      project or brand,{
-                      " "}
+                      If you’d like something along these lines for your project
+                      or brand,{" "}
                       <strong>this is the kind of base we can adapt</strong>
                       to your reality.
                     </p>

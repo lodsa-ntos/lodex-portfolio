@@ -176,10 +176,11 @@ function ProjetoReal() {
                 from the first click, while respecting the brand identity with a
                 focus on mobile navigation and clear copy.
                 <br />
-                <br />The site brings together the key areas — company,
-                services, how it works, and contact — in a smooth, lightweight
-                navigation. The code was optimized for performance, fast loads,
-                and a scalable structure.
+                <br />
+                The site brings together the key areas — company, services, how
+                it works, and contact — in a smooth, lightweight navigation. The
+                code was optimized for performance, fast loads, and a scalable
+                structure.
                 <br />
                 <br />
                 The site is now live and in use, with content managed by the
@@ -187,10 +188,10 @@ function ProjetoReal() {
                 commitment, from structure to final details.
               </p>
 
-        {/* Before, solution and impact — text with small images of the old site */}
+              {/* Before, solution and impact — text with small images of the old site */}
               <div className="mb-6" data-track-section="project_antes_depois">
                 <h2 className="text-gray-700 text-lg font-medium mb-3">
-          Before • The solution • The impact
+                  Before • The solution • The impact
                 </h2>
 
                 {/* Before */}
@@ -337,7 +338,9 @@ function ProjetoReal() {
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </span>
-                    <span className="text-sm">Simple, intuitive navigation</span>
+                    <span className="text-sm">
+                      Simple, intuitive navigation
+                    </span>
                   </li>
 
                   <li className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -357,7 +360,9 @@ function ProjetoReal() {
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </span>
-                    <span className="text-sm">Layout designed for scalability</span>
+                    <span className="text-sm">
+                      Layout designed for scalability
+                    </span>
                   </li>
 
                   <li className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -397,7 +402,9 @@ function ProjetoReal() {
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </span>
-                    <span className="text-sm">Future CMS integration possible</span>
+                    <span className="text-sm">
+                      Future CMS integration possible
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -428,8 +435,9 @@ function ProjetoReal() {
                     <p className="pl-5 pt-2 text-gray-600">
                       We were very pleased with the website. It looks amazing —
                       we truly loved it! Very professional and detail‑oriented.
-                      <br className="hidden sm:block" />The About Us page looks
-                      beautiful and conveys exactly what we wanted.
+                      <br className="hidden sm:block" />
+                      The About Us page looks beautiful and conveys exactly what
+                      we wanted.
                     </p>
                   </div>
                   <p className="text-sm italic font-semibold font-Jost text-gray-700 mt-1 pl-5">
@@ -447,7 +455,7 @@ function ProjetoReal() {
           className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
-      aria-label="Preview of the old site image"
+          aria-label="Preview of the old site image"
           onClick={() => setPreviewImage(null)}
         >
           <div
@@ -456,7 +464,7 @@ function ProjetoReal() {
           >
             <button
               className="absolute -top-3 -right-3 bg-white text-gray-700 hover:text-black rounded-full w-8 h-8 flex items-center justify-center shadow ring-1 ring-slate-200"
-        aria-label="Close preview"
+              aria-label="Close preview"
               onClick={() => setPreviewImage(null)}
             >
               ×
@@ -467,7 +475,7 @@ function ProjetoReal() {
               className="block max-h-[90vh] max-w-[95vw] object-contain rounded-lg bg-white"
             />
             <p className="mt-2 text-center text-xs text-slate-200/90">
-        Press Esc to close
+              Press Esc to close
             </p>
           </div>
         </div>

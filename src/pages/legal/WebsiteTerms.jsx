@@ -31,9 +31,9 @@ function WebsiteTerms() {
                   1. What are cookies?
                 </h2>
                 <p>
-                  Cookies are small text files stored on your device when you visit a
-                  website. They are widely used to make websites work more efficiently
-                  and to provide information to website owners.
+                  Cookies are small text files stored on your device when you
+                  visit a website. They are widely used to make websites work
+                  more efficiently and to provide information to website owners.
                 </p>
               </section>
 
@@ -42,8 +42,8 @@ function WebsiteTerms() {
                   2. How we use cookies
                 </h2>
                 <p>
-                  We use cookies to improve your experience on our website and to
-                  understand how you interact with our content.
+                  We use cookies to improve your experience on our website and
+                  to understand how you interact with our content.
                 </p>
               </section>
 
@@ -58,8 +58,8 @@ function WebsiteTerms() {
                       3.1 Strictly necessary cookies
                     </h3>
                     <p>
-                      Essential for the operation of the website. They enable you to
-                      navigate the site and use its features.
+                      Essential for the operation of the website. They enable
+                      you to navigate the site and use its features.
                     </p>
                     <div className="bg-gray-50 p-4 rounded-lg mt-3">
                       <p>
@@ -78,8 +78,8 @@ function WebsiteTerms() {
                       3.2 Performance cookies
                     </h3>
                     <p>
-                      These collect information about how you use our website, such as
-                      pages visited most often.
+                      These collect information about how you use our website,
+                      such as pages visited most often.
                     </p>
                     <div className="bg-gray-50 p-4 rounded-lg mt-3">
                       <p>
@@ -98,8 +98,8 @@ function WebsiteTerms() {
                       3.3 Functional cookies
                     </h3>
                     <p>
-                      Allow the website to remember choices you make and provide enhanced,
-                      personalised features.
+                      Allow the website to remember choices you make and provide
+                      enhanced, personalised features.
                     </p>
                     <div className="bg-gray-50 p-4 rounded-lg mt-3">
                       <p>
@@ -120,21 +120,32 @@ function WebsiteTerms() {
                   4. Third‑party cookies
                 </h2>
                 <p>
-                  Some cookies are set by third‑party services that appear on our pages:
+                  Some cookies are set by third‑party services that appear on
+                  our pages:
                 </p>
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-medium text-gray-900">Google Analytics</h4>
-                      <p className="text-sm text-gray-600">Traffic and behaviour analysis</p>
+                      <h4 className="font-medium text-gray-900">
+                        Google Analytics
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        Traffic and behaviour analysis
+                      </p>
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-900">WhatsApp widget</h4>
-                      <p className="text-sm text-gray-600">Direct chat functionality</p>
+                      <h4 className="font-medium text-gray-900">
+                        WhatsApp widget
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        Direct chat functionality
+                      </p>
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">Vercel</h4>
-                      <p className="text-sm text-gray-600">Hosting and performance</p>
+                      <p className="text-sm text-gray-600">
+                        Hosting and performance
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -145,15 +156,16 @@ function WebsiteTerms() {
                   5. Managing cookies
                 </h2>
                 <p>
-                  You can control and/or delete cookies as you wish. You can delete all
-                  cookies already on your computer and set most browsers to prevent them
-                  from being placed.
+                  You can control and/or delete cookies as you wish. You can
+                  delete all cookies already on your computer and set most
+                  browsers to prevent them from being placed.
                 </p>
 
                 <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
                   <p className="text-yellow-800">
-                    <strong>Note:</strong> If you choose to delete or disable cookies,
-                    some features of our website may not function properly.
+                    <strong>Note:</strong> If you choose to delete or disable
+                    cookies, some features of our website may not function
+                    properly.
                   </p>
                 </div>
 
@@ -163,7 +175,8 @@ function WebsiteTerms() {
                   </h3>
                   <ul className="space-y-3">
                     <li>
-                      <strong>Chrome:</strong> Settings → Privacy & security → Cookies
+                      <strong>Chrome:</strong> Settings → Privacy & security →
+                      Cookies
                     </li>
                     <li>
                       <strong>Firefox:</strong> Preferences → Privacy & Security
@@ -172,7 +185,8 @@ function WebsiteTerms() {
                       <strong>Safari:</strong> Preferences → Privacy
                     </li>
                     <li>
-                      <strong>Edge:</strong> Settings → Privacy, search and services
+                      <strong>Edge:</strong> Settings → Privacy, search and
+                      services
                     </li>
                   </ul>
                 </div>
@@ -183,9 +197,9 @@ function WebsiteTerms() {
                   6. Cookie consent
                 </h2>
                 <p>
-                  By continuing to use our website, you agree to the use of cookies as
-                  described in this policy. If you do not agree, adjust your browser
-                  settings or stop using the site.
+                  By continuing to use our website, you agree to the use of
+                  cookies as described in this policy. If you do not agree,
+                  adjust your browser settings or stop using the site.
                 </p>
               </section>
 
@@ -194,8 +208,8 @@ function WebsiteTerms() {
                   7. Updates to this policy
                 </h2>
                 <p>
-                  We may update this Cookie Policy from time to time. Please review this
-                  page regularly to stay informed.
+                  We may update this Cookie Policy from time to time. Please
+                  review this page regularly to stay informed.
                 </p>
               </section>
 

@@ -63,7 +63,9 @@ function Academico() {
                     className="flex gap-1 items-center text-xs font-medium font-Satoshi transition-transform duration-500 ease-in-out whitespace-nowrap"
                   >
                     <LiaUniversitySolid /> Academic project{" "}
-                    <span className="hidden md:block">• Final degree project</span>
+                    <span className="hidden md:block">
+                      • Final degree project
+                    </span>
                   </a>
                 </div>
 
@@ -110,9 +112,8 @@ function Academico() {
                 {/** Descrição */}
                 <p className="max-w-lg mt-2 mb-6 text-lg font-light text-gray-600">
                   Mobile app for borrowing school books, developed as a final
-                  degree project. Built in collaboration with Camarate
-                  Secondary School to make library access simpler and more
-                  efficient.
+                  degree project. Built in collaboration with Camarate Secondary
+                  School to make library access simpler and more efficient.
                 </p>
 
                 <button
@@ -223,8 +224,9 @@ function Academico() {
                 <br />
                 While workable at a very small scale, this model became
                 unsustainable. Besides being inefficient, it was vulnerable to
-                loss, hard to update, and not accessible to students. Modernizing
-                the flow wasn’t just an improvement: it was a necessity.
+                loss, hard to update, and not accessible to students.
+                Modernizing the flow wasn’t just an improvement: it was a
+                necessity.
               </p>
             </div>
           </div>
@@ -245,16 +247,19 @@ function Academico() {
             </div>
 
             <div className="pt-6 flex flex-col items-start">
-              <h2 className="py-4 text-4xl text-[#333333]">Proposed solution</h2>
+              <h2 className="py-4 text-4xl text-[#333333]">
+                Proposed solution
+              </h2>
 
               <p className="max-w-xl mx-auto mb-10 text-xl font-light text-[#333333] leading-relaxed">
                 I proposed a simple, accessible, and secure mobile app to make
                 the book-loan process easier, with usability in mind for
                 teachers, students, and the library staff.
                 <br />
-                <br />The system was designed to meet the real needs of the
-                school library, supporting daily tasks around book management
-                and loans. The goal was to make the library environment more
+                <br />
+                The system was designed to meet the real needs of the school
+                library, supporting daily tasks around book management and
+                loans. The goal was to make the library environment more
                 accessible and engaging, encouraging students to use its
                 resources more often through a modern, simple digital
                 experience.
@@ -283,9 +288,7 @@ function Academico() {
             </div>
 
             <div className="pt-12 flex flex-col items-start">
-              <h2 className="py-4 text-4xl text-[#333333]">
-                Key features
-              </h2>
+              <h2 className="py-4 text-4xl text-[#333333]">Key features</h2>
 
               <p className="max-w-xl mb-10 text-xl font-light text-[#333333] leading-relaxed ">
                 Throughout development, I prioritized features that truly
@@ -301,8 +304,8 @@ function Academico() {
                 <br />
                 In addition, features like a help center, staff contacts, and
                 internal procedures strengthen the app’s usefulness in the
-                school’s day-to-day, allowing students, teachers, and visitors to
-                quickly find the right information at the right time.
+                school’s day-to-day, allowing students, teachers, and visitors
+                to quickly find the right information at the right time.
               </p>
             </div>
           </div>
@@ -344,8 +347,9 @@ function Academico() {
                 Axure RP 9, prioritizing clarity, simplicity, and usability for
                 the target audience (teachers, students, and library staff).
                 <br />
-                <br />The app’s architecture was split into three main layers:
-                user interface, business logic, and data layer. This separation
+                <br />
+                The app’s architecture was split into three main layers: user
+                interface, business logic, and data layer. This separation
                 streamlined development and kept the focus on accessibility and
                 future scalability.
               </p>
@@ -402,19 +406,24 @@ function Academico() {
 
               <p className="max-w-2xl mx-auto mb-10 text-xl font-light text-[#333333] leading-relaxed">
                 This visualization shows the key navigation flows of the app.
-                <br />The interface was designed to be simple, accessible, and
+                <br />
+                The interface was designed to be simple, accessible, and
                 functional, ensuring a good experience for students, teachers,
                 and school staff.
                 <br />
-                <br />The flow covers everything from{" "}
+                <br />
+                The flow covers everything from{" "}
                 <strong>login, book search, loan, and return</strong> to support
                 areas like{" "}
-                <strong>help, institutional information, and internal procedures</strong>.
+                <strong>
+                  help, institutional information, and internal procedures
+                </strong>
+                .
                 <br />
-                <br />The goal was to reduce friction and make library tasks
-                smoother in a few taps—especially in a school setting with
-                limited resources and users with different levels of digital
-                literacy.
+                <br />
+                The goal was to reduce friction and make library tasks smoother
+                in a few taps—especially in a school setting with limited
+                resources and users with different levels of digital literacy.
               </p>
             </div>
           </div>
