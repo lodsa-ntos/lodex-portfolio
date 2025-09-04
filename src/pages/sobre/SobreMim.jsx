@@ -14,7 +14,15 @@ function SobreMim() {
   return (
     <>
       <Helmet>
-        <title>LodeX Studio — Sobre mim</title>
+        <title>About — LodeX Studio</title>
+        <meta
+          name="description"
+          content="I help freelancers and entrepreneurs build clean, fast websites that communicate clearly and convert. Frontend developer and UI/UX designer."
+        />
+        <meta
+          name="keywords"
+          content="about Lodney Santos, about LodeX Studio, frontend developer, UI/UX designer, freelancer websites"
+        />
       </Helmet>
 
       <HeroSection />
@@ -117,12 +125,7 @@ const WhatIDoSection = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-4">
         {whatIDoItems.map(({ icon, title, text }) => (
-          <InfoCard
-            key={title}
-            icon={icon}
-            title={title}
-            text={text}
-          />
+          <InfoCard key={title} icon={icon} title={title} text={text} />
         ))}
       </div>
     </GlobalContainer>

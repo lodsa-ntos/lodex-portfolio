@@ -72,10 +72,14 @@ function Conversar() {
   return (
     <>
       <Helmet>
-        <title>LodeX Studio — Conversar</title>
+        <title>Contact — LodeX Studio</title>
         <meta
           name="description"
-          content="Entra em contacto para começar um projeto com presença real. Fala direto comigo, sem intermediários."
+          content="Start a project or ask a question. Get a clear, no‑nonsense plan for your website or landing page — built to convert."
+        />
+        <meta
+          name="keywords"
+          content="contact, start a project, website quote, landing page quote, freelancer website, entrepreneur website"
         />
       </Helmet>
       <section

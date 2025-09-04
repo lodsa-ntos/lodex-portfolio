@@ -445,10 +445,14 @@ function Services() {
   return (
     <>
       <Helmet>
-        <title>LodeX Studio — Serviços</title>
+        <title>Services — LodeX Studio</title>
         <meta
           name="description"
-          content="Landing pages, websites completos, portfólios e redesigns. Soluções digitais para marcas pequenas com identidade forte."
+          content="Websites and landing pages that turn freelancers and entrepreneurs from invisible to unforgettable online. Outcome-led, fast, and conversion-focused."
+        />
+        <meta
+          name="keywords"
+          content="web designer, frontend developer, landing page, website, portfolio, redesign, freelancer, entrepreneur, conversion, React, Tailwind"
         />
         {/* Review JSON-LD — prova social do cliente Gestos Amáveis */}
         <script type="application/ld+json">{`

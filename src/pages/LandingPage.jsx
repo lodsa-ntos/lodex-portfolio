@@ -54,16 +54,16 @@ function LandingPage() {
     <>
       <Helmet>
         <title>
-          LodeX Studio | Frontend Developer & UI Designer Portugal | Lodney
-          Santos
+          LodeX Studio | Websites that turn freelancers & entrepreneurs from
+          invisible to unforgettable
         </title>
         <meta
           name="description"
-          content="Lodney Santos - Frontend Developer & UI Designer especializado em websites modernos, landing pages e soluções digitais escaláveis em Portugal. React.js, JavaScript, UI/UX Design."
+          content="Conversion-focused personal brand and portfolio websites for freelancers & entrepreneurs. React + Tailwind. Clear positioning, clean UI/UX, fast by default."
         />
         <meta
           name="keywords"
-          content="frontend developer portugal, ui designer portugal, lodney santos, lodex studio, react developer, javascript developer, landing pages portugal, website design portugal, ui ux design, desenvolvedor frontend, designer ui portugal, sites modernos"
+          content="freelancer website, entrepreneur website, personal brand website, portfolio website, conversion websites, react developer, tailwind developer, ui ux designer"
         />
         <link rel="canonical" href="https://lodexstudio.com" />
 

@@ -7,10 +7,10 @@ function ServerError() {
   return (
     <>
       <Helmet>
-        <title>Erro 500 - Erro Interno do Servidor | LodeX Studio</title>
+        <title>500 — Internal Server Error | LodeX Studio</title>
         <meta
           name="description"
-          content="Erro interno do servidor. A LodeX Studio está a trabalhar para resolver o problema."
+          content="Something went wrong on our side. We’re working to fix it as quickly as possible."
         />
         <meta name="robots" content="noindex, follow" />
       </Helmet>

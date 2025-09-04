@@ -47,7 +47,10 @@ function GlobalProject() {
         "ring-1 ring-inset bg-gray-50 text-gray-600 ring-gray-500 text-xs px-2 py-1 rounded-full flex items-center justify-end text-end gap-1",
       description: (
         <>
-          A mobile application developed as a final course project in collaboration with{" "} <strong>Camarate Secondary School</strong>. Designed to make the school’s library resources more accessible and engaging for students.
+          A mobile application developed as a final course project in
+          collaboration with <strong>Camarate Secondary School</strong>.
+          Designed to make the school’s library resources more accessible and
+          engaging for students.
         </>
       ),
       tags: ["app", "Apps"],
@@ -169,10 +172,14 @@ function GlobalProject() {
   return (
     <>
       <Helmet>
-        <title>LodeX Studio — Portfólio</title>
+        <title>Portfolio — LodeX Studio</title>
         <meta
           name="description"
-          content="Projetos reais e conceitos autorais com foco em clareza, ritmo e estrutura sólida. Veja o que foi criado recentemente."
+          content="Selected work: websites and landing pages with clear structure, clean UI, and real-world outcomes. Case studies and concepts."
+        />
+        <meta
+          name="keywords"
+          content="portfolio, case studies, websites, landing pages, React, Tailwind, UI/UX"
         />
       </Helmet>
       <section id="sobremim" className="min-h-[95vh] pt-36 border-b shadow-md">

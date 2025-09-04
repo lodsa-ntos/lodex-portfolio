@@ -7,10 +7,10 @@ function NotFound() {
   return (
     <>
       <Helmet>
-        <title>Página não encontrada - 404 | LodeX Studio</title>
+        <title>Page not found — 404 | LodeX Studio</title>
         <meta
           name="description"
-          content="A página que procuras não existe ou foi movida. Volta à página inicial ou explora os projetos disponíveis na LodeX Studio."
+          content="The page you’re looking for doesn’t exist or was moved. Go back to the homepage or explore recent case studies."
         />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
@@ -18,7 +18,6 @@ function NotFound() {
       <section className="min-h-screen py-24 flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50">
         <GlobalContainer>
           <div className="text-center max-w-2xl mx-auto">
-
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
               404
             </h1>

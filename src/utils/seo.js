@@ -232,52 +232,52 @@ export const generateArticleStructuredData = (article) => {
     articleSection: article.category,
     keywords: article.keywords,
     wordCount: article.wordCount,
-    inLanguage: 'pt-PT'
+    inLanguage: article.inLanguage || 'en'
   };
 };
 
 // SEO page data templates
 export const SEO_TEMPLATES = {
   homepage: {
-    title: 'LodeX Studio | Frontend Developer & UI Designer Portugal | Lodney Santos',
-    description: 'Lodney Santos - Frontend Developer & UI Designer especializado em websites modernos, landing pages e soluções digitais escaláveis em Portugal. React.js, JavaScript, UI/UX Design.',
-    keywords: 'frontend developer portugal, ui designer portugal, lodney santos, lodex studio, react developer, javascript developer, landing pages portugal, website design portugal',
+  title: 'LodeX Studio | Websites that turn freelancers & entrepreneurs from invisible to unforgettable',
+  description: 'Conversion-focused personal brand and portfolio websites for freelancers & entrepreneurs. Fast by default. Clear positioning. Clean UI/UX that gets clients.',
+  keywords: 'freelancer website, entrepreneur website, personal brand website, portfolio website, conversion-focused websites, landing pages, react developer, tailwind developer, ui ux designer',
   canonical: 'https://lodexstudio.com',
   image: 'https://lodexstudio.com/lodney-santos-developer.jpg'
   },
   
   portfolio: {
-    title: 'Portfólio | LodeX Studio - Projetos de Desenvolvimento Web Portugal',
-    description: 'Veja os projetos desenvolvidos pela LodeX Studio. Websites modernos, landing pages e aplicações web criadas com React.js, JavaScript e UI/UX design em Portugal.',
-    keywords: 'portfolio desenvolvedor web, projetos web portugal, websites modernos portugal, react projetos, ui design portfolio',
+    title: 'Portfolio | LodeX Studio — Personal brands, portfolios and landing pages',
+    description: 'Selected work: conversion-focused websites for freelancers & entrepreneurs. Before • Solution • Impact.',
+    keywords: 'portfolio websites, personal brand portfolio, freelancer sites, landing pages, case studies',
     canonical: 'https://lodexstudio.com/portfolio'
   },
   
   services: {
-    title: 'Serviços | LodeX Studio - Desenvolvimento Web & UI Design Portugal',
-    description: 'Serviços de desenvolvimento web, UI/UX design e criação de websites modernos pela LodeX Studio em Portugal. Landing pages, portfólios e soluções digitais escaláveis.',
-    keywords: 'serviços desenvolvimento web portugal, ui design portugal, criação websites portugal, landing pages portugal, frontend developer services',
+    title: 'Services | Websites for freelancers & entrepreneurs that convert',
+    description: 'Personal brand websites, portfolios, and landing pages built with React + Tailwind. Clear positioning, clean UI/UX, and speed that ranks and converts.',
+    keywords: 'freelancer website services, entrepreneur website services, personal brand website, landing page design, react developer services',
     canonical: 'https://lodexstudio.com/servicos'
   },
   
   about: {
-    title: 'Sobre Mim | Lodney Santos - Frontend Developer & UI Designer Portugal',
-    description: 'Conheça Lodney Santos, Frontend Developer & UI Designer da LodeX Studio. Especializado em React.js, JavaScript e criação de websites modernos e escaláveis em Portugal.',
-    keywords: 'lodney santos, frontend developer portugal, ui designer lisboa, desenvolvedor react portugal, javascript developer',
+    title: 'About | Lodney Santos — Frontend Developer & UI Designer',
+    description: 'I build conversion-focused personal brands and portfolio websites for freelancers & entrepreneurs. React + Tailwind. Clear, fast, and client-winning.',
+    keywords: 'lodney santos, frontend developer, ui designer, freelancer websites, portfolio websites',
     canonical: 'https://lodexstudio.com/sobremim'
   },
   
   contact: {
-    title: 'Contacto | LodeX Studio - Iniciar Projeto de Website Portugal',
-    description: 'Entre em contacto com a LodeX Studio para desenvolver o seu website, landing page ou aplicação web. Orçamento gratuito para projetos de desenvolvimento web em Portugal.',
-    keywords: 'contacto desenvolvedor web portugal, orçamento website portugal, criar website portugal, desenvolvedor freelancer lisboa',
+    title: 'Contact | Book a 15‑minute call — LodeX Studio',
+    description: 'Let’s plan a website that makes you unforgettable. Book a quick call to map goals, scope, and the fastest path to live.',
+    keywords: 'contact lodex studio, book a call, freelancer website quote, portfolio website quote',
     canonical: 'https://lodexstudio.com/conversar'
   },
   
   blog: {
-    title: 'Blog | LodeX Studio - Artigos sobre Desenvolvimento Web & UI Design',
-    description: 'Artigos e tutoriais sobre desenvolvimento web, React.js, JavaScript, UI/UX design e tecnologias modernas. Dicas e insights de um Frontend Developer em Portugal.',
-    keywords: 'blog desenvolvimento web, artigos react portugal, tutoriais javascript, ui design tips, frontend development blog portugal',
+    title: 'Blog | LodeX Studio — Websites, positioning, and conversion',
+    description: 'Practical articles on websites that convert: positioning, UX details, case studies, and simple automation.',
+    keywords: 'website conversion, positioning, ux details, case studies, simple automation',
     canonical: 'https://lodexstudio.com/blog'
   }
 };
