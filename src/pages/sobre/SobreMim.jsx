@@ -44,12 +44,12 @@ const HeroSection = () => (
     <GlobalContainer>
       <div className="flex flex-col items-start justify-start mb-2">
         <h1 className="text-sm font-bold uppercase text-secundario subpixel-antialiased tracking-[2px] mb-1">
-          Sobre mim
+          About
         </h1>
         <h2 className="text-5xl tracking-tighter font-semibold text-primario subpixel-antialiased">
-          <span className="text-primario font-semibold">Entre design</span>
-          <span className="text-[#757575]"> e </span>
-          persistência
+          <span className="text-primario font-semibold">Where design</span>
+          <span className="text-[#757575]"> meets </span>
+          persistence
         </h2>
       </div>
 
@@ -60,22 +60,22 @@ const HeroSection = () => (
           </h1>
 
           <p className="max-w-xl mb-20 lg:mb-6 font-light text-xl leading-relaxed subpixel-antialiased">
-            Sempre fui curioso com o que há por trás das coisas — desmontar
-            computadores, observar interfaces, tentar entender lógica onde a
-            maioria só vê pixels. Foi no design digital que encontrei um lugar
-            onde forma e estrutura se encontram. Sou desenvolvedor frontend com
-            foco em transformar ideias em produtos digitais com estrutura,
-            clareza e presença visual.
+            I’ve always been curious about how things work — taking computers apart,
+            studying interfaces, and finding the logic most people don’t see. In digital
+            design I found the place where form meets structure. Today I’m a frontend
+            developer and UI/UX designer who turns ideas into clear, fast, and expressive
+            web experiences.
             <br />
             <br />
-            Ajudo pessoas que têm uma ideia, mas ainda não têm alguém que saiba
-            dar forma a isso com código, design e usabilidade.
+            I help freelancers, founders, and small businesses shape early ideas into
+            something real — usable, beautiful, and ready to ship. My focus is simple:
+            clarity, momentum, and outcomes.
           </p>
         </div>
 
         <img
           src={me}
-          alt="Lod, desenvolvedor frontend e entusiasta de UI/UX design"
+          alt="Lodney Santos — frontend developer and UI/UX designer"
           className="w-64 mt-28 sm:w-80 aspect-square rounded-2xl object-cover mx-auto bg-gradient-to-b from-primario-claro shadow-lg hover:scale-105 hover:brightness-105 hover:contrast-100 hover:shadow-xl -translate-y-16 transform transition-all duration-500"
         />
       </div>
@@ -86,28 +86,28 @@ const HeroSection = () => (
 const whatIDoItems = [
   {
     icon: <PiWallDuotone className="size-10 text-gray-500" />,
-    title: "Construo",
-    text: "Websites e interfaces sob medida, sem templates, com base na ideia e no público.",
+  title: "I build",
+  text: "Websites and interfaces tailored to your idea and audience — no templates.",
   },
   {
     icon: <MdOutlineDesignServices className="size-10 text-gray-500" />,
-    title: "Desenho",
-    text: "Protótipos e interfaces funcionais com foco em estrutura, hierarquia e intenção visual.",
+  title: "I design",
+  text: "Functional prototypes and interfaces with structure, hierarchy, and visual intent.",
   },
   {
     icon: <MdImportantDevices className="size-10 text-gray-500" />,
-    title: "Desenvolvo",
-    text: "Frontend com React, Tailwind e animações leves com Framer Motion",
+  title: "I develop",
+  text: "Frontend with React and Tailwind, with smooth motion using Framer Motion.",
   },
   {
     icon: <PiRocketLaunchDuotone className="size-10 text-gray-500" />,
-    title: "Lanço",
-    text: "Transformo ideias iniciais em MVPs prontos para ir ao ar — simples, diretos e viáveis.",
+  title: "I launch",
+  text: "Turn early ideas into MVPs — simple, lean, and ready to go live.",
   },
   {
     icon: <VscCompassDot className="size-10 text-gray-500" />,
-    title: "Guio",
-    text: "Ajudas pontuais para quem quer clareza no que precisa construir (mesmo antes do código).",
+  title: "I guide",
+  text: "Hands-on guidance to define what to build — even before writing code.",
   },
 ];
 
@@ -116,12 +116,12 @@ const WhatIDoSection = () => (
     <GlobalContainer>
       <div className="mb-16">
         <h2 className="mb-6 text-4xl font-light text-[##333333] subpixel-antialiased text-center">
-          Dou forma ao que <br />
-          ainda está só na cabeça.
+      I give shape to what’s <br />
+      still only in your head.
         </h2>
       </div>
 
-      <DividerLabel label="O que faço?" />
+    <DividerLabel label="What I do" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-4">
         {whatIDoItems.map(({ icon, title, text }) => (
@@ -142,32 +142,31 @@ const ForWhomSection = () => (
         <div className="sticky">
           <img
             src="images/aboutme/pratical.png"
-            alt="Retrato pratical"
+            alt="Practical portrait"
             className="w-52 sm:w-96 object-cover mx-auto hover:brightness-105 hover:contrast-100 transform transition-all duration-500"
           />
         </div>
 
         <div className="text-gray-800">
           <h1 className="mb-6 mt-6 lg:mt-0 text-4xl font-light text-[##333333] subpixel-antialiased">
-            Para quem é
+            Who I help
           </h1>
 
           <p className="max-w-xl mb-6 font-light text-lg leading-relaxed subpixel-antialiased">
-            Se tens uma ideia, um projeto, um negócio ou até só um rascunho mal
-            definido, posso ajudar a dar forma a isso. Já trabalhei com quem
-            tinha tudo pronto e só precisava de execução, mas também com quem só
-            tinha uma frase e nenhuma certeza.
+            If you have an idea, a project, a business, or even a rough sketch,
+            I can help give it shape. I’ve worked with clients who had everything
+            ready and just needed clean execution — and with those who only had
+            a sentence and lots of uncertainty.
             <br /> <br />
-            Seja um site simples, uma landing page, uma app ou algo maior, a
-            base é a mesma: escutar, entender e construir algo funcional e
-            visualmente certo para quem vai usar.
+            Whether it’s a simple website, a landing page, an app, or something
+            larger, the foundation is the same: listen, understand, and build
+            something functional and right for your users.
             <br /> <br />
-            Trabalho com quem está a começar, com freelancers, pequenos
-            negócios, criadores ou equipas que querem algo próprio, sem
-            complicação. Não importa se tens experiência técnica ou não sabes
-            por onde começar. O meu papel é facilitar, guiar e construir
-            contigo, com transparência e foco no essencial. Se valorizas isso,
-            estou aqui para somar.
+            I work with people who are starting out — freelancers, small
+            businesses, creators, and teams who want something of their own,
+            without complexity. You don’t need technical experience. My role is
+            to simplify, guide, and build with you — with transparency and focus
+            on what matters: clarity, momentum, and results.
           </p>
         </div>
       </div>
@@ -181,24 +180,23 @@ const WhySection = () => (
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="text-gray-800">
           <h1 className="mb-6 text-4xl font-light text-[##333333] subpixel-antialiased">
-            Por que faço isso?
+            Why I do this
           </h1>
           <p className="max-w-lg font-light text-xl leading-relaxed subpixel-antialiased">
-            Levei anos para entender o meu lugar. Comecei desmontando
-            computadores, lutei com a programação, formei-me com atraso. Mas
-            descobri que meu foco não era velocidade, era transformar confusão
-            em clareza.
+            It took me years to find my place. I started by dismantling
+            computers, struggled with programming, and graduated later than planned.
+            I learned my strength isn’t speed — it’s turning confusion into clarity.
             <br />
-            <br />É isso que faço hoje: ajudo pessoas a transformar ideias
-            soltas em experiências digitais reais, com estrutura, beleza e
-            funcionalidade, mesmo que o ponto de partida seja incerto.
+            <br />That’s what I do today: I help people turn scattered ideas into real
+            digital experiences with structure, craft, and function — even when the
+            starting point is uncertain.
           </p>
         </div>
 
         <div className="sticky">
           <img
             src="images/aboutme/place.svg"
-            alt="Retrato pratical"
+            alt="Illustration of place"
             className="hidden md:block w-72 inset-[326px] xl:translate-x-0 translate-x-16 lg:w-96 object-cover mx-auto hover:brightness-105 hover:contrast-100 transform transition-all duration-500 lg:inset-[166px] left-0 absolute"
           />
         </div>
@@ -212,29 +210,29 @@ const CallToActionSection = () => (
     <GlobalContainer>
       <div className="flex flex-col items-center justify-center text-center">
         <h1 className="text-3xl font-bold uppercase text-terciario mb-2">
-          Bora construir?
+          Ready to build it?
         </h1>
         <p className="text-terciario text-base mb-6 font-regular">
-          Quando a ideia é boa, a execução precisa acompanhar.
+          When the idea is good, the execution should match.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
           <BubblyLink to="/conversar" colorStart="#004AAD" colorEnd="#FFFFFF">
             <button
               className="bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-white hover:scale-105 hover:ring-inset flex items-center gap-1"
-              aria-label="Explorar projetos"
+              aria-label="Open contact form"
             >
               <SiLibreofficewriter className="text-green-400" />
-              Preencher formulário
+              Fill out the form
             </button>
           </BubblyLink>
 
           <BubblyLink to="/portfolio" colorStart="#004AAD" colorEnd="#FFFFFF">
             <button
               className="bg-white font-semibold text-secundario py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-blue-300 hover:text-white transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-white ring-secundario ring-2 hover:scale-105 hover:ring-inset flex items-center gap-1"
-              aria-label="Explorar projetos"
+              aria-label="Explore projects"
             >
-              👉 Veja os meus projetos
+              👉 See my projects
             </button>
           </BubblyLink>
         </div>

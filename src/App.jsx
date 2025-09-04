@@ -10,7 +10,6 @@ import ProjetoReal from "./pages/projects/client/gestosamaveis/ProjetoReal";
 import ConceitoPessoal from "./pages/projects/ficticio/ConceitoPessoal";
 import Academico from "./pages/projects/Academico";
 import SobreMim from "./pages/sobre/SobreMim";
-import Services from "./pages/services/Services";
 import Blog from "./pages/blog/Blog";
 import GlobalProject from "./pages/projects/GlobalProject";
 import Conversar from "./pages/chat/Conversar";
@@ -37,7 +36,6 @@ function App() {
           <Route path="/academico" element={<Academico />} />
           <Route path="/launchpeak" element={<ConceitoPessoal />} />
           <Route path="/about" element={<SobreMim />} />
-          <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/case-studies" element={<GlobalProject />} />
           <Route path="/conversar" element={<Conversar />} />
