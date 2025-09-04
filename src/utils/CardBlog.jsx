@@ -11,16 +11,16 @@ const cardData = [
   {
     id: 1,
     img: "images/blog/cad-responsivo.jpg",
-    title: "Card Responsivo com Hover Animado",
+    title: "Responsive Card with Animated Hover",
     linkHref: "/cardresponsivo",
     description:
-      "Aprenda a criar um card moderno e responsivo em menos de 200 linhas de código usando React + TailwindCSS.",
+      "Learn to build a modern, responsive card in under 200 lines using React + TailwindCSS.",
     Avatar: [
       {
         foto: imgAvatar,
         profileFoto: "",
         autor: "LodeX Studio",
-        date: "09 de agosto de 2025",
+        date: "August 9, 2025",
       },
     ],
     Badge: [
@@ -41,7 +41,6 @@ const cardData = [
       },
     ],
   },
-  
 ];
 
 // Badge Component

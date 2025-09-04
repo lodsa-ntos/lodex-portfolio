@@ -5,11 +5,11 @@ import CardBlog from "../../utils/CardBlog";
 
 const HERO_DEFAULTS = {
   overline: "Insights",
-  title: "Tutoriais e ideias para acelerar o seu código.",
+  title: "Tutorials and ideas to accelerate your code.",
   description:
-    "Dicas práticas, guias passo a passo e exemplos reais para ajudar programadores e designers a criarem projetos mais rápidos, bonitos e eficientes. Conteúdo focado em React, TailwindCSS, UI/UX e ferramentas modernas para web.",
+    "Practical tips, step-by-step guides, and real examples to help developers and designers build faster, cleaner, and more efficient projects. Focused on React, TailwindCSS, UI/UX, and modern web tools.",
   imageSrc: "/images/blog/blog-banner-hero.jpg",
-  imageAlt: "Abstração tecnológica representando ideias e código"
+  imageAlt: "Abstract technology background representing ideas and code",
 };
 
 function HeroBanner({
@@ -17,7 +17,7 @@ function HeroBanner({
   title = HERO_DEFAULTS.title,
   description = HERO_DEFAULTS.description,
   imageSrc = HERO_DEFAULTS.imageSrc,
-  imageAlt = HERO_DEFAULTS.imageAlt
+  imageAlt = HERO_DEFAULTS.imageAlt,
 }) {
   return (
     <section
@@ -32,13 +32,13 @@ function HeroBanner({
         aria-hidden="true"
       >
         <img
-            src={imageSrc}
-            alt={imageAlt}
-            loading="eager"
-            decoding="async"
-            className="w-full h-full object-cover object-center"
-            fetchpriority="high"
-          />
+          src={imageSrc}
+          alt={imageAlt}
+          loading="eager"
+          decoding="async"
+          className="w-full h-full object-cover object-center"
+          fetchpriority="high"
+        />
       </picture>
 
       {/* Overlays for contrast */}
@@ -58,9 +58,9 @@ function HeroBanner({
           >
             {title}
           </h1>
-            <p className="mt-5 text-base md:text-lg leading-relaxed text-gray-100/90">
-              {description}
-            </p>
+          <p className="mt-5 text-base md:text-lg leading-relaxed text-gray-100/90">
+            {description}
+          </p>
         </div>
       </GlobalContainer>
 
@@ -86,7 +86,7 @@ function RecentArticles() {
     <section className="pt-8 md:pt-10 pb-20 border-b shadow-md transition-all duration-500">
       <GlobalContainer>
         <div>
-          <h1 className="font-bold">Artigos Recentes</h1>
+          <h1 className="font-bold">Recent articles</h1>
           <CardBlog />
         </div>
       </GlobalContainer>
@@ -98,10 +98,10 @@ function Blog() {
   return (
     <>
       <Helmet>
-        <title>LodeX Studio — Blog</title>
+        <title>Blog — LodeX Studio</title>
         <meta
           name="description"
-          content="Reflexões autorais e soluções práticas sobre criação digital, frontend e design. Conteúdo direto, com propósito."
+          content="Original reflections and practical solutions on digital creation, front‑end, and design — direct, useful, and to the point."
         />
       </Helmet>
       <HeroBanner />
