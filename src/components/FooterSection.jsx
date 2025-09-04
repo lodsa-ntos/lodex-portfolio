@@ -54,10 +54,10 @@ function FooterSection() {
           {/* Links */}
           <div className="grid grid-cols-4 mt-6 md:mt-0 gap-x-1">
             <BubblyLink
-              to="/about"
+              to="/"
               className="text-[#4a5565] hover:text-gray-800 transition-colors no-underline"
             >
-              about
+              home
             </BubblyLink>
             <BubblyLink
               to="/case-studies"
@@ -66,16 +66,16 @@ function FooterSection() {
               case studies
             </BubblyLink>
             <BubblyLink
-              to="/services"
-              className="text-[#4a5565] hover:text-gray-800 transition-colors"
-            >
-              services
-            </BubblyLink>
-            <BubblyLink
               to="/blog"
               className="text-[#4a5565] hover:text-gray-800 transition-colors"
             >
               blog
+            </BubblyLink>
+            <BubblyLink
+              to="/about"
+              className="text-[#4a5565] hover:text-gray-800 transition-colors"
+            >
+              about
             </BubblyLink>
           </div>
 
@@ -134,9 +134,9 @@ function FooterSection() {
                   </BubblyLink>
                 </div>
               </div>
-              <p className="text-[#4a5565] hover:text-gray-800 transition-colors text-sm font-Satoshi flex items-center justify-center gap-1">
+              <p className="text-[#4a5565] hover:text-gray-800 transition-colors text-sm font-Satoshi flex items-center justify-center gap-1 md:mr-14">
                 <strong className="text-primario hover:text-secundario">
-                  Building digital experiences that grow.
+                  Building digital experiments that inspire.
                 </strong>
               </p>
             </div>
