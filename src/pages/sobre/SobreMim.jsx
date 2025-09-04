@@ -130,7 +130,7 @@ const WhatIDoSection = () => (
 const ForWhomSection = () => (
   <section
     id="paraqueme"
-    className="min-h-[95vh] lg:min-h-[95vh] 2xl:min-h-[35vh] pb-20 pt-16 lg:pb-0 lg:pt-24 border-b shadow-xl bg-gray-50"
+    className="min-h-[95vh] lg:min-h-[95vh] 2xl:min-h-[35vh] pb-20 pt-16 lg:py-24 border-b shadow-xl bg-gray-50"
   >
     <GlobalContainer>
       <div className="grid grid-cols-1 md:grid-cols-2">
@@ -163,6 +163,12 @@ const ForWhomSection = () => (
             <li>Dark-mode friendly layouts.</li>
             <li>A personal design system with Tailwind.</li>
           </ol>
+
+          <h1 className="mb-6 mt-6 lg:mt-0 text-4xl font-light text-[##333333] subpixel-antialiased">
+            3. How I see design & code
+          </h1>
+
+          <p className="lg:mb-6 font-light text-xl leading-relaxed subpixel-antialiased">For me, design is structure made visible. Code is the craft that makes it work. Both together turn ideas into something you can actually experience.</p>
         </div>
       </div>
     </GlobalContainer>
@@ -210,21 +216,12 @@ const CallToActionSection = () => (
           Want to see what I’ve been building?
         </h1>
         <p className="text-terciario text-base mb-6 font-regular">
-          When the idea is good, the execution should match.
+          This is where I turn ideas into experiments.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <BubblyLink to="/conversar" colorStart="#004AAD" colorEnd="#FFFFFF">
-            <button
-              className="bg-primario font-semibold text-white py-3 px-4 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-secundario transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-white hover:scale-105 hover:ring-inset flex items-center gap-1"
-              aria-label="Open contact form"
-            >
-              <SiLibreofficewriter className="text-green-400" />
-              Fill out the form
-            </button>
-          </BubblyLink>
 
-          <BubblyLink to="/portfolio" colorStart="#004AAD" colorEnd="#FFFFFF">
+          <BubblyLink to="/case-studies" colorStart="#004AAD" colorEnd="#FFFFFF">
             <button
               className="bg-white font-semibold text-secundario py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-blue-300 hover:text-white transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-white ring-secundario ring-2 hover:scale-105 hover:ring-inset flex items-center gap-1"
               aria-label="Explore projects"
