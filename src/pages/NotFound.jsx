@@ -61,7 +61,7 @@ function NotFound() {
                   Landing pages, websites completos e redesigns profissionais.
                 </p>
                 <BubblyLink
-                  to="/servicos"
+                  to="/about"
                   colorStart="#6366F1"
                   colorEnd="#4F46E5"
                   className="text-blue-600 hover:text-blue-800 text-sm font-medium"

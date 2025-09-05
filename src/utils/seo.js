@@ -58,7 +58,7 @@ export const generatePersonStructuredData = (person) => {
     alternateName: person.alternateName || 'Lod',
     jobTitle: person.jobTitle || 'Frontend Developer & UI Designer',
     url: person.url || 'https://lodexstudio.com',
-    image: person.image || 'https://lodexstudio.com/lodney-santos-developer.jpg',
+  image: person.image || 'https://lodexstudio.com/pictures-lodneysantos/536240586_1105419774507110_6089065836688110588_n.jpeg',
     sameAs: person.sameAs || [
       'https://www.instagram.com/lodneysantos/',
       'https://www.linkedin.com/in/lodney-santos/',
@@ -86,7 +86,10 @@ export const generateImageObjectsStructuredData = (images) => {
       name: 'Lodney Santos'
     },
     creditText: img.creditText || 'LodeX Studio',
-    license: img.license || 'https://creativecommons.org/licenses/by-nc/4.0/'
+  encodingFormat: img.encodingFormat || 'image/jpeg',
+  width: img.width,
+  height: img.height,
+  license: img.license || 'https://lodexstudio.com/terms'
   }));
 };
 
@@ -215,7 +218,7 @@ export const generateArticleStructuredData = (article) => {
     author: {
       '@type': 'Person',
       name: 'Lodney Santos',
-      url: 'https://lodexstudio.com/sobremim'
+  url: 'https://lodexstudio.com/about'
     },
     publisher: {
       '@type': 'Organization',
@@ -239,45 +242,45 @@ export const generateArticleStructuredData = (article) => {
 // SEO page data templates
 export const SEO_TEMPLATES = {
   homepage: {
-  title: 'LodeX Studio | Websites that turn freelancers & entrepreneurs from invisible to unforgettable',
-  description: 'Conversion-focused personal brand and portfolio websites for freelancers & entrepreneurs. Fast by default. Clear positioning. Clean UI/UX that gets clients.',
-  keywords: 'freelancer website, entrepreneur website, personal brand website, portfolio website, conversion-focused websites, landing pages, react developer, tailwind developer, ui ux designer',
+  title: 'Lodney Santos (LodeX Studio) — Personal Portfolio & Frontend Experiments',
+  description: 'Personal portfolio of Lodney Santos (LodeX Studio): frontend development, UI/UX experiments, and hobby projects built with React & TailwindCSS.',
+  keywords: 'lodney santos, lodex studio, personal portfolio, hobby projects, frontend developer, react, tailwindcss, ui ux, web developer portugal',
   canonical: 'https://lodexstudio.com',
-  image: 'https://lodexstudio.com/lodney-santos-developer.jpg'
+  image: 'https://lodexstudio.com/pictures-lodneysantos/536240586_1105419774507110_6089065836688110588_n.jpeg'
   },
   
   portfolio: {
-    title: 'Portfolio | LodeX Studio — Personal brands, portfolios and landing pages',
-    description: 'Selected work: conversion-focused websites for freelancers & entrepreneurs. Before • Solution • Impact.',
-    keywords: 'portfolio websites, personal brand portfolio, freelancer sites, landing pages, case studies',
-    canonical: 'https://lodexstudio.com/portfolio'
+    title: 'Projects | Personal portfolio — React & UI/UX experiments',
+    description: 'Selected personal and academic projects by Lodney Santos. Frontend experiments, UI/UX prototypes, and small case studies.',
+    keywords: 'personal projects, portfolio, ui ux experiments, react demos, case studies',
+  canonical: 'https://lodexstudio.com/case-studies'
   },
   
   services: {
-    title: 'Services | Websites for freelancers & entrepreneurs that convert',
-    description: 'Personal brand websites, portfolios, and landing pages built with React + Tailwind. Clear positioning, clean UI/UX, and speed that ranks and converts.',
-    keywords: 'freelancer website services, entrepreneur website services, personal brand website, landing page design, react developer services',
-    canonical: 'https://lodexstudio.com/servicos'
+    title: 'What I build | Side projects, experiments, and learning',
+    description: 'A personal list of what I enjoy building: small web apps, UI/UX prototypes, and experiments with React & Tailwind.',
+    keywords: 'side projects, experiments, learning, react components, ui prototypes',
+  canonical: 'https://lodexstudio.com/about'
   },
   
   about: {
     title: 'About | Lodney Santos — Frontend Developer & UI Designer',
-    description: 'I build conversion-focused personal brands and portfolio websites for freelancers & entrepreneurs. React + Tailwind. Clear, fast, and client-winning.',
-    keywords: 'lodney santos, frontend developer, ui designer, freelancer websites, portfolio websites',
-    canonical: 'https://lodexstudio.com/sobremim'
+    description: 'I share personal projects, UI/UX experiments, and thoughts on frontend. React + Tailwind. Based in Portugal.',
+    keywords: 'lodney santos, frontend developer, ui designer, personal portfolio',
+  canonical: 'https://lodexstudio.com/about'
   },
   
   contact: {
-    title: 'Contact | Book a 15‑minute call — LodeX Studio',
-    description: 'Let’s plan a website that makes you unforgettable. Book a quick call to map goals, scope, and the fastest path to live.',
-    keywords: 'contact lodex studio, book a call, freelancer website quote, portfolio website quote',
-    canonical: 'https://lodexstudio.com/conversar'
+    title: 'Contact | Say hi to Lodney',
+    description: 'Want to chat about frontend, UI/UX, or a project idea? Reach out — happy to connect.',
+    keywords: 'contact lodney santos, contact lodex studio, say hi',
+  canonical: 'https://lodexstudio.com/conversar'
   },
   
   blog: {
-    title: 'Blog | LodeX Studio — Websites, positioning, and conversion',
-    description: 'Practical articles on websites that convert: positioning, UX details, case studies, and simple automation.',
-    keywords: 'website conversion, positioning, ux details, case studies, simple automation',
+    title: 'Blog | Frontend notes & UI/UX experiments',
+    description: 'Short notes on frontend development, UI/UX details, and small case studies from my personal projects.',
+    keywords: 'frontend notes, ui ux, experiments, case studies',
     canonical: 'https://lodexstudio.com/blog'
   }
 };

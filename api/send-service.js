@@ -69,7 +69,7 @@ export default async function handler(req, res) {
                 <p><strong>Mensagem:</strong><br>${message}</p>
                 <hr />
                 <p style="font-size: 12px; color: #888;">
-                Recebido via <a href="https://www.lodexstudio.com/servicos">Lodex Studio – ${funcao || "-"}</a>
+                Recebido via <a href="https://www.lodexstudio.com/about">Lodex Studio – ${funcao || "-"}</a>
                 </p>
                 <br />
                 <table cellpadding="0" cellspacing="0" style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">

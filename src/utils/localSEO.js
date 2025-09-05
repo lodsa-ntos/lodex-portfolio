@@ -57,7 +57,7 @@ export const generateLocalBusinessStructuredData = () => {
       "name": "Lodney Santos",
       "jobTitle": "Frontend Developer & UI Designer",
       "image": "https://lodexstudio.com/lodney-santos-developer.jpg",
-      "url": "https://lodexstudio.com/sobremim",
+  "url": "https://lodexstudio.com/about",
       "sameAs": [
         "https://www.linkedin.com/in/lodney-santos/",
         "https://github.com/lodsa-ntos",

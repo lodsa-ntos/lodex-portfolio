@@ -96,7 +96,8 @@ function CardBlog() {
                       card.imagePosition || "object-center"
                     } transition-transform duration-500 group-hover:scale-105 group-hover:rounded-xl`}
                     src={card.img}
-                    alt={`example-${index + 1}`}
+                    alt={`${card.title} — ${card.description}`}
+                    loading="lazy"
                   />
 
                   {/* CTA button */}

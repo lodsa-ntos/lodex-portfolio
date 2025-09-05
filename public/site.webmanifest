@@ -46,7 +46,7 @@
       "name": "Serviços",
       "short_name": "Serviços",
       "description": "Conhecer os serviços oferecidos",
-      "url": "/servicos",
+  "url": "/about",
       "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
     },
     {

@@ -98,10 +98,10 @@ function Blog() {
   return (
     <>
       <Helmet>
-        <title>Blog — LodeX Studio</title>
+        <title>Blog — Frontend notes</title>
         <meta
           name="description"
-          content="Original reflections and practical solutions on digital creation, front‑end, and design — direct, useful, and to the point."
+          content="Short notes on frontend development, UI/UX details, and small case studies from my personal projects."
         />
       </Helmet>
       <HeroBanner />

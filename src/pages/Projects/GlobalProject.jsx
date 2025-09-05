@@ -172,14 +172,14 @@ function GlobalProject() {
   return (
     <>
       <Helmet>
-        <title>Portfolio — LodeX Studio</title>
+        <title>Projects — Personal portfolio</title>
         <meta
           name="description"
-          content="Selected work: websites and landing pages with clear structure, clean UI, and real-world outcomes. Case studies and concepts."
+          content="Personal and academic projects by Lodney Santos — frontend experiments, UI/UX prototypes, and concepts built with React & Tailwind."
         />
         <meta
           name="keywords"
-          content="portfolio, case studies, websites, landing pages, React, Tailwind, UI/UX"
+          content="personal projects, portfolio, ui ux experiments, react demos, case studies"
         />
       </Helmet>
       <section id="sobremim" className="min-h-[95vh] pt-36 border-b shadow-md">

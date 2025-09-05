@@ -14,14 +14,14 @@ function SobreMim() {
   return (
     <>
       <Helmet>
-        <title>About — LodeX Studio</title>
+        <title>About — Lodney Santos</title>
         <meta
           name="description"
-          content="I help freelancers and entrepreneurs build clean, fast websites that communicate clearly and convert. Frontend developer and UI/UX designer."
+          content="Personal portfolio of Lodney Santos. I share what I’m building and learning — frontend development, UI/UX, and small experiments."
         />
         <meta
           name="keywords"
-          content="about Lodney Santos, about LodeX Studio, frontend developer, UI/UX designer, freelancer websites"
+          content="lodney santos, about, personal portfolio, frontend developer, ui ux"
         />
       </Helmet>
 
@@ -168,7 +168,11 @@ const ForWhomSection = () => (
             3. How I see design & code
           </h1>
 
-          <p className="lg:mb-6 font-light text-xl leading-relaxed subpixel-antialiased">For me, design is structure made visible. Code is the craft that makes it work. Both together turn ideas into something you can actually experience.</p>
+          <p className="lg:mb-6 font-light text-xl leading-relaxed subpixel-antialiased">
+            For me, design is structure made visible. Code is the craft that
+            makes it work. Both together turn ideas into something you can
+            actually experience.
+          </p>
         </div>
       </div>
     </GlobalContainer>
@@ -220,8 +224,11 @@ const CallToActionSection = () => (
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
-
-          <BubblyLink to="/case-studies" colorStart="#004AAD" colorEnd="#FFFFFF">
+          <BubblyLink
+            to="/case-studies"
+            colorStart="#004AAD"
+            colorEnd="#FFFFFF"
+          >
             <button
               className="bg-white font-semibold text-secundario py-3 px-3 rounded-full shadow-md hover:shadow-lg text-sm w-full sm:w-fit max-w-xs hover:bg-blue-300 hover:text-white transition-all duration-500 whitespace-nowrap hover:ring-2 hover:ring-white ring-secundario ring-2 hover:scale-105 hover:ring-inset flex items-center gap-1"
               aria-label="Explore projects"

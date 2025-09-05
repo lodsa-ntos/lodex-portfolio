@@ -1,21 +1,20 @@
-# LodeX Studio - Portfolio Website
+# LodeX Studio — Personal Portfolio
 
-<div align="center">
-
-![LodeX Studio](https://lodexstudio.com/LodeX-Studio-Website.jpg)
+<!-- /center removed -->
 
 [![Live Website](https://img.shields.io/badge/🌐_Live_Website-lodexstudio.com-blue?style=for-the-badge)](https://lodexstudio.com)
 [![React](https://img.shields.io/badge/React-19.1.0-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-7.0.4-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.17-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
-**🚀 Modern Frontend Development & UI/UX Design Portfolio**
+## 🧪 Personal portfolio, frontend experiments, and UI/UX notes
 
-</div>
+<!-- /center removed -->
 
 ## 🌟 Overview
 
-Professional portfolio website for **LodeX Studio**, specializing in modern web development, responsive design, and user experience optimization. Showcasing real client projects, technical expertise, and comprehensive web solutions.
+This is my hobby/personal portfolio — a place to share what I’m learning and building.
+You’ll find small projects, UI/UX experiments, and a few case-study notes built with React + Tailwind.
 
 **🎯 Key Highlights:**
 
@@ -29,7 +28,7 @@ Professional portfolio website for **LodeX Studio**, specializing in modern web 
 
 If this project helps or inspires you, please consider giving it a star! ⭐ It helps other developers discover this work.
 
-## 🎯 Featured Projects
+## 🎯 Projects
 
 ### 🏥 [Gestos Amáveis - Healthcare Platform](https://lodexstudio.com/gestosamaveis)
 
@@ -45,15 +44,12 @@ If this project helps or inspires you, please consider giving it a star! ⭐ It 
 - Technical documentation examples
 - Code quality demonstrations
 
-## 💼 Services Offered
+## 🧰 What I build
 
-| Service | Technologies |
-|---------|-------------|
-| 🎨 **Landing Pages** | React, Vite, TailwindCSS |
-| 🏢 **Business Websites** | Full-stack solutions |
-| 📱 **Web Applications** | React, Node.js, APIs |
-| 🔧 **Performance Optimization** | Core Web Vitals focus |
-| 📊 **SEO & Analytics** | Google Analytics, Schema |
+- Small web apps and components
+- Landing page concepts
+- UI/UX prototypes and motion studies
+- Articles and notes on frontend
 
 ## ✨ Features
 
@@ -64,14 +60,12 @@ If this project helps or inspires you, please consider giving it a star! ⭐ It 
 - Clean, professional UI with TailwindCSS
 - Accessibility-focused components
 
-### 📱 **Portfolio Sections**
+### 📱 **Sections**
 
-- **Hero Section** - Professional introduction and CTA
-- **Services** - Detailed service offerings with pricing
-- **Portfolio** - Real client projects and case studies
-- **Blog** - Technical tutorials and insights
-- **About** - Professional background and expertise
-- **Contact** - Direct communication channels
+- Projects (personal, academic, and concepts)
+- Blog (short notes and tutorials)
+- About (background and goals)
+- Contact (say hi)
 
 ### 🔧 **Technical Stack**
 
@@ -85,12 +79,11 @@ If this project helps or inspires you, please consider giving it a star! ⭐ It 
 
 ### 📊 **SEO & Performance**
 
-- Google Analytics integration
-- Enhanced meta tags and Open Graph
-- Schema.org structured data
+- GA4 + Plausible (optional)
+- Per-page meta + Open Graph
+- Schema.org (Person, WebSite, ImageObject, Article)
 - Sitemap and robots.txt
-- Security headers via Vercel
-- Optimized loading performance
+- Image alt text and descriptive filenames
 
 ### 📧 **Contact Forms**
 
@@ -138,7 +131,7 @@ npm run lint         # Run ESLint
 
 ## 📁 Project Structure
 
-```
+```text
 src/
 ├── components/          # Reusable UI components
 │   ├── HeroSection.jsx
@@ -176,7 +169,7 @@ public/                 # Static files
 └── favicon files
 ```
 
-## 🔧 Configuration
+## 🔧 Configuration (optional)
 
 ### Environment Variables
 
@@ -193,11 +186,7 @@ GA_MEASUREMENT_ID=G-XXXXXXXXXX
 
 ### Email Setup
 
-The portfolio uses Zoho SMTP for email functionality:
-
-1. Create a Zoho account
-2. Generate an app-specific password
-3. Add credentials to environment variables
+Contact forms can be wired to an email provider (e.g., Zoho SMTP) if needed.
 
 ## 📱 Mobile Responsiveness
 
@@ -233,12 +222,11 @@ Fully responsive design with breakpoints:
 - CSRF protection
 - Content Security Policy headers
 
-### Legal Compliance
+### Legal
 
-- Privacy Policy (GDPR compliant)
+- Privacy Policy
 - Terms of Service
 - Cookie Policy
-- Data processing transparency
 
 ## 📈 Performance Optimizations
 
@@ -310,42 +298,32 @@ npm run build
 - TailwindCSS configuration in `tailwind.config.js`
 - Component-specific styles inline
 
-### Adding New Services
+### Adding New Experiments
 
-1. Update `src/pages/services/Services.jsx`
-2. Add service data to services array
-3. Update pricing in structured data
+1. Add a page/component under `src/pages/`
+2. Wire a route in `src/App.jsx`
+3. Update sitemap if public
 
-## 📞 Support & Contact
-
-**Professional Contact:**
+## 📞 Contact
 
 - **Email**: <lodexstudio@gmail.com>
 - **Website**: <https://lodexstudio.com>
-
-**Development:**
-
 - **GitHub**: [lodsa-ntos/lodex-portfolio](https://github.com/lodsa-ntos/lodex-portfolio)
-- **Issues**: Please report bugs via GitHub Issues
 
 ## 📄 License
 
-© 2025 Lodney Santos - LodeX Studio. All Rights Reserved.
+© 2025 Lodney Santos — LodeX Studio
 
-This portfolio is proprietary software. The design, code, and content are protected by copyright.
+All content and images © their respective owner (me). You’re welcome to browse the code and learn.
 
-**Allowed:**
+Allowed:
 
-- Viewing the source code for educational purposes
-- Using code snippets as learning examples
+- Use small snippets for learning with attribution.
 
-**Not Allowed:**
+Not allowed:
 
-- Commercial use without permission
-- Copying design or content in whole or in part.
-- Redistribution of the complete codebase
-
-For permissions beyond the scope of this license, contact: <lodex.studio@gmail.com>
+- Reuse the full design or content as-is for commercial purposes.
+- Redistribute the full codebase.
 
 ## 🌟 GitHub Stats
 
@@ -354,9 +332,9 @@ For permissions beyond the scope of this license, contact: <lodex.studio@gmail.c
 ![GitHub issues](https://img.shields.io/github/issues/lodsa-ntos/lodex-portfolio)
 ![GitHub stars](https://img.shields.io/github/stars/lodsa-ntos/lodex-portfolio)
 
-## 🏷️ Topics & Keywords
+## 🏷️ Topics
 
-`portfolio` `react` `vite` `tailwindcss` `frontend-developer` `web-development` `ui-ux-design` `responsive-design` `javascript` `modern-web` `performance-optimization` `seo` `portugal-developer` `freelance-developer` `business-website`
+`portfolio` `react` `vite` `tailwindcss` `frontend` `ui-ux` `experiments` `responsive-design` `javascript` `performance` `seo` `portugal`
 
 ## 🌍 Connect & Follow
 
@@ -368,10 +346,10 @@ For permissions beyond the scope of this license, contact: <lodex.studio@gmail.c
 
 ---
 
-<div align="center">
+<!-- center removed -->
 
-**⭐ Star this repo if it helped you! | 🍴 Fork it to customize for your own use**
+⭐ Star this repo if it helped you! • 🍴 Fork it to customize for your own use
 
-**Built with ❤️ by LodeX Studio** | *Modern Web Development & UI Design*
+Built with ❤️ by LodeX Studio — Modern Web Development & UI Design
 
-</div>
+<!-- /center removed -->
