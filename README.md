@@ -338,11 +338,11 @@ Not allowed:
 
 ## 🌍 Connect & Follow
 
-- 🌐 **Website**: [lodexstudio.com](https://lodexstudio.com)
-- 💼 **LinkedIn**: [Connect with Lodney Santos](https://linkedin.com/in/lodney-santos)
-- 📧 **Email**: <lodexstudio@gmail.com>
-- 📱 **WhatsApp**: +351 935 895 551
-- 📍 **Location**: Sacavém, Lisboa, Portugal
+- [![Website](https://img.shields.io/badge/Website-lodexstudio.com-2ea44f?logo=google-chrome&logoColor=white)](https://lodexstudio.com)
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-Lodney%20Santos-0077B5?logo=linkedin&logoColor=white)](https://linkedin.com/in/lodney-santos)
+- [![Email](https://img.shields.io/badge/Email-lodexstudio@gmail.com-D14836?logo=gmail&logoColor=white)](mailto:lodexstudio@gmail.com)
+- [![Instagram](https://img.shields.io/badge/Instagram-@lodex.studio-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/lodex.studio/)
+- [![Instagram](https://img.shields.io/badge/Instagram-itslodneysantos-purple?logo=instagram&logoColor=white)](https://www.instagram.com/itslodneysantos/)
 
 ---
 
