@@ -127,7 +127,7 @@
     <image:image>
       <image:loc>https://lodexstudio.com/images/blog/cad-responsivo.jpg</image:loc>
       <image:title>Responsive Card with Animated Hover</image:title>
-      <image:caption>Build a modern responsive card with React & TailwindCSS</image:caption>
+      <image:caption>Build a modern responsive card with React &amp; TailwindCSS</image:caption>
       <image:license>https://lodexstudio.com/terms</image:license>
     </image:image>
   </url>
