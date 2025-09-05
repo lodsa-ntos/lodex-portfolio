@@ -13,12 +13,7 @@ import SobreMim from "./pages/sobre/SobreMim";
 import Blog from "./pages/blog/Blog";
 import GlobalProject from "./pages/projects/GlobalProject";
 import CardResponsivo from "./pages/blog/article/CardResponsivo";
-import IAAjuda from "./pages/blog/article/IAAjuda";
-import PiramideDigital from "./pages/blog/article/PiramideDigital";
-import SmartUX from "./pages/blog/article/SmartUX";
-import BrandingIdentidade from "./pages/blog/article/BrandingIdentidade";
-import AutomacaoSimples from "./pages/blog/article/AutomacaoSimples";
-import DoBlogAoCliente from "./pages/blog/article/DoBlogAoCliente";
+// Removed other blog articles to keep only the responsive card tutorial
 import DataProtection from "./pages/legal/DataProtection";
 import TermsOfService from "./pages/legal/TermsOfService";
 import WebsiteTerms from "./pages/legal/WebsiteTerms";
@@ -38,12 +33,6 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/case-studies" element={<GlobalProject />} />
           <Route path="/cardresponsivo" element={<CardResponsivo />} />
-          <Route path="/ia-que-ajuda" element={<IAAjuda />} />
-          <Route path="/piramide-digital" element={<PiramideDigital />} />
-          <Route path="/smart-ux" element={<SmartUX />} />
-          <Route path="/branding-identidade" element={<BrandingIdentidade />} />
-          <Route path="/automacao-simples" element={<AutomacaoSimples />} />
-          <Route path="/do-blog-ao-cliente" element={<DoBlogAoCliente />} />
           <Route path="/privacypolicy" element={<DataProtection />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/cookies" element={<WebsiteTerms />} />

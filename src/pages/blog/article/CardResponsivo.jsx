@@ -8,6 +8,7 @@ import { IoMdCodeWorking } from "react-icons/io";
 import { GiConvergenceTarget } from "react-icons/gi";
 import imgAvatar from "../../../assets/logo/lodexstudio-logo-white.svg";
 import CodeBlock from "../../../utils/CodeBlock";
+import { trackBlogRead } from "../../../utils/analytics";
 
 const Avatar = [
   {
@@ -158,7 +159,7 @@ function Indice() {
   );
 }
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 
 function NewsletterForm() {
@@ -244,6 +245,9 @@ function NewsletterForm() {
 }
 
 function CardResponsivo() {
+  useEffect(() => {
+    trackBlogRead("Responsive Card with Animated Hover — React + TailwindCSS");
+  }, []);
   return (
     <>
       <Helmet>
@@ -259,13 +263,14 @@ function CardResponsivo() {
           name="keywords"
           content="React, Tailwind, responsive card, badges, UI components, web design, frontend"
         />
+        <link rel="canonical" href="https://lodexstudio.com/cardresponsivo" />
         <meta
           property="og:title"
-          content="Responsive Card with Badges — React + Tailwind"
+          content="Responsive Card with Animated Hover — React + TailwindCSS"
         />
         <meta
           property="og:description"
-          content="Build a responsive card with badges using React and Tailwind."
+          content="Build a modern, responsive card with an animated hover using React and TailwindCSS."
         />
         <meta
           property="og:image"
@@ -273,9 +278,50 @@ function CardResponsivo() {
         />
         <meta
           property="og:url"
-          content="https://lodexstudio.com/blog/cardresponsive"
+          content="https://lodexstudio.com/cardresponsivo"
         />
         <meta property="og:type" content="article" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline:
+              "Responsive Card with Animated Hover — React + TailwindCSS",
+            description:
+              "Learn how to build a responsive card with an animated hover using React and TailwindCSS. Step-by-step guide with code, design tips, and responsiveness.",
+            image: [
+              "https://lodexstudio.com/images/blog/card-responsivo-cover.jpg",
+              "https://lodexstudio.com/images/blog/cad-responsivo.jpg",
+            ],
+            mainEntityOfPage: "https://lodexstudio.com/cardresponsivo",
+            url: "https://lodexstudio.com/cardresponsivo",
+            author: {
+              "@type": "Person",
+              name: "Lodney Santos",
+              url: "https://lodexstudio.com/about",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "LodeX Studio",
+              url: "https://lodexstudio.com",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://lodexstudio.com/lodexstudio-logo.svg",
+              },
+            },
+            datePublished: "2025-08-09",
+            dateModified: "2025-09-05",
+            keywords: [
+              "React",
+              "TailwindCSS",
+              "responsive card",
+              "UI components",
+              "frontend tutorial",
+              "hover animation",
+            ],
+          })}
+        </script>
       </Helmet>
 
       <a
